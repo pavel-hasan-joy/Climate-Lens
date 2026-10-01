@@ -17,6 +17,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import * as turf from '@turf/turf';
+import { generateCmip6 } from './build-cmip6.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const RAW = path.join(ROOT, 'data-raw');
@@ -192,6 +193,8 @@ async function main() {
 
   await fs.writeFile(path.join(OUT, 'climate.json'), JSON.stringify(climate));
   console.log('Climate snapshot written.');
+
+  await generateCmip6();
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

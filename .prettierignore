@@ -1,0 +1,6 @@
+dist
+node_modules
+data-raw
+.system_generated
+*.geo.json
+climate.json

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14213d"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </radialGradient>
+    <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#0072ff"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGlow)"/>
+  <!-- Outer Glow Ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#pulseGrad)" stroke-width="4" opacity="0.4" stroke-dasharray="8 12"/>
+  <!-- Planet Globe Body -->
+  <circle cx="256" cy="256" r="140" fill="url(#globeGrad)" opacity="0.85"/>
+  <!-- Grid Lines / Latitude Longitude -->
+  <ellipse cx="256" cy="256" rx="140" ry="50" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35"/>
+  <ellipse cx="256" cy="256" rx="140" ry="105" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35"/>
+  <line x1="256" y1="116" x2="256" y2="396" stroke="#ffffff" stroke-width="2.5" opacity="0.35"/>
+  <ellipse cx="256" cy="256" rx="75" ry="140" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35"/>
+  <!-- Orbit Ring -->
+  <ellipse cx="256" cy="256" rx="210" ry="90" fill="none" stroke="url(#pulseGrad)" stroke-width="6" transform="rotate(-30 256 256)"/>
+  <!-- Satellite / Lens Node -->
+  <circle cx="410" cy="170" r="16" fill="#00f2fe"/>
+  <circle cx="410" cy="170" r="28" fill="none" stroke="#00f2fe" stroke-width="3" opacity="0.6"/>
+  <!-- Center Core Lens Sparkle -->
+  <circle cx="256" cy="256" r="18" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="26" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+</svg>
