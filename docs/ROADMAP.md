@@ -180,7 +180,7 @@
 - [x] Plain-language district agricultural narrative card (3 sentences).
 - [x] Visible decision-support notice: *"Indicative agro-climatic decision support, not an official agrometeorological forecast."*
 
-### STAGE 9 — Extra NASA Datasets and Climate-Model Projections
+### STAGE 9 — Extra NASA Datasets and Climate-Model Projections [COMPLETED & VERIFIED]
 - [x] NASA NEX-GDDP-CMIP6 downscaled climate models:
   - Scenarios: SSP2-4.5 (moderate emissions) and SSP5-8.5 (high emissions).
   - 5-model ensemble: GFDL-ESM4, MPI-ESM1-2-HR, MRI-ESM2-0, EC-Earth3, UKESM1-0-LL.

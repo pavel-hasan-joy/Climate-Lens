@@ -1,6 +1,7 @@
 import { Line } from 'react-chartjs-2';
 import { FUTURE_YEAR, METRIC, PAST_YEARS, TIME } from '../../lib/constants';
 import { ALL_YEARS } from '../../lib/metrics';
+import { useTranslation } from '../../lib/i18n';
 import { baseOptions, crosshairPlugin, INK, shadePlugin } from './setup';
 import type { Cmip6Result, DistrictStats, MetricId, ScenarioId, TimeId } from '../../lib/types';
 
@@ -331,17 +332,18 @@ export default function YearChart({
   }
 
   // Slope per decade and Mann–Kendall significance
+  const { t, toDigits } = useTranslation();
   const slopeDigits = metric === 'heat' ? 2 : 1;
   const slope1 = stats.slope * 10;
   const pVal1 = stats.mk?.p ?? 1;
   const isSig1 = stats.mk?.significant ?? false;
-  const sigText1 = isSig1 ? `p = ${pVal1.toFixed(3)}` : `p = ${pVal1.toFixed(2)} (ns)`;
+  const sigText1 = `${isSig1 ? t('trends.significant') : t('trends.notSignificant')} (${t('trends.pValue', { p: toDigits(pVal1.toFixed(3)) })})`;
   const slopeSign1 = slope1 > 0 ? '+' : '';
 
   const slope2 = compareStats ? compareStats.slope * 10 : 0;
   const pVal2 = compareStats?.mk?.p ?? 1;
   const isSig2 = compareStats?.mk?.significant ?? false;
-  const sigText2 = isSig2 ? `p = ${pVal2.toFixed(3)}` : `p = ${pVal2.toFixed(2)} (ns)`;
+  const sigText2 = `${isSig2 ? t('trends.significant') : t('trends.notSignificant')} (${t('trends.pValue', { p: toDigits(pVal2.toFixed(3)) })})`;
   const slopeSign2 = slope2 > 0 ? '+' : '';
 
   return (
@@ -352,12 +354,12 @@ export default function YearChart({
             <span className="trend-item" style={{ color: d1Color }}>
               <i style={{ background: d1Color }} />
               <b>{districtName}:</b> {slopeSign1}
-              {slope1.toFixed(slopeDigits)} {unit}/dec ({sigText1})
+              {toDigits(slope1.toFixed(slopeDigits))} {unit}/{t('trends.perDecade')} ({sigText1})
             </span>
             <span className="trend-item" style={{ color: d2Color }}>
               <i style={{ background: d2Color }} />
               <b>{compareName}:</b> {slopeSign2}
-              {slope2.toFixed(slopeDigits)} {unit}/dec ({sigText2})
+              {toDigits(slope2.toFixed(slopeDigits))} {unit}/{t('trends.perDecade')} ({sigText2})
             </span>
           </div>
         ) : (
@@ -365,20 +367,20 @@ export default function YearChart({
             <span className="trend-slope">
               <b>
                 {slopeSign1}
-                {slope1.toFixed(slopeDigits)}
+                {toDigits(slope1.toFixed(slopeDigits))}
               </b>{' '}
-              {unit}/decade
+              {unit}/{t('trends.decade')}
             </span>
             <span
-              className={'trend-sig' + (isSig1 ? ' on' : '')}
-              title={`Mann–Kendall trend test: p = ${pVal1.toFixed(4)}`}
+              className={'trend-sig' + (isSig1 ? ' on' : ' not-sig')}
+              title={`Mann–Kendall rank correlation trend test: p = ${pVal1.toFixed(4)}`}
             >
               {sigText1}
             </span>
             {hasCmip && (
               <span className="trend-cmip-tag" style={{ color: cmipData.info.color }}>
                 <i style={{ background: cmipData.info.color }} />
-                <b>{cmipData.info.name} (2040):</b> {cmipData.at2040.median} {unit}
+                <b>{cmipData.info.name} (2040):</b> {toDigits(cmipData.at2040.median)} {unit}
               </span>
             )}
           </div>

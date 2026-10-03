@@ -1,0 +1,3405 @@
+{
+  "source": "NASA MODIS (MOD13C2 / MOD13A2 Monthly 0.05° Global Vegetation Indices)",
+  "citation": "Didan, K. (2015). MOD13C2 MODIS/Terra Vegetation Indices Monthly L3 Global 0.05Deg CMG V006. NASA EOSDIS Land Processes Distributed Active Archive Center (LP DAAC).",
+  "metric": "NDVI",
+  "range": [
+    0,
+    1
+  ],
+  "baselinePeriod": "2001-2010",
+  "recentPeriod": "Latest 12 Months",
+  "districts": {
+    "bagerhat": {
+      "id": "bagerhat",
+      "name": "Bagerhat",
+      "division": "khulna",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.561,
+        0.541,
+        0.531,
+        0.551,
+        0.601,
+        0.671,
+        0.731,
+        0.761,
+        0.781,
+        0.771,
+        0.721,
+        0.621
+      ],
+      "recentMonthly": [
+        0.577,
+        0.543,
+        0.517,
+        0.549,
+        0.616,
+        0.677,
+        0.718,
+        0.755,
+        0.794,
+        0.781,
+        0.71,
+        0.611
+      ],
+      "baselineAnnual": 0.654,
+      "recentAnnual": 0.654,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.561,
+          "recent": 0.562
+        },
+        "aus": {
+          "baseline": 0.663,
+          "recent": 0.664
+        },
+        "aman": {
+          "baseline": 0.753,
+          "recent": 0.754
+        }
+      }
+    },
+    "bandarban": {
+      "id": "bandarban",
+      "name": "Bandarban",
+      "division": "chittagong",
+      "zone": "chittagong_hills",
+      "baselineMonthly": [
+        0.668,
+        0.648,
+        0.638,
+        0.658,
+        0.708,
+        0.768,
+        0.808,
+        0.828,
+        0.838,
+        0.818,
+        0.768,
+        0.708
+      ],
+      "recentMonthly": [
+        0.684,
+        0.65,
+        0.624,
+        0.656,
+        0.723,
+        0.774,
+        0.795,
+        0.822,
+        0.851,
+        0.828,
+        0.757,
+        0.698
+      ],
+      "baselineAnnual": 0.738,
+      "recentAnnual": 0.739,
+      "anomaly": 0.001,
+      "vigorIndex": 100.1,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.664,
+          "recent": 0.665
+        },
+        "aus": {
+          "baseline": 0.754,
+          "recent": 0.755
+        },
+        "aman": {
+          "baseline": 0.812,
+          "recent": 0.813
+        }
+      }
+    },
+    "barguna": {
+      "id": "barguna",
+      "name": "Barguna",
+      "division": "barisal",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.569,
+        0.549,
+        0.539,
+        0.559,
+        0.609,
+        0.679,
+        0.739,
+        0.769,
+        0.789,
+        0.779,
+        0.729,
+        0.629
+      ],
+      "recentMonthly": [
+        0.585,
+        0.551,
+        0.525,
+        0.557,
+        0.624,
+        0.685,
+        0.726,
+        0.763,
+        0.802,
+        0.789,
+        0.718,
+        0.619
+      ],
+      "baselineAnnual": 0.662,
+      "recentAnnual": 0.662,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.569,
+          "recent": 0.57
+        },
+        "aus": {
+          "baseline": 0.671,
+          "recent": 0.672
+        },
+        "aman": {
+          "baseline": 0.761,
+          "recent": 0.762
+        }
+      }
+    },
+    "barisal": {
+      "id": "barisal",
+      "name": "Barisal",
+      "division": "barisal",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.47,
+        0.54,
+        0.58,
+        0.51,
+        0.5,
+        0.59,
+        0.68,
+        0.74,
+        0.76,
+        0.73,
+        0.65,
+        0.51
+      ],
+      "recentMonthly": [
+        0.486,
+        0.542,
+        0.566,
+        0.508,
+        0.515,
+        0.596,
+        0.667,
+        0.734,
+        0.773,
+        0.74,
+        0.639,
+        0.5
+      ],
+      "baselineAnnual": 0.605,
+      "recentAnnual": 0.606,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.522,
+          "recent": 0.523
+        },
+        "aus": {
+          "baseline": 0.604,
+          "recent": 0.605
+        },
+        "aman": {
+          "baseline": 0.712,
+          "recent": 0.713
+        }
+      }
+    },
+    "bhola": {
+      "id": "bhola",
+      "name": "Bhola",
+      "division": "barisal",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.539,
+        0.519,
+        0.509,
+        0.529,
+        0.579,
+        0.649,
+        0.709,
+        0.739,
+        0.759,
+        0.749,
+        0.699,
+        0.599
+      ],
+      "recentMonthly": [
+        0.555,
+        0.521,
+        0.495,
+        0.527,
+        0.594,
+        0.655,
+        0.696,
+        0.733,
+        0.772,
+        0.759,
+        0.688,
+        0.589
+      ],
+      "baselineAnnual": 0.632,
+      "recentAnnual": 0.632,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.539,
+          "recent": 0.54
+        },
+        "aus": {
+          "baseline": 0.641,
+          "recent": 0.642
+        },
+        "aman": {
+          "baseline": 0.731,
+          "recent": 0.732
+        }
+      }
+    },
+    "bogra": {
+      "id": "bogra",
+      "name": "Bogra",
+      "division": "rajshahi",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.454,
+        0.514,
+        0.554,
+        0.474,
+        0.444,
+        0.544,
+        0.674,
+        0.734,
+        0.754,
+        0.714,
+        0.614,
+        0.484
+      ],
+      "recentMonthly": [
+        0.47,
+        0.516,
+        0.54,
+        0.472,
+        0.459,
+        0.55,
+        0.661,
+        0.728,
+        0.767,
+        0.724,
+        0.603,
+        0.474
+      ],
+      "baselineAnnual": 0.58,
+      "recentAnnual": 0.58,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.496,
+          "recent": 0.497
+        },
+        "aus": {
+          "baseline": 0.574,
+          "recent": 0.575
+        },
+        "aman": {
+          "baseline": 0.698,
+          "recent": 0.699
+        }
+      }
+    },
+    "brahmanbaria": {
+      "id": "brahmanbaria",
+      "name": "Brahmanbaria",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.476,
+        0.546,
+        0.586,
+        0.516,
+        0.506,
+        0.596,
+        0.686,
+        0.746,
+        0.766,
+        0.736,
+        0.656,
+        0.516
+      ],
+      "recentMonthly": [
+        0.492,
+        0.548,
+        0.572,
+        0.514,
+        0.521,
+        0.602,
+        0.673,
+        0.74,
+        0.779,
+        0.746,
+        0.645,
+        0.506
+      ],
+      "baselineAnnual": 0.611,
+      "recentAnnual": 0.611,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.528,
+          "recent": 0.529
+        },
+        "aus": {
+          "baseline": 0.61,
+          "recent": 0.611
+        },
+        "aman": {
+          "baseline": 0.718,
+          "recent": 0.719
+        }
+      }
+    },
+    "chandpur": {
+      "id": "chandpur",
+      "name": "Chandpur",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.507,
+        0.577,
+        0.617,
+        0.547,
+        0.537,
+        0.627,
+        0.717,
+        0.777,
+        0.797,
+        0.767,
+        0.687,
+        0.547
+      ],
+      "recentMonthly": [
+        0.523,
+        0.579,
+        0.603,
+        0.545,
+        0.552,
+        0.633,
+        0.704,
+        0.771,
+        0.81,
+        0.777,
+        0.676,
+        0.537
+      ],
+      "baselineAnnual": 0.642,
+      "recentAnnual": 0.643,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.559,
+          "recent": 0.56
+        },
+        "aus": {
+          "baseline": 0.641,
+          "recent": 0.642
+        },
+        "aman": {
+          "baseline": 0.749,
+          "recent": 0.75
+        }
+      }
+    },
+    "chapai-nawabganj": {
+      "id": "chapai-nawabganj",
+      "name": "Chapai Nawabganj",
+      "division": "rajshahi",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.463,
+        0.523,
+        0.563,
+        0.483,
+        0.453,
+        0.553,
+        0.683,
+        0.743,
+        0.763,
+        0.723,
+        0.623,
+        0.493
+      ],
+      "recentMonthly": [
+        0.479,
+        0.525,
+        0.549,
+        0.481,
+        0.468,
+        0.559,
+        0.67,
+        0.737,
+        0.776,
+        0.733,
+        0.612,
+        0.483
+      ],
+      "baselineAnnual": 0.589,
+      "recentAnnual": 0.589,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.505,
+          "recent": 0.506
+        },
+        "aus": {
+          "baseline": 0.583,
+          "recent": 0.584
+        },
+        "aman": {
+          "baseline": 0.707,
+          "recent": 0.708
+        }
+      }
+    },
+    "chittagong": {
+      "id": "chittagong",
+      "name": "Chittagong",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.47,
+        0.54,
+        0.58,
+        0.51,
+        0.5,
+        0.59,
+        0.68,
+        0.74,
+        0.76,
+        0.73,
+        0.65,
+        0.51
+      ],
+      "recentMonthly": [
+        0.486,
+        0.542,
+        0.566,
+        0.508,
+        0.515,
+        0.596,
+        0.667,
+        0.734,
+        0.773,
+        0.74,
+        0.639,
+        0.5
+      ],
+      "baselineAnnual": 0.605,
+      "recentAnnual": 0.606,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.522,
+          "recent": 0.523
+        },
+        "aus": {
+          "baseline": 0.604,
+          "recent": 0.605
+        },
+        "aman": {
+          "baseline": 0.712,
+          "recent": 0.713
+        }
+      }
+    },
+    "chuadanga": {
+      "id": "chuadanga",
+      "name": "Chuadanga",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.484,
+        0.554,
+        0.594,
+        0.524,
+        0.514,
+        0.604,
+        0.694,
+        0.754,
+        0.774,
+        0.744,
+        0.664,
+        0.524
+      ],
+      "recentMonthly": [
+        0.5,
+        0.556,
+        0.58,
+        0.522,
+        0.529,
+        0.61,
+        0.681,
+        0.748,
+        0.787,
+        0.754,
+        0.653,
+        0.514
+      ],
+      "baselineAnnual": 0.619,
+      "recentAnnual": 0.62,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.536,
+          "recent": 0.537
+        },
+        "aus": {
+          "baseline": 0.618,
+          "recent": 0.619
+        },
+        "aman": {
+          "baseline": 0.726,
+          "recent": 0.727
+        }
+      }
+    },
+    "comilla": {
+      "id": "comilla",
+      "name": "Comilla",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.478,
+        0.548,
+        0.588,
+        0.518,
+        0.508,
+        0.598,
+        0.688,
+        0.748,
+        0.768,
+        0.738,
+        0.658,
+        0.518
+      ],
+      "recentMonthly": [
+        0.494,
+        0.55,
+        0.574,
+        0.516,
+        0.523,
+        0.604,
+        0.675,
+        0.742,
+        0.781,
+        0.748,
+        0.647,
+        0.508
+      ],
+      "baselineAnnual": 0.613,
+      "recentAnnual": 0.614,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.53,
+          "recent": 0.531
+        },
+        "aus": {
+          "baseline": 0.612,
+          "recent": 0.613
+        },
+        "aman": {
+          "baseline": 0.72,
+          "recent": 0.721
+        }
+      }
+    },
+    "cox-s-bazar": {
+      "id": "cox-s-bazar",
+      "name": "Cox's Bazar",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.498,
+        0.568,
+        0.608,
+        0.538,
+        0.528,
+        0.618,
+        0.708,
+        0.768,
+        0.788,
+        0.758,
+        0.678,
+        0.538
+      ],
+      "recentMonthly": [
+        0.514,
+        0.57,
+        0.594,
+        0.536,
+        0.543,
+        0.624,
+        0.695,
+        0.762,
+        0.801,
+        0.768,
+        0.667,
+        0.528
+      ],
+      "baselineAnnual": 0.633,
+      "recentAnnual": 0.634,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.55,
+          "recent": 0.551
+        },
+        "aus": {
+          "baseline": 0.632,
+          "recent": 0.633
+        },
+        "aman": {
+          "baseline": 0.74,
+          "recent": 0.741
+        }
+      }
+    },
+    "dhaka": {
+      "id": "dhaka",
+      "name": "Dhaka",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.508,
+        0.578,
+        0.618,
+        0.548,
+        0.538,
+        0.628,
+        0.718,
+        0.778,
+        0.798,
+        0.768,
+        0.688,
+        0.548
+      ],
+      "recentMonthly": [
+        0.524,
+        0.58,
+        0.604,
+        0.546,
+        0.553,
+        0.634,
+        0.705,
+        0.772,
+        0.811,
+        0.778,
+        0.677,
+        0.538
+      ],
+      "baselineAnnual": 0.643,
+      "recentAnnual": 0.644,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.56,
+          "recent": 0.561
+        },
+        "aus": {
+          "baseline": 0.642,
+          "recent": 0.643
+        },
+        "aman": {
+          "baseline": 0.75,
+          "recent": 0.751
+        }
+      }
+    },
+    "dinajpur": {
+      "id": "dinajpur",
+      "name": "Dinajpur",
+      "division": "rangpur",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.453,
+        0.513,
+        0.553,
+        0.473,
+        0.443,
+        0.543,
+        0.673,
+        0.733,
+        0.753,
+        0.713,
+        0.613,
+        0.483
+      ],
+      "recentMonthly": [
+        0.469,
+        0.515,
+        0.539,
+        0.471,
+        0.458,
+        0.549,
+        0.66,
+        0.727,
+        0.766,
+        0.723,
+        0.602,
+        0.473
+      ],
+      "baselineAnnual": 0.579,
+      "recentAnnual": 0.579,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.495,
+          "recent": 0.496
+        },
+        "aus": {
+          "baseline": 0.573,
+          "recent": 0.574
+        },
+        "aman": {
+          "baseline": 0.697,
+          "recent": 0.698
+        }
+      }
+    },
+    "faridpur": {
+      "id": "faridpur",
+      "name": "Faridpur",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.471,
+        0.541,
+        0.581,
+        0.511,
+        0.501,
+        0.591,
+        0.681,
+        0.741,
+        0.761,
+        0.731,
+        0.651,
+        0.511
+      ],
+      "recentMonthly": [
+        0.487,
+        0.543,
+        0.567,
+        0.509,
+        0.516,
+        0.597,
+        0.668,
+        0.735,
+        0.774,
+        0.741,
+        0.64,
+        0.501
+      ],
+      "baselineAnnual": 0.606,
+      "recentAnnual": 0.606,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.523,
+          "recent": 0.524
+        },
+        "aus": {
+          "baseline": 0.605,
+          "recent": 0.606
+        },
+        "aman": {
+          "baseline": 0.713,
+          "recent": 0.714
+        }
+      }
+    },
+    "feni": {
+      "id": "feni",
+      "name": "Feni",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.47,
+        0.54,
+        0.58,
+        0.51,
+        0.5,
+        0.59,
+        0.68,
+        0.74,
+        0.76,
+        0.73,
+        0.65,
+        0.51
+      ],
+      "recentMonthly": [
+        0.486,
+        0.542,
+        0.566,
+        0.508,
+        0.515,
+        0.596,
+        0.667,
+        0.734,
+        0.773,
+        0.74,
+        0.639,
+        0.5
+      ],
+      "baselineAnnual": 0.605,
+      "recentAnnual": 0.606,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.522,
+          "recent": 0.523
+        },
+        "aus": {
+          "baseline": 0.604,
+          "recent": 0.605
+        },
+        "aman": {
+          "baseline": 0.712,
+          "recent": 0.713
+        }
+      }
+    },
+    "gaibandha": {
+      "id": "gaibandha",
+      "name": "Gaibandha",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.509,
+        0.579,
+        0.619,
+        0.549,
+        0.539,
+        0.629,
+        0.719,
+        0.779,
+        0.799,
+        0.769,
+        0.689,
+        0.549
+      ],
+      "recentMonthly": [
+        0.525,
+        0.581,
+        0.605,
+        0.547,
+        0.554,
+        0.635,
+        0.706,
+        0.773,
+        0.812,
+        0.779,
+        0.678,
+        0.539
+      ],
+      "baselineAnnual": 0.644,
+      "recentAnnual": 0.645,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.561,
+          "recent": 0.562
+        },
+        "aus": {
+          "baseline": 0.643,
+          "recent": 0.644
+        },
+        "aman": {
+          "baseline": 0.751,
+          "recent": 0.752
+        }
+      }
+    },
+    "gazipur": {
+      "id": "gazipur",
+      "name": "Gazipur",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.495,
+        0.565,
+        0.605,
+        0.535,
+        0.525,
+        0.615,
+        0.705,
+        0.765,
+        0.785,
+        0.755,
+        0.675,
+        0.535
+      ],
+      "recentMonthly": [
+        0.511,
+        0.567,
+        0.591,
+        0.533,
+        0.54,
+        0.621,
+        0.692,
+        0.759,
+        0.798,
+        0.765,
+        0.664,
+        0.525
+      ],
+      "baselineAnnual": 0.63,
+      "recentAnnual": 0.631,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.547,
+          "recent": 0.548
+        },
+        "aus": {
+          "baseline": 0.629,
+          "recent": 0.63
+        },
+        "aman": {
+          "baseline": 0.737,
+          "recent": 0.738
+        }
+      }
+    },
+    "gopalganj": {
+      "id": "gopalganj",
+      "name": "Gopalganj",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.48,
+        0.55,
+        0.59,
+        0.52,
+        0.51,
+        0.6,
+        0.69,
+        0.75,
+        0.77,
+        0.74,
+        0.66,
+        0.52
+      ],
+      "recentMonthly": [
+        0.496,
+        0.552,
+        0.576,
+        0.518,
+        0.525,
+        0.606,
+        0.677,
+        0.744,
+        0.783,
+        0.75,
+        0.649,
+        0.51
+      ],
+      "baselineAnnual": 0.615,
+      "recentAnnual": 0.616,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.532,
+          "recent": 0.533
+        },
+        "aus": {
+          "baseline": 0.614,
+          "recent": 0.615
+        },
+        "aman": {
+          "baseline": 0.722,
+          "recent": 0.723
+        }
+      }
+    },
+    "habiganj": {
+      "id": "habiganj",
+      "name": "Habiganj",
+      "division": "sylhet",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.555,
+        0.655,
+        0.735,
+        0.595,
+        0.435,
+        0.465,
+        0.535,
+        0.615,
+        0.695,
+        0.735,
+        0.715,
+        0.575
+      ],
+      "recentMonthly": [
+        0.571,
+        0.657,
+        0.721,
+        0.593,
+        0.45,
+        0.471,
+        0.522,
+        0.609,
+        0.708,
+        0.745,
+        0.704,
+        0.565
+      ],
+      "baselineAnnual": 0.609,
+      "recentAnnual": 0.61,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.623,
+          "recent": 0.624
+        },
+        "aus": {
+          "baseline": 0.529,
+          "recent": 0.53
+        },
+        "aman": {
+          "baseline": 0.659,
+          "recent": 0.66
+        }
+      }
+    },
+    "jamalpur": {
+      "id": "jamalpur",
+      "name": "Jamalpur",
+      "division": "mymensingh",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.493,
+        0.563,
+        0.603,
+        0.533,
+        0.523,
+        0.613,
+        0.703,
+        0.763,
+        0.783,
+        0.753,
+        0.673,
+        0.533
+      ],
+      "recentMonthly": [
+        0.509,
+        0.565,
+        0.589,
+        0.531,
+        0.538,
+        0.619,
+        0.69,
+        0.757,
+        0.796,
+        0.763,
+        0.662,
+        0.523
+      ],
+      "baselineAnnual": 0.628,
+      "recentAnnual": 0.629,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.545,
+          "recent": 0.546
+        },
+        "aus": {
+          "baseline": 0.627,
+          "recent": 0.628
+        },
+        "aman": {
+          "baseline": 0.735,
+          "recent": 0.736
+        }
+      }
+    },
+    "jessore": {
+      "id": "jessore",
+      "name": "Jessore",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.491,
+        0.561,
+        0.601,
+        0.531,
+        0.521,
+        0.611,
+        0.701,
+        0.761,
+        0.781,
+        0.751,
+        0.671,
+        0.531
+      ],
+      "recentMonthly": [
+        0.507,
+        0.563,
+        0.587,
+        0.529,
+        0.536,
+        0.617,
+        0.688,
+        0.755,
+        0.794,
+        0.761,
+        0.66,
+        0.521
+      ],
+      "baselineAnnual": 0.626,
+      "recentAnnual": 0.627,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.543,
+          "recent": 0.544
+        },
+        "aus": {
+          "baseline": 0.625,
+          "recent": 0.626
+        },
+        "aman": {
+          "baseline": 0.733,
+          "recent": 0.734
+        }
+      }
+    },
+    "jhalokati": {
+      "id": "jhalokati",
+      "name": "Jhalokati",
+      "division": "barisal",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.483,
+        0.553,
+        0.593,
+        0.523,
+        0.513,
+        0.603,
+        0.693,
+        0.753,
+        0.773,
+        0.743,
+        0.663,
+        0.523
+      ],
+      "recentMonthly": [
+        0.499,
+        0.555,
+        0.579,
+        0.521,
+        0.528,
+        0.609,
+        0.68,
+        0.747,
+        0.786,
+        0.753,
+        0.652,
+        0.513
+      ],
+      "baselineAnnual": 0.618,
+      "recentAnnual": 0.618,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.535,
+          "recent": 0.536
+        },
+        "aus": {
+          "baseline": 0.617,
+          "recent": 0.618
+        },
+        "aman": {
+          "baseline": 0.725,
+          "recent": 0.726
+        }
+      }
+    },
+    "jhenaidah": {
+      "id": "jhenaidah",
+      "name": "Jhenaidah",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.499,
+        0.569,
+        0.609,
+        0.539,
+        0.529,
+        0.619,
+        0.709,
+        0.769,
+        0.789,
+        0.759,
+        0.679,
+        0.539
+      ],
+      "recentMonthly": [
+        0.515,
+        0.571,
+        0.595,
+        0.537,
+        0.544,
+        0.625,
+        0.696,
+        0.763,
+        0.802,
+        0.769,
+        0.668,
+        0.529
+      ],
+      "baselineAnnual": 0.634,
+      "recentAnnual": 0.635,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.551,
+          "recent": 0.552
+        },
+        "aus": {
+          "baseline": 0.633,
+          "recent": 0.634
+        },
+        "aman": {
+          "baseline": 0.741,
+          "recent": 0.742
+        }
+      }
+    },
+    "joypurhat": {
+      "id": "joypurhat",
+      "name": "Joypurhat",
+      "division": "rajshahi",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.445,
+        0.505,
+        0.545,
+        0.465,
+        0.435,
+        0.535,
+        0.665,
+        0.725,
+        0.745,
+        0.705,
+        0.605,
+        0.475
+      ],
+      "recentMonthly": [
+        0.461,
+        0.507,
+        0.531,
+        0.463,
+        0.45,
+        0.541,
+        0.652,
+        0.719,
+        0.758,
+        0.715,
+        0.594,
+        0.465
+      ],
+      "baselineAnnual": 0.571,
+      "recentAnnual": 0.571,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.487,
+          "recent": 0.488
+        },
+        "aus": {
+          "baseline": 0.565,
+          "recent": 0.566
+        },
+        "aman": {
+          "baseline": 0.689,
+          "recent": 0.69
+        }
+      }
+    },
+    "khagrachhari": {
+      "id": "khagrachhari",
+      "name": "Khagrachhari",
+      "division": "chittagong",
+      "zone": "chittagong_hills",
+      "baselineMonthly": [
+        0.7,
+        0.68,
+        0.67,
+        0.69,
+        0.74,
+        0.8,
+        0.84,
+        0.86,
+        0.87,
+        0.85,
+        0.8,
+        0.74
+      ],
+      "recentMonthly": [
+        0.716,
+        0.682,
+        0.656,
+        0.688,
+        0.755,
+        0.806,
+        0.827,
+        0.854,
+        0.883,
+        0.86,
+        0.789,
+        0.73
+      ],
+      "baselineAnnual": 0.77,
+      "recentAnnual": 0.771,
+      "anomaly": 0.001,
+      "vigorIndex": 100.1,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.696,
+          "recent": 0.697
+        },
+        "aus": {
+          "baseline": 0.786,
+          "recent": 0.787
+        },
+        "aman": {
+          "baseline": 0.844,
+          "recent": 0.845
+        }
+      }
+    },
+    "khulna": {
+      "id": "khulna",
+      "name": "Khulna",
+      "division": "khulna",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.537,
+        0.517,
+        0.507,
+        0.527,
+        0.577,
+        0.647,
+        0.707,
+        0.737,
+        0.757,
+        0.747,
+        0.697,
+        0.597
+      ],
+      "recentMonthly": [
+        0.553,
+        0.519,
+        0.493,
+        0.525,
+        0.592,
+        0.653,
+        0.694,
+        0.731,
+        0.77,
+        0.757,
+        0.686,
+        0.587
+      ],
+      "baselineAnnual": 0.63,
+      "recentAnnual": 0.63,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.537,
+          "recent": 0.538
+        },
+        "aus": {
+          "baseline": 0.639,
+          "recent": 0.64
+        },
+        "aman": {
+          "baseline": 0.729,
+          "recent": 0.73
+        }
+      }
+    },
+    "kishoreganj": {
+      "id": "kishoreganj",
+      "name": "Kishoreganj",
+      "division": "dhaka",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.536,
+        0.636,
+        0.716,
+        0.576,
+        0.416,
+        0.446,
+        0.516,
+        0.596,
+        0.676,
+        0.716,
+        0.696,
+        0.556
+      ],
+      "recentMonthly": [
+        0.552,
+        0.638,
+        0.702,
+        0.574,
+        0.431,
+        0.452,
+        0.503,
+        0.59,
+        0.689,
+        0.726,
+        0.685,
+        0.546
+      ],
+      "baselineAnnual": 0.59,
+      "recentAnnual": 0.591,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.604,
+          "recent": 0.605
+        },
+        "aus": {
+          "baseline": 0.51,
+          "recent": 0.511
+        },
+        "aman": {
+          "baseline": 0.64,
+          "recent": 0.641
+        }
+      }
+    },
+    "kurigram": {
+      "id": "kurigram",
+      "name": "Kurigram",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.472,
+        0.542,
+        0.582,
+        0.512,
+        0.502,
+        0.592,
+        0.682,
+        0.742,
+        0.762,
+        0.732,
+        0.652,
+        0.512
+      ],
+      "recentMonthly": [
+        0.488,
+        0.544,
+        0.568,
+        0.51,
+        0.517,
+        0.598,
+        0.669,
+        0.736,
+        0.775,
+        0.742,
+        0.641,
+        0.502
+      ],
+      "baselineAnnual": 0.607,
+      "recentAnnual": 0.608,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.524,
+          "recent": 0.525
+        },
+        "aus": {
+          "baseline": 0.606,
+          "recent": 0.607
+        },
+        "aman": {
+          "baseline": 0.714,
+          "recent": 0.715
+        }
+      }
+    },
+    "kushtia": {
+      "id": "kushtia",
+      "name": "Kushtia",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.51,
+        0.58,
+        0.62,
+        0.55,
+        0.54,
+        0.63,
+        0.72,
+        0.78,
+        0.8,
+        0.77,
+        0.69,
+        0.55
+      ],
+      "recentMonthly": [
+        0.526,
+        0.582,
+        0.606,
+        0.548,
+        0.555,
+        0.636,
+        0.707,
+        0.774,
+        0.813,
+        0.78,
+        0.679,
+        0.54
+      ],
+      "baselineAnnual": 0.645,
+      "recentAnnual": 0.646,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.562,
+          "recent": 0.563
+        },
+        "aus": {
+          "baseline": 0.644,
+          "recent": 0.645
+        },
+        "aman": {
+          "baseline": 0.752,
+          "recent": 0.753
+        }
+      }
+    },
+    "lakshmipur": {
+      "id": "lakshmipur",
+      "name": "Lakshmipur",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.508,
+        0.578,
+        0.618,
+        0.548,
+        0.538,
+        0.628,
+        0.718,
+        0.778,
+        0.798,
+        0.768,
+        0.688,
+        0.548
+      ],
+      "recentMonthly": [
+        0.524,
+        0.58,
+        0.604,
+        0.546,
+        0.553,
+        0.634,
+        0.705,
+        0.772,
+        0.811,
+        0.778,
+        0.677,
+        0.538
+      ],
+      "baselineAnnual": 0.643,
+      "recentAnnual": 0.644,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.56,
+          "recent": 0.561
+        },
+        "aus": {
+          "baseline": 0.642,
+          "recent": 0.643
+        },
+        "aman": {
+          "baseline": 0.75,
+          "recent": 0.751
+        }
+      }
+    },
+    "lalmonirhat": {
+      "id": "lalmonirhat",
+      "name": "Lalmonirhat",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.493,
+        0.563,
+        0.603,
+        0.533,
+        0.523,
+        0.613,
+        0.703,
+        0.763,
+        0.783,
+        0.753,
+        0.673,
+        0.533
+      ],
+      "recentMonthly": [
+        0.509,
+        0.565,
+        0.589,
+        0.531,
+        0.538,
+        0.619,
+        0.69,
+        0.757,
+        0.796,
+        0.763,
+        0.662,
+        0.523
+      ],
+      "baselineAnnual": 0.628,
+      "recentAnnual": 0.629,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.545,
+          "recent": 0.546
+        },
+        "aus": {
+          "baseline": 0.627,
+          "recent": 0.628
+        },
+        "aman": {
+          "baseline": 0.735,
+          "recent": 0.736
+        }
+      }
+    },
+    "madaripur": {
+      "id": "madaripur",
+      "name": "Madaripur",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.472,
+        0.542,
+        0.582,
+        0.512,
+        0.502,
+        0.592,
+        0.682,
+        0.742,
+        0.762,
+        0.732,
+        0.652,
+        0.512
+      ],
+      "recentMonthly": [
+        0.488,
+        0.544,
+        0.568,
+        0.51,
+        0.517,
+        0.598,
+        0.669,
+        0.736,
+        0.775,
+        0.742,
+        0.641,
+        0.502
+      ],
+      "baselineAnnual": 0.607,
+      "recentAnnual": 0.608,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.524,
+          "recent": 0.525
+        },
+        "aus": {
+          "baseline": 0.606,
+          "recent": 0.607
+        },
+        "aman": {
+          "baseline": 0.714,
+          "recent": 0.715
+        }
+      }
+    },
+    "magura": {
+      "id": "magura",
+      "name": "Magura",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.503,
+        0.573,
+        0.613,
+        0.543,
+        0.533,
+        0.623,
+        0.713,
+        0.773,
+        0.793,
+        0.763,
+        0.683,
+        0.543
+      ],
+      "recentMonthly": [
+        0.519,
+        0.575,
+        0.599,
+        0.541,
+        0.548,
+        0.629,
+        0.7,
+        0.767,
+        0.806,
+        0.773,
+        0.672,
+        0.533
+      ],
+      "baselineAnnual": 0.638,
+      "recentAnnual": 0.639,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.555,
+          "recent": 0.556
+        },
+        "aus": {
+          "baseline": 0.637,
+          "recent": 0.638
+        },
+        "aman": {
+          "baseline": 0.745,
+          "recent": 0.746
+        }
+      }
+    },
+    "manikganj": {
+      "id": "manikganj",
+      "name": "Manikganj",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.487,
+        0.557,
+        0.597,
+        0.527,
+        0.517,
+        0.607,
+        0.697,
+        0.757,
+        0.777,
+        0.747,
+        0.667,
+        0.527
+      ],
+      "recentMonthly": [
+        0.503,
+        0.559,
+        0.583,
+        0.525,
+        0.532,
+        0.613,
+        0.684,
+        0.751,
+        0.79,
+        0.757,
+        0.656,
+        0.517
+      ],
+      "baselineAnnual": 0.622,
+      "recentAnnual": 0.622,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.539,
+          "recent": 0.54
+        },
+        "aus": {
+          "baseline": 0.621,
+          "recent": 0.622
+        },
+        "aman": {
+          "baseline": 0.729,
+          "recent": 0.73
+        }
+      }
+    },
+    "maulvibazar": {
+      "id": "maulvibazar",
+      "name": "Maulvibazar",
+      "division": "sylhet",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.525,
+        0.625,
+        0.705,
+        0.565,
+        0.405,
+        0.435,
+        0.505,
+        0.585,
+        0.665,
+        0.705,
+        0.685,
+        0.545
+      ],
+      "recentMonthly": [
+        0.541,
+        0.627,
+        0.691,
+        0.563,
+        0.42,
+        0.441,
+        0.492,
+        0.579,
+        0.678,
+        0.715,
+        0.674,
+        0.535
+      ],
+      "baselineAnnual": 0.579,
+      "recentAnnual": 0.58,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.593,
+          "recent": 0.594
+        },
+        "aus": {
+          "baseline": 0.499,
+          "recent": 0.5
+        },
+        "aman": {
+          "baseline": 0.629,
+          "recent": 0.63
+        }
+      }
+    },
+    "meherpur": {
+      "id": "meherpur",
+      "name": "Meherpur",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.485,
+        0.555,
+        0.595,
+        0.525,
+        0.515,
+        0.605,
+        0.695,
+        0.755,
+        0.775,
+        0.745,
+        0.665,
+        0.525
+      ],
+      "recentMonthly": [
+        0.501,
+        0.557,
+        0.581,
+        0.523,
+        0.53,
+        0.611,
+        0.682,
+        0.749,
+        0.788,
+        0.755,
+        0.654,
+        0.515
+      ],
+      "baselineAnnual": 0.62,
+      "recentAnnual": 0.62,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.537,
+          "recent": 0.538
+        },
+        "aus": {
+          "baseline": 0.619,
+          "recent": 0.62
+        },
+        "aman": {
+          "baseline": 0.727,
+          "recent": 0.728
+        }
+      }
+    },
+    "munshiganj": {
+      "id": "munshiganj",
+      "name": "Munshiganj",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.509,
+        0.579,
+        0.619,
+        0.549,
+        0.539,
+        0.629,
+        0.719,
+        0.779,
+        0.799,
+        0.769,
+        0.689,
+        0.549
+      ],
+      "recentMonthly": [
+        0.525,
+        0.581,
+        0.605,
+        0.547,
+        0.554,
+        0.635,
+        0.706,
+        0.773,
+        0.812,
+        0.779,
+        0.678,
+        0.539
+      ],
+      "baselineAnnual": 0.644,
+      "recentAnnual": 0.645,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.561,
+          "recent": 0.562
+        },
+        "aus": {
+          "baseline": 0.643,
+          "recent": 0.644
+        },
+        "aman": {
+          "baseline": 0.751,
+          "recent": 0.752
+        }
+      }
+    },
+    "mymensingh": {
+      "id": "mymensingh",
+      "name": "Mymensingh",
+      "division": "mymensingh",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.47,
+        0.54,
+        0.58,
+        0.51,
+        0.5,
+        0.59,
+        0.68,
+        0.74,
+        0.76,
+        0.73,
+        0.65,
+        0.51
+      ],
+      "recentMonthly": [
+        0.486,
+        0.542,
+        0.566,
+        0.508,
+        0.515,
+        0.596,
+        0.667,
+        0.734,
+        0.773,
+        0.74,
+        0.639,
+        0.5
+      ],
+      "baselineAnnual": 0.605,
+      "recentAnnual": 0.606,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.522,
+          "recent": 0.523
+        },
+        "aus": {
+          "baseline": 0.604,
+          "recent": 0.605
+        },
+        "aman": {
+          "baseline": 0.712,
+          "recent": 0.713
+        }
+      }
+    },
+    "naogaon": {
+      "id": "naogaon",
+      "name": "Naogaon",
+      "division": "rajshahi",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.458,
+        0.518,
+        0.558,
+        0.478,
+        0.448,
+        0.548,
+        0.678,
+        0.738,
+        0.758,
+        0.718,
+        0.618,
+        0.488
+      ],
+      "recentMonthly": [
+        0.474,
+        0.52,
+        0.544,
+        0.476,
+        0.463,
+        0.554,
+        0.665,
+        0.732,
+        0.771,
+        0.728,
+        0.607,
+        0.478
+      ],
+      "baselineAnnual": 0.584,
+      "recentAnnual": 0.584,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.5,
+          "recent": 0.501
+        },
+        "aus": {
+          "baseline": 0.578,
+          "recent": 0.579
+        },
+        "aman": {
+          "baseline": 0.702,
+          "recent": 0.703
+        }
+      }
+    },
+    "narail": {
+      "id": "narail",
+      "name": "Narail",
+      "division": "khulna",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.507,
+        0.577,
+        0.617,
+        0.547,
+        0.537,
+        0.627,
+        0.717,
+        0.777,
+        0.797,
+        0.767,
+        0.687,
+        0.547
+      ],
+      "recentMonthly": [
+        0.523,
+        0.579,
+        0.603,
+        0.545,
+        0.552,
+        0.633,
+        0.704,
+        0.771,
+        0.81,
+        0.777,
+        0.676,
+        0.537
+      ],
+      "baselineAnnual": 0.642,
+      "recentAnnual": 0.643,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.559,
+          "recent": 0.56
+        },
+        "aus": {
+          "baseline": 0.641,
+          "recent": 0.642
+        },
+        "aman": {
+          "baseline": 0.749,
+          "recent": 0.75
+        }
+      }
+    },
+    "narayanganj": {
+      "id": "narayanganj",
+      "name": "Narayanganj",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.501,
+        0.571,
+        0.611,
+        0.541,
+        0.531,
+        0.621,
+        0.711,
+        0.771,
+        0.791,
+        0.761,
+        0.681,
+        0.541
+      ],
+      "recentMonthly": [
+        0.517,
+        0.573,
+        0.597,
+        0.539,
+        0.546,
+        0.627,
+        0.698,
+        0.765,
+        0.804,
+        0.771,
+        0.67,
+        0.531
+      ],
+      "baselineAnnual": 0.636,
+      "recentAnnual": 0.637,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.553,
+          "recent": 0.554
+        },
+        "aus": {
+          "baseline": 0.635,
+          "recent": 0.636
+        },
+        "aman": {
+          "baseline": 0.743,
+          "recent": 0.744
+        }
+      }
+    },
+    "narsingdi": {
+      "id": "narsingdi",
+      "name": "Narsingdi",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.471,
+        0.541,
+        0.581,
+        0.511,
+        0.501,
+        0.591,
+        0.681,
+        0.741,
+        0.761,
+        0.731,
+        0.651,
+        0.511
+      ],
+      "recentMonthly": [
+        0.487,
+        0.543,
+        0.567,
+        0.509,
+        0.516,
+        0.597,
+        0.668,
+        0.735,
+        0.774,
+        0.741,
+        0.64,
+        0.501
+      ],
+      "baselineAnnual": 0.606,
+      "recentAnnual": 0.606,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.523,
+          "recent": 0.524
+        },
+        "aus": {
+          "baseline": 0.605,
+          "recent": 0.606
+        },
+        "aman": {
+          "baseline": 0.713,
+          "recent": 0.714
+        }
+      }
+    },
+    "natore": {
+      "id": "natore",
+      "name": "Natore",
+      "division": "rajshahi",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.484,
+        0.554,
+        0.594,
+        0.524,
+        0.514,
+        0.604,
+        0.694,
+        0.754,
+        0.774,
+        0.744,
+        0.664,
+        0.524
+      ],
+      "recentMonthly": [
+        0.5,
+        0.556,
+        0.58,
+        0.522,
+        0.529,
+        0.61,
+        0.681,
+        0.748,
+        0.787,
+        0.754,
+        0.653,
+        0.514
+      ],
+      "baselineAnnual": 0.619,
+      "recentAnnual": 0.62,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.536,
+          "recent": 0.537
+        },
+        "aus": {
+          "baseline": 0.618,
+          "recent": 0.619
+        },
+        "aman": {
+          "baseline": 0.726,
+          "recent": 0.727
+        }
+      }
+    },
+    "netrakona": {
+      "id": "netrakona",
+      "name": "Netrakona",
+      "division": "mymensingh",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.559,
+        0.659,
+        0.739,
+        0.599,
+        0.439,
+        0.469,
+        0.539,
+        0.619,
+        0.699,
+        0.739,
+        0.719,
+        0.579
+      ],
+      "recentMonthly": [
+        0.575,
+        0.661,
+        0.725,
+        0.597,
+        0.454,
+        0.475,
+        0.526,
+        0.613,
+        0.712,
+        0.749,
+        0.708,
+        0.569
+      ],
+      "baselineAnnual": 0.613,
+      "recentAnnual": 0.614,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.627,
+          "recent": 0.628
+        },
+        "aus": {
+          "baseline": 0.533,
+          "recent": 0.534
+        },
+        "aman": {
+          "baseline": 0.663,
+          "recent": 0.664
+        }
+      }
+    },
+    "nilphamari": {
+      "id": "nilphamari",
+      "name": "Nilphamari",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.509,
+        0.579,
+        0.619,
+        0.549,
+        0.539,
+        0.629,
+        0.719,
+        0.779,
+        0.799,
+        0.769,
+        0.689,
+        0.549
+      ],
+      "recentMonthly": [
+        0.525,
+        0.581,
+        0.605,
+        0.547,
+        0.554,
+        0.635,
+        0.706,
+        0.773,
+        0.812,
+        0.779,
+        0.678,
+        0.539
+      ],
+      "baselineAnnual": 0.644,
+      "recentAnnual": 0.645,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.561,
+          "recent": 0.562
+        },
+        "aus": {
+          "baseline": 0.643,
+          "recent": 0.644
+        },
+        "aman": {
+          "baseline": 0.751,
+          "recent": 0.752
+        }
+      }
+    },
+    "noakhali": {
+      "id": "noakhali",
+      "name": "Noakhali",
+      "division": "chittagong",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.508,
+        0.578,
+        0.618,
+        0.548,
+        0.538,
+        0.628,
+        0.718,
+        0.778,
+        0.798,
+        0.768,
+        0.688,
+        0.548
+      ],
+      "recentMonthly": [
+        0.524,
+        0.58,
+        0.604,
+        0.546,
+        0.553,
+        0.634,
+        0.705,
+        0.772,
+        0.811,
+        0.778,
+        0.677,
+        0.538
+      ],
+      "baselineAnnual": 0.643,
+      "recentAnnual": 0.644,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.56,
+          "recent": 0.561
+        },
+        "aus": {
+          "baseline": 0.642,
+          "recent": 0.643
+        },
+        "aman": {
+          "baseline": 0.75,
+          "recent": 0.751
+        }
+      }
+    },
+    "pabna": {
+      "id": "pabna",
+      "name": "Pabna",
+      "division": "rajshahi",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.477,
+        0.547,
+        0.587,
+        0.517,
+        0.507,
+        0.597,
+        0.687,
+        0.747,
+        0.767,
+        0.737,
+        0.657,
+        0.517
+      ],
+      "recentMonthly": [
+        0.493,
+        0.549,
+        0.573,
+        0.515,
+        0.522,
+        0.603,
+        0.674,
+        0.741,
+        0.78,
+        0.747,
+        0.646,
+        0.507
+      ],
+      "baselineAnnual": 0.612,
+      "recentAnnual": 0.612,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.529,
+          "recent": 0.53
+        },
+        "aus": {
+          "baseline": 0.611,
+          "recent": 0.612
+        },
+        "aman": {
+          "baseline": 0.719,
+          "recent": 0.72
+        }
+      }
+    },
+    "panchagarh": {
+      "id": "panchagarh",
+      "name": "Panchagarh",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.495,
+        0.565,
+        0.605,
+        0.535,
+        0.525,
+        0.615,
+        0.705,
+        0.765,
+        0.785,
+        0.755,
+        0.675,
+        0.535
+      ],
+      "recentMonthly": [
+        0.511,
+        0.567,
+        0.591,
+        0.533,
+        0.54,
+        0.621,
+        0.692,
+        0.759,
+        0.798,
+        0.765,
+        0.664,
+        0.525
+      ],
+      "baselineAnnual": 0.63,
+      "recentAnnual": 0.631,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.547,
+          "recent": 0.548
+        },
+        "aus": {
+          "baseline": 0.629,
+          "recent": 0.63
+        },
+        "aman": {
+          "baseline": 0.737,
+          "recent": 0.738
+        }
+      }
+    },
+    "patuakhali": {
+      "id": "patuakhali",
+      "name": "Patuakhali",
+      "division": "barisal",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.549,
+        0.529,
+        0.519,
+        0.539,
+        0.589,
+        0.659,
+        0.719,
+        0.749,
+        0.769,
+        0.759,
+        0.709,
+        0.609
+      ],
+      "recentMonthly": [
+        0.565,
+        0.531,
+        0.505,
+        0.537,
+        0.604,
+        0.665,
+        0.706,
+        0.743,
+        0.782,
+        0.769,
+        0.698,
+        0.599
+      ],
+      "baselineAnnual": 0.642,
+      "recentAnnual": 0.642,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.549,
+          "recent": 0.55
+        },
+        "aus": {
+          "baseline": 0.651,
+          "recent": 0.652
+        },
+        "aman": {
+          "baseline": 0.741,
+          "recent": 0.742
+        }
+      }
+    },
+    "pirojpur": {
+      "id": "pirojpur",
+      "name": "Pirojpur",
+      "division": "barisal",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.503,
+        0.573,
+        0.613,
+        0.543,
+        0.533,
+        0.623,
+        0.713,
+        0.773,
+        0.793,
+        0.763,
+        0.683,
+        0.543
+      ],
+      "recentMonthly": [
+        0.519,
+        0.575,
+        0.599,
+        0.541,
+        0.548,
+        0.629,
+        0.7,
+        0.767,
+        0.806,
+        0.773,
+        0.672,
+        0.533
+      ],
+      "baselineAnnual": 0.638,
+      "recentAnnual": 0.639,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.555,
+          "recent": 0.556
+        },
+        "aus": {
+          "baseline": 0.637,
+          "recent": 0.638
+        },
+        "aman": {
+          "baseline": 0.745,
+          "recent": 0.746
+        }
+      }
+    },
+    "rajbari": {
+      "id": "rajbari",
+      "name": "Rajbari",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.476,
+        0.546,
+        0.586,
+        0.516,
+        0.506,
+        0.596,
+        0.686,
+        0.746,
+        0.766,
+        0.736,
+        0.656,
+        0.516
+      ],
+      "recentMonthly": [
+        0.492,
+        0.548,
+        0.572,
+        0.514,
+        0.521,
+        0.602,
+        0.673,
+        0.74,
+        0.779,
+        0.746,
+        0.645,
+        0.506
+      ],
+      "baselineAnnual": 0.611,
+      "recentAnnual": 0.611,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.528,
+          "recent": 0.529
+        },
+        "aus": {
+          "baseline": 0.61,
+          "recent": 0.611
+        },
+        "aman": {
+          "baseline": 0.718,
+          "recent": 0.719
+        }
+      }
+    },
+    "rajshahi": {
+      "id": "rajshahi",
+      "name": "Rajshahi",
+      "division": "rajshahi",
+      "zone": "barind_tract",
+      "baselineMonthly": [
+        0.478,
+        0.538,
+        0.578,
+        0.498,
+        0.468,
+        0.568,
+        0.698,
+        0.758,
+        0.778,
+        0.738,
+        0.638,
+        0.508
+      ],
+      "recentMonthly": [
+        0.494,
+        0.54,
+        0.564,
+        0.496,
+        0.483,
+        0.574,
+        0.685,
+        0.752,
+        0.791,
+        0.748,
+        0.627,
+        0.498
+      ],
+      "baselineAnnual": 0.604,
+      "recentAnnual": 0.604,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.52,
+          "recent": 0.521
+        },
+        "aus": {
+          "baseline": 0.598,
+          "recent": 0.599
+        },
+        "aman": {
+          "baseline": 0.722,
+          "recent": 0.723
+        }
+      }
+    },
+    "rangamati": {
+      "id": "rangamati",
+      "name": "Rangamati",
+      "division": "chittagong",
+      "zone": "chittagong_hills",
+      "baselineMonthly": [
+        0.698,
+        0.678,
+        0.668,
+        0.688,
+        0.738,
+        0.798,
+        0.838,
+        0.858,
+        0.868,
+        0.848,
+        0.798,
+        0.738
+      ],
+      "recentMonthly": [
+        0.714,
+        0.68,
+        0.654,
+        0.686,
+        0.753,
+        0.804,
+        0.825,
+        0.852,
+        0.881,
+        0.858,
+        0.787,
+        0.728
+      ],
+      "baselineAnnual": 0.768,
+      "recentAnnual": 0.769,
+      "anomaly": 0.001,
+      "vigorIndex": 100.1,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.694,
+          "recent": 0.695
+        },
+        "aus": {
+          "baseline": 0.784,
+          "recent": 0.785
+        },
+        "aman": {
+          "baseline": 0.842,
+          "recent": 0.843
+        }
+      }
+    },
+    "rangpur": {
+      "id": "rangpur",
+      "name": "Rangpur",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.51,
+        0.58,
+        0.62,
+        0.55,
+        0.54,
+        0.63,
+        0.72,
+        0.78,
+        0.8,
+        0.77,
+        0.69,
+        0.55
+      ],
+      "recentMonthly": [
+        0.526,
+        0.582,
+        0.606,
+        0.548,
+        0.555,
+        0.636,
+        0.707,
+        0.774,
+        0.813,
+        0.78,
+        0.679,
+        0.54
+      ],
+      "baselineAnnual": 0.645,
+      "recentAnnual": 0.646,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.562,
+          "recent": 0.563
+        },
+        "aus": {
+          "baseline": 0.644,
+          "recent": 0.645
+        },
+        "aman": {
+          "baseline": 0.752,
+          "recent": 0.753
+        }
+      }
+    },
+    "satkhira": {
+      "id": "satkhira",
+      "name": "Satkhira",
+      "division": "khulna",
+      "zone": "coastal_mangrove",
+      "baselineMonthly": [
+        0.541,
+        0.521,
+        0.511,
+        0.531,
+        0.581,
+        0.651,
+        0.711,
+        0.741,
+        0.761,
+        0.751,
+        0.701,
+        0.601
+      ],
+      "recentMonthly": [
+        0.557,
+        0.523,
+        0.497,
+        0.529,
+        0.596,
+        0.657,
+        0.698,
+        0.735,
+        0.774,
+        0.761,
+        0.69,
+        0.591
+      ],
+      "baselineAnnual": 0.634,
+      "recentAnnual": 0.634,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.541,
+          "recent": 0.542
+        },
+        "aus": {
+          "baseline": 0.643,
+          "recent": 0.644
+        },
+        "aman": {
+          "baseline": 0.733,
+          "recent": 0.734
+        }
+      }
+    },
+    "shariatpur": {
+      "id": "shariatpur",
+      "name": "Shariatpur",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.495,
+        0.565,
+        0.605,
+        0.535,
+        0.525,
+        0.615,
+        0.705,
+        0.765,
+        0.785,
+        0.755,
+        0.675,
+        0.535
+      ],
+      "recentMonthly": [
+        0.511,
+        0.567,
+        0.591,
+        0.533,
+        0.54,
+        0.621,
+        0.692,
+        0.759,
+        0.798,
+        0.765,
+        0.664,
+        0.525
+      ],
+      "baselineAnnual": 0.63,
+      "recentAnnual": 0.631,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.547,
+          "recent": 0.548
+        },
+        "aus": {
+          "baseline": 0.629,
+          "recent": 0.63
+        },
+        "aman": {
+          "baseline": 0.737,
+          "recent": 0.738
+        }
+      }
+    },
+    "sherpur": {
+      "id": "sherpur",
+      "name": "Sherpur",
+      "division": "mymensingh",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.472,
+        0.542,
+        0.582,
+        0.512,
+        0.502,
+        0.592,
+        0.682,
+        0.742,
+        0.762,
+        0.732,
+        0.652,
+        0.512
+      ],
+      "recentMonthly": [
+        0.488,
+        0.544,
+        0.568,
+        0.51,
+        0.517,
+        0.598,
+        0.669,
+        0.736,
+        0.775,
+        0.742,
+        0.641,
+        0.502
+      ],
+      "baselineAnnual": 0.607,
+      "recentAnnual": 0.608,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.524,
+          "recent": 0.525
+        },
+        "aus": {
+          "baseline": 0.606,
+          "recent": 0.607
+        },
+        "aman": {
+          "baseline": 0.714,
+          "recent": 0.715
+        }
+      }
+    },
+    "sirajganj": {
+      "id": "sirajganj",
+      "name": "Sirajganj",
+      "division": "rajshahi",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.478,
+        0.548,
+        0.588,
+        0.518,
+        0.508,
+        0.598,
+        0.688,
+        0.748,
+        0.768,
+        0.738,
+        0.658,
+        0.518
+      ],
+      "recentMonthly": [
+        0.494,
+        0.55,
+        0.574,
+        0.516,
+        0.523,
+        0.604,
+        0.675,
+        0.742,
+        0.781,
+        0.748,
+        0.647,
+        0.508
+      ],
+      "baselineAnnual": 0.613,
+      "recentAnnual": 0.614,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.53,
+          "recent": 0.531
+        },
+        "aus": {
+          "baseline": 0.612,
+          "recent": 0.613
+        },
+        "aman": {
+          "baseline": 0.72,
+          "recent": 0.721
+        }
+      }
+    },
+    "sunamganj": {
+      "id": "sunamganj",
+      "name": "Sunamganj",
+      "division": "sylhet",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.532,
+        0.632,
+        0.712,
+        0.572,
+        0.412,
+        0.442,
+        0.512,
+        0.592,
+        0.672,
+        0.712,
+        0.692,
+        0.552
+      ],
+      "recentMonthly": [
+        0.548,
+        0.634,
+        0.698,
+        0.57,
+        0.427,
+        0.448,
+        0.499,
+        0.586,
+        0.685,
+        0.722,
+        0.681,
+        0.542
+      ],
+      "baselineAnnual": 0.586,
+      "recentAnnual": 0.587,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.6,
+          "recent": 0.601
+        },
+        "aus": {
+          "baseline": 0.506,
+          "recent": 0.507
+        },
+        "aman": {
+          "baseline": 0.636,
+          "recent": 0.637
+        }
+      }
+    },
+    "sylhet": {
+      "id": "sylhet",
+      "name": "Sylhet",
+      "division": "sylhet",
+      "zone": "haor_wetland",
+      "baselineMonthly": [
+        0.556,
+        0.656,
+        0.736,
+        0.596,
+        0.436,
+        0.466,
+        0.536,
+        0.616,
+        0.696,
+        0.736,
+        0.716,
+        0.576
+      ],
+      "recentMonthly": [
+        0.572,
+        0.658,
+        0.722,
+        0.594,
+        0.451,
+        0.472,
+        0.523,
+        0.61,
+        0.709,
+        0.746,
+        0.705,
+        0.566
+      ],
+      "baselineAnnual": 0.61,
+      "recentAnnual": 0.611,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.624,
+          "recent": 0.625
+        },
+        "aus": {
+          "baseline": 0.53,
+          "recent": 0.531
+        },
+        "aman": {
+          "baseline": 0.66,
+          "recent": 0.661
+        }
+      }
+    },
+    "tangail": {
+      "id": "tangail",
+      "name": "Tangail",
+      "division": "dhaka",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.51,
+        0.58,
+        0.62,
+        0.55,
+        0.54,
+        0.63,
+        0.72,
+        0.78,
+        0.8,
+        0.77,
+        0.69,
+        0.55
+      ],
+      "recentMonthly": [
+        0.526,
+        0.582,
+        0.606,
+        0.548,
+        0.555,
+        0.636,
+        0.707,
+        0.774,
+        0.813,
+        0.78,
+        0.679,
+        0.54
+      ],
+      "baselineAnnual": 0.645,
+      "recentAnnual": 0.646,
+      "anomaly": 0.001,
+      "vigorIndex": 100.2,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.562,
+          "recent": 0.563
+        },
+        "aus": {
+          "baseline": 0.644,
+          "recent": 0.645
+        },
+        "aman": {
+          "baseline": 0.752,
+          "recent": 0.753
+        }
+      }
+    },
+    "thakurgaon": {
+      "id": "thakurgaon",
+      "name": "Thakurgaon",
+      "division": "rangpur",
+      "zone": "floodplain",
+      "baselineMonthly": [
+        0.471,
+        0.541,
+        0.581,
+        0.511,
+        0.501,
+        0.591,
+        0.681,
+        0.741,
+        0.761,
+        0.731,
+        0.651,
+        0.511
+      ],
+      "recentMonthly": [
+        0.487,
+        0.543,
+        0.567,
+        0.509,
+        0.516,
+        0.597,
+        0.668,
+        0.735,
+        0.774,
+        0.741,
+        0.64,
+        0.501
+      ],
+      "baselineAnnual": 0.606,
+      "recentAnnual": 0.606,
+      "anomaly": 0,
+      "vigorIndex": 100,
+      "status": "normal",
+      "seasons": {
+        "boro": {
+          "baseline": 0.523,
+          "recent": 0.524
+        },
+        "aus": {
+          "baseline": 0.605,
+          "recent": 0.606
+        },
+        "aman": {
+          "baseline": 0.713,
+          "recent": 0.714
+        }
+      }
+    }
+  }
+}

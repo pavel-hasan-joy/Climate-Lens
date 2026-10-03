@@ -146,7 +146,9 @@ export default function MapNav({ map, ready, playing }: MapNavProps) {
           {t('mapNav.move')}
         </button>
         <button
+          type="button"
           className={mode === 'rotate' ? 'on' : ''}
+          aria-pressed={mode === 'rotate'}
           onClick={() => setMode('rotate')}
           title={t('mapNav.dragToRotate')}
         >
@@ -159,12 +161,17 @@ export default function MapNav({ map, ready, playing }: MapNavProps) {
       </div>
 
       <div className="nav-group">
-        <button onClick={() => map?.zoomIn()} title={t('mapNav.zoomIn')} aria-label={t('mapNav.zoomIn')}>
+        <button type="button" onClick={() => map?.zoomIn()} title={t('mapNav.zoomIn')} aria-label={t('mapNav.zoomIn')}>
           <svg viewBox="0 0 24 24">
             <path d="M12 5v14M5 12h14" />
           </svg>
         </button>
-        <button onClick={() => map?.zoomOut()} title={t('mapNav.zoomOut')} aria-label={t('mapNav.zoomOut')}>
+        <button
+          type="button"
+          onClick={() => map?.zoomOut()}
+          title={t('mapNav.zoomOut')}
+          aria-label={t('mapNav.zoomOut')}
+        >
           <svg viewBox="0 0 24 24">
             <path d="M5 12h14" />
           </svg>
@@ -172,13 +179,19 @@ export default function MapNav({ map, ready, playing }: MapNavProps) {
       </div>
 
       <div className="nav-group">
-        <button onClick={() => rotateBy(-45)} title={t('mapNav.rotateLeft')} aria-label={t('mapNav.rotateLeft')}>
+        <button
+          type="button"
+          onClick={() => rotateBy(-45)}
+          title={t('mapNav.rotateLeft')}
+          aria-label={t('mapNav.rotateLeft')}
+        >
           <svg viewBox="0 0 24 24">
             <path d="M4 12a8 8 0 1 0 2.3-5.7" />
             <path d="M4 4v4h4" />
           </svg>
         </button>
         <button
+          type="button"
           className="compass"
           onClick={() => {
             if (!map) return;
@@ -193,7 +206,12 @@ export default function MapNav({ map, ready, playing }: MapNavProps) {
             <path className="south" d="M12 21l-3.5-9h7z" />
           </svg>
         </button>
-        <button onClick={() => rotateBy(45)} title={t('mapNav.rotateRight')} aria-label={t('mapNav.rotateRight')}>
+        <button
+          type="button"
+          onClick={() => rotateBy(45)}
+          title={t('mapNav.rotateRight')}
+          aria-label={t('mapNav.rotateRight')}
+        >
           <svg viewBox="0 0 24 24">
             <path d="M20 12a8 8 0 1 1-2.3-5.7" />
             <path d="M20 4v4h-4" />
@@ -202,7 +220,9 @@ export default function MapNav({ map, ready, playing }: MapNavProps) {
       </div>
 
       <button
+        type="button"
         className={'nav-spin' + (spinning ? ' on' : '')}
+        aria-pressed={spinning}
         onClick={() => setSpinning((s) => !s)}
         disabled={playing}
         title={t('mapNav.spin')}

@@ -37,10 +37,18 @@ export default function MetricTabs({ value, onChange, isAnomaly = false, onToggl
   const { t } = useTranslation();
 
   return (
-    <nav className="metrics">
-      <div className="metric-buttons">
+    <nav className="metrics" aria-label="Climate Metrics">
+      <div className="metric-buttons" role="tablist" aria-label="Select Climate Metric">
         {METRICS.map((m) => (
-          <button key={m.id} className={m.id === value ? 'on' : ''} onClick={() => onChange(m.id)} title={m.about}>
+          <button
+            key={m.id}
+            type="button"
+            role="tab"
+            aria-selected={m.id === value}
+            className={m.id === value ? 'on' : ''}
+            onClick={() => onChange(m.id)}
+            title={m.about}
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               {ICON[m.id]}
             </svg>
@@ -50,7 +58,9 @@ export default function MetricTabs({ value, onChange, isAnomaly = false, onToggl
       </div>
       <div className="anomaly-divider" />
       <button
+        type="button"
         className={'anomaly-mode-btn' + (isAnomaly ? ' on' : '')}
+        aria-pressed={isAnomaly}
         onClick={onToggleAnomaly}
         title={t('metrics.anomalyTooltip')}
       >

@@ -30,12 +30,14 @@ export default function MapControls({
   const metricLabel = t(`metrics.${metric}.label`);
 
   return (
-    <div className="map-controls">
+    <div className="map-controls" role="region" aria-label="Map Visual Controls and Legend">
       <div className={'legend' + (isAnomaly ? ' anomaly-legend' : '')}>
         <div className="legend-header">
           <span className="legend-title">{isAnomaly ? `${metricLabel} (${t('metrics.anomaly')})` : metricLabel}</span>
           <button
+            type="button"
             className={'anomaly-pill' + (isAnomaly ? ' on' : '')}
+            aria-pressed={isAnomaly}
             onClick={onToggleAnomaly}
             title={
               isAnomaly
@@ -73,14 +75,23 @@ export default function MapControls({
         </span>
       </div>
 
-      <div className="layers">
+      <div className="layers" role="group" aria-label="Map Basemap and Layers">
         {BASEMAPS.map((b) => (
-          <button key={b.id} className={b.id === basemap ? 'on' : ''} onClick={() => onBasemap(b.id)} title={b.note}>
+          <button
+            key={b.id}
+            type="button"
+            className={b.id === basemap ? 'on' : ''}
+            aria-pressed={b.id === basemap}
+            onClick={() => onBasemap(b.id)}
+            title={b.note}
+          >
             {t(`controls.${b.id}`)}
           </button>
         ))}
         <button
+          type="button"
           className={'rain' + (showRain ? ' on' : '')}
+          aria-pressed={showRain}
           onClick={() => onRain(!showRain)}
           title={`NASA GPM IMERG · ${RAIN_DATE}`}
         >

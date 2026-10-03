@@ -18,6 +18,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import * as turf from '@turf/turf';
 import { generateCmip6 } from './build-cmip6.mjs';
+import { generatePopulation } from './build-population.mjs';
+import { generateNdvi } from './build-ndvi.mjs';
+import { runAllAnalyses } from './analyze-all.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const RAW = path.join(ROOT, 'data-raw');
@@ -195,6 +198,9 @@ async function main() {
   console.log('Climate snapshot written.');
 
   await generateCmip6();
+  await generatePopulation();
+  await generateNdvi();
+  await runAllAnalyses();
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

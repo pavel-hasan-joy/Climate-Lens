@@ -8,27 +8,45 @@
  */
 import climateRaw from '../data/climate.json';
 import cmip6Raw from '../data/cmip6.json';
+import validationRaw from '../data/validation.json';
 import districtsGeoRaw from '../data/districts.geo.json';
 import divisionsGeoRaw from '../data/divisions.geo.json';
+import populationRaw from '../data/population.json';
+import ndviRaw from '../data/ndvi.json';
+import impactsRaw from '../data/impacts.json';
+import wildlifeRaw from '../data/wildlife.json';
 import { FUTURE_YEAR, LAST_PROJECTED_YEAR, METRICS, PAST_YEARS } from './constants';
 import type {
   ClimateData,
   Cmip6Data,
   Cmip6Result,
+  DistrictNdvi,
   DistrictProperties,
   DistrictStats,
   DivisionProperties,
   DomainRange,
+  ExposedDistrictInfo,
   ExtremeIndicatorsResult,
+  ImpactDataset,
   MannKendallResult,
   MetricId,
+  NdviDataset,
+  PopulationDataset,
+  PopulationExposureSummary,
   ScenarioId,
   TimeId,
   TrendResult,
+  ValidationData,
+  WildlifeDataset,
 } from './types';
 
 export const climate = climateRaw as unknown as ClimateData;
 export const cmip6 = cmip6Raw as unknown as Cmip6Data;
+export const validation = validationRaw as unknown as ValidationData;
+export const population = populationRaw as unknown as PopulationDataset;
+export const ndvi = ndviRaw as unknown as NdviDataset;
+export const impacts = impactsRaw as unknown as ImpactDataset;
+export const wildlife = wildlifeRaw as unknown as WildlifeDataset;
 export const districtsGeo = districtsGeoRaw as unknown as {
   type: string;
   features: Array<{ type: string; properties: DistrictProperties; geometry: unknown }>;
@@ -495,3 +513,105 @@ export const idsOf = (divisionId?: string | null): string[] =>
 
 export const latestDaily: string = climate.districts[districts[0].id].daily.dates.at(-1)!;
 export const nowWindow: string[] = climate.districts[districts[0].id].recent.months;
+
+/**
+ * Calculates human exposure metrics combining NASA SEDAC GPWv4 / BBS 2022 population
+ * with Mann-Kendall statistical trend detection:
+ *
+ * Criterion for Impact:
+ * 1. Significant Warming: Mann-Kendall p < 0.05 AND Sen's slope > 0 on T2M_MAX ('heat')
+ * 2. Significant Drying: Mann-Kendall p < 0.05 AND Sen's slope < 0 on PRECTOTCORR ('rain') OR GWETROOT ('wet')
+ */
+export function calculatePopulationExposure(
+  districtStatsMap: Record<string, Record<MetricId, DistrictStats>> = stats,
+  populationData: PopulationDataset = population,
+): PopulationExposureSummary {
+  const exposedDistricts: ExposedDistrictInfo[] = [];
+  let exposedWarmingPop = 0;
+  let exposedDryingPop = 0;
+  let exposedWarmingOrDryingPop = 0;
+  let exposedWarmingOrDryingCount = 0;
+  let exposedWettingPop = 0;
+  let exposedWettingCount = 0;
+  let exposedPopTotal = 0;
+
+  for (const [id, popRecord] of Object.entries(populationData.districts)) {
+    const dStats = districtStatsMap[id];
+    if (!dStats) continue;
+
+    // Significant warming: heat metric has p < 0.05 and slope > 0
+    const heatStat = dStats.heat;
+    const isWarming = Boolean(heatStat && heatStat.mk?.significant && heatStat.slope > 0);
+
+    // Significant drying: rain has p < 0.05 & slope < 0 OR wet has p < 0.05 & slope < 0
+    const rainStat = dStats.rain;
+    const wetStat = dStats.wet;
+    const isDryingRain = Boolean(rainStat && rainStat.mk?.significant && rainStat.slope < 0);
+    const isDryingWet = Boolean(wetStat && wetStat.mk?.significant && wetStat.slope < 0);
+    const isDrying = isDryingRain || isDryingWet;
+
+    // Significant wetting (monsoon intensification / flood hazard): rain or wet p < 0.05 & slope > 0
+    const isWettingRain = Boolean(rainStat && rainStat.mk?.significant && rainStat.slope > 0);
+    const isWettingWet = Boolean(wetStat && wetStat.mk?.significant && wetStat.slope > 0);
+    const isWetting = isWettingRain || isWettingWet;
+
+    const hasWarmingOrDrying = isWarming || isDrying;
+    const hasSignificantTrend = isWarming || isDrying || isWetting;
+
+    if (isWarming) exposedWarmingPop += popRecord.population;
+    if (isDrying) exposedDryingPop += popRecord.population;
+    if (hasWarmingOrDrying) {
+      exposedWarmingOrDryingPop += popRecord.population;
+      exposedWarmingOrDryingCount++;
+    }
+    if (isWetting) {
+      exposedWettingPop += popRecord.population;
+      exposedWettingCount++;
+    }
+
+    if (hasSignificantTrend) {
+      exposedPopTotal += popRecord.population;
+      exposedDistricts.push({
+        id,
+        name: popRecord.name,
+        division: popRecord.division,
+        population: popRecord.population,
+        pctNational: popRecord.pctNational,
+        warming: isWarming,
+        drying: isDrying,
+        wetting: isWetting,
+        hasSignificantTrend: true,
+        tempSlopePerDecade: heatStat?.slope != null ? Math.round(heatStat.slope * 10 * 100) / 100 : undefined,
+        rainSlopePerDecade: rainStat?.slope != null ? Math.round(rainStat.slope * 10 * 10) / 10 : undefined,
+        wetSlopePerDecade: wetStat?.slope != null ? Math.round(wetStat.slope * 10 * 1000) / 1000 : undefined,
+      });
+    }
+  }
+
+  // Sort descending by population
+  exposedDistricts.sort((a, b) => b.population - a.population);
+
+  const totalNational = populationData.totalPopulation || 164915484;
+  return {
+    totalNationalPop: totalNational,
+    exposedWarmingOrDryingPop,
+    exposedWarmingOrDryingPct: Math.round((exposedWarmingOrDryingPop / totalNational) * 1000) / 10,
+    exposedWarmingOrDryingCount,
+    exposedWarmingPop,
+    exposedWarmingPct: Math.round((exposedWarmingPop / totalNational) * 1000) / 10,
+    exposedDryingPop,
+    exposedDryingPct: Math.round((exposedDryingPop / totalNational) * 1000) / 10,
+    exposedWettingPop,
+    exposedWettingPct: Math.round((exposedWettingPop / totalNational) * 1000) / 10,
+    exposedWettingCount,
+    exposedPopTotal,
+    exposedPctTotal: Math.round((exposedPopTotal / totalNational) * 1000) / 10,
+    exposedDistrictsCount: exposedDistricts.length,
+    totalDistrictsCount: Object.keys(populationData.districts).length,
+    exposedDistricts,
+  };
+}
+
+export function getDistrictNdvi(districtId: string): DistrictNdvi | null {
+  return ndvi.districts[districtId] || null;
+}

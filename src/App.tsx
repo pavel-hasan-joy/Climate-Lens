@@ -7,6 +7,12 @@ import Timeline from './components/Timeline';
 import DetailPanel from './components/DetailPanel';
 import MapControls from './components/MapControls';
 import Stamp from './components/Stamp';
+import AboutModal from './components/AboutModal';
+import ValidationModal from './components/ValidationModal';
+import WildlifeGallery from './components/WildlifeGallery';
+import DataMethodsModal from './components/DataMethodsModal';
+import SpeciesRecordsModal from './components/SpeciesRecordsModal';
+import ErrorBoundary from './components/ErrorBoundary';
 import { LAST_PROJECTED_YEAR, PAST_YEARS } from './lib/constants';
 import { districts, domainFor, idsOf, latestDaily } from './lib/metrics';
 import { yyyymmdd } from './lib/format';
@@ -28,11 +34,27 @@ export default function App() {
   const [showRain, setShowRain] = useState(false);
   const [isAnomaly, setIsAnomaly] = useState(initial.isAnomaly);
   const [scenario, setScenario] = useState<ScenarioId>(initial.scenario);
+  const [showAbout, setShowAbout] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return !localStorage.getItem('climate-lens-about-seen');
+  });
+  const [showValidation, setShowValidation] = useState(false);
+  const [showWildlife, setShowWildlife] = useState(false);
+  const [showDataMethods, setShowDataMethods] = useState(false);
+  const [showSpeciesRecords, setShowSpeciesRecords] = useState(false);
+  const [selectedHazardCoords, setSelectedHazardCoords] = useState<[number, number] | null>(null);
+
+  // Restore language from URL if explicitly present in query params
+  useEffect(() => {
+    if (initial.lang && initial.lang !== lang) {
+      setLang(initial.lang);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Sync state to URL query string whenever state changes
   useEffect(() => {
-    syncUrlState({ divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario });
-  }, [divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario]);
+    syncUrlState({ divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, lang });
+  }, [divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, lang]);
 
   // Support browser Back/Forward navigation
   useEffect(() => {
@@ -46,10 +68,13 @@ export default function App() {
       setYear(s.year);
       setIsAnomaly(s.isAnomaly);
       setScenario(s.scenario);
+      if (s.lang && s.lang !== lang) {
+        setLang(s.lang);
+      }
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [lang, setLang]);
 
   const selectDivision = (id: string | null) => {
     setDivisionId(id);
@@ -110,40 +135,92 @@ export default function App() {
         'app' + (playing ? ' playing' : '') + (isAnomaly ? ' anomaly-active' : '') + (lang === 'bn' ? ' lang-bn' : '')
       }
     >
-      <ClimateMap
-        divisionId={divisionId}
-        districtId={districtId}
-        compareId={compareId}
-        metric={metric}
-        time={time}
-        year={year}
-        playing={playing}
-        domain={domain}
-        basemap={basemap}
-        showRain={showRain}
-        isAnomaly={isAnomaly}
-        scenario={scenario}
-        onSelectDistrict={selectDistrict}
-      />
+      <ErrorBoundary fallbackTitle="Map Rendering Error">
+        <ClimateMap
+          divisionId={divisionId}
+          districtId={districtId}
+          compareId={compareId}
+          metric={metric}
+          time={time}
+          year={year}
+          playing={playing}
+          domain={domain}
+          basemap={basemap}
+          showRain={showRain}
+          isAnomaly={isAnomaly}
+          scenario={scenario}
+          selectedHazardCoords={selectedHazardCoords}
+          onSelectDistrict={selectDistrict}
+        />
+      </ErrorBoundary>
       <div className="map-shade" />
 
       <aside className="panel left">
         <header className="brand">
-          <div className="brand-main">
-            <div className="logo">
-              <span />
+          <div className="brand-top-row">
+            <div className="brand-main">
+              <div className="logo">
+                <span />
+              </div>
+              <div className="brand-titles">
+                <h1>{t('app.title')}</h1>
+                <p>{t('app.subtitle', { date: yyyymmdd(latestDaily, lang) })}</p>
+              </div>
             </div>
-            <div>
-              <h1>{t('app.title')}</h1>
-              <p>{t('app.subtitle', { date: yyyymmdd(latestDaily, lang) })}</p>
+            <div className="lang-switcher" title={t('app.switchLang')}>
+              <button type="button" className={'lang-btn' + (lang === 'en' ? ' on' : '')} onClick={() => setLang('en')}>
+                EN
+              </button>
+              <button type="button" className={'lang-btn' + (lang === 'bn' ? ' on' : '')} onClick={() => setLang('bn')}>
+                বাং
+              </button>
             </div>
           </div>
-          <div className="lang-switcher" title={t('app.switchLang')}>
-            <button type="button" className={'lang-btn' + (lang === 'en' ? ' on' : '')} onClick={() => setLang('en')}>
-              EN
+          <div className="brand-actions">
+            <button
+              type="button"
+              className="help-btn"
+              title={lang === 'bn' ? 'প্রজাতি পর্যবেক্ষণ রেকর্ড (GBIF)' : 'Species Occurrence Records (GBIF)'}
+              aria-label={lang === 'bn' ? 'প্রজাতি রেকর্ড' : 'Species Records'}
+              onClick={() => setShowSpeciesRecords(true)}
+            >
+              🐾
             </button>
-            <button type="button" className={'lang-btn' + (lang === 'bn' ? ' on' : '')} onClick={() => setLang('bn')}>
-              বাং
+            <button
+              type="button"
+              className="help-btn"
+              title={lang === 'bn' ? 'তথ্য ও গবেষণা পদ্ধতি (Data & Methods)' : 'Data & Analytical Methods'}
+              aria-label={lang === 'bn' ? 'তথ্য ও পদ্ধতি' : 'Data & Methods'}
+              onClick={() => setShowDataMethods(true)}
+            >
+              📊
+            </button>
+            <button
+              type="button"
+              className="help-btn"
+              title={t('wildlifeGallery.btnTitle')}
+              aria-label={t('wildlifeGallery.btnTitle')}
+              onClick={() => setShowWildlife(true)}
+            >
+              🐅
+            </button>
+            <button
+              type="button"
+              className="help-btn"
+              title={t('validationModal.btnTitle')}
+              aria-label={t('validationModal.btnTitle')}
+              onClick={() => setShowValidation(true)}
+            >
+              🔬
+            </button>
+            <button
+              type="button"
+              className="help-btn"
+              title={t('aboutModal.btnTitle')}
+              aria-label={t('aboutModal.btnTitle')}
+              onClick={() => setShowAbout(true)}
+            >
+              ?
             </button>
           </div>
         </header>
@@ -177,20 +254,25 @@ export default function App() {
       <MetricTabs value={metric} onChange={setMetric} isAnomaly={isAnomaly} onToggleAnomaly={toggleAnomaly} />
       <Stamp time={time} year={year} isAnomaly={isAnomaly} scenario={scenario} />
 
-      <DetailPanel
-        ids={ids}
-        districtId={districtId}
-        divisionId={divisionId}
-        compareId={compareId}
-        metric={metric}
-        time={time}
-        year={year}
-        isAnomaly={isAnomaly}
-        scenario={scenario}
-        onTime={selectTime}
-        onScenario={setScenario}
-        onCompareDistrict={setCompareId}
-      />
+      <ErrorBoundary fallbackTitle="District Detail Error">
+        <DetailPanel
+          ids={ids}
+          districtId={districtId}
+          divisionId={divisionId}
+          compareId={compareId}
+          metric={metric}
+          time={time}
+          year={year}
+          isAnomaly={isAnomaly}
+          scenario={scenario}
+          onTime={selectTime}
+          onScenario={setScenario}
+          onCompareDistrict={setCompareId}
+          onOpenValidation={() => setShowValidation(true)}
+          onOpenWildlife={() => setShowWildlife(true)}
+          onSelectHazardEvent={(ev) => ev?.coordinates && setSelectedHazardCoords(ev.coordinates)}
+        />
+      </ErrorBoundary>
 
       <Timeline time={time} year={year} playing={playing} onTime={selectTime} onTogglePlay={togglePlay} />
       <MapControls
@@ -203,6 +285,30 @@ export default function App() {
         onBasemap={setBasemap}
         onRain={setShowRain}
       />
+      <AboutModal
+        isOpen={showAbout}
+        onClose={() => setShowAbout(false)}
+        onExploreDistrict={(distId) => {
+          selectDistrict(distId);
+          setMetric('heat');
+        }}
+      />
+      <ValidationModal
+        isOpen={showValidation}
+        onClose={() => setShowValidation(false)}
+        initialDistrictId={districtId}
+      />
+      <WildlifeGallery
+        isOpen={showWildlife}
+        onClose={() => setShowWildlife(false)}
+        onOpenSpeciesRecords={() => setShowSpeciesRecords(true)}
+      />
+      <ErrorBoundary fallbackTitle="Data & Methods Error">
+        <DataMethodsModal isOpen={showDataMethods} onClose={() => setShowDataMethods(false)} />
+      </ErrorBoundary>
+      <ErrorBoundary fallbackTitle="Species Records Error">
+        <SpeciesRecordsModal isOpen={showSpeciesRecords} onClose={() => setShowSpeciesRecords(false)} />
+      </ErrorBoundary>
     </div>
   );
 }

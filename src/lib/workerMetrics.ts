@@ -1,5 +1,42 @@
 import { mannKendall, theilSen } from './metrics';
+import { analyzeDistrictPayload } from '../workers/metrics.worker';
 import type { MannKendallResult, TrendResult } from './types';
+
+export interface DistrictMetricAnalysis {
+  series: number[];
+  slopePerYear: number;
+  slopePerDecade: number;
+  intercept: number;
+  mannKendall: {
+    s: number;
+    z: number;
+    p: number;
+    significant: boolean;
+    trend: 'increasing' | 'decreasing' | 'no_trend';
+  };
+  baselineMean: number;
+  latestAnomaly: number;
+  latestPctAnomaly: number;
+  latestPercentile: number;
+}
+
+export interface DistrictAnalysisResult {
+  metrics: {
+    monsoon: DistrictMetricAnalysis;
+    rain: DistrictMetricAnalysis;
+    heat: DistrictMetricAnalysis;
+    wet: DistrictMetricAnalysis;
+  };
+  extremes: {
+    heatwaveDays36C: number;
+    heatwaveDays38C: number;
+    heavyRainDays50mm: number;
+    longestDrySpellDays: number;
+    maxDailyRainMm: number;
+    maxRecordedTmaxC: number;
+    totalRainMm: number;
+  };
+}
 
 let worker: Worker | null = null;
 let reqCounter = 0;
@@ -67,4 +104,27 @@ export async function computeTheilSenAsync(xs: number[], ys: number[]): Promise<
     ...res,
     at: (x: number) => res.intercept + res.slope * x,
   }));
+}
+
+/**
+ * Computes full district statistical trends, baseline anomalies, and extremes
+ * in a Web Worker, with synchronous fallback.
+ */
+export async function analyzeDistrictAsync(payload: {
+  years: number[];
+  monthly: { rain: number[][]; tmax: number[][]; wet: number[][] };
+  daily?: { dates: string[]; rain: number[]; tmax: number[] };
+  baselineStart?: number;
+  baselineEnd?: number;
+}): Promise<DistrictAnalysisResult> {
+  const w = getWorker();
+  if (!w) {
+    return analyzeDistrictPayload(payload) as unknown as DistrictAnalysisResult;
+  }
+
+  const id = ++reqCounter;
+  return new Promise((resolve, reject) => {
+    pending.set(id, { resolve, reject });
+    w.postMessage({ id, type: 'ANALYZE_DISTRICT', payload });
+  });
 }

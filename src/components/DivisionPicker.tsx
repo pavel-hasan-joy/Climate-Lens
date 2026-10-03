@@ -65,12 +65,15 @@ export default function DivisionPicker({
   const tiles = [{ id: null, name: t('app.country') }, ...divisions];
 
   return (
-    <div className="divisions">
+    <div className="divisions" role="group" aria-label={t('nav.region')}>
       {tiles.map((tile, i) => (
         <button
           key={tile.id ?? 'all'}
+          type="button"
           className={'division' + (tile.id === value ? ' on' : '')}
           style={{ animationDelay: `${i * 35}ms` }}
+          aria-pressed={tile.id === value}
+          aria-label={tile.id ? getDivisionName(tile.id) : t('app.country')}
           onClick={() => onChange(tile.id)}
         >
           <svg viewBox={`0 0 ${W} ${H}`} aria-hidden="true">

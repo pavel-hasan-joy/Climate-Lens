@@ -1,0 +1,650 @@
+{
+  "source": "NASA SEDAC Gridded Population of the World (GPWv4.11) & BBS 2022 Census",
+  "citation": "Center for International Earth Science Information Network - CIESIN - Columbia University. 2018. Gridded Population of the World, Version 4 (GPWv4): Population Count & Density Adjusted to Match 2022 BBS National Census.",
+  "censusYear": 2022,
+  "totalPopulation": 164915484,
+  "totalAreaSqKm": 148237,
+  "nationalDensity": 1113,
+  "districts": {
+    "bagerhat": {
+      "id": "bagerhat",
+      "name": "Bagerhat",
+      "division": "khulna",
+      "population": 1613079,
+      "areaSqKm": 3959.1,
+      "density": 407,
+      "pctNational": 0.98,
+      "urbanPct": 18.2
+    },
+    "bandarban": {
+      "id": "bandarban",
+      "name": "Bandarban",
+      "division": "chittagong",
+      "population": 481109,
+      "areaSqKm": 4479,
+      "density": 107,
+      "pctNational": 0.29,
+      "urbanPct": 29.8
+    },
+    "barguna": {
+      "id": "barguna",
+      "name": "Barguna",
+      "division": "barisal",
+      "population": 1010530,
+      "areaSqKm": 1831.3,
+      "density": 552,
+      "pctNational": 0.61,
+      "urbanPct": 16.5
+    },
+    "barisal": {
+      "id": "barisal",
+      "name": "Barisal",
+      "division": "barisal",
+      "population": 2570450,
+      "areaSqKm": 2784.5,
+      "density": 923,
+      "pctNational": 1.56,
+      "urbanPct": 25.4
+    },
+    "bhola": {
+      "id": "bhola",
+      "name": "Bhola",
+      "division": "barisal",
+      "population": 1932514,
+      "areaSqKm": 3403.5,
+      "density": 568,
+      "pctNational": 1.17,
+      "urbanPct": 15.8
+    },
+    "bogra": {
+      "id": "bogra",
+      "name": "Bogra",
+      "division": "rajshahi",
+      "population": 3734300,
+      "areaSqKm": 2898.7,
+      "density": 1288,
+      "pctNational": 2.26,
+      "urbanPct": 23.6
+    },
+    "brahmanbaria": {
+      "id": "brahmanbaria",
+      "name": "Brahmanbaria",
+      "division": "chittagong",
+      "population": 3306559,
+      "areaSqKm": 1881.2,
+      "density": 1758,
+      "pctNational": 2.01,
+      "urbanPct": 21
+    },
+    "chandpur": {
+      "id": "chandpur",
+      "name": "Chandpur",
+      "division": "chittagong",
+      "population": 2635748,
+      "areaSqKm": 1645.3,
+      "density": 1602,
+      "pctNational": 1.6,
+      "urbanPct": 22.4
+    },
+    "chapai-nawabganj": {
+      "id": "chapai-nawabganj",
+      "name": "Chapai Nawabganj",
+      "division": "rajshahi",
+      "population": 1835528,
+      "areaSqKm": 1702.6,
+      "density": 1078,
+      "pctNational": 1.11,
+      "urbanPct": 26.2
+    },
+    "chittagong": {
+      "id": "chittagong",
+      "name": "Chittagong",
+      "division": "chittagong",
+      "population": 9169464,
+      "areaSqKm": 5282.9,
+      "density": 1736,
+      "pctNational": 5.56,
+      "urbanPct": 54.8
+    },
+    "chuadanga": {
+      "id": "chuadanga",
+      "name": "Chuadanga",
+      "division": "khulna",
+      "population": 1234054,
+      "areaSqKm": 1170.9,
+      "density": 1054,
+      "pctNational": 0.75,
+      "urbanPct": 24.1
+    },
+    "comilla": {
+      "id": "comilla",
+      "name": "Comilla",
+      "division": "chittagong",
+      "population": 6212216,
+      "areaSqKm": 3146.3,
+      "density": 1974,
+      "pctNational": 3.77,
+      "urbanPct": 26.5
+    },
+    "cox-s-bazar": {
+      "id": "cox-s-bazar",
+      "name": "Cox's Bazar",
+      "division": "chittagong",
+      "population": 2823265,
+      "areaSqKm": 2491.9,
+      "density": 1133,
+      "pctNational": 1.71,
+      "urbanPct": 28.1
+    },
+    "dhaka": {
+      "id": "dhaka",
+      "name": "Dhaka",
+      "division": "dhaka",
+      "population": 14734025,
+      "areaSqKm": 1463.6,
+      "density": 10067,
+      "pctNational": 8.93,
+      "urbanPct": 92.4
+    },
+    "dinajpur": {
+      "id": "dinajpur",
+      "name": "Dinajpur",
+      "division": "rangpur",
+      "population": 3315238,
+      "areaSqKm": 3444.3,
+      "density": 963,
+      "pctNational": 2.01,
+      "urbanPct": 19.8
+    },
+    "faridpur": {
+      "id": "faridpur",
+      "name": "Faridpur",
+      "division": "dhaka",
+      "population": 2162876,
+      "areaSqKm": 2052.7,
+      "density": 1054,
+      "pctNational": 1.31,
+      "urbanPct": 21.3
+    },
+    "feni": {
+      "id": "feni",
+      "name": "Feni",
+      "division": "chittagong",
+      "population": 1648896,
+      "areaSqKm": 990.4,
+      "density": 1665,
+      "pctNational": 1,
+      "urbanPct": 24.9
+    },
+    "gaibandha": {
+      "id": "gaibandha",
+      "name": "Gaibandha",
+      "division": "rangpur",
+      "population": 2562232,
+      "areaSqKm": 2114.8,
+      "density": 1212,
+      "pctNational": 1.55,
+      "urbanPct": 13.9
+    },
+    "gazipur": {
+      "id": "gazipur",
+      "name": "Gazipur",
+      "division": "dhaka",
+      "population": 5263474,
+      "areaSqKm": 1806.4,
+      "density": 2914,
+      "pctNational": 3.19,
+      "urbanPct": 68.3
+    },
+    "gopalganj": {
+      "id": "gopalganj",
+      "name": "Gopalganj",
+      "division": "dhaka",
+      "population": 1295053,
+      "areaSqKm": 1468.7,
+      "density": 882,
+      "pctNational": 0.79,
+      "urbanPct": 16.7
+    },
+    "habiganj": {
+      "id": "habiganj",
+      "name": "Habiganj",
+      "division": "sylhet",
+      "population": 2358886,
+      "areaSqKm": 2636.6,
+      "density": 895,
+      "pctNational": 1.43,
+      "urbanPct": 17.5
+    },
+    "jamalpur": {
+      "id": "jamalpur",
+      "name": "Jamalpur",
+      "division": "mymensingh",
+      "population": 2499737,
+      "areaSqKm": 2115.2,
+      "density": 1182,
+      "pctNational": 1.52,
+      "urbanPct": 18.2
+    },
+    "jessore": {
+      "id": "jessore",
+      "name": "Jessore",
+      "division": "khulna",
+      "population": 3076849,
+      "areaSqKm": 2607,
+      "density": 1180,
+      "pctNational": 1.87,
+      "urbanPct": 23.5
+    },
+    "jhalokati": {
+      "id": "jhalokati",
+      "name": "Jhalokati",
+      "division": "barisal",
+      "population": 749469,
+      "areaSqKm": 706.8,
+      "density": 1060,
+      "pctNational": 0.45,
+      "urbanPct": 19.4
+    },
+    "jhenaidah": {
+      "id": "jhenaidah",
+      "name": "Jhenaidah",
+      "division": "khulna",
+      "population": 2005849,
+      "areaSqKm": 1964.8,
+      "density": 1021,
+      "pctNational": 1.22,
+      "urbanPct": 20.8
+    },
+    "joypurhat": {
+      "id": "joypurhat",
+      "name": "Joypurhat",
+      "division": "rajshahi",
+      "population": 956447,
+      "areaSqKm": 1012.4,
+      "density": 945,
+      "pctNational": 0.58,
+      "urbanPct": 19.1
+    },
+    "khagrachhari": {
+      "id": "khagrachhari",
+      "name": "Khagrachhari",
+      "division": "chittagong",
+      "population": 714119,
+      "areaSqKm": 2744.9,
+      "density": 260,
+      "pctNational": 0.43,
+      "urbanPct": 34.2
+    },
+    "khulna": {
+      "id": "khulna",
+      "name": "Khulna",
+      "division": "khulna",
+      "population": 2613385,
+      "areaSqKm": 4394.5,
+      "density": 595,
+      "pctNational": 1.58,
+      "urbanPct": 44.1
+    },
+    "kishoreganj": {
+      "id": "kishoreganj",
+      "name": "Kishoreganj",
+      "division": "dhaka",
+      "population": 3267630,
+      "areaSqKm": 2731.2,
+      "density": 1196,
+      "pctNational": 1.98,
+      "urbanPct": 17.8
+    },
+    "kurigram": {
+      "id": "kurigram",
+      "name": "Kurigram",
+      "division": "rangpur",
+      "population": 2329161,
+      "areaSqKm": 2245,
+      "density": 1037,
+      "pctNational": 1.41,
+      "urbanPct": 16.2
+    },
+    "kushtia": {
+      "id": "kushtia",
+      "name": "Kushtia",
+      "division": "khulna",
+      "population": 2149692,
+      "areaSqKm": 1608.8,
+      "density": 1336,
+      "pctNational": 1.3,
+      "urbanPct": 24.3
+    },
+    "lakshmipur": {
+      "id": "lakshmipur",
+      "name": "Lakshmipur",
+      "division": "chittagong",
+      "population": 1938111,
+      "areaSqKm": 1440.4,
+      "density": 1346,
+      "pctNational": 1.18,
+      "urbanPct": 17.9
+    },
+    "lalmonirhat": {
+      "id": "lalmonirhat",
+      "name": "Lalmonirhat",
+      "division": "rangpur",
+      "population": 1428406,
+      "areaSqKm": 1247.4,
+      "density": 1145,
+      "pctNational": 0.87,
+      "urbanPct": 15.6
+    },
+    "madaripur": {
+      "id": "madaripur",
+      "name": "Madaripur",
+      "division": "dhaka",
+      "population": 1293027,
+      "areaSqKm": 1144.9,
+      "density": 1129,
+      "pctNational": 0.78,
+      "urbanPct": 18.4
+    },
+    "magura": {
+      "id": "magura",
+      "name": "Magura",
+      "division": "khulna",
+      "population": 1033115,
+      "areaSqKm": 1039.1,
+      "density": 994,
+      "pctNational": 0.63,
+      "urbanPct": 16.8
+    },
+    "manikganj": {
+      "id": "manikganj",
+      "name": "Manikganj",
+      "division": "dhaka",
+      "population": 1558024,
+      "areaSqKm": 1383.7,
+      "density": 1126,
+      "pctNational": 0.94,
+      "urbanPct": 15.2
+    },
+    "maulvibazar": {
+      "id": "maulvibazar",
+      "name": "Maulvibazar",
+      "division": "sylhet",
+      "population": 2119841,
+      "areaSqKm": 2799.4,
+      "density": 757,
+      "pctNational": 1.29,
+      "urbanPct": 17.3
+    },
+    "meherpur": {
+      "id": "meherpur",
+      "name": "Meherpur",
+      "division": "khulna",
+      "population": 705356,
+      "areaSqKm": 751.6,
+      "density": 938,
+      "pctNational": 0.43,
+      "urbanPct": 18.6
+    },
+    "munshiganj": {
+      "id": "munshiganj",
+      "name": "Munshiganj",
+      "division": "dhaka",
+      "population": 1625418,
+      "areaSqKm": 1004.3,
+      "density": 1618,
+      "pctNational": 0.99,
+      "urbanPct": 21.8
+    },
+    "mymensingh": {
+      "id": "mymensingh",
+      "name": "Mymensingh",
+      "division": "mymensingh",
+      "population": 5899052,
+      "areaSqKm": 4394.6,
+      "density": 1342,
+      "pctNational": 3.58,
+      "urbanPct": 24.1
+    },
+    "naogaon": {
+      "id": "naogaon",
+      "name": "Naogaon",
+      "division": "rajshahi",
+      "population": 2784598,
+      "areaSqKm": 3435.7,
+      "density": 810,
+      "pctNational": 1.69,
+      "urbanPct": 15.7
+    },
+    "narail": {
+      "id": "narail",
+      "name": "Narail",
+      "division": "khulna",
+      "population": 788673,
+      "areaSqKm": 967.9,
+      "density": 815,
+      "pctNational": 0.48,
+      "urbanPct": 17.1
+    },
+    "narayanganj": {
+      "id": "narayanganj",
+      "name": "Narayanganj",
+      "division": "dhaka",
+      "population": 3909138,
+      "areaSqKm": 684.4,
+      "density": 5712,
+      "pctNational": 2.37,
+      "urbanPct": 76.5
+    },
+    "narsingdi": {
+      "id": "narsingdi",
+      "name": "Narsingdi",
+      "division": "dhaka",
+      "population": 2584452,
+      "areaSqKm": 1150.1,
+      "density": 2247,
+      "pctNational": 1.57,
+      "urbanPct": 31.4
+    },
+    "natore": {
+      "id": "natore",
+      "name": "Natore",
+      "division": "rajshahi",
+      "population": 1859921,
+      "areaSqKm": 1900.2,
+      "density": 979,
+      "pctNational": 1.13,
+      "urbanPct": 17.6
+    },
+    "netrakona": {
+      "id": "netrakona",
+      "name": "Netrakona",
+      "division": "mymensingh",
+      "population": 2324856,
+      "areaSqKm": 2794.3,
+      "density": 832,
+      "pctNational": 1.41,
+      "urbanPct": 15.4
+    },
+    "nilphamari": {
+      "id": "nilphamari",
+      "name": "Nilphamari",
+      "division": "rangpur",
+      "population": 1834231,
+      "areaSqKm": 1547,
+      "density": 1186,
+      "pctNational": 1.11,
+      "urbanPct": 16.9
+    },
+    "noakhali": {
+      "id": "noakhali",
+      "name": "Noakhali",
+      "division": "chittagong",
+      "population": 3625252,
+      "areaSqKm": 4202.7,
+      "density": 863,
+      "pctNational": 2.2,
+      "urbanPct": 20.3
+    },
+    "pabna": {
+      "id": "pabna",
+      "name": "Pabna",
+      "division": "rajshahi",
+      "population": 2909622,
+      "areaSqKm": 2376.1,
+      "density": 1225,
+      "pctNational": 1.76,
+      "urbanPct": 22.8
+    },
+    "panchagarh": {
+      "id": "panchagarh",
+      "name": "Panchagarh",
+      "division": "rangpur",
+      "population": 1179843,
+      "areaSqKm": 1404.6,
+      "density": 840,
+      "pctNational": 0.72,
+      "urbanPct": 15.9
+    },
+    "patuakhali": {
+      "id": "patuakhali",
+      "name": "Patuakhali",
+      "division": "barisal",
+      "population": 1727254,
+      "areaSqKm": 3221.3,
+      "density": 536,
+      "pctNational": 1.05,
+      "urbanPct": 16.4
+    },
+    "pirojpur": {
+      "id": "pirojpur",
+      "name": "Pirojpur",
+      "division": "barisal",
+      "population": 1198193,
+      "areaSqKm": 1277.8,
+      "density": 938,
+      "pctNational": 0.73,
+      "urbanPct": 18.7
+    },
+    "rajbari": {
+      "id": "rajbari",
+      "name": "Rajbari",
+      "division": "dhaka",
+      "population": 1189821,
+      "areaSqKm": 1092.3,
+      "density": 1089,
+      "pctNational": 0.72,
+      "urbanPct": 17.2
+    },
+    "rajshahi": {
+      "id": "rajshahi",
+      "name": "Rajshahi",
+      "division": "rajshahi",
+      "population": 2915013,
+      "areaSqKm": 2425.3,
+      "density": 1202,
+      "pctNational": 1.77,
+      "urbanPct": 35.8
+    },
+    "rangamati": {
+      "id": "rangamati",
+      "name": "Rangamati",
+      "division": "chittagong",
+      "population": 647587,
+      "areaSqKm": 6116.1,
+      "density": 106,
+      "pctNational": 0.39,
+      "urbanPct": 38.6
+    },
+    "rangpur": {
+      "id": "rangpur",
+      "name": "Rangpur",
+      "division": "rangpur",
+      "population": 3169615,
+      "areaSqKm": 2400.6,
+      "density": 1320,
+      "pctNational": 1.92,
+      "urbanPct": 28.4
+    },
+    "satkhira": {
+      "id": "satkhira",
+      "name": "Satkhira",
+      "division": "khulna",
+      "population": 2196581,
+      "areaSqKm": 3817.3,
+      "density": 575,
+      "pctNational": 1.33,
+      "urbanPct": 19.3
+    },
+    "shariatpur": {
+      "id": "shariatpur",
+      "name": "Shariatpur",
+      "division": "dhaka",
+      "population": 1225537,
+      "areaSqKm": 1174.1,
+      "density": 1044,
+      "pctNational": 0.74,
+      "urbanPct": 16.9
+    },
+    "sherpur": {
+      "id": "sherpur",
+      "name": "Sherpur",
+      "division": "mymensingh",
+      "population": 1501321,
+      "areaSqKm": 1364.7,
+      "density": 1100,
+      "pctNational": 0.91,
+      "urbanPct": 15.8
+    },
+    "sirajganj": {
+      "id": "sirajganj",
+      "name": "Sirajganj",
+      "division": "rajshahi",
+      "population": 3357758,
+      "areaSqKm": 2497.9,
+      "density": 1344,
+      "pctNational": 2.04,
+      "urbanPct": 19.5
+    },
+    "sunamganj": {
+      "id": "sunamganj",
+      "name": "Sunamganj",
+      "division": "sylhet",
+      "population": 2695495,
+      "areaSqKm": 3747.2,
+      "density": 719,
+      "pctNational": 1.63,
+      "urbanPct": 14.8
+    },
+    "sylhet": {
+      "id": "sylhet",
+      "name": "Sylhet",
+      "division": "sylhet",
+      "population": 3857037,
+      "areaSqKm": 3452.1,
+      "density": 1117,
+      "pctNational": 2.34,
+      "urbanPct": 32.7
+    },
+    "tangail": {
+      "id": "tangail",
+      "name": "Tangail",
+      "division": "dhaka",
+      "population": 4037608,
+      "areaSqKm": 3414.4,
+      "density": 1183,
+      "pctNational": 2.45,
+      "urbanPct": 20.6
+    },
+    "thakurgaon": {
+      "id": "thakurgaon",
+      "name": "Thakurgaon",
+      "division": "rangpur",
+      "population": 1533894,
+      "areaSqKm": 1781.7,
+      "density": 861,
+      "pctNational": 0.93,
+      "urbanPct": 17.4
+    }
+  }
+}
