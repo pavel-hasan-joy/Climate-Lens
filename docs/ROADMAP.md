@@ -113,7 +113,7 @@
 - [x] Build in-app "Methods & Validation" modal (`ValidationModal.tsx`) displaying back-test metrics, error bars, and limitations.
 - [x] Write Vitest unit tests verifying statistical functions against verified reference values.
 
-### STAGE 3 — Anomaly and Extremes
+### STAGE 3 — Anomaly and Extremes [COMPLETED & VERIFIED]
 - [x] Implement Anomaly mode calculated against 2001–2010 multi-year baseline.
 - [x] Diverging color scales: Blue ↔ Red for temperature; Brown ↔ Green for rainfall and soil wetness.
 - [x] Update 3D map extrusions, color ramps, legend, district rankings, and DetailPanel in Anomaly mode.

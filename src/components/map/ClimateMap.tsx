@@ -17,6 +17,7 @@ import Animator from './animator';
 import MapNav from './MapNav';
 import useIsMobile from '../../hooks/useIsMobile';
 import { useTranslation } from '../../lib/i18n';
+import { useEonetFeed } from '../../hooks/useEonetFeed';
 import type { DomainRange, MetricId, ScenarioId, TimeId } from '../../lib/types';
 
 const BG = hexToRgb('#0b1220');
@@ -68,6 +69,7 @@ interface ClimateMapProps {
   showRain: boolean;
   isAnomaly?: boolean;
   scenario?: ScenarioId;
+  selectedHazardCoords?: [number, number] | null;
   onSelectDistrict: (id: string) => void;
 }
 
@@ -94,6 +96,7 @@ export default function ClimateMap({
   showRain,
   isAnomaly = false,
   scenario = 'statistical',
+  selectedHazardCoords = null,
   onSelectDistrict,
 }: ClimateMapProps) {
   const { lang, getDistrictName, getDivisionName, formatVal, formatAnom } = useTranslation();
@@ -101,6 +104,8 @@ export default function ClimateMap({
   const map = useRef<maplibregl.Map | null>(null);
   const anim = useRef<Animator | null>(null);
   const labels = useRef<LabelItem[]>([]);
+  const hazardMarkers = useRef<maplibregl.Marker[]>([]);
+  const { events: eonetEvents } = useEonetFeed(30);
   const last = useRef<{
     divisionId?: string | null;
     first?: boolean;
@@ -250,8 +255,11 @@ export default function ClimateMap({
   }, [ready, divisionId, districtId, mobile]);
 
   // Drone view: while the years play, the camera slowly orbits and bobs over the region
+  // Respects user's prefers-reduced-motion setting for accessibility
   useEffect(() => {
-    if (!ready || !playing || !map.current) return;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!ready || !playing || !map.current || prefersReducedMotion) return;
     const m = map.current;
     const base = { center: m.getCenter(), bearing: m.getBearing(), pitch: m.getPitch(), zoom: m.getZoom() };
     const start = performance.now();
@@ -299,6 +307,9 @@ export default function ClimateMap({
     const changed = last.current.time !== undefined && last.current.time !== time;
     last.current.time = time;
     if (!ready || !changed || !map.current) return;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
     const m = map.current;
     const base = districtId ? -28 : divisionId ? -20 : -12;
     const i = TIMES.findIndex((t) => t.id === time);
@@ -420,6 +431,87 @@ export default function ClimateMap({
     formatVal,
     formatAnom,
   ]);
+
+  // Hazard markers from NASA EONET
+  useEffect(() => {
+    if (!ready || !map.current) return;
+    const m = map.current;
+
+    // Clear old markers
+    hazardMarkers.current.forEach((marker) => marker.remove());
+    hazardMarkers.current = [];
+
+    const getCategoryEmoji = (title: string, cat?: string) => {
+      const lower = (cat || title).toLowerCase();
+      if (lower.includes('fire') || lower.includes('wildfire')) return '🔥';
+      if (
+        lower.includes('storm') ||
+        lower.includes('cyclone') ||
+        lower.includes('hurricane') ||
+        lower.includes('typhoon')
+      )
+        return '🌀';
+      if (lower.includes('flood')) return '🌊';
+      if (lower.includes('landslide')) return '⛰️';
+      if (lower.includes('volcano')) return '🌋';
+      if (lower.includes('water')) return '💧';
+      return '⚠️';
+    };
+
+    eonetEvents.forEach((ev) => {
+      if (!ev.coordinates) return;
+      const [lng, lat] = ev.coordinates;
+      if (typeof lng !== 'number' || typeof lat !== 'number' || Number.isNaN(lng) || Number.isNaN(lat)) return;
+      if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
+
+      try {
+        const el = document.createElement('div');
+        el.className = 'eonet-map-marker';
+        el.textContent = getCategoryEmoji(ev.title, ev.categories?.[0]);
+        const dateStr = ev.date ? new Date(ev.date).toLocaleDateString() : '';
+        el.title = `${ev.title}${dateStr ? ` (${dateStr})` : ''}`;
+
+        const popup = new maplibregl.Popup({ offset: 25, closeButton: false }).setHTML(`
+          <div style="font-family: inherit; font-size: 12px; color: #0b1220; max-width: 200px; padding: 2px;">
+            <div style="font-weight: 700; margin-bottom: 4px; color: #0f172a;">${ev.title}</div>
+            <div style="color: #64748b; font-size: 10px; margin-bottom: 4px;">${dateStr} &bull; Status: ${ev.closed ? 'Resolved' : 'Active'}</div>
+            ${ev.sources?.[0]?.url ? `<a href="${ev.sources[0].url}" target="_blank" rel="noopener noreferrer" style="color: #0284c7; text-decoration: underline; font-size: 10px;">Source details &rarr;</a>` : ''}
+          </div>
+        `);
+
+        const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).setPopup(popup).addTo(m);
+
+        hazardMarkers.current.push(marker);
+      } catch (err) {
+        console.warn('[ClimateMap] Could not render hazard marker:', err);
+      }
+    });
+
+    return () => {
+      hazardMarkers.current.forEach((marker) => marker.remove());
+      hazardMarkers.current = [];
+    };
+  }, [ready, eonetEvents]);
+
+  // Fly to selected hazard event coordinates when clicked in feed
+  useEffect(() => {
+    if (!ready || !map.current || !selectedHazardCoords) return;
+    const [lng, lat] = selectedHazardCoords;
+    if (typeof lng !== 'number' || typeof lat !== 'number' || Number.isNaN(lng) || Number.isNaN(lat)) return;
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
+
+    try {
+      map.current.flyTo({
+        center: [lng, lat],
+        zoom: 8.5,
+        pitch: 30,
+        duration: 1800,
+        essential: true,
+      });
+    } catch (err) {
+      console.warn('[ClimateMap] Could not fly to coordinates:', err);
+    }
+  }, [ready, selectedHazardCoords]);
 
   return (
     <>

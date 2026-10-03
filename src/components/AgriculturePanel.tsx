@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
-import { analyzeCropClimate, checkUnusualNow, CROPS } from '../lib/agriculture';
+import { analyzeCropClimate, checkUnusualNow, CROPS, generateDistrictStory } from '../lib/agriculture';
 import { useTranslation } from '../lib/i18n';
+import NdviVigorCard from './NdviVigorCard';
+import YieldClimateCard from './YieldClimateCard';
 import type { CropId } from '../lib/types';
 
 const MONTH_NAMES_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -24,12 +26,14 @@ interface AgriculturePanelProps {
 }
 
 export default function AgriculturePanel({ districtId }: AgriculturePanelProps) {
-  const { lang, t, toDigits } = useTranslation();
+  const { lang, t, toDigits, getDistrictName } = useTranslation();
 
+  const districtName = getDistrictName(districtId);
   const currentCalendarMonth = new Date().getMonth(); // 0..11
   const monthLabels = lang === 'bn' ? MONTH_NAMES_BN : MONTH_NAMES_EN;
 
   const unusual = useMemo(() => checkUnusualNow(districtId), [districtId]);
+  const story = useMemo(() => generateDistrictStory(districtId, lang), [districtId, lang]);
 
   const cropAnalyses = useMemo(() => {
     return (Object.keys(CROPS) as CropId[])
@@ -41,13 +45,56 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
     <div className="agriculture-panel fade">
       {/* Indicative Disclaimer Notice */}
       <div className="agri-disclaimer-banner">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="10" />
           <line x1="12" y1="16" x2="12" y2="12" />
           <line x1="12" y1="8" x2="12.01" y2="8" />
         </svg>
-        <span>{t('agriculture.disclaimer')}</span>
+        <div className="disclaimer-text-group">
+          <strong>{lang === 'bn' ? 'দিকনির্দেশনামূলক সিদ্ধান্ত গ্রহণ সহায়তা' : 'Indicative Decision Support'}</strong>
+          <span> · {t('agriculture.disclaimer')}</span>
+        </div>
       </div>
+
+      {/* Auto-Generated District Story Card (3 Plain-Language Sentences) */}
+      <section className="district-story-card card">
+        <div className="story-card-header">
+          <div className="story-card-title-group">
+            <span className="story-card-icon">📖</span>
+            <div>
+              <h4 className="story-card-title">{t('agriculture.storyTitle')}</h4>
+              <span className="story-card-sub">{t('agriculture.storySubtitle', { district: districtName })}</span>
+            </div>
+          </div>
+          <span className="story-badge">2001–2040</span>
+        </div>
+
+        <div className="story-sentences-list">
+          {/* Sentence 1: What changed in 20+ years */}
+          <div className="story-sentence-item">
+            <div className="sentence-tag-row">
+              <span className="sentence-tag tag-past">{t('agriculture.sentence1Tag')}</span>
+            </div>
+            <p className="sentence-body">{story.sentence1}</p>
+          </div>
+
+          {/* Sentence 2: What is expected by 2040 */}
+          <div className="story-sentence-item">
+            <div className="sentence-tag-row">
+              <span className="sentence-tag tag-future">{t('agriculture.sentence2Tag')}</span>
+            </div>
+            <p className="sentence-body">{story.sentence2}</p>
+          </div>
+
+          {/* Sentence 3: Who is most affected */}
+          <div className="story-sentence-item">
+            <div className="sentence-tag-row">
+              <span className="sentence-tag tag-people">{t('agriculture.sentence3Tag')}</span>
+            </div>
+            <p className="sentence-body">{story.sentence3}</p>
+          </div>
+        </div>
+      </section>
 
       {/* "Unusual now" Alert Badge */}
       <div className={'unusual-now-card ' + (unusual.isUnusual ? 'is-alert' : 'is-normal')}>
@@ -68,7 +115,8 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
               {toDigits(unusual.curRain)} {t('metrics.rain.unit')}
             </b>
             <span className="chip-sub">
-              {t('agriculture.histMean')}: {toDigits(unusual.meanRain)}
+              {toDigits(unusual.pRain)}%ile · {lang === 'bn' ? 'স্বাভাবিক' : 'Norm'}: {toDigits(unusual.p10Rain)}–
+              {toDigits(unusual.p90Rain)}
             </span>
           </div>
           <div className="unusual-metric-chip">
@@ -77,7 +125,8 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
               {toDigits(unusual.curTmax)} {t('metrics.heat.unit')}
             </b>
             <span className="chip-sub">
-              {t('agriculture.histMean')}: {toDigits(unusual.meanTmax)}
+              {toDigits(unusual.pTmax)}%ile · {lang === 'bn' ? 'স্বাভাবিক' : 'Norm'}: {toDigits(unusual.p10Tmax)}–
+              {toDigits(unusual.p90Tmax)}
             </span>
           </div>
           <div className="unusual-metric-chip">
@@ -86,7 +135,8 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
               {toDigits(unusual.curWet)} {t('metrics.wet.unit')}
             </b>
             <span className="chip-sub">
-              {t('agriculture.histMean')}: {toDigits(unusual.meanWet)}
+              {toDigits(unusual.pWet)}%ile · {lang === 'bn' ? 'স্বাভাবিক' : 'Norm'}: {toDigits(unusual.p10Wet)}–
+              {toDigits(unusual.p90Wet)}
             </span>
           </div>
         </div>
@@ -145,8 +195,9 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
       {/* Crop Cards with Growing-Season Comparisons & Risk Reasoning */}
       <section className="crops-cards-list">
         {cropAnalyses.map((analysis) => {
-          const { crop, baseline, now, projected, changes, risk, reasonEn, reasonBn } = analysis;
-          const isAmanActive = crop.months.includes(currentCalendarMonth);
+          const { crop, baseline, now, projected, changes, risk, ruleCriteriaEn, ruleCriteriaBn, reasonEn, reasonBn } =
+            analysis;
+          const isCropActive = crop.months.includes(currentCalendarMonth);
           const riskKey = `risk.${risk}`;
 
           return (
@@ -159,7 +210,7 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
                   <div>
                     <div className="crop-header-line">
                       <h4 className="crop-heading">{lang === 'bn' ? crop.nameBn : crop.nameEn}</h4>
-                      {isAmanActive && <span className="active-season-badge">{t('agriculture.inSeason')}</span>}
+                      {isCropActive && <span className="active-season-badge">{t('agriculture.inSeason')}</span>}
                     </div>
                     <span className="crop-type-sub">{lang === 'bn' ? crop.typeBn : crop.typeEn}</span>
                   </div>
@@ -172,14 +223,31 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
                 </div>
               </div>
 
-              {/* Plain-Language Visible Reasoning */}
+              {/* Plain-Language Visible Reasoning with Numbers */}
               <div className="crop-reasoning-box">
+                <span className="reasoning-label">
+                  {lang === 'bn' ? 'পর্যবেক্ষণ ও প্রভাব বিশ্লেষণ' : 'Observed Impact & Reasoning'}
+                </span>
                 <p className="crop-reasoning-text">{lang === 'bn' ? reasonBn : reasonEn}</p>
               </div>
 
-              {/* Climate Growing-Season Comparison Grid */}
+              {/* Transparent Non-Black-Box Decision Rule Criteria */}
+              <div className="crop-rule-criteria-box">
+                <div className="rule-criteria-header">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg>
+                  <span>{t('agriculture.decisionRule')}</span>
+                </div>
+                <p className="crop-rule-text">{lang === 'bn' ? ruleCriteriaBn : ruleCriteriaEn}</p>
+              </div>
+
+              {/* Climate Growing-Season Comparison Grid (Rain, Max Temp, Soil Wetness) */}
               <div className="crop-metrics-grid">
-                {/* Growing Season Rainfall */}
+                {/* 1. Growing Season Rainfall */}
                 <div className="crop-metric-box">
                   <div className="metric-box-title">
                     <span>{t('agriculture.seasonRain')}</span>
@@ -210,7 +278,32 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
                   </div>
                 </div>
 
-                {/* Growing Season Soil Wetness */}
+                {/* 2. Growing Season Max Temperature */}
+                <div className="crop-metric-box">
+                  <div className="metric-box-title">
+                    <span>{t('agriculture.seasonTmax')}</span>
+                    <span className={'change-tag ' + (changes.tmaxDiff <= 0 ? 'tag-pos' : 'tag-neg')}>
+                      {changes.tmaxDiff >= 0 ? '+' : ''}
+                      {toDigits(changes.tmaxDiff)}°C
+                    </span>
+                  </div>
+                  <div className="metric-comparison-row">
+                    <div className="comparison-col">
+                      <span className="sub-label">{t('times.past')}</span>
+                      <span className="val-text">{toDigits(baseline.tmax)}°C</span>
+                    </div>
+                    <div className="comparison-col highlight">
+                      <span className="sub-label">{t('times.now')}</span>
+                      <span className="val-text">{toDigits(now.tmax)}°C</span>
+                    </div>
+                    <div className="comparison-col">
+                      <span className="sub-label">{toDigits(2040)}</span>
+                      <span className="val-text">{toDigits(projected.tmax)}°C</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3. Growing Season Soil Wetness */}
                 <div className="crop-metric-box">
                   <div className="metric-box-title">
                     <span>{t('agriculture.seasonWet')}</span>
@@ -238,6 +331,28 @@ export default function AgriculturePanel({ districtId }: AgriculturePanelProps) 
             </article>
           );
         })}
+      </section>
+
+      {/* NASA MODIS NDVI Vegetation Health & Drought Stress */}
+      <NdviVigorCard districtId={districtId} />
+
+      {/* Climate vs Rice Yield Analysis (Phase 9A / 9C) */}
+      <YieldClimateCard />
+
+      {/* Sources & Citations Section */}
+      <section className="crop-sources-card card">
+        <div className="sources-header">
+          <span className="sources-icon">📚</span>
+          <h4 className="sources-title">{t('agriculture.sourcesTitle')}</h4>
+        </div>
+        <p className="sources-body">{t('agriculture.sourcesBody')}</p>
+        <div className="sources-tags">
+          <span className="source-tag">BRRI</span>
+          <span className="source-tag">DAE</span>
+          <span className="source-tag">FAO GIEWS</span>
+          <span className="source-tag">NASA POWER</span>
+          <span className="source-tag">NASA MODIS</span>
+        </div>
       </section>
     </div>
   );

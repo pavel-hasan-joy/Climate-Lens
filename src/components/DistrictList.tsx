@@ -32,7 +32,7 @@ export default function DistrictList({
   onSelect,
   onCompare,
 }: DistrictListProps) {
-  const { getDistrictName, getDivisionName, toDigits, formatVal, formatAnom, lang } = useTranslation();
+  const { t, getDistrictName, getDivisionName, toDigits, formatVal, formatAnom, lang } = useTranslation();
   const pool = districts.filter((d) => !divisionId || d.division === divisionId);
   const m = METRIC[metric];
   const ramp = isAnomaly ? m.divergingRamp : m.ramp;
@@ -42,33 +42,37 @@ export default function DistrictList({
     .sort((a, b) => (b.v ?? 0) - (a.v ?? 0))
     .slice(0, divisionId ? undefined : 10);
 
-  const t = (v: number | null | undefined): number =>
+  const scale = (v: number | null | undefined): number =>
     Math.max(0, Math.min(1, ((v ?? 0) - domain[0]) / (domain[1] - domain[0])));
 
   return (
-    <div className="districts">
+    <div className="districts" role="list" aria-label={t('nav.rankedDistricts')}>
       {rows.map((d, i) => {
         const isSelected = d.id === districtId;
         const isCompared = d.id === compareId;
+        const districtLabel = getDistrictName(d.id);
 
         return (
           <div
             key={d.id}
+            role="listitem"
             className={'district-row-wrap' + (isSelected ? ' selected' : '') + (isCompared ? ' compared' : '')}
           >
             <button
               type="button"
               className={'district' + (isSelected ? ' on' : '') + (isCompared ? ' compared-on' : '')}
               style={{ animationDelay: `${i * 30}ms` }}
+              aria-current={isSelected ? 'true' : undefined}
+              aria-label={`${toDigits(i + 1)}. ${districtLabel} (${isAnomaly ? formatAnom(metric, d.v) : formatVal(metric, d.v)})`}
               onClick={() => onSelect(d.id)}
             >
               <span className="rank">{toDigits(i + 1)}</span>
               <span className="district-name">
-                {getDistrictName(d.id)}
+                {districtLabel}
                 {!divisionId && <small>{getDivisionName(d.division)}</small>}
               </span>
               <span className="district-bar">
-                <i style={{ width: `${8 + t(d.v) * 92}%`, background: rgb(rampColor(ramp, t(d.v))) }} />
+                <i style={{ width: `${8 + scale(d.v) * 92}%`, background: rgb(rampColor(ramp, scale(d.v))) }} />
               </span>
               <span className="district-val">{isAnomaly ? formatAnom(metric, d.v) : formatVal(metric, d.v)}</span>
             </button>
@@ -76,13 +80,23 @@ export default function DistrictList({
               <button
                 type="button"
                 className={'compare-btn-badge' + (isCompared ? ' on' : '')}
+                aria-pressed={isCompared}
+                aria-label={
+                  isCompared
+                    ? lang === 'bn'
+                      ? `${districtLabel} তুলনা থেকে সরান`
+                      : `Remove ${d.name} from comparison`
+                    : lang === 'bn'
+                      ? `নির্বাচিত জেলার সাথে ${districtLabel} তুলনা করুন`
+                      : `Compare ${d.name} with selected district`
+                }
                 title={
                   isCompared
                     ? lang === 'bn'
                       ? 'তুলনা থেকে সরান'
                       : 'Remove from comparison'
                     : lang === 'bn'
-                      ? `নির্বাচিত জেলার সাথে ${getDistrictName(d.id)} তুলনা করুন`
+                      ? `নির্বাচিত জেলার সাথে ${districtLabel} তুলনা করুন`
                       : `Compare ${d.name} with selected`
                 }
                 onClick={(e) => {

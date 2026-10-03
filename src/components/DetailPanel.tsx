@@ -24,6 +24,14 @@ import DailyChart from './charts/DailyChart';
 import StripesChart from './charts/StripesChart';
 import HeatmapChart from './charts/HeatmapChart';
 import AgriculturePanel from './AgriculturePanel';
+import PopulationImpactCard from './PopulationImpactCard';
+import ImpactPanel from './ImpactPanel';
+import ImpactCard from './ImpactCard';
+import LiveDistrictAnalysis from './LiveDistrictAnalysis';
+import HappeningNowFeed from './HappeningNowFeed';
+import DistrictInsightsPanel from './DistrictInsightsPanel';
+import SystemStatusBar from './SystemStatusBar';
+import { getImpactsFor } from '../lib/impactMatching';
 import { PERIOD } from './Timeline';
 import type { MetricId, ScenarioId, TimeId } from '../lib/types';
 
@@ -40,6 +48,9 @@ interface DetailPanelProps {
   onTime: (time: TimeId) => void;
   onScenario?: (scenario: ScenarioId) => void;
   onCompareDistrict?: (id: string | null) => void;
+  onOpenValidation?: () => void;
+  onOpenWildlife?: () => void;
+  onSelectHazardEvent?: (event: any) => void;
 }
 
 export default function DetailPanel({
@@ -55,15 +66,33 @@ export default function DetailPanel({
   onTime,
   onScenario,
   onCompareDistrict,
+  onOpenValidation,
+  onOpenWildlife,
+  onSelectHazardEvent,
 }: DetailPanelProps) {
   const panelRef = useRef<HTMLElement>(null);
   const [copied, setCopied] = useState(false);
-  const [activeTab, setActiveTab] = useState<'climate' | 'agri'>('climate');
+  const [activeTab, setActiveTab] = useState<'climate' | 'insights' | 'agri' | 'impact' | 'hazards'>('climate');
+  const [showUnusualNumbers, setShowUnusualNumbers] = useState(false);
+  const [isImpactsExpanded, setIsImpactsExpanded] = useState(false);
   const { t, toDigits, getDistrictName, getDivisionName, formatVal, formatAnom, formatSummary, lang } =
     useTranslation();
 
   const targetDistrictId = districtId || ids[0];
   const unusual = useMemo(() => checkUnusualNow(targetDistrictId), [targetDistrictId]);
+
+  const relevantImpacts = useMemo(() => {
+    return getImpactsFor({
+      districtId,
+      divisionId,
+      metric,
+      time,
+      year,
+      scenario,
+      categoryFilter: 'all',
+      metricScope: 'current',
+    });
+  }, [districtId, divisionId, metric, time, year, scenario]);
 
   const m = METRIC[metric];
   const s = statsFor(ids, metric);
@@ -197,8 +226,15 @@ export default function DetailPanel({
           <button
             type="button"
             className={'unusual-alert-badge ' + (unusual.isUnusual ? 'is-alert' : 'is-normal')}
-            title={lang === 'bn' ? unusual.detailBn : unusual.detailEn}
-            onClick={() => setActiveTab('agri')}
+            title={
+              lang === 'bn'
+                ? `${unusual.detailBn} (ক্লিক করে পরিসংখ্যান দেখুন)`
+                : `${unusual.detailEn} (Click to inspect numbers)`
+            }
+            onClick={() => {
+              if (activeTab !== 'climate') setActiveTab('climate');
+              setShowUnusualNumbers((prev) => !prev);
+            }}
           >
             <span className={'status-dot ' + (unusual.isUnusual ? 'pulse-alert' : 'dot-normal')} />
             <span className="unusual-badge-text">
@@ -209,35 +245,82 @@ export default function DetailPanel({
         <h2>{name}</h2>
       </header>
 
-      {/* Main Tab Navigation: Climate Overview vs Agriculture */}
+      {/* Main Tab Navigation: Climate Overview vs Agriculture vs Impacts */}
       <nav className="detail-tab-nav" role="tablist">
         <button
           className={'detail-nav-tab' + (activeTab === 'climate' ? ' on' : '')}
           onClick={() => setActiveTab('climate')}
           role="tab"
           aria-selected={activeTab === 'climate'}
+          title={t('agriculture.overviewTab')}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="18" y1="20" x2="18" y2="10" />
             <line x1="12" y1="20" x2="12" y2="4" />
             <line x1="6" y1="20" x2="6" y2="14" />
           </svg>
-          <span>{t('agriculture.overviewTab')}</span>
+          <span>{lang === 'bn' ? 'সারসংক্ষেপ' : 'Overview'}</span>
+        </button>
+        <button
+          className={'detail-nav-tab' + (activeTab === 'insights' ? ' on' : '')}
+          onClick={() => setActiveTab('insights')}
+          role="tab"
+          aria-selected={activeTab === 'insights'}
+          title={lang === 'bn' ? 'পরিসংখ্যান ও বিশ্লেষণ' : 'Statistical Insights'}
+        >
+          <span className="tab-icon-insights">💡</span>
+          <span>{lang === 'bn' ? 'বিশ্লেষণ' : 'Insights'}</span>
         </button>
         <button
           className={'detail-nav-tab' + (activeTab === 'agri' ? ' on' : '')}
           onClick={() => setActiveTab('agri')}
           role="tab"
           aria-selected={activeTab === 'agri'}
+          title={lang === 'bn' ? 'কৃষি ও ফসল' : 'Agriculture & Yield'}
         >
           <span className="tab-icon-agri">🌾</span>
-          <span>{t('agriculture.tab')}</span>
+          <span>{lang === 'bn' ? 'কৃষি' : 'Agri'}</span>
           {unusual.isUnusual && <span className="tab-alert-dot" />}
+        </button>
+        <button
+          className={'detail-nav-tab' + (activeTab === 'impact' ? ' on' : '')}
+          onClick={() => setActiveTab('impact')}
+          role="tab"
+          aria-selected={activeTab === 'impact'}
+          title={lang === 'bn' ? 'গবেষণালব্ধ প্রমাণ ও প্রভাব' : 'Documented Impacts'}
+        >
+          <span className="tab-icon-impact">🔬</span>
+          <span>{lang === 'bn' ? 'প্রভাব' : 'Impacts'}</span>
+          {relevantImpacts.length > 0 && <span className="tab-count-pill">{toDigits(relevantImpacts.length)}</span>}
+        </button>
+        <button
+          className={'detail-nav-tab' + (activeTab === 'hazards' ? ' on' : '')}
+          onClick={() => setActiveTab('hazards')}
+          role="tab"
+          aria-selected={activeTab === 'hazards'}
+          title={lang === 'bn' ? 'চলমান দুর্যোগ ফিড' : 'Happening Now Hazards Feed'}
+        >
+          <span className="tab-icon-hazards">⚠️</span>
+          <span>{lang === 'bn' ? 'দুর্যোগ' : 'Hazards'}</span>
         </button>
       </nav>
 
-      {activeTab === 'agri' ? (
+      {activeTab === 'insights' ? (
+        <DistrictInsightsPanel districtId={targetDistrictId} metric={metric} />
+      ) : activeTab === 'agri' ? (
         <AgriculturePanel districtId={targetDistrictId} />
+      ) : activeTab === 'impact' ? (
+        <ImpactPanel
+          districtId={districtId}
+          divisionId={divisionId}
+          metric={metric}
+          time={time}
+          year={year}
+          scenario={scenario}
+          onOpenWildlife={onOpenWildlife}
+        />
+      ) : activeTab === 'hazards' ? (
+        <HappeningNowFeed onSelectEvent={onSelectHazardEvent} />
       ) : (
         <>
           {/* Compare district selector */}
@@ -277,10 +360,13 @@ export default function DetailPanel({
           )}
 
           {/* Export & Share toolbar */}
-          <section className="export-actions-bar">
+          {/* Export Toolbar (PNG chart, CSV data, PDF 1-page report, share link) */}
+          <section className="export-actions-bar" role="group" aria-label="Export and Share Tools">
             <button
+              type="button"
               className="export-btn"
               onClick={handleExportPNG}
+              aria-label={t('detail.exportPNG')}
               title="Download the currently visible chart as a PNG image"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -290,8 +376,10 @@ export default function DetailPanel({
               <span>{t('detail.exportPNG')}</span>
             </button>
             <button
+              type="button"
               className="export-btn"
               onClick={handleExportCSV}
+              aria-label={t('detail.exportCSV')}
               title="Download historical values and 2050 projections as CSV"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -304,9 +392,11 @@ export default function DetailPanel({
               <span>{t('detail.exportCSV')}</span>
             </button>
             <button
+              type="button"
               className="export-btn primary"
               onClick={handleExportPDF}
               disabled={!district}
+              aria-label={t('detail.exportPDF')}
               title={district ? 'Download 1-page PDF summary report' : 'Select a district to download PDF report'}
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -319,8 +409,10 @@ export default function DetailPanel({
               <span>{t('detail.exportPDF')}</span>
             </button>
             <button
+              type="button"
               className={'export-btn' + (copied ? ' on' : '')}
               onClick={handleCopyShareLink}
+              aria-label={copied ? t('detail.copied') : t('detail.share')}
               title="Copy shareable link with current view state to clipboard"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -331,6 +423,85 @@ export default function DetailPanel({
             </button>
           </section>
 
+          {/* "Unusual right now" Numbers behind the badge */}
+          {(unusual.isUnusual || showUnusualNumbers) && (
+            <section className={'unusual-breakdown-card ' + (unusual.isUnusual ? 'is-alert' : 'is-normal')}>
+              <div className="unusual-card-header">
+                <div className="unusual-card-title-group">
+                  <span className={'status-dot ' + (unusual.isUnusual ? 'pulse-alert' : 'dot-normal')} />
+                  <h4 className="unusual-card-title">
+                    {unusual.isUnusual ? t('agriculture.unusualBadge') : t('agriculture.normalBadge')}
+                    <span className="unusual-title-sep">·</span>
+                    <span>{lang === 'bn' ? unusual.titleBn : unusual.titleEn}</span>
+                  </h4>
+                </div>
+                <div className="unusual-card-actions">
+                  <span className="unusual-badge-tag">{t('detail.last60Days')}</span>
+                  <button
+                    type="button"
+                    className="unusual-close-toggle"
+                    onClick={() => setShowUnusualNumbers((s) => !s)}
+                    title="Toggle alert numbers"
+                  >
+                    {showUnusualNumbers || unusual.isUnusual ? '▲' : '▼'}
+                  </button>
+                </div>
+              </div>
+
+              <p className="unusual-card-desc">{lang === 'bn' ? unusual.detailBn : unusual.detailEn}</p>
+
+              <div className="unusual-numbers-grid">
+                {unusual.metrics?.map((mItem) => {
+                  const isAlert = mItem.isUnusual;
+                  const normStr = `${toDigits(mItem.p10)}–${toDigits(mItem.p90)} ${mItem.unit}`;
+                  const curStr = `${toDigits(mItem.current)} ${mItem.unit}`;
+                  const pctStr = `${toDigits(mItem.percentile)}%ile`;
+                  const zStr = `${mItem.zScore > 0 ? '+' : ''}${toDigits(mItem.zScore)}σ`;
+                  const dirLabel =
+                    mItem.direction === 'high'
+                      ? lang === 'bn'
+                        ? 'স্বাভাবিকের চেয়ে বেশি'
+                        : 'Above normal'
+                      : mItem.direction === 'low'
+                        ? lang === 'bn'
+                          ? 'স্বাভাবিকের চেয়ে কম'
+                          : 'Below normal'
+                        : lang === 'bn'
+                          ? 'স্বাভাবিক সীমার মধ্যে'
+                          : 'Normal range';
+
+                  return (
+                    <div key={mItem.id} className={'unusual-num-cell' + (isAlert ? ' alert-cell' : '')}>
+                      <div className="unusual-num-top">
+                        <span className="unusual-metric-name">{lang === 'bn' ? mItem.labelBn : mItem.labelEn}</span>
+                        <span className={'unusual-pct-tag' + (isAlert ? ' alert-pct' : ' normal-pct')}>{pctStr}</span>
+                      </div>
+                      <div className="unusual-num-main">
+                        <span className="unusual-num-val">{curStr}</span>
+                        <span className="unusual-num-z">{zStr}</span>
+                      </div>
+                      <div className="unusual-num-range">
+                        <small>{lang === 'bn' ? '১০ম–৯০তম সীমা' : '10th–90th %ile'}:</small>
+                        <b>{normStr}</b>
+                      </div>
+                      <div className="unusual-num-bar-track" title={`${dirLabel} · ${pctStr}`}>
+                        <div className="unusual-num-normal-band" style={{ left: '10%', width: '80%' }} />
+                        <div
+                          className={'unusual-num-marker' + (isAlert ? ' alert-marker' : '')}
+                          style={{ left: `${mItem.percentile}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="unusual-card-footer">
+                <small>{t('detail.unusualMethod')}</small>
+              </div>
+            </section>
+          )}
+
           {/* Hero section: Single or Side-by-Side compare */}
           {compareDistrict && compareShown != null ? (
             <section className="hero compare-hero">
@@ -340,7 +511,11 @@ export default function DetailPanel({
                   ? year > 2025
                     ? t('timeline.projectedYear', { year: toDigits(year) })
                     : toDigits(year)
-                  : PERIOD[time]}
+                  : isFuture
+                    ? hasCmip
+                      ? `2040 (${cmipData.info.short} ${t('scenarios.modelMedian')})`
+                      : `2040 (${t('scenarios.statistical')})`
+                    : PERIOD[time]}
               </div>
 
               <div className="compare-side-by-side">
@@ -384,7 +559,11 @@ export default function DetailPanel({
                   ? year > 2025
                     ? t('timeline.projectedYear', { year: toDigits(year) })
                     : toDigits(year)
-                  : PERIOD[time]}
+                  : isFuture
+                    ? hasCmip
+                      ? `2040 (${cmipData.info.short} ${t('scenarios.modelMedian')})`
+                      : `2040 (${t('scenarios.statistical')})`
+                    : PERIOD[time]}
               </div>
               <div className="hero-value">
                 <AnimatedNumber value={shown} digits={m.digits} />
@@ -406,6 +585,84 @@ export default function DetailPanel({
               <p className="story">{formatSummary({ name, metric, stats: s, isAnomaly, scenario, cmipData })}</p>
             </section>
           )}
+
+          {/* Trend per Decade & Mann–Kendall Significance Card */}
+          <section className="trend-sig-card">
+            <div className="trend-sig-header">
+              <div className="trend-sig-title">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 3v18h18" />
+                  <path d="m19 9-5 5-4-4-3 3" />
+                </svg>
+                <span>{t('trends.title')}</span>
+              </div>
+              {onOpenValidation && (
+                <button
+                  type="button"
+                  className="trend-validation-link"
+                  onClick={onOpenValidation}
+                  title={t('validationModal.btnTitle')}
+                >
+                  <span>🔬 {t('trends.viewValidation')}</span>
+                </button>
+              )}
+            </div>
+            <div className="trend-sig-body">
+              {compareDistrict && compareStats ? (
+                <div className="trend-sig-compare">
+                  <div className="trend-sig-item" style={{ borderLeftColor: '#3987e5' }}>
+                    <div className="trend-sig-name">{name}</div>
+                    <div className="trend-sig-row">
+                      <span className="trend-sig-val">
+                        <b>
+                          {s.slope * 10 > 0 ? '+' : ''}
+                          {toDigits((s.slope * 10).toFixed(m.digits + 1))}
+                        </b>{' '}
+                        {unitLabel}/{t('trends.perDecade')}
+                      </span>
+                      <span className={'trend-sig-badge' + (s.mk.significant ? ' sig' : ' not-sig')}>
+                        {s.mk.significant ? t('trends.significant') : t('trends.notSignificant')} (
+                        {t('trends.pValue', { p: toDigits(s.mk.p.toFixed(3)) })})
+                      </span>
+                    </div>
+                  </div>
+                  <div className="trend-sig-item" style={{ borderLeftColor: '#f59e0b' }}>
+                    <div className="trend-sig-name">{compareName}</div>
+                    <div className="trend-sig-row">
+                      <span className="trend-sig-val">
+                        <b>
+                          {compareStats.slope * 10 > 0 ? '+' : ''}
+                          {toDigits((compareStats.slope * 10).toFixed(m.digits + 1))}
+                        </b>{' '}
+                        {unitLabel}/{t('trends.perDecade')}
+                      </span>
+                      <span className={'trend-sig-badge' + (compareStats.mk.significant ? ' sig' : ' not-sig')}>
+                        {compareStats.mk.significant ? t('trends.significant') : t('trends.notSignificant')} (
+                        {t('trends.pValue', { p: toDigits(compareStats.mk.p.toFixed(3)) })})
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="trend-sig-single">
+                  <div className="trend-sig-row">
+                    <span className="trend-sig-label">{t('trends.trendPerDecade')}:</span>
+                    <b className="trend-sig-val">
+                      {s.slope * 10 > 0 ? '+' : ''}
+                      {toDigits((s.slope * 10).toFixed(m.digits + 1))} {unitLabel}/{t('trends.decade')}
+                    </b>
+                  </div>
+                  <div className={'trend-sig-badge' + (s.mk.significant ? ' sig' : ' not-sig')}>
+                    <span className="sig-dot" />
+                    <span>
+                      {s.mk.significant ? t('trends.significant') : t('trends.notSignificant')} (
+                      {t('trends.pValue', { p: toDigits(s.mk.p.toFixed(3)) })})
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
 
           {/* Scenario Selector when in Future mode */}
           {time === 'future' && (
@@ -506,8 +763,8 @@ export default function DetailPanel({
                       ? `${name.slice(0, 5)} / ${compareName?.slice(0, 5) ?? ''}`
                       : isFut
                         ? hasCmip
-                          ? `10–90%: ${formatVal(metric, cmipData.at2040.low)}–${formatVal(metric, cmipData.at2040.high)}`
-                          : `± ${formatVal(metric, s.band)}`
+                          ? `10–90% CMIP6: ${formatVal(metric, cmipData.at2040.low)}–${formatVal(metric, cmipData.at2040.high)}`
+                          : `±95% Theil–Sen: ±${formatVal(metric, s.band)}`
                         : isAnomaly
                           ? tItem.id === 'past'
                             ? t('times.zeroBaseline')
@@ -557,9 +814,21 @@ export default function DetailPanel({
                       ? t('detail.drySpellsAbout')
                       : t('detail.heavyRainAbout', { threshold: toDigits(HEAVY_RAIN_THRESHOLD) });
 
+                const indDef =
+                  ind.id === 'heatwave'
+                    ? t('detail.heatwaveDef', { threshold: toDigits(HEATWAVE_THRESHOLD) })
+                    : ind.id === 'dry_spell'
+                      ? t('detail.drySpellDef')
+                      : t('detail.heavyRainDef', { threshold: toDigits(HEAVY_RAIN_THRESHOLD) });
+
+                const indIcon = ind.id === 'heatwave' ? '🌡️' : ind.id === 'dry_spell' ? '☀️' : '🌧️';
+
                 return (
                   <div key={ind.id} className="extreme-cell" title={indAbout}>
-                    <span className="extreme-label">{indLabel}</span>
+                    <div className="extreme-cell-top">
+                      <span className="extreme-icon">{indIcon}</span>
+                      <span className="extreme-label">{indLabel}</span>
+                    </div>
                     {compareDistrict ? (
                       <span className="extreme-num extreme-num-split">
                         <b style={{ color: '#3987e5' }}>{toDigits(countA)}</b>
@@ -572,11 +841,62 @@ export default function DetailPanel({
                         <b>{toDigits(countA)}</b> <small>{indUnit}</small>
                       </span>
                     )}
+                    <span className="extreme-def-badge">{indDef}</span>
                     <p className="extreme-desc">{indAbout}</p>
                   </div>
                 );
               })}
             </div>
+          </section>
+
+          {/* NASA SEDAC Population & Climate Shift Exposure */}
+          <PopulationImpactCard districtId={targetDistrictId} metric={metric} />
+
+          {/* Documented Climate Impacts Collapsible Section */}
+          <section className="overview-impacts-card card">
+            <button
+              type="button"
+              className="overview-impacts-header"
+              onClick={() => setIsImpactsExpanded((prev) => !prev)}
+              aria-expanded={isImpactsExpanded}
+            >
+              <div className="overview-impacts-title-group">
+                <span className="impacts-main-icon" aria-hidden="true">
+                  🔬
+                </span>
+                <h3 className="overview-impacts-title">{t('evidenceImpacts.sectionTitle')}</h3>
+                <span className="overview-impacts-badge">
+                  {relevantImpacts.length} {lang === 'bn' ? 'টি' : 'records'}
+                </span>
+              </div>
+              <span className="overview-toggle-icon">
+                {isImpactsExpanded
+                  ? '▲ ' + t('evidenceImpacts.collapseSection')
+                  : '▼ ' + t('evidenceImpacts.expandSection', { count: toDigits(relevantImpacts.length) })}
+              </span>
+            </button>
+
+            {isImpactsExpanded && (
+              <div className="overview-impacts-content fade">
+                {relevantImpacts.length > 0 ? (
+                  <>
+                    {relevantImpacts.slice(0, 3).map((item) => (
+                      <ImpactCard key={item.entry.id} evaluated={item} isFuture={isFuture} />
+                    ))}
+                    <button type="button" className="overview-see-all-btn" onClick={() => setActiveTab('impact')}>
+                      <span>
+                        {lang === 'bn'
+                          ? `সকল ${toDigits(relevantImpacts.length)}টি বাস্তব প্রভাব ও ফিল্টার দেখুন`
+                          : `Explore all ${relevantImpacts.length} documented impacts & filters`}
+                      </span>
+                      <span>→</span>
+                    </button>
+                  </>
+                ) : (
+                  <p className="impact-empty-note">{t('evidenceImpacts.emptyFilterNotice')}</p>
+                )}
+              </div>
+            )}
           </section>
 
           {/* Climate Stripes */}
@@ -760,6 +1080,9 @@ export default function DetailPanel({
               <DailyChart daily={daily} />
             </div>
           </section>
+
+          {/* Live NASA POWER Automated Statistical Analysis */}
+          {districtId && <LiveDistrictAnalysis districtId={districtId} metric={metric} />}
         </>
       )}
 
@@ -773,7 +1096,8 @@ export default function DetailPanel({
           <a href={SOURCE.bordersUrl} target="_blank" rel="noreferrer">
             {SOURCE.borders}
           </a>
-          . <b>{t('detail.mapSource')}</b> — NASA GIBS.
+          . <b>Population</b> — NASA SEDAC GPWv4 & BBS 2022 Census. <b>Vegetation</b> — NASA MODIS (MOD13C2).{' '}
+          <b>{t('detail.mapSource')}</b> — NASA GIBS.
         </p>
         <p>
           <b>Past</b> is the {toDigits(PAST_YEARS[0])}–{toDigits(PAST_YEARS[1])} average baseline. <b>Now</b> is the
@@ -783,6 +1107,7 @@ export default function DetailPanel({
           {toDigits(PAST_YEARS[0])}–{toDigits(PAST_YEARS[1])} baseline using diverging palettes. <b>Compare mode</b>{' '}
           allows side-by-side evaluation of two districts.
         </p>
+        <SystemStatusBar compact />
       </footer>
     </aside>
   );
