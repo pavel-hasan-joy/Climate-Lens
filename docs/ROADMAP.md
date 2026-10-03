@@ -104,7 +104,7 @@
 - [x] Deployment readiness (`vercel.json`, `public/_redirects`), Open Graph meta tags, and favicon in `index.html`.
 - [x] First-visit "How to read this map" modal (`AboutModal.tsx`) with localStorage persistence and interactive guided tour.
 
-### STAGE 2 — Scientific Validity
+### STAGE 2 — Scientific Validity [COMPLETED & VERIFIED]
 - [x] Implement back-testing script (`scripts/backtest.mjs`): train Theil–Sen on 2001–2015, evaluate on 2016–2025.
 - [x] Compute Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and 95% confidence interval coverage per district/metric.
 - [x] Save back-test outputs to compact `src/data/validation.json`.
