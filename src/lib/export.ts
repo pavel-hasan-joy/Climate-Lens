@@ -1,4 +1,3 @@
-import { jsPDF } from 'jspdf';
 import { FUTURE_YEAR, HEATWAVE_THRESHOLD, HEAVY_RAIN_THRESHOLD, METRICS, PAST_YEARS } from './constants';
 import { ALL_YEARS, climate, extremesFor, statsFor } from './metrics';
 import { formatValue, monthName } from './format';
@@ -102,10 +101,14 @@ export function exportDistrictCSV(district: DistrictProperties | null | undefine
 /**
  * Generates a clean, professional, single-page PDF summary report for a district.
  */
-export function exportDistrictPDF(district: DistrictProperties | null | undefined, divisionName?: string | null): void {
+export async function exportDistrictPDF(
+  district: DistrictProperties | null | undefined,
+  divisionName?: string | null,
+): Promise<void> {
   if (!district) return;
   const id = district.id;
 
+  const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({
     orientation: 'portrait',
     unit: 'mm',

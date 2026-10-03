@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 import ClimateMap from './components/map/ClimateMap';
 import DivisionPicker from './components/DivisionPicker';
 import DistrictList from './components/DistrictList';
@@ -8,12 +8,13 @@ import DetailPanel from './components/DetailPanel';
 import MapControls from './components/MapControls';
 import Stamp from './components/Stamp';
 import AboutModal from './components/AboutModal';
-import ValidationModal from './components/ValidationModal';
-import WildlifeGallery from './components/WildlifeGallery';
-import DataMethodsModal from './components/DataMethodsModal';
-import SpeciesRecordsModal from './components/SpeciesRecordsModal';
 import SystemStatusBar from './components/SystemStatusBar';
 import ErrorBoundary from './components/ErrorBoundary';
+
+const ValidationModal = lazy(() => import('./components/ValidationModal'));
+const WildlifeGallery = lazy(() => import('./components/WildlifeGallery'));
+const DataMethodsModal = lazy(() => import('./components/DataMethodsModal'));
+const SpeciesRecordsModal = lazy(() => import('./components/SpeciesRecordsModal'));
 import { LAST_PROJECTED_YEAR, PAST_YEARS } from './lib/constants';
 import { districts, domainFor, idsOf, latestDaily } from './lib/metrics';
 import { yyyymmdd } from './lib/format';
@@ -296,22 +297,32 @@ export default function App() {
           setMetric('heat');
         }}
       />
-      <ValidationModal
-        isOpen={showValidation}
-        onClose={() => setShowValidation(false)}
-        initialDistrictId={districtId}
-      />
-      <WildlifeGallery
-        isOpen={showWildlife}
-        onClose={() => setShowWildlife(false)}
-        onOpenSpeciesRecords={() => setShowSpeciesRecords(true)}
-      />
-      <ErrorBoundary fallbackTitle="Data & Methods Error">
-        <DataMethodsModal isOpen={showDataMethods} onClose={() => setShowDataMethods(false)} />
-      </ErrorBoundary>
-      <ErrorBoundary fallbackTitle="Species Records Error">
-        <SpeciesRecordsModal isOpen={showSpeciesRecords} onClose={() => setShowSpeciesRecords(false)} />
-      </ErrorBoundary>
+      <Suspense fallback={null}>
+        {showValidation && (
+          <ValidationModal
+            isOpen={showValidation}
+            onClose={() => setShowValidation(false)}
+            initialDistrictId={districtId}
+          />
+        )}
+        {showWildlife && (
+          <WildlifeGallery
+            isOpen={showWildlife}
+            onClose={() => setShowWildlife(false)}
+            onOpenSpeciesRecords={() => setShowSpeciesRecords(true)}
+          />
+        )}
+        {showDataMethods && (
+          <ErrorBoundary fallbackTitle="Data & Methods Error">
+            <DataMethodsModal isOpen={showDataMethods} onClose={() => setShowDataMethods(false)} />
+          </ErrorBoundary>
+        )}
+        {showSpeciesRecords && (
+          <ErrorBoundary fallbackTitle="Species Records Error">
+            <SpeciesRecordsModal isOpen={showSpeciesRecords} onClose={() => setShowSpeciesRecords(false)} />
+          </ErrorBoundary>
+        )}
+      </Suspense>
     </div>
   );
 }
