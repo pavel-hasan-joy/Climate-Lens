@@ -153,7 +153,7 @@
 - [x] Evidence badges, confidence indicators, and prominent disclaimer: *"Documented research shown for context, not localized predictions."*
 - [x] Build Wildlife Gallery (`WildlifeGallery.tsx`): Lost species, At-risk species, 2000→2015 change, and data-deficient species note. Zero copyrighted photographs.
 
-### STAGE 6 — Insights Presentation and Live Analysis
+### STAGE 6 — Insights Presentation and Live Analysis [COMPLETED & VERIFIED]
 - [x] "Insights" panel (`DistrictInsightsPanel.tsx`): trend per decade, significance label, baseline anomaly, extreme days count, latest-12-months percentile.
 - [x] Deterministic 3-sentence plain-language summary in English and Bangla (strictly template-based, zero LLM runtime hallucinations). Explicitly notes non-significant trends.
 - [x] "Climate vs. Rice Yield" scatter plot card (`YieldClimateCard.tsx`) with $r_s$, $p$, $n$, and visible disclaimer: *"Correlation, not proof of cause."*
