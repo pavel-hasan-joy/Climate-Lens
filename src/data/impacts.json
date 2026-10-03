@@ -1,0 +1,438 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-02",
+  "total_entries": 14,
+  "entries": [
+    {
+      "id": "crop_boro_moisture_stress",
+      "category": "crop",
+      "name_en": "Boro Rice Moisture Deficit",
+      "name_bn": "বোরো ধানের আর্দ্রতাজনিত পানির টান",
+      "metric": "soil",
+      "direction": "harm",
+      "season": "boro_winter",
+      "regions": ["rajshahi", "rangpur", "chapai-nawabganj", "bogra", "dinajpur", "naogaon"],
+      "summary_en": "Agro-hydrological review reports that dry-season Boro rice suffers up to a 32% yield decrease under 60% soil moisture stress during critical vegetative and reproductive phases in north-western Bangladesh.",
+      "summary_bn": "উত্তর-পশ্চিমাঞ্চলের কৃষি-হাইড্রোলজিক্যাল পর্যালোচনায় দেখা গেছে, উদ্ভিদের বৃদ্ধি ও শিষ গঠনের সময় ৬০% আর্দ্রতাজনিত পানির টানের মুখে বোরো ধানের ফলন ৩২% পর্যন্ত হ্রাস পায়।",
+      "numbers": {
+        "value": 32,
+        "unit": "%",
+        "what_it_measures": "Maximum yield decline under 60% soil moisture stress"
+      },
+      "threshold": {
+        "value": 60,
+        "unit": "%",
+        "condition": "moisture stress deficit during panicle initiation and flowering",
+        "source": "Elsevier / Nature-Based Solutions review"
+      },
+      "evidence_type": "review",
+      "climate_link": "direct",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "A Review of Moisture Stress and Climate Adaptation for Rice Cultivation in Bangladesh",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2772411525000631",
+        "publisher": "Elsevier / Nature-Based Solutions",
+        "year": 2025
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "crop_rice_heat_longterm",
+      "category": "crop",
+      "name_en": "Rice Multi-Decadal Temperature Variability",
+      "name_bn": "ধান ও দীর্ঘমেয়াদি তাপমাত্রা বৃদ্ধি (১৯৮০–২০২০)",
+      "metric": "temp",
+      "direction": "mixed",
+      "season": "all_seasons",
+      "regions": ["sylhet", "rajshahi", "dhaka", "rangpur", "khulna", "barisal", "chittagong", "mymensingh"],
+      "summary_en": "Long-term econometric trend analysis (1980–2020) indicates that temperature fluctuations explain 11–47% of Aus, 4–70% of Aman, and 7–52% of Boro yield variation across Bangladesh. Aus is the most heat-stressed, while Sylhet showed positive yield responses to frequent rainfall and warm days.",
+      "summary_bn": "১৯৮০–২০২০ সালের দীর্ঘমেয়াদি রিগ্রেশন বিশ্লেষণে দেখা গেছে, তাপমাত্রার ওঠানামা আউশের ক্ষেত্রে ১১–৪৭%, আমনের ক্ষেত্রে ৪–৭০% এবং বোরো ধানের ক্ষেত্রে ৭–৫২% ফলন বৈচিত্র্য ব্যাখ্যা করে। আউশ সবচেয়ে বেশি তাপদাহের ঝুঁকিতে থাকে, তবে সিলেটে নিয়মিত বৃষ্টিপাতের কারণে ফলন বৃদ্ধি লক্ষ্য করা গেছে।",
+      "numbers": {
+        "value": "11–47% (Aus), 4–70% (Aman), 7–52% (Boro)",
+        "unit": "%",
+        "what_it_measures": "Percentage of seasonal rice yield variance explained by temperature fluctuations"
+      },
+      "threshold": {
+        "value": 35,
+        "unit": "°C",
+        "condition": "days exceeding 35°C (heat incidence during reproductive phase)",
+        "source": "Mamun et al. (2025), Cogent Food & Agriculture"
+      },
+      "evidence_type": "statistical_study",
+      "climate_link": "direct",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Temperature variability and its effect on seasonal yield of rice in Bangladesh: a long-term trend assessment",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/23311932.2024.2447903",
+        "publisher": "Taylor & Francis / Cogent Food & Agriculture",
+        "year": 2025
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "crop_rice_extremes_plos",
+      "category": "crop",
+      "name_en": "Rice & Climatic Extremes Spatiotemporal Trends",
+      "name_bn": "ধান ও জলবায়ু চরমভাবাপন্নতার প্রবণতা",
+      "metric": "multi",
+      "direction": "harm",
+      "season": "all_seasons",
+      "regions": ["dhaka", "mymensingh", "rajshahi", "rangpur", "sylhet"],
+      "summary_en": "Non-parametric trend analysis of weather stations shows wet-season rainfall dropping significantly (>12 mm/season/yr) in central and north regions, alongside nationwide increases in dry-season dry spells. Days exceeding 36°C increased significantly at 18 stations, posing severe sterility risks to Aman rice.",
+      "summary_bn": "আবহাওয়া উপাত্তের প্রবণতা বিশ্লেষণে দেখা গেছে, মধ্য ও উত্তরাঞ্চলে বর্ষাকালের বৃষ্টিপাত উল্লেখযোগ্য হারে হ্রাস পেয়েছে (>১২ মিমি/মৌসুম/বছর), বিপরীতে শুষ্ক মৌসুমে খরার ব্যাপ্তি বেড়েছে। ১৮টি স্টেশনে ৩৬°সে-এর বেশি তাপমাত্রার দিনের সংখ্যা বৃদ্ধি আমন ধানের জন্য চরম বন্ধ্যাত্বের ঝুঁকি তৈরি করছে।",
+      "numbers": {
+        "value": 0.5,
+        "unit": "°C/decade",
+        "what_it_measures": "Warming rate of wet-season maximum temperatures across meteorological stations"
+      },
+      "threshold": {
+        "value": 36,
+        "unit": "°C",
+        "condition": "critical threshold above which spikelet sterility sharply increases during flowering",
+        "source": "Mainuddin et al. (2022), PLOS Climate"
+      },
+      "evidence_type": "observed_data",
+      "climate_link": "direct",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Long-term spatio-temporal variability and trends in rainfall and temperature extremes and their potential risk to rice production in Bangladesh",
+        "url": "https://journals.plos.org/climate/article?id=10.1371/journal.pclm.0000009",
+        "publisher": "Public Library of Science (PLOS Climate)",
+        "year": 2022
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "crop_rice_climatology_national",
+      "category": "crop",
+      "name_en": "National 65-Year Temperature & Rainfall Climatology on Rice",
+      "name_bn": "দেশব্যাপী ৬৫ বছরের জলবায়ু ও ধান উৎপাদন",
+      "metric": "multi",
+      "direction": "mixed",
+      "season": "all_seasons",
+      "regions": ["all"],
+      "summary_en": "Analysis of 35 BMD weather stations (1949–2013) finds that climate variability accounts for 33% (Aus), 25% (Aman), and 16% (Boro) of detrended yield variability. Maximum temperature significantly reduced Aus and Aman yields, whereas total seasonal rainfall positively influenced yields across all three crops.",
+      "summary_bn": "৩৫টি আবহাওয়া স্টেশনের ৬৫ বছরের (১৯৪৯–২০১৩) উপাত্ত বিশ্লেষণে দেখা গেছে, জলবায়ু পরিবর্তন আউশের ৩৩%, আমনের ২৫% এবং বোরো ধানের ১৬% ফলন পরিবর্তন ব্যাখ্যা করে। সর্বোচ্চ তাপমাত্রা আউশ ও আমনের ফলন কমায়, তবে পর্যাপ্ত মৌসুমী বৃষ্টিপাত তিনটি জাতেরই ফলন বাড়াতে সহায়ক ভূমিকা রাখে।",
+      "numbers": {
+        "value": "Aus 33%, Aman 25%, Boro 16%",
+        "unit": "%",
+        "what_it_measures": "Percentage of detrended rice yield variance accounted for by climate variability"
+      },
+      "threshold": null,
+      "evidence_type": "statistical_study",
+      "climate_link": "direct",
+      "consensus": "mixed",
+      "confidence": "high",
+      "source": {
+        "title": "Climate change in Bangladesh: Temperature and rainfall climatology of Bangladesh for 1949–2013 and its implication on rice yield",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10569571/",
+        "publisher": "PLOS One",
+        "year": 2023
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "crop_rice_northwest_barind",
+      "category": "crop",
+      "name_en": "Northwest Barind Tract Rice Sensitivity",
+      "name_bn": "উত্তর-পশ্চিমাঞ্চলের বরেন্দ্র বরো ও আমন সংবেদনশীলতা",
+      "metric": "multi",
+      "direction": "mixed",
+      "season": "all_seasons",
+      "regions": ["rajshahi", "rangpur", "bogra", "pabna", "dinajpur", "chapai-nawabganj", "naogaon"],
+      "summary_en": "Multiple statistical models in northwest Bangladesh demonstrate that while rainfall affects all three rice crops, winter minimum temperatures can sometimes mitigate yield variability in irrigated Boro, contrasting with the severe negative sensitivity of rainfed Aman to summer heat and drought.",
+      "summary_bn": "উত্তর-পশ্চিমাঞ্চলের বরেন্দ্র অঞ্চলে একাধিক পরিসংখ্যানগত মডেলে দেখা গেছে, বৃষ্টিপাত তিনটি মৌসুমেই প্রভাব ফেলে; তবে শীতের মৃদু সর্বনিম্ন তাপমাত্রা সেচভিত্তিক বোরো ধানের জন্য সহায়ক হতে পারে, যা বৃষ্টি-নির্ভর আমন ধানের ওপর তীব্র খরার ক্ষতিকর প্রভাবের সাথে মিশ্র বৈসাদৃশ্য তৈরি করে।",
+      "numbers": {
+        "value": "Aus 33%, Aman 25%, Boro 16%",
+        "unit": "%",
+        "what_it_measures": "Regional rice yield variance explained by climate factors in northwest drought-prone zones"
+      },
+      "threshold": null,
+      "evidence_type": "statistical_study",
+      "climate_link": "direct",
+      "consensus": "mixed",
+      "confidence": "high",
+      "source": {
+        "title": "Variability of climate-induced rice yields in northwest Bangladesh using multiple statistical modeling",
+        "url": "https://link.springer.com/article/10.1007/s00704-021-03909-1",
+        "publisher": "Springer / Theoretical and Applied Climatology",
+        "year": 2022
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "fruit_mango_temperature_threshold",
+      "category": "fruit",
+      "name_en": "Mango Thermal Bounds (Chapainawabganj)",
+      "name_bn": "আমের তাপমাত্রা সংবেদনশীলতা (চাঁপাইনবাবগঞ্জ)",
+      "metric": "temp",
+      "direction": "harm",
+      "season": "summer",
+      "regions": ["chapai-nawabganj", "rajshahi"],
+      "summary_en": "Agro-climatological study in Chapainawabganj indicates that mango vegetative development and flowering are optimal between 25°C and 35°C; temperatures outside this window hamper budding, burn blossoms, and accelerate fruitlet drop.",
+      "summary_bn": "চাঁপাইনবাবগঞ্জের আম বাগান নিয়ে পরিচালিত গবেষণায় দেখা গেছে, আমের মুকুল ও বৃদ্ধির সর্বোত্তম তাপমাত্রা ২৫°সে থেকে ৩৫°সে; তাপমাত্রা ৩৫°সে অতিক্রম করলে মুকুল পুড়ে যায় এবং কচি গুটি ঝরে পড়ে।",
+      "numbers": {
+        "value": "25–35",
+        "unit": "°C",
+        "what_it_measures": "Optimal temperature window for mango vegetative growth and fruit set"
+      },
+      "threshold": {
+        "value": 35,
+        "unit": "°C",
+        "condition": "upper thermal limit above which flowering burns and fruitlet drop accelerates",
+        "source": "Local agro-climatology study, Chapainawabganj"
+      },
+      "evidence_type": "statistical_study",
+      "climate_link": "direct",
+      "consensus": "established",
+      "confidence": "low",
+      "source": {
+        "title": "Climatic Variability and Mango Production in Chapainawabganj District",
+        "url": "https://www.academia.edu/17255574/Article_4_Climatic_V_",
+        "publisher": "Academia.edu / Research Repository",
+        "year": 2015
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "fruit_mango_extreme_heatwave_2024",
+      "category": "fruit",
+      "name_en": "Mango Orchards 2024 Prolonged Heatwave",
+      "name_bn": "২০২৪ সালের তীব্র দাবদাহ ও আম উৎপাদন বিপর্যয়",
+      "metric": "temp",
+      "direction": "harm",
+      "season": "summer",
+      "regions": ["rajshahi", "chapai-nawabganj", "kushtia", "jessore"],
+      "summary_en": "In 2024, Bangladesh experienced an unprecedented 73 days of heatwaves including a continuous 52-day spell in April–May. Extreme temperatures reaching 43.8°C dried up developing mangoes on trees, resulting in an estimated 20–40% orchard yield loss and massive irrigation cost surges.",
+      "summary_bn": "২০২৪ সালে বাংলাদেশে রেকর্ড ৭৩ দিন দাবদাহ বয়ে যায়, যার মধ্যে এপ্রিল-মে মাসে টানা ৫২ দিন চরম তাপদাহ ছিল। যশোরে সর্বোচ্চ ৪৩.৮°সে তাপমাত্রার প্রভাবে গাছের কচি আম শুকিয়ে ঝরে পড়ে, যার ফলে ২০–৪০% আম উৎপাদন ঘাটতির প্রাথমিক প্রাক্কলন করা হয়।",
+      "numbers": {
+        "value": "20–40",
+        "unit": "%",
+        "what_it_measures": "Estimated mango harvest volume loss across major western producing divisions"
+      },
+      "threshold": {
+        "value": 43.8,
+        "unit": "°C",
+        "condition": "52-year temperature record in Jessore during the 52-day unbroken heatwave",
+        "source": "Bangladesh Meteorological Department (BMD) / Rafiqul Islam"
+      },
+      "evidence_type": "news_or_expert_estimate",
+      "climate_link": "direct",
+      "consensus": "established",
+      "confidence": "medium",
+      "source": {
+        "title": "From mangoes to poultry, heatwave aftermath leaves Bangladesh food security in jeopardy",
+        "url": "https://www.preventionweb.net/news/mangoes-poultry-heatwave-aftermath-leaves-bangladesh-food-security-jeopardy",
+        "publisher": "PreventionWeb / Dialogue Earth",
+        "year": 2024
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "fruit_litchi_dinajpur_heat_drought",
+      "category": "fruit",
+      "name_en": "Dinajpur Litchi Scorching & Moisture Stress",
+      "name_bn": "দিনাজপুরের লিচুতে তাপদাহ ও আর্দ্রতা ঘাটতি",
+      "metric": "soil",
+      "direction": "harm",
+      "season": "summer",
+      "regions": ["dinajpur", "rajshahi"],
+      "summary_en": "In Dinajpur, the country's primary litchi hub, extreme spring heat and acute soil moisture deficits caused severe bud scorching, intermediate fruit drop, and premature cracking, leading farmers and agricultural officials to estimate at least a 30% harvest decline in 2024.",
+      "summary_bn": "দিনাজপুরের প্রধান লিচু অঞ্চলে তীব্র তাপদাহ ও মাটির আর্দ্রতার চরম ঘাটতির কারণে মুকুল পুড়ে যাওয়া, গুটি ঝরে পড়া এবং অকালে ফল ফেটে যাওয়ার ঘটনা ঘটে। স্থানীয় চাষী ও কৃষি সম্প্রসারণ অধিদপ্তরের (ডিএই) কর্মকর্তাদের মতে ২০২৪ সালে লিচু উৎপাদন অন্তত ৩০% হ্রাস পায়।",
+      "numbers": {
+        "value": 30,
+        "unit": "%",
+        "what_it_measures": "Estimated litchi yield decline in Dinajpur district due to heat and soil moisture stress"
+      },
+      "threshold": null,
+      "evidence_type": "farmer_perception",
+      "climate_link": "contributing",
+      "consensus": "established",
+      "confidence": "medium",
+      "source": {
+        "title": "Unfavourable weather hits harvest of mangoes, litchis in Rajshahi, Dinajpur",
+        "url": "https://www.tbsnews.net/bangladesh/unfavourable-weather-hits-harvest-mangoes-litchis-rajshahi-dinajpur-867591",
+        "publisher": "The Business Standard",
+        "year": 2024
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "fish_hilsa_migration_barriers",
+      "category": "fish",
+      "name_en": "Hilsa Shad (Tenualosa ilisha) Estuarine Migration",
+      "name_bn": "ইলিশ মাছের নদী অভিবাসন ও প্রতিকূলতা",
+      "metric": "multi",
+      "direction": "harm",
+      "season": "monsoon",
+      "regions": ["barisal", "chittagong", "chandpur", "bhola", "patuakhali"],
+      "summary_en": "Department of Fisheries surveys identified 17 critical migration obstruction bottlenecks (14 in the Meghna) where severe siltation and river shoals, coupled with erratic monsoon rains, reduced upstream river discharge, and widespread illegal monofilament gillnets, block hilsa migration into freshwater spawning grounds.",
+      "summary_bn": "মৎস্য অধিদপ্তরের জরিপে মেঘনা-তেঁতুলিয়া অববাহিকায় ১৭টি স্থানে (শুধু মেঘনাতেই ১৪টি) ইলিশের অভিবাসন পথ রুদ্ধ হওয়ার প্রমাণ পাওয়া গেছে। নদী ভরাট ও ডুবোচর, অনিয়মিত মৌসুমী বৃষ্টিপাত, উজানের পানির প্রবাহ হ্রাস এবং নিষিদ্ধ কারেন্ট জালের কারণে ইলিশ ডিম ছাড়ার মিষ্টি পানির এলাকায় পৌঁছাতে পারছে না।",
+      "numbers": {
+        "value": 17,
+        "unit": "obstruction points",
+        "what_it_measures": "Number of critical migration bottleneck points identified in major estuarine rivers"
+      },
+      "threshold": null,
+      "evidence_type": "observed_data",
+      "climate_link": "contributing",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Where have Bangladesh's hilsa gone?",
+        "url": "https://www.thedailystar.net/slow-reads/unheard-voices/news/where-have-bangladeshs-hilsa-gone-4264921",
+        "publisher": "The Daily Star",
+        "year": 2024
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "fish_hilsa_climate_environmental_stress",
+      "category": "fish",
+      "name_en": "Hilsa Ecological & Thermal Stress",
+      "name_bn": "ইলিশের ওপর পরিবেশগত ও তাপমাত্রার প্রভাব",
+      "metric": "multi",
+      "direction": "harm",
+      "season": "monsoon",
+      "regions": ["barisal", "chittagong", "khulna"],
+      "summary_en": "Hilsa spawning and migration are highly sensitive to coastal water temperature, salinity gradients, and monsoon timing. Compounding heavy commercial fishing, rising temperatures and shifting river salinity have caused hilsa to mature prematurely at stunted sizes (17–18 cm), reflecting severe reproductive stress.",
+      "summary_bn": "ইলিশের প্রজনন ও অভিবাসন পানির তাপমাত্রা, লবণাক্ততার মাত্রা এবং বর্ষার আগমনের ওপর অত্যন্ত নির্ভরশীল। অতিরিক্ত মাছ শিকারের সাথে সমুদ্রের উষ্ণায়ন ও নদীর লবণাক্ততা পরিবর্তনের প্রভাবে পদ্মা-মেঘনায় ইলিশ মাত্র ১৭–১৮ সেমি ছোট আকারেই ডিম ছাড়তে বাধ্য হচ্ছে, যা মাছটির ওপর চরম পরিবেশগত চাপের প্রমাণ।",
+      "numbers": {
+        "value": "17–18",
+        "unit": "cm",
+        "what_it_measures": "Premature size at sexual maturity of stressed hilsa caught in Padma and Meghna estuaries"
+      },
+      "threshold": null,
+      "evidence_type": "news_or_expert_estimate",
+      "climate_link": "contributing",
+      "consensus": "established",
+      "confidence": "medium",
+      "source": {
+        "title": "Climate change, human pressures push Bangladesh’s ‘national fish’ into decline",
+        "url": "https://news.mongabay.com/2023/06/climate-change-human-pressures-push-bangladeshs-national-fish-into-decline/",
+        "publisher": "Mongabay",
+        "year": 2023
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "wildlife_bengal_tiger_sundarbans_habitat",
+      "category": "wildlife",
+      "name_en": "Bengal Tiger Sundarbans Habitat (Panthera tigris)",
+      "name_bn": "সুন্দরবনের রয়েল বেঙ্গল টাইগার আবাসস্থল",
+      "metric": "multi",
+      "direction": "harm",
+      "season": null,
+      "regions": ["bagerhat", "khulna", "satkhira"],
+      "summary_en": "Using MaxEnt machine-learning spatial models under IPCC RCP6.0 and RCP8.5 scenarios, Mukul et al. (2019) projected that the combined impacts of climate extremes, increased salinity, and sea-level rise could eliminate all suitable Bengal tiger habitat in the Bangladesh Sundarbans by 2070.",
+      "summary_bn": "আইপিসিসি আরসিপি৬.০ ও আরসিপি৮.৫ দৃশ্যপটের আওতায় ম্যাক্সএন্ট মডেল ব্যবহার করে মুকুল এবং অন্যান্যদের (২০১৯) গবেষণায় পূর্বাভাস দেওয়া হয়েছে যে, চরম আবহাওয়া, অতিরিক্ত লবণাক্ততা ও সমুদ্রপৃষ্ঠের উচ্চতা বৃদ্ধির যৌথ প্রভাবে ২০৭০ সালের মধ্যে সুন্দরবনে বেঙ্গল টাইগারের উপযোগী কোনো প্রাকৃতিক আবাস অবশিষ্ট থাকবে না।",
+      "numbers": {
+        "value": 100,
+        "unit": "% suitable habitat loss by 2070",
+        "what_it_measures": "Projected total loss of suitable tiger habitat under unmitigated climate change and sea-level rise"
+      },
+      "threshold": null,
+      "evidence_type": "model_projection",
+      "climate_link": "contributing",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Combined effects of climate change and sea-level rise project dramatic habitat loss of the globally endangered Bengal tiger in the Bangladesh Sundarbans",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0048969719304310",
+        "publisher": "Elsevier / Science of The Total Environment",
+        "year": 2019
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "wildlife_river_dolphins_threats",
+      "category": "wildlife",
+      "name_en": "Ganges & Irrawaddy River Dolphins",
+      "name_bn": "শুশুক ও ইরাবতী ডলফিন",
+      "metric": "multi",
+      "direction": "harm",
+      "season": null,
+      "regions": ["khulna", "barisal", "chittagong", "dhaka"],
+      "summary_en": "Bangladesh supports approximately 2,000 endangered Ganges river dolphins (Platanista gangetica) and 6,000 Irrawaddy dolphins (Orcaella brevirostris). The primary immediate driver of mortality is accidental entanglement in illegal monofilament gillnets (130+ killed in 2007–2016), aggravated by reduced upstream river flow and encroaching salinity.",
+      "summary_bn": "বাংলাদেশে আনুমানিক ২,০০০ গঙ্গা নদীর শুশুক (আইইউসিএন লাল তালিকায় বিপন্ন) এবং ৬,০০০ ইরাবতী ডলফিন বাস করে। এদের মৃত্যুর প্রধানতম কারণ নদীতে নিষিদ্ধ কারেন্ট জালের ফাঁসে আটকে শ্বাসরুদ্ধ হওয়া (২০০৭–২০১৬ সালে ১৩০টির বেশি মৃত্যু), যা উজানের মিষ্টি পানির প্রবাহ হ্রাস ও লবণাক্ততা বৃদ্ধির ফলে আরও প্রকট হচ্ছে।",
+      "numbers": {
+        "value": "2000 Ganges, 6000 Irrawaddy",
+        "unit": "individuals",
+        "what_it_measures": "Estimated national dolphin populations in Bangladesh river and estuarine systems"
+      },
+      "threshold": null,
+      "evidence_type": "observed_data",
+      "climate_link": "contributing",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Banned but abundant, gillnets pose main threat to Bangladesh's river dolphins",
+        "url": "https://news.mongabay.com/2023/01/banned-but-abundant-gillnets-pose-main-threat-to-bangladeshs-river-dolphins/",
+        "publisher": "Mongabay",
+        "year": 2023
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "extinction_red_list_bangladesh_2015",
+      "category": "extinction",
+      "name_en": "IUCN Red List of Bangladesh 2015 Fauna",
+      "name_bn": "বাংলাদেশের লাল তালিকা ২০১৫ (বন্যপ্রাণী)",
+      "metric": "multi",
+      "direction": "harm",
+      "season": null,
+      "regions": ["all"],
+      "summary_en": "The comprehensive 2015 IUCN Red List assessed 1,619 animal species across 7 taxonomic groups in Bangladesh, documenting 31 regionally extinct species (11 mammals, 19 birds, 1 reptile) and 390 threatened species (56 CR, 181 EN, 153 VU). Historical extinctions were driven by habitat destruction, deforestation, agricultural expansion, and hunting; climate change is not established as the primary historical extinction driver.",
+      "summary_bn": "২০১৫ সালে আইইউসিএন ও বাংলাদেশ বন অধিদপ্তরের লাল তালিকায় ৭টি প্রাণী শ্রেণিতে ১,৬১৯টি প্রজাতি মূল্যায়িত হয়, যার মধ্যে ৩১টি প্রজাতি দেশ থেকে বিলুপ্ত (১১টি স্তন্যপায়ী, ১৯টি পাখি, ১টি সরীসৃপ) এবং ৩৯০টি প্রজাতি হুমকির মুখে বলে চিহ্নিত হয়। এসব ঐতিহাসিক বিলুপ্তির প্রধান কারণ ছিল বন উজাড়, কৃষিজমির বিস্তার ও নির্বিচার শিকার; জলবায়ু পরিবর্তনের প্রত্যক্ষ সংশ্লিষ্টতা ঐতিহাসিকভাবে প্রতিষ্ঠিত নয়।",
+      "numbers": {
+        "value": 31,
+        "unit": "regionally extinct species",
+        "what_it_measures": "Number of animal species classified as Regionally Extinct (RE) in Bangladesh out of 1,619 assessed"
+      },
+      "threshold": null,
+      "evidence_type": "observed_data",
+      "climate_link": "not_established",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "Bangladesh Red List reports 31 regionally extinct and 390 threatened animal species",
+        "url": "https://iucn.org/news/bangladesh/201607/bangladesh-red-list-reports-31-regionally-extinct-and-390-threatened-animal-species",
+        "publisher": "IUCN Bangladesh",
+        "year": 2016
+      },
+      "last_checked": "2026-10-02"
+    },
+    {
+      "id": "extinction_sufal_species_inventory",
+      "category": "extinction",
+      "name_en": "Forest Department Red List Database (SUFAL)",
+      "name_bn": "বন অধিদপ্তর ও সুফল প্রকল্প প্রজাতি নিবন্ধন",
+      "metric": "multi",
+      "direction": "harm",
+      "season": null,
+      "regions": ["all"],
+      "summary_en": "Official species inventory maintained by the Bangladesh Forest Department under the SUFAL project registers 1,619 evaluated faunal species. It notes that while 31 taxa remain classified as Regionally Extinct, isolated relict sightings have been reported for species such as Gaur (Bos gaurus) and Hog Deer (Axis porcinus) in remote border tracts.",
+      "summary_bn": "বাংলাদেশ বন অধিদপ্তরের সুফল প্রকল্পের অধীনে সংরক্ষিত সরকারি প্রজাতি ডেটাবেজে ১,৬১৯টি বন্যপ্রাণী অন্তর্ভুক্ত। এখানে ৩১টি প্রজাতি আঞ্চলিকভাবে বিলুপ্ত হিসেবে তালিকাভুক্ত হলেও দুর্গম পাহাড়ি ও সীমান্ত এলাকায় গৌর (বুনো গরু) এবং হগ ডিয়ার (পারা হরিণ)-এর মতো কিছু প্রজাতির সীমিত উপস্থিতির খবর রয়েছে।",
+      "numbers": {
+        "value": 1619,
+        "unit": "assessed species",
+        "what_it_measures": "Total official faunal species count evaluated under the National Red List framework"
+      },
+      "threshold": null,
+      "evidence_type": "observed_data",
+      "climate_link": "not_established",
+      "consensus": "established",
+      "confidence": "high",
+      "source": {
+        "title": "All the Assessed Animal Species in Bangladesh",
+        "url": "https://sufal.bforest.gov.bd/redlist/all-the-assessed-species-in-bangladesh/assessed-animal-species/",
+        "publisher": "Bangladesh Forest Department (SUFAL)",
+        "year": 2015
+      },
+      "last_checked": "2026-10-02"
+    }
+  ]
+}

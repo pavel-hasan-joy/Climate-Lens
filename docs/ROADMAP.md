@@ -136,7 +136,7 @@
 - [x] Generate `src/data/analysis/data-status.json` with execution timestamps, record counts, URLs, and licenses.
 - [x] Enforce fallback to cached JSON on network fetch failures with loud error logging.
 
-### STAGE 5 — Impact Knowledge Base and Wildlife
+### STAGE 5 — Impact Knowledge Base and Wildlife [COMPLETED & VERIFIED]
 - [x] Create `src/data/impacts.json` strictly verified from peer-reviewed literature and official reports.
 - [x] Create JSON schema (`src/data/impacts.schema.json`) and validator (`scripts/validate-impacts.mjs`).
 - [x] Seed verified records with required fields:

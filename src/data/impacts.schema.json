@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClimateImpactsDataset",
+  "description": "Curated, fully sourced impact evidence linking rainfall, temperature, and soil wetness to ecological and agricultural outcomes in Bangladesh.",
+  "type": "object",
+  "required": ["version", "last_updated", "total_entries", "entries"],
+  "properties": {
+    "version": { "type": "string" },
+    "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "total_entries": { "type": "integer" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "name_en",
+          "name_bn",
+          "metric",
+          "direction",
+          "season",
+          "regions",
+          "summary_en",
+          "summary_bn",
+          "numbers",
+          "evidence_type",
+          "climate_link",
+          "consensus",
+          "confidence",
+          "source",
+          "last_checked"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "category": { "enum": ["crop", "fruit", "fish", "wildlife", "extinction"] },
+          "name_en": { "type": "string", "minLength": 2 },
+          "name_bn": { "type": "string", "minLength": 2 },
+          "metric": { "enum": ["rain", "temp", "soil", "multi"] },
+          "direction": { "enum": ["harm", "benefit", "mixed"] },
+          "season": { "type": ["string", "null"] },
+          "regions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "summary_en": { "type": "string", "minLength": 10 },
+          "summary_bn": { "type": "string", "minLength": 10 },
+          "numbers": {
+            "type": "object",
+            "required": ["value", "unit", "what_it_measures"],
+            "additionalProperties": false,
+            "properties": {
+              "value": { "type": ["number", "string"] },
+              "unit": { "type": "string" },
+              "what_it_measures": { "type": "string" }
+            }
+          },
+          "threshold": {
+            "type": ["object", "null"],
+            "required": ["value", "unit", "condition", "source"],
+            "additionalProperties": false,
+            "properties": {
+              "value": { "type": ["number", "string"] },
+              "unit": { "type": "string" },
+              "condition": { "type": "string" },
+              "source": { "type": "string" }
+            }
+          },
+          "evidence_type": {
+            "enum": [
+              "observed_data",
+              "statistical_study",
+              "model_projection",
+              "review",
+              "news_or_expert_estimate",
+              "farmer_perception"
+            ]
+          },
+          "climate_link": { "enum": ["direct", "contributing", "unclear", "not_established"] },
+          "consensus": { "enum": ["established", "mixed", "emerging", "contested"] },
+          "confidence": { "enum": ["high", "medium", "low"] },
+          "source": {
+            "type": "object",
+            "required": ["title", "url", "publisher", "year"],
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string", "minLength": 5 },
+              "url": { "type": "string", "pattern": "^https?://.+" },
+              "publisher": { "type": "string", "minLength": 2 },
+              "year": { "type": "integer", "minimum": 1950, "maximum": 2030 }
+            }
+          },
+          "last_checked": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    }
+  }
+}
