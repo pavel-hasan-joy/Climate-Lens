@@ -12,6 +12,7 @@ import ValidationModal from './components/ValidationModal';
 import WildlifeGallery from './components/WildlifeGallery';
 import DataMethodsModal from './components/DataMethodsModal';
 import SpeciesRecordsModal from './components/SpeciesRecordsModal';
+import SystemStatusBar from './components/SystemStatusBar';
 import ErrorBoundary from './components/ErrorBoundary';
 import { LAST_PROJECTED_YEAR, PAST_YEARS } from './lib/constants';
 import { districts, domainFor, idsOf, latestDaily } from './lib/metrics';
@@ -249,6 +250,8 @@ export default function App() {
             {...shared}
           />
         </section>
+
+        <SystemStatusBar />
       </aside>
 
       <MetricTabs value={metric} onChange={setMetric} isAnomaly={isAnomaly} onToggleAnomaly={toggleAnomaly} />

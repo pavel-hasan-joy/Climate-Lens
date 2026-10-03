@@ -191,7 +191,7 @@
 - [x] NASA MODIS Vegetation Health Index (`MOD13C2` / `MOD13A2` NDVI):
   - Monthly vegetation vigor tracking across Aus, Aman, and Boro seasons (`NdviVigorCard.tsx`).
 
-### STAGE 10 — Automation and Reliability
+### STAGE 10 — Automation and Reliability [COMPLETED & VERIFIED]
 - [x] Monthly + manual GitHub Actions workflow (`.github/workflows/data-update.yml`).
 - [x] Automated data validation script (`scripts/validate-data.mjs`): checks schema, missing values, plausible value ranges, and provenance.
 - [x] Automated impact validation script (`scripts/validate-impacts.mjs`).
