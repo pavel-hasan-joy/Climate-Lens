@@ -173,7 +173,7 @@
 - [x] Data exports: CSV download, chart PNG export, and one-page PDF summary export via jsPDF (`src/lib/export.ts`).
 - [x] Accessibility: WCAG AA focus rings, semantic ARIA labels, colorblind-safe color ramps, and `prefers-reduced-motion` compliance.
 
-### STAGE 8 — Agriculture and Risk
+### STAGE 8 — Agriculture and Risk [COMPLETED & VERIFIED]
 - [x] Dedicated Agriculture panel (`AgriculturePanel.tsx`) with Aus, Aman, and Boro crop calendars (sowing, vegetative, harvesting).
 - [x] Season-matched historical baseline vs. observed vs. projected rainfall, temperature, and root-zone soil wetness.
 - [x] Agro-climatic vulnerability rating (Low / Moderate / High) with transparent mathematical criteria.
