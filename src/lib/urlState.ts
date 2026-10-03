@@ -55,6 +55,10 @@ export function parseUrlState(
   const scenParam = params.get('scenario') || params.get('scen');
   const scenario: ScenarioId = scenParam && VALID_SCENARIOS.has(scenParam) ? (scenParam as ScenarioId) : 'statistical';
 
+  // language: lang or l
+  const langParam = params.get('lang') || params.get('l');
+  const lang = langParam === 'bn' || langParam === 'en' ? langParam : undefined;
+
   return {
     divisionId,
     districtId,
@@ -64,6 +68,7 @@ export function parseUrlState(
     year,
     isAnomaly,
     scenario,
+    ...(lang ? { lang } : {}),
   };
 }
 
@@ -79,6 +84,7 @@ export function buildUrlQuery({
   year,
   isAnomaly,
   scenario,
+  lang,
 }: Partial<AppUrlState>): string {
   const params = new URLSearchParams();
 
@@ -110,6 +116,10 @@ export function buildUrlQuery({
 
   if (scenario && scenario !== 'statistical') {
     params.set('scenario', scenario);
+  }
+
+  if (lang && lang === 'bn') {
+    params.set('lang', 'bn');
   }
 
   const qs = params.toString();

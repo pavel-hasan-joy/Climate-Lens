@@ -71,7 +71,20 @@ describe('URL state synchronization', () => {
       time: 'past',
       year: 2015,
       isAnomaly: true,
+      lang: 'bn',
     });
-    expect(q2).toBe('?dist=dhaka&comp=sylhet&m=heat&t=past&yr=2015&anom=1');
+    expect(q2).toBe('?dist=dhaka&comp=sylhet&m=heat&t=past&yr=2015&anom=1&lang=bn');
+  });
+
+  it('parses and preserves language parameter', () => {
+    const s1 = parseUrlState('?lang=bn&dist=khulna');
+    expect(s1.lang).toBe('bn');
+    expect(s1.districtId).toBe('khulna');
+
+    const s2 = parseUrlState('?l=en&dist=barisal');
+    expect(s2.lang).toBe('en');
+
+    const s3 = parseUrlState('?lang=invalid');
+    expect(s3.lang).toBeUndefined();
   });
 });
