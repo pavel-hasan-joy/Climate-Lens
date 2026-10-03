@@ -1,0 +1,6131 @@
+{
+  "metadata": {
+    "source": "NASA POWER (power.larc.nasa.gov) — PRECTOTCORR, T2M_MAX, GWETROOT",
+    "sourceUrl": "https://power.larc.nasa.gov/api/temporal/monthly/point",
+    "fetchedAt": "2026-09-27",
+    "analysisTimestamp": "2026-10-03T06:42:39.494Z",
+    "baselinePeriod": "2001–2010",
+    "analysisPeriod": "2001–2025",
+    "totalDistricts": 64,
+    "metrics": [
+      "monsoon",
+      "rain",
+      "heat",
+      "wet"
+    ],
+    "license": "NASA Open Data Policy (Public Domain)",
+    "citation": "NASA Prediction Of Worldwide Energy Resources (POWER) Project, NASA Langley Research Center"
+  },
+  "districts": {
+    "bagerhat": {
+      "id": "bagerhat",
+      "name": "Bagerhat",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 48.6194,
+          "sensSlopePerDecade": 486.1944,
+          "intercept": -96183.3028,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1222.46,
+            "latestYearAnomaly": 851.14,
+            "recent12MoAnomaly": -698.46,
+            "recent12MoPctAnomaly": -57.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 892.6,
+          "historicalMax": 3515.8,
+          "historicalMean": 1705.06
+        },
+        "rain": {
+          "sensSlopePerYear": 75.2361,
+          "sensSlopePerDecade": 752.3607,
+          "intercept": -149266.3511,
+          "mannKendall": {
+            "S": 162,
+            "varS": 1833.33,
+            "z": 3.7601,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1709.26,
+            "latestYearAnomaly": 1303.54,
+            "recent12MoAnomaly": 966.44,
+            "recent12MoPctAnomaly": 56.54
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1374.4,
+          "historicalMax": 5083.7,
+          "historicalMean": 2432.21
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0306,
+          "sensSlopePerDecade": -0.3058,
+          "intercept": 101.089,
+          "mannKendall": {
+            "S": -43,
+            "varS": 1832.33,
+            "z": -0.9812,
+            "pValue": 0.3265,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.75,
+            "latestYearAnomaly": -0.75,
+            "recent12MoAnomaly": -11.21,
+            "recent12MoPctAnomaly": -28.2
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.47,
+          "historicalMax": 42.06,
+          "historicalMean": 39.25
+        },
+        "wet": {
+          "sensSlopePerYear": 0.375,
+          "sensSlopePerDecade": 3.75,
+          "intercept": -679.92,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 72.29,
+            "latestYearAnomaly": 4.79,
+            "recent12MoAnomaly": 5.04,
+            "recent12MoPctAnomaly": 6.97
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 68.08,
+          "historicalMax": 85.5,
+          "historicalMean": 75.16
+        }
+      }
+    },
+    "bandarban": {
+      "id": "bandarban",
+      "name": "Bandarban",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 117.6236,
+          "sensSlopePerDecade": 1176.236,
+          "intercept": -234619.0354,
+          "mannKendall": {
+            "S": 168,
+            "varS": 1833.33,
+            "z": 3.9003,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1326.79,
+            "latestYearAnomaly": 1258.71,
+            "recent12MoAnomaly": -841.89,
+            "recent12MoPctAnomaly": -63.45
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 616.4,
+          "historicalMax": 4783.9,
+          "historicalMean": 2283.51
+        },
+        "rain": {
+          "sensSlopePerYear": 144.6461,
+          "sensSlopePerDecade": 1446.4605,
+          "intercept": -288233.6105,
+          "mannKendall": {
+            "S": 172,
+            "varS": 1833.33,
+            "z": 3.9937,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1815.85,
+            "latestYearAnomaly": 1838.05,
+            "recent12MoAnomaly": 1830.45,
+            "recent12MoPctAnomaly": 100.8
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 843.4,
+          "historicalMax": 6111.4,
+          "historicalMean": 2996.88
+        },
+        "heat": {
+          "sensSlopePerYear": -0.041,
+          "sensSlopePerDecade": -0.4104,
+          "intercept": 119.4385,
+          "mannKendall": {
+            "S": -58,
+            "varS": 1831.33,
+            "z": -1.332,
+            "pValue": 0.1829,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 37.3,
+            "latestYearAnomaly": -1.28,
+            "recent12MoAnomaly": -9.03,
+            "recent12MoPctAnomaly": -24.21
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.14,
+          "historicalMax": 38.07,
+          "historicalMean": 36.57
+        },
+        "wet": {
+          "sensSlopePerYear": 0.7328,
+          "sensSlopePerDecade": 7.3283,
+          "intercept": -1407.2194,
+          "mannKendall": {
+            "S": 175,
+            "varS": 1832.33,
+            "z": 4.0649,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 60.57,
+            "latestYearAnomaly": 11.6,
+            "recent12MoAnomaly": 10.01,
+            "recent12MoPctAnomaly": 16.53
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 47.83,
+          "historicalMax": 78.75,
+          "historicalMean": 67.01
+        }
+      }
+    },
+    "barguna": {
+      "id": "barguna",
+      "name": "Barguna",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 77.99,
+          "sensSlopePerDecade": 779.9,
+          "intercept": -154943.49,
+          "mannKendall": {
+            "S": 152,
+            "varS": 1833.33,
+            "z": 3.5266,
+            "pValue": 0.0004,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1347.78,
+            "latestYearAnomaly": 1244.92,
+            "recent12MoAnomaly": -803.08,
+            "recent12MoPctAnomaly": -59.59
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 992.4,
+          "historicalMax": 4417.4,
+          "historicalMean": 2143.27
+        },
+        "rain": {
+          "sensSlopePerYear": 109.1477,
+          "sensSlopePerDecade": 1091.4769,
+          "intercept": -217075.7138,
+          "mannKendall": {
+            "S": 158,
+            "varS": 1833.33,
+            "z": 3.6667,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1849.68,
+            "latestYearAnomaly": 1837.72,
+            "recent12MoAnomaly": 1373.42,
+            "recent12MoPctAnomaly": 74.25
+          },
+          "recent12MoPercentile": 60,
+          "historicalMin": 1459.1,
+          "historicalMax": 6227,
+          "historicalMean": 2972.56
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0196,
+          "sensSlopePerDecade": -0.1958,
+          "intercept": 75.3258,
+          "mannKendall": {
+            "S": -26,
+            "varS": 1833.33,
+            "z": -0.5839,
+            "pValue": 0.5593,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 36.11,
+            "latestYearAnomaly": -0.27,
+            "recent12MoAnomaly": -7.97,
+            "recent12MoPctAnomaly": -22.08
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.37,
+          "historicalMax": 37.96,
+          "historicalMean": 35.82
+        },
+        "wet": {
+          "sensSlopePerYear": 0.2821,
+          "sensSlopePerDecade": 2.8212,
+          "intercept": -486.7412,
+          "mannKendall": {
+            "S": 128,
+            "varS": 1829.33,
+            "z": 2.9693,
+            "pValue": 0.003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 79.25,
+            "latestYearAnomaly": 3.08,
+            "recent12MoAnomaly": 3.42,
+            "recent12MoPctAnomaly": 4.32
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 76.83,
+          "historicalMax": 88.33,
+          "historicalMean": 81.34
+        }
+      }
+    },
+    "barisal": {
+      "id": "barisal",
+      "name": "Barisal",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 41.4442,
+          "sensSlopePerDecade": 414.4416,
+          "intercept": -81842.2156,
+          "mannKendall": {
+            "S": 126,
+            "varS": 1833.33,
+            "z": 2.9194,
+            "pValue": 0.0035,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1352.61,
+            "latestYearAnomaly": 729.59,
+            "recent12MoAnomaly": -689.01,
+            "recent12MoPctAnomaly": -50.94
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1080.4,
+          "historicalMax": 3900.2,
+          "historicalMean": 1731.8
+        },
+        "rain": {
+          "sensSlopePerYear": 58.8786,
+          "sensSlopePerDecade": 588.7857,
+          "intercept": -116131.65,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1944.12,
+            "latestYearAnomaly": 1174.88,
+            "recent12MoAnomaly": 924.18,
+            "recent12MoPctAnomaly": 47.54
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1622.5,
+          "historicalMax": 5646.8,
+          "historicalMean": 2542.93
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0302,
+          "sensSlopePerDecade": -0.3024,
+          "intercept": 98.5574,
+          "mannKendall": {
+            "S": -54,
+            "varS": 1833.33,
+            "z": -1.2378,
+            "pValue": 0.2158,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.16,
+            "latestYearAnomaly": -0.36,
+            "recent12MoAnomaly": -10.6,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.35,
+          "historicalMax": 40.58,
+          "historicalMean": 37.55
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4192,
+          "sensSlopePerDecade": 4.1917,
+          "intercept": -771.7025,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 69.35,
+            "latestYearAnomaly": 5.48,
+            "recent12MoAnomaly": 5.9,
+            "recent12MoPctAnomaly": 8.51
+          },
+          "recent12MoPercentile": 70,
+          "historicalMin": 64.75,
+          "historicalMax": 84.75,
+          "historicalMean": 72.63
+        }
+      }
+    },
+    "bhola": {
+      "id": "bhola",
+      "name": "Bhola",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 70.5903,
+          "sensSlopePerDecade": 705.9028,
+          "intercept": -140127.3486,
+          "mannKendall": {
+            "S": 160,
+            "varS": 1833.33,
+            "z": 3.7134,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1409.06,
+            "latestYearAnomaly": 1188.34,
+            "recent12MoAnomaly": -767.16,
+            "recent12MoPctAnomaly": -54.44
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1068.4,
+          "historicalMax": 4791.1,
+          "historicalMean": 2123.75
+        },
+        "rain": {
+          "sensSlopePerYear": 100.09,
+          "sensSlopePerDecade": 1000.9,
+          "intercept": -198926.97,
+          "mannKendall": {
+            "S": 162,
+            "varS": 1833.33,
+            "z": 3.7601,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1954.41,
+            "latestYearAnomaly": 1790.09,
+            "recent12MoAnomaly": 1405.09,
+            "recent12MoPctAnomaly": 71.89
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1553.3,
+          "historicalMax": 6629.5,
+          "historicalMean": 2975.08
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0266,
+          "sensSlopePerDecade": -0.2657,
+          "intercept": 90.188,
+          "mannKendall": {
+            "S": -67,
+            "varS": 1832.33,
+            "z": -1.5418,
+            "pValue": 0.1231,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 37.07,
+            "latestYearAnomaly": -0.5,
+            "recent12MoAnomaly": -9.76,
+            "recent12MoPctAnomaly": -26.32
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.76,
+          "historicalMax": 39.38,
+          "historicalMean": 36.48
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4658,
+          "sensSlopePerDecade": 4.6577,
+          "intercept": -864.1162,
+          "mannKendall": {
+            "S": 149,
+            "varS": 1830.33,
+            "z": 3.4594,
+            "pValue": 0.0005,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 70.25,
+            "latestYearAnomaly": 5.75,
+            "recent12MoAnomaly": 5.83,
+            "recent12MoPctAnomaly": 8.3
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 66.92,
+          "historicalMax": 85.33,
+          "historicalMean": 73.85
+        }
+      }
+    },
+    "bogra": {
+      "id": "bogra",
+      "name": "Bogra",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 18.5438,
+          "sensSlopePerDecade": 185.4375,
+          "intercept": -36108.2938,
+          "mannKendall": {
+            "S": 106,
+            "varS": 1833.33,
+            "z": 2.4523,
+            "pValue": 0.0142,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1113.61,
+            "latestYearAnomaly": 327.89,
+            "recent12MoAnomaly": -277.11,
+            "recent12MoPctAnomaly": -24.88
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 807.7,
+          "historicalMax": 1940,
+          "historicalMean": 1256.31
+        },
+        "rain": {
+          "sensSlopePerYear": 38.1889,
+          "sensSlopePerDecade": 381.8889,
+          "intercept": -75056.3222,
+          "mannKendall": {
+            "S": 124,
+            "varS": 1833.33,
+            "z": 2.8727,
+            "pValue": 0.0041,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1615.23,
+            "latestYearAnomaly": 693.47,
+            "recent12MoAnomaly": 765.47,
+            "recent12MoPctAnomaly": 47.39
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1302.7,
+          "historicalMax": 2891.5,
+          "historicalMean": 1867.72
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0143,
+          "sensSlopePerDecade": -0.1425,
+          "intercept": 68.2278,
+          "mannKendall": {
+            "S": -10,
+            "varS": 1833.33,
+            "z": -0.2102,
+            "pValue": 0.8335,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.84,
+            "latestYearAnomaly": -0.06,
+            "recent12MoAnomaly": -13.44,
+            "recent12MoPctAnomaly": -33.75
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.88,
+          "historicalMax": 42.56,
+          "historicalMean": 39.41
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4508,
+          "sensSlopePerDecade": 4.5083,
+          "intercept": -838.8225,
+          "mannKendall": {
+            "S": 120,
+            "varS": 1833.33,
+            "z": 2.7792,
+            "pValue": 0.0054,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.98,
+            "latestYearAnomaly": 9.19,
+            "recent12MoAnomaly": 12.35,
+            "recent12MoPctAnomaly": 19
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 59.67,
+          "historicalMax": 80,
+          "historicalMean": 67.97
+        }
+      }
+    },
+    "brahmanbaria": {
+      "id": "brahmanbaria",
+      "name": "Brahmanbaria",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.1654,
+          "sensSlopePerDecade": 211.6542,
+          "intercept": -41253.1492,
+          "mannKendall": {
+            "S": 104,
+            "varS": 1833.33,
+            "z": 2.4056,
+            "pValue": 0.0161,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1289.04,
+            "latestYearAnomaly": 350.76,
+            "recent12MoAnomaly": -279.84,
+            "recent12MoPctAnomaly": -21.71
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 968.9,
+          "historicalMax": 2880.5,
+          "historicalMean": 1451.86
+        },
+        "rain": {
+          "sensSlopePerYear": 39.651,
+          "sensSlopePerDecade": 396.5098,
+          "intercept": -77603.3137,
+          "mannKendall": {
+            "S": 110,
+            "varS": 1833.33,
+            "z": 2.5457,
+            "pValue": 0.0109,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2030.48,
+            "latestYearAnomaly": 624.02,
+            "recent12MoAnomaly": 884.82,
+            "recent12MoPctAnomaly": 43.58
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 1531.4,
+          "historicalMax": 4812.9,
+          "historicalMean": 2351.81
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0053,
+          "sensSlopePerDecade": -0.0531,
+          "intercept": 48.9266,
+          "mannKendall": {
+            "S": -11,
+            "varS": 1832.33,
+            "z": -0.2336,
+            "pValue": 0.8153,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.19,
+            "latestYearAnomaly": 0.44,
+            "recent12MoAnomaly": -9.78,
+            "recent12MoPctAnomaly": -25.61
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.37,
+          "historicalMax": 40.99,
+          "historicalMean": 37.77
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3888,
+          "sensSlopePerDecade": 3.8875,
+          "intercept": -714.9725,
+          "mannKendall": {
+            "S": 106,
+            "varS": 1831.33,
+            "z": 2.4536,
+            "pValue": 0.0141,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.26,
+            "latestYearAnomaly": 6.57,
+            "recent12MoAnomaly": 8.91,
+            "recent12MoPctAnomaly": 13.65
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 60.92,
+          "historicalMax": 83.25,
+          "historicalMean": 68.28
+        }
+      }
+    },
+    "chandpur": {
+      "id": "chandpur",
+      "name": "Chandpur",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 41.4442,
+          "sensSlopePerDecade": 414.4416,
+          "intercept": -81842.2156,
+          "mannKendall": {
+            "S": 126,
+            "varS": 1833.33,
+            "z": 2.9194,
+            "pValue": 0.0035,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1352.61,
+            "latestYearAnomaly": 729.59,
+            "recent12MoAnomaly": -689.01,
+            "recent12MoPctAnomaly": -50.94
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1080.4,
+          "historicalMax": 3900.2,
+          "historicalMean": 1731.8
+        },
+        "rain": {
+          "sensSlopePerYear": 58.8786,
+          "sensSlopePerDecade": 588.7857,
+          "intercept": -116131.65,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1944.12,
+            "latestYearAnomaly": 1174.88,
+            "recent12MoAnomaly": 924.18,
+            "recent12MoPctAnomaly": 47.54
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1622.5,
+          "historicalMax": 5646.8,
+          "historicalMean": 2542.93
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0302,
+          "sensSlopePerDecade": -0.3024,
+          "intercept": 98.5574,
+          "mannKendall": {
+            "S": -54,
+            "varS": 1833.33,
+            "z": -1.2378,
+            "pValue": 0.2158,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.16,
+            "latestYearAnomaly": -0.36,
+            "recent12MoAnomaly": -10.6,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.35,
+          "historicalMax": 40.58,
+          "historicalMean": 37.55
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4192,
+          "sensSlopePerDecade": 4.1917,
+          "intercept": -771.7025,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 69.35,
+            "latestYearAnomaly": 5.48,
+            "recent12MoAnomaly": 5.9,
+            "recent12MoPctAnomaly": 8.51
+          },
+          "recent12MoPercentile": 70,
+          "historicalMin": 64.75,
+          "historicalMax": 84.75,
+          "historicalMean": 72.63
+        }
+      }
+    },
+    "chapai-nawabganj": {
+      "id": "chapai-nawabganj",
+      "name": "Chapai Nawabganj",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 5.3054,
+          "sensSlopePerDecade": 53.0536,
+          "intercept": -9774.0161,
+          "mannKendall": {
+            "S": 48,
+            "varS": 1833.33,
+            "z": 1.0977,
+            "pValue": 0.2723,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 882.52,
+            "latestYearAnomaly": 149.28,
+            "recent12MoAnomaly": -568.62,
+            "recent12MoPctAnomaly": -64.43
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 658.9,
+          "historicalMax": 1224,
+          "historicalMean": 905.14
+        },
+        "rain": {
+          "sensSlopePerYear": 8.388,
+          "sensSlopePerDecade": 83.8804,
+          "intercept": -15585.2793,
+          "mannKendall": {
+            "S": 72,
+            "varS": 1833.33,
+            "z": 1.6582,
+            "pValue": 0.0973,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 1242.73,
+            "latestYearAnomaly": 224.07,
+            "recent12MoAnomaly": 106.67,
+            "recent12MoPctAnomaly": 8.58
+          },
+          "recent12MoPercentile": 64,
+          "historicalMin": 1014,
+          "historicalMax": 1644.2,
+          "historicalMean": 1286.28
+        },
+        "heat": {
+          "sensSlopePerYear": 0.0055,
+          "sensSlopePerDecade": 0.055,
+          "intercept": 30.7035,
+          "mannKendall": {
+            "S": 11,
+            "varS": 1832.33,
+            "z": 0.2336,
+            "pValue": 0.8153,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.88,
+            "latestYearAnomaly": 0.34,
+            "recent12MoAnomaly": -15.07,
+            "recent12MoPctAnomaly": -35.98
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 39.33,
+          "historicalMax": 43.61,
+          "historicalMean": 41.78
+        },
+        "wet": {
+          "sensSlopePerYear": 0.1094,
+          "sensSlopePerDecade": 1.0938,
+          "intercept": -164.75,
+          "mannKendall": {
+            "S": 32,
+            "varS": 1831.33,
+            "z": 0.7244,
+            "pValue": 0.4688,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 55.1,
+            "latestYearAnomaly": 5.82,
+            "recent12MoAnomaly": 4.73,
+            "recent12MoPctAnomaly": 8.59
+          },
+          "recent12MoPercentile": 76,
+          "historicalMin": 48.5,
+          "historicalMax": 65.67,
+          "historicalMean": 55.94
+        }
+      }
+    },
+    "chittagong": {
+      "id": "chittagong",
+      "name": "Chittagong",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 95.0551,
+          "sensSlopePerDecade": 950.5511,
+          "intercept": -189297.178,
+          "mannKendall": {
+            "S": 180,
+            "varS": 1833.33,
+            "z": 4.1805,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1462.94,
+            "latestYearAnomaly": 1396.46,
+            "recent12MoAnomaly": -820.94,
+            "recent12MoPctAnomaly": -56.12
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 882.1,
+          "historicalMax": 5604.9,
+          "historicalMean": 2329.5
+        },
+        "rain": {
+          "sensSlopePerYear": 128.6482,
+          "sensSlopePerDecade": 1286.4818,
+          "intercept": -256087.12,
+          "mannKendall": {
+            "S": 180,
+            "varS": 1833.33,
+            "z": 4.1805,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2028.55,
+            "latestYearAnomaly": 2034.25,
+            "recent12MoAnomaly": 1678.35,
+            "recent12MoPctAnomaly": 82.74
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1228.4,
+          "historicalMax": 7374.6,
+          "historicalMean": 3158.66
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0641,
+          "sensSlopePerDecade": -0.6412,
+          "intercept": 164.4009,
+          "mannKendall": {
+            "S": -84,
+            "varS": 1833.33,
+            "z": -1.9385,
+            "pValue": 0.0526,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 36.07,
+            "latestYearAnomaly": -1.39,
+            "recent12MoAnomaly": -7.76,
+            "recent12MoPctAnomaly": -21.52
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.33,
+          "historicalMax": 37.15,
+          "historicalMean": 35.42
+        },
+        "wet": {
+          "sensSlopePerYear": 0.6892,
+          "sensSlopePerDecade": 6.8916,
+          "intercept": -1315.4569,
+          "mannKendall": {
+            "S": 173,
+            "varS": 1832.33,
+            "z": 4.0182,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.59,
+            "latestYearAnomaly": 9.58,
+            "recent12MoAnomaly": 8.91,
+            "recent12MoPctAnomaly": 13.58
+          },
+          "recent12MoPercentile": 64,
+          "historicalMin": 55.92,
+          "historicalMax": 84.83,
+          "historicalMean": 71.36
+        }
+      }
+    },
+    "chuadanga": {
+      "id": "chuadanga",
+      "name": "Chuadanga",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 18.561,
+          "sensSlopePerDecade": 185.6098,
+          "intercept": -36333.0443,
+          "mannKendall": {
+            "S": 96,
+            "varS": 1833.33,
+            "z": 2.2187,
+            "pValue": 0.0265,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 916.28,
+            "latestYearAnomaly": 299.22,
+            "recent12MoAnomaly": -526.68,
+            "recent12MoPctAnomaly": -57.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 620.8,
+          "historicalMax": 1511,
+          "historicalMean": 1036.78
+        },
+        "rain": {
+          "sensSlopePerYear": 30.4292,
+          "sensSlopePerDecade": 304.2917,
+          "intercept": -59775.4667,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1297.48,
+            "latestYearAnomaly": 501.82,
+            "recent12MoAnomaly": 493.02,
+            "recent12MoPctAnomaly": 38
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1095.1,
+          "historicalMax": 2307.8,
+          "historicalMean": 1508.28
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0197,
+          "sensSlopePerDecade": -0.1974,
+          "intercept": 81.7424,
+          "mannKendall": {
+            "S": -21,
+            "varS": 1832.33,
+            "z": -0.4672,
+            "pValue": 0.6403,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 42.41,
+            "latestYearAnomaly": -0.08,
+            "recent12MoAnomaly": -14.59,
+            "recent12MoPctAnomaly": -34.4
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 38.71,
+          "historicalMax": 44.36,
+          "historicalMean": 42
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3829,
+          "sensSlopePerDecade": 3.8293,
+          "intercept": -704.07,
+          "mannKendall": {
+            "S": 129,
+            "varS": 1832.33,
+            "z": 2.9903,
+            "pValue": 0.0028,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 63.87,
+            "latestYearAnomaly": 7.8,
+            "recent12MoAnomaly": 7.38,
+            "recent12MoPctAnomaly": 11.56
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.92,
+          "historicalMax": 77.25,
+          "historicalMean": 66.63
+        }
+      }
+    },
+    "comilla": {
+      "id": "comilla",
+      "name": "Comilla",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 27.025,
+          "sensSlopePerDecade": 270.25,
+          "intercept": -52872.225,
+          "mannKendall": {
+            "S": 110,
+            "varS": 1833.33,
+            "z": 2.5457,
+            "pValue": 0.0109,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1358.02,
+            "latestYearAnomaly": 549.08,
+            "recent12MoAnomaly": -538.32,
+            "recent12MoPctAnomaly": -39.64
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1110.1,
+          "historicalMax": 3467.5,
+          "historicalMean": 1606.42
+        },
+        "rain": {
+          "sensSlopePerYear": 43.4029,
+          "sensSlopePerDecade": 434.0294,
+          "intercept": -85033.8088,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2047.99,
+            "latestYearAnomaly": 841.91,
+            "recent12MoAnomaly": 784.61,
+            "recent12MoPctAnomaly": 38.31
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1660.1,
+          "historicalMax": 5294.8,
+          "historicalMean": 2454.1
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0352,
+          "sensSlopePerDecade": -0.3521,
+          "intercept": 108.9455,
+          "mannKendall": {
+            "S": -41,
+            "varS": 1832.33,
+            "z": -0.9345,
+            "pValue": 0.3501,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.17,
+            "latestYearAnomaly": -0.17,
+            "recent12MoAnomaly": -10.48,
+            "recent12MoPctAnomaly": -27.45
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.79,
+          "historicalMax": 41.07,
+          "historicalMean": 37.53
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3928,
+          "sensSlopePerDecade": 3.9284,
+          "intercept": -721.5876,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.03,
+            "latestYearAnomaly": 6.22,
+            "recent12MoAnomaly": 6.39,
+            "recent12MoPctAnomaly": 9.54
+          },
+          "recent12MoPercentile": 78,
+          "historicalMin": 63.42,
+          "historicalMax": 84.08,
+          "historicalMean": 70.05
+        }
+      }
+    },
+    "cox-s-bazar": {
+      "id": "cox-s-bazar",
+      "name": "Cox's Bazar",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 147.25,
+          "sensSlopePerDecade": 1472.5,
+          "intercept": -292705.3,
+          "mannKendall": {
+            "S": 158,
+            "varS": 1833.33,
+            "z": 3.6667,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2620.75,
+            "latestYearAnomaly": 1901.95,
+            "recent12MoAnomaly": -1872.85,
+            "recent12MoPctAnomaly": -71.46
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1613.8,
+          "historicalMax": 7215.2,
+          "historicalMean": 3972.57
+        },
+        "rain": {
+          "sensSlopePerYear": 182.2269,
+          "sensSlopePerDecade": 1822.2695,
+          "intercept": -361510.8464,
+          "mannKendall": {
+            "S": 166,
+            "varS": 1833.33,
+            "z": 3.8536,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 3668.67,
+            "latestYearAnomaly": 2674.63,
+            "recent12MoAnomaly": 2114.43,
+            "recent12MoPctAnomaly": 57.63
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 2212.6,
+          "historicalMax": 9818.4,
+          "historicalMean": 5414.82
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0377,
+          "sensSlopePerDecade": -0.3769,
+          "intercept": 106.9827,
+          "mannKendall": {
+            "S": -67,
+            "varS": 1832.33,
+            "z": -1.5418,
+            "pValue": 0.1231,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 31.67,
+            "latestYearAnomaly": -0.21,
+            "recent12MoAnomaly": -4.67,
+            "recent12MoPctAnomaly": -14.75
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 29.8,
+          "historicalMax": 32.29,
+          "historicalMean": 31.25
+        },
+        "wet": {
+          "sensSlopePerYear": 0.375,
+          "sensSlopePerDecade": 3.75,
+          "intercept": -680.25,
+          "mannKendall": {
+            "S": 151,
+            "varS": 1830.33,
+            "z": 3.5061,
+            "pValue": 0.0005,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 71.75,
+            "latestYearAnomaly": 3.92,
+            "recent12MoAnomaly": 3.17,
+            "recent12MoPctAnomaly": 4.42
+          },
+          "recent12MoPercentile": 56,
+          "historicalMin": 66.58,
+          "historicalMax": 83.58,
+          "historicalMean": 74.73
+        }
+      }
+    },
+    "dhaka": {
+      "id": "dhaka",
+      "name": "Dhaka",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 23.4925,
+          "sensSlopePerDecade": 234.925,
+          "intercept": -46034.05,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1833.33,
+            "z": 2.7325,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1135.16,
+            "latestYearAnomaly": 447.04,
+            "recent12MoAnomaly": -297.06,
+            "recent12MoPctAnomaly": -26.17
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 812,
+          "historicalMax": 2530.9,
+          "historicalMean": 1308.24
+        },
+        "rain": {
+          "sensSlopePerYear": 44.063,
+          "sensSlopePerDecade": 440.6295,
+          "intercept": -86730.598,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1680.87,
+            "latestYearAnomaly": 781.13,
+            "recent12MoAnomaly": 957.43,
+            "recent12MoPctAnomaly": 56.96
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1253.7,
+          "historicalMax": 4046.6,
+          "historicalMean": 2029.46
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0148,
+          "sensSlopePerDecade": -0.1477,
+          "intercept": 69.4861,
+          "mannKendall": {
+            "S": -16,
+            "varS": 1833.33,
+            "z": -0.3503,
+            "pValue": 0.7261,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.94,
+            "latestYearAnomaly": 0.34,
+            "recent12MoAnomaly": -12.5,
+            "recent12MoPctAnomaly": -31.3
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.95,
+          "historicalMax": 42.27,
+          "historicalMean": 39.39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.429,
+          "sensSlopePerDecade": 4.2895,
+          "intercept": -794.4261,
+          "mannKendall": {
+            "S": 91,
+            "varS": 1829.67,
+            "z": 2.1041,
+            "pValue": 0.0354,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.63,
+            "latestYearAnomaly": 8.29,
+            "recent12MoAnomaly": 11.2,
+            "recent12MoPctAnomaly": 17.06
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 57.58,
+          "historicalMax": 81,
+          "historicalMean": 68.86
+        }
+      }
+    },
+    "dinajpur": {
+      "id": "dinajpur",
+      "name": "Dinajpur",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 22.3716,
+          "sensSlopePerDecade": 223.7158,
+          "intercept": -43825.634,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1065.73,
+            "latestYearAnomaly": 310.27,
+            "recent12MoAnomaly": -281.93,
+            "recent12MoPctAnomaly": -26.45
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 863.1,
+          "historicalMax": 2020,
+          "historicalMean": 1250.95
+        },
+        "rain": {
+          "sensSlopePerYear": 35.8119,
+          "sensSlopePerDecade": 358.119,
+          "intercept": -70389.8952,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1474.97,
+            "latestYearAnomaly": 676.53,
+            "recent12MoAnomaly": 784.73,
+            "recent12MoPctAnomaly": 53.2
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 1227.2,
+          "historicalMax": 2836.8,
+          "historicalMean": 1741.1
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0279,
+          "sensSlopePerDecade": -0.2789,
+          "intercept": 96.6126,
+          "mannKendall": {
+            "S": -30,
+            "varS": 1833.33,
+            "z": -0.6773,
+            "pValue": 0.4982,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.8,
+            "latestYearAnomaly": -0.59,
+            "recent12MoAnomaly": -14.37,
+            "recent12MoPctAnomaly": -35.22
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 36.66,
+          "historicalMax": 43.19,
+          "historicalMean": 40.39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5027,
+          "sensSlopePerDecade": 5.0267,
+          "intercept": -947.714,
+          "mannKendall": {
+            "S": 160,
+            "varS": 1831.33,
+            "z": 3.7155,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 61.37,
+            "latestYearAnomaly": 9.88,
+            "recent12MoAnomaly": 14.05,
+            "recent12MoPctAnomaly": 22.9
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 57.75,
+          "historicalMax": 75.92,
+          "historicalMean": 64.52
+        }
+      }
+    },
+    "faridpur": {
+      "id": "faridpur",
+      "name": "Faridpur",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 24.3644,
+          "sensSlopePerDecade": 243.6438,
+          "intercept": -47734.9594,
+          "mannKendall": {
+            "S": 110,
+            "varS": 1833.33,
+            "z": 2.5457,
+            "pValue": 0.0109,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1114.29,
+            "latestYearAnomaly": 488.61,
+            "recent12MoAnomaly": -437.69,
+            "recent12MoPctAnomaly": -39.28
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 845.2,
+          "historicalMax": 2620,
+          "historicalMean": 1317.95
+        },
+        "rain": {
+          "sensSlopePerYear": 45.4531,
+          "sensSlopePerDecade": 454.5306,
+          "intercept": -89579.7314,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1633.83,
+            "latestYearAnomaly": 859.77,
+            "recent12MoAnomaly": 891.17,
+            "recent12MoPctAnomaly": 54.54
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 1268.7,
+          "historicalMax": 4106.9,
+          "historicalMean": 2021.11
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0235,
+          "sensSlopePerDecade": -0.2345,
+          "intercept": 87.0524,
+          "mannKendall": {
+            "S": -27,
+            "varS": 1832.33,
+            "z": -0.6074,
+            "pValue": 0.5436,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.3,
+            "latestYearAnomaly": 0.08,
+            "recent12MoAnomaly": -12.53,
+            "recent12MoPctAnomaly": -31.09
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.79,
+          "historicalMax": 42.49,
+          "historicalMean": 39.73
+        },
+        "wet": {
+          "sensSlopePerYear": 0.488,
+          "sensSlopePerDecade": 4.8802,
+          "intercept": -915.1,
+          "mannKendall": {
+            "S": 136,
+            "varS": 1833.33,
+            "z": 3.1529,
+            "pValue": 0.0016,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.6,
+            "latestYearAnomaly": 8.23,
+            "recent12MoAnomaly": 9.98,
+            "recent12MoPctAnomaly": 15.45
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 57.5,
+          "historicalMax": 80.83,
+          "historicalMean": 68.26
+        }
+      }
+    },
+    "feni": {
+      "id": "feni",
+      "name": "Feni",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 56.02,
+          "sensSlopePerDecade": 560.2,
+          "intercept": -110911.38,
+          "mannKendall": {
+            "S": 166,
+            "varS": 1833.33,
+            "z": 3.8536,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1485.89,
+            "latestYearAnomaly": 1014.11,
+            "recent12MoAnomaly": -752.29,
+            "recent12MoPctAnomaly": -50.63
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1136.2,
+          "historicalMax": 4785.9,
+          "historicalMean": 2029.2
+        },
+        "rain": {
+          "sensSlopePerYear": 75.8621,
+          "sensSlopePerDecade": 758.6212,
+          "intercept": -150080.2636,
+          "mannKendall": {
+            "S": 162,
+            "varS": 1833.33,
+            "z": 3.7601,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2125.91,
+            "latestYearAnomaly": 1515.29,
+            "recent12MoAnomaly": 1142.29,
+            "recent12MoPctAnomaly": 53.73
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1645.4,
+          "historicalMax": 6675,
+          "historicalMean": 2884.84
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0849,
+          "sensSlopePerDecade": -0.8493,
+          "intercept": 207.3212,
+          "mannKendall": {
+            "S": -92,
+            "varS": 1833.33,
+            "z": -2.1253,
+            "pValue": 0.0336,
+            "trend": "decreasing"
+          },
+          "baseline2001_2010": {
+            "mean": 37.24,
+            "latestYearAnomaly": -0.91,
+            "recent12MoAnomaly": -9.86,
+            "recent12MoPctAnomaly": -26.49
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.31,
+          "historicalMax": 39.64,
+          "historicalMean": 36.35
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5038,
+          "sensSlopePerDecade": 5.0375,
+          "intercept": -941.2525,
+          "mannKendall": {
+            "S": 166,
+            "varS": 1831.33,
+            "z": 3.8557,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 69.36,
+            "latestYearAnomaly": 6.89,
+            "recent12MoAnomaly": 6.47,
+            "recent12MoPctAnomaly": 9.33
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 64.58,
+          "historicalMax": 86.83,
+          "historicalMean": 73.37
+        }
+      }
+    },
+    "gaibandha": {
+      "id": "gaibandha",
+      "name": "Gaibandha",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 19.7365,
+          "sensSlopePerDecade": 197.3646,
+          "intercept": -38371.0448,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1236.21,
+            "latestYearAnomaly": 189.69,
+            "recent12MoAnomaly": -287.11,
+            "recent12MoPctAnomaly": -23.23
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 925.7,
+          "historicalMax": 2222.5,
+          "historicalMean": 1402.69
+        },
+        "rain": {
+          "sensSlopePerYear": 37.919,
+          "sensSlopePerDecade": 379.1905,
+          "intercept": -74375.0667,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1779.24,
+            "latestYearAnomaly": 609.36,
+            "recent12MoAnomaly": 786.76,
+            "recent12MoPctAnomaly": 44.22
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 1402.9,
+          "historicalMax": 3230.6,
+          "historicalMean": 2039.92
+        },
+        "heat": {
+          "sensSlopePerYear": -0.034,
+          "sensSlopePerDecade": -0.3399,
+          "intercept": 107.4297,
+          "mannKendall": {
+            "S": -33,
+            "varS": 1832.33,
+            "z": -0.7476,
+            "pValue": 0.4547,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.54,
+            "latestYearAnomaly": -0.63,
+            "recent12MoAnomaly": -12.56,
+            "recent12MoPctAnomaly": -31.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.01,
+          "historicalMax": 42.4,
+          "historicalMean": 39.06
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4345,
+          "sensSlopePerDecade": 4.3454,
+          "intercept": -808.8669,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 63.33,
+            "latestYearAnomaly": 7.75,
+            "recent12MoAnomaly": 11.67,
+            "recent12MoPctAnomaly": 18.43
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 59.67,
+          "historicalMax": 76.92,
+          "historicalMean": 66.09
+        }
+      }
+    },
+    "gazipur": {
+      "id": "gazipur",
+      "name": "Gazipur",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.2199,
+          "sensSlopePerDecade": 212.1994,
+          "intercept": -41338.6807,
+          "mannKendall": {
+            "S": 98,
+            "varS": 1833.33,
+            "z": 2.2654,
+            "pValue": 0.0235,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1261.67,
+            "latestYearAnomaly": 408.43,
+            "recent12MoAnomaly": -308.57,
+            "recent12MoPctAnomaly": -24.46
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 933.9,
+          "historicalMax": 2881,
+          "historicalMean": 1426.5
+        },
+        "rain": {
+          "sensSlopePerYear": 43.9125,
+          "sensSlopePerDecade": 439.125,
+          "intercept": -86281.9875,
+          "mannKendall": {
+            "S": 112,
+            "varS": 1833.33,
+            "z": 2.5924,
+            "pValue": 0.0095,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1923.3,
+            "latestYearAnomaly": 715.8,
+            "recent12MoAnomaly": 938.2,
+            "recent12MoPctAnomaly": 48.78
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1506,
+          "historicalMax": 4630.6,
+          "historicalMean": 2258.37
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0025,
+          "sensSlopePerDecade": -0.025,
+          "intercept": 43.78,
+          "mannKendall": {
+            "S": -4,
+            "varS": 1833.33,
+            "z": -0.0701,
+            "pValue": 0.9441,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.13,
+            "latestYearAnomaly": 0.47,
+            "recent12MoAnomaly": -11.03,
+            "recent12MoPctAnomaly": -28.19
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.21,
+          "historicalMax": 41.78,
+          "historicalMean": 38.64
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4111,
+          "sensSlopePerDecade": 4.1112,
+          "intercept": -759.7194,
+          "mannKendall": {
+            "S": 92,
+            "varS": 1831.33,
+            "z": 2.1265,
+            "pValue": 0.0335,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.02,
+            "latestYearAnomaly": 6.9,
+            "recent12MoAnomaly": 9.73,
+            "recent12MoPctAnomaly": 14.97
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.25,
+          "historicalMax": 81.67,
+          "historicalMean": 67.93
+        }
+      }
+    },
+    "gopalganj": {
+      "id": "gopalganj",
+      "name": "Gopalganj",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 31.95,
+          "sensSlopePerDecade": 319.5,
+          "intercept": -62897.75,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1148.02,
+            "latestYearAnomaly": 599.78,
+            "recent12MoAnomaly": -577.92,
+            "recent12MoPctAnomaly": -50.34
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 875.9,
+          "historicalMax": 2920.5,
+          "historicalMean": 1443.82
+        },
+        "rain": {
+          "sensSlopePerYear": 56.9611,
+          "sensSlopePerDecade": 569.6111,
+          "intercept": -112692.15,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1648.67,
+            "latestYearAnomaly": 1005.43,
+            "recent12MoAnomaly": 848.83,
+            "recent12MoPctAnomaly": 51.49
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1368.9,
+          "historicalMax": 4441.1,
+          "historicalMean": 2148.64
+        },
+        "heat": {
+          "sensSlopePerYear": -0.039,
+          "sensSlopePerDecade": -0.39,
+          "intercept": 118.848,
+          "mannKendall": {
+            "S": -42,
+            "varS": 1833.33,
+            "z": -0.9576,
+            "pValue": 0.3383,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.66,
+            "latestYearAnomaly": -0.71,
+            "recent12MoAnomaly": -12.61,
+            "recent12MoPctAnomaly": -31.01
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.87,
+          "historicalMax": 42.83,
+          "historicalMean": 40.07
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4717,
+          "sensSlopePerDecade": 4.7166,
+          "intercept": -878.4697,
+          "mannKendall": {
+            "S": 141,
+            "varS": 1832.33,
+            "z": 3.2706,
+            "pValue": 0.0011,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.58,
+            "latestYearAnomaly": 7,
+            "recent12MoAnomaly": 7.75,
+            "recent12MoPctAnomaly": 11.46
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 62.33,
+          "historicalMax": 84.08,
+          "historicalMean": 71.16
+        }
+      }
+    },
+    "habiganj": {
+      "id": "habiganj",
+      "name": "Habiganj",
+      "division": "sylhet",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 46.16,
+          "sensSlopePerDecade": 461.6,
+          "intercept": -91075.3,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1565.44,
+            "latestYearAnomaly": 563.46,
+            "recent12MoAnomaly": -182.64,
+            "recent12MoPctAnomaly": -11.67
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 1219.7,
+          "historicalMax": 3625.1,
+          "historicalMean": 1932.27
+        },
+        "rain": {
+          "sensSlopePerYear": 78.2417,
+          "sensSlopePerDecade": 782.4167,
+          "intercept": -154448.75,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2472.34,
+            "latestYearAnomaly": 1189.76,
+            "recent12MoAnomaly": 1543.76,
+            "recent12MoPctAnomaly": 62.44
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1875.7,
+          "historicalMax": 6144.9,
+          "historicalMean": 3090.62
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0141,
+          "sensSlopePerDecade": -0.1415,
+          "intercept": 66.0726,
+          "mannKendall": {
+            "S": -27,
+            "varS": 1832.33,
+            "z": -0.6074,
+            "pValue": 0.5436,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 37.85,
+            "latestYearAnomaly": 0.17,
+            "recent12MoAnomaly": -9.1,
+            "recent12MoPctAnomaly": -24.04
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.26,
+          "historicalMax": 40.77,
+          "historicalMean": 37.38
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3701,
+          "sensSlopePerDecade": 3.7012,
+          "intercept": -672.2107,
+          "mannKendall": {
+            "S": 123,
+            "varS": 1832.33,
+            "z": 2.8501,
+            "pValue": 0.0044,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 68.78,
+            "latestYearAnomaly": 5.64,
+            "recent12MoAnomaly": 8.97,
+            "recent12MoPctAnomaly": 13.05
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 64,
+          "historicalMax": 84.42,
+          "historicalMean": 71.92
+        }
+      }
+    },
+    "jamalpur": {
+      "id": "jamalpur",
+      "name": "Jamalpur",
+      "division": "mymensingh",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.6192,
+          "sensSlopePerDecade": 216.1923,
+          "intercept": -42088.9308,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1293.98,
+            "latestYearAnomaly": 300.02,
+            "recent12MoAnomaly": -255.78,
+            "recent12MoPctAnomaly": -19.77
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 899.9,
+          "historicalMax": 2435.8,
+          "historicalMean": 1490.5
+        },
+        "rain": {
+          "sensSlopePerYear": 45.756,
+          "sensSlopePerDecade": 457.5602,
+          "intercept": -89991.2205,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1833.33,
+            "z": 2.7325,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1926.66,
+            "latestYearAnomaly": 719.84,
+            "recent12MoAnomaly": 884.54,
+            "recent12MoPctAnomaly": 45.91
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1530.8,
+          "historicalMax": 3899.1,
+          "historicalMean": 2275.24
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0232,
+          "sensSlopePerDecade": -0.2319,
+          "intercept": 85.35,
+          "mannKendall": {
+            "S": -24,
+            "varS": 1833.33,
+            "z": -0.5372,
+            "pValue": 0.5912,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.86,
+            "latestYearAnomaly": -0.18,
+            "recent12MoAnomaly": -11.56,
+            "recent12MoPctAnomaly": -29.76
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.41,
+          "historicalMax": 41.98,
+          "historicalMean": 38.38
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3765,
+          "sensSlopePerDecade": 3.765,
+          "intercept": -690.0465,
+          "mannKendall": {
+            "S": 93,
+            "varS": 1832.33,
+            "z": 2.1492,
+            "pValue": 0.0316,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.72,
+            "latestYearAnomaly": 7.45,
+            "recent12MoAnomaly": 11.11,
+            "recent12MoPctAnomaly": 17.16
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 59.75,
+          "historicalMax": 78.92,
+          "historicalMean": 67.62
+        }
+      }
+    },
+    "jessore": {
+      "id": "jessore",
+      "name": "Jessore",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 31.2722,
+          "sensSlopePerDecade": 312.7222,
+          "intercept": -61725.8889,
+          "mannKendall": {
+            "S": 138,
+            "varS": 1833.33,
+            "z": 3.1996,
+            "pValue": 0.0014,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1003.88,
+            "latestYearAnomaly": 562.42,
+            "recent12MoAnomaly": -529.78,
+            "recent12MoPctAnomaly": -52.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 650.5,
+          "historicalMax": 2231.2,
+          "historicalMean": 1256.13
+        },
+        "rain": {
+          "sensSlopePerYear": 50.4,
+          "sensSlopePerDecade": 504,
+          "intercept": -99693.7,
+          "mannKendall": {
+            "S": 148,
+            "varS": 1833.33,
+            "z": 3.4332,
+            "pValue": 0.0006,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1433.24,
+            "latestYearAnomaly": 909.56,
+            "recent12MoAnomaly": 805.36,
+            "recent12MoPctAnomaly": 56.19
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1103.5,
+          "historicalMax": 3482.9,
+          "historicalMean": 1849.42
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0401,
+          "sensSlopePerDecade": -0.4005,
+          "intercept": 121.9704,
+          "mannKendall": {
+            "S": -42,
+            "varS": 1833.33,
+            "z": -0.9576,
+            "pValue": 0.3383,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.76,
+            "latestYearAnomaly": -0.29,
+            "recent12MoAnomaly": -13.51,
+            "recent12MoPctAnomaly": -32.35
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.87,
+          "historicalMax": 44.17,
+          "historicalMean": 41.28
+        },
+        "wet": {
+          "sensSlopePerYear": 0.498,
+          "sensSlopePerDecade": 4.98,
+          "intercept": -931.232,
+          "mannKendall": {
+            "S": 165,
+            "varS": 1832.33,
+            "z": 3.8313,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.71,
+            "latestYearAnomaly": 8.29,
+            "recent12MoAnomaly": 8.12,
+            "recent12MoPctAnomaly": 11.99
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 62.42,
+          "historicalMax": 83.25,
+          "historicalMean": 71.35
+        }
+      }
+    },
+    "jhalokati": {
+      "id": "jhalokati",
+      "name": "Jhalokati",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 48.6194,
+          "sensSlopePerDecade": 486.1944,
+          "intercept": -96183.3028,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1222.46,
+            "latestYearAnomaly": 851.14,
+            "recent12MoAnomaly": -698.46,
+            "recent12MoPctAnomaly": -57.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 892.6,
+          "historicalMax": 3515.8,
+          "historicalMean": 1705.06
+        },
+        "rain": {
+          "sensSlopePerYear": 75.2361,
+          "sensSlopePerDecade": 752.3607,
+          "intercept": -149266.3511,
+          "mannKendall": {
+            "S": 162,
+            "varS": 1833.33,
+            "z": 3.7601,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1709.26,
+            "latestYearAnomaly": 1303.54,
+            "recent12MoAnomaly": 966.44,
+            "recent12MoPctAnomaly": 56.54
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1374.4,
+          "historicalMax": 5083.7,
+          "historicalMean": 2432.21
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0306,
+          "sensSlopePerDecade": -0.3058,
+          "intercept": 101.089,
+          "mannKendall": {
+            "S": -43,
+            "varS": 1832.33,
+            "z": -0.9812,
+            "pValue": 0.3265,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.75,
+            "latestYearAnomaly": -0.75,
+            "recent12MoAnomaly": -11.21,
+            "recent12MoPctAnomaly": -28.2
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.47,
+          "historicalMax": 42.06,
+          "historicalMean": 39.25
+        },
+        "wet": {
+          "sensSlopePerYear": 0.375,
+          "sensSlopePerDecade": 3.75,
+          "intercept": -679.92,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 72.29,
+            "latestYearAnomaly": 4.79,
+            "recent12MoAnomaly": 5.04,
+            "recent12MoPctAnomaly": 6.97
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 68.08,
+          "historicalMax": 85.5,
+          "historicalMean": 75.16
+        }
+      }
+    },
+    "jhenaidah": {
+      "id": "jhenaidah",
+      "name": "Jhenaidah",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 18.561,
+          "sensSlopePerDecade": 185.6098,
+          "intercept": -36333.0443,
+          "mannKendall": {
+            "S": 96,
+            "varS": 1833.33,
+            "z": 2.2187,
+            "pValue": 0.0265,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 916.28,
+            "latestYearAnomaly": 299.22,
+            "recent12MoAnomaly": -526.68,
+            "recent12MoPctAnomaly": -57.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 620.8,
+          "historicalMax": 1511,
+          "historicalMean": 1036.78
+        },
+        "rain": {
+          "sensSlopePerYear": 30.4292,
+          "sensSlopePerDecade": 304.2917,
+          "intercept": -59775.4667,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1297.48,
+            "latestYearAnomaly": 501.82,
+            "recent12MoAnomaly": 493.02,
+            "recent12MoPctAnomaly": 38
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1095.1,
+          "historicalMax": 2307.8,
+          "historicalMean": 1508.28
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0197,
+          "sensSlopePerDecade": -0.1974,
+          "intercept": 81.7424,
+          "mannKendall": {
+            "S": -21,
+            "varS": 1832.33,
+            "z": -0.4672,
+            "pValue": 0.6403,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 42.41,
+            "latestYearAnomaly": -0.08,
+            "recent12MoAnomaly": -14.59,
+            "recent12MoPctAnomaly": -34.4
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 38.71,
+          "historicalMax": 44.36,
+          "historicalMean": 42
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3829,
+          "sensSlopePerDecade": 3.8293,
+          "intercept": -704.07,
+          "mannKendall": {
+            "S": 129,
+            "varS": 1832.33,
+            "z": 2.9903,
+            "pValue": 0.0028,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 63.87,
+            "latestYearAnomaly": 7.8,
+            "recent12MoAnomaly": 7.38,
+            "recent12MoPctAnomaly": 11.56
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.92,
+          "historicalMax": 77.25,
+          "historicalMean": 66.63
+        }
+      }
+    },
+    "joypurhat": {
+      "id": "joypurhat",
+      "name": "Joypurhat",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 18.5438,
+          "sensSlopePerDecade": 185.4375,
+          "intercept": -36108.2938,
+          "mannKendall": {
+            "S": 106,
+            "varS": 1833.33,
+            "z": 2.4523,
+            "pValue": 0.0142,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1113.61,
+            "latestYearAnomaly": 327.89,
+            "recent12MoAnomaly": -277.11,
+            "recent12MoPctAnomaly": -24.88
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 807.7,
+          "historicalMax": 1940,
+          "historicalMean": 1256.31
+        },
+        "rain": {
+          "sensSlopePerYear": 38.1889,
+          "sensSlopePerDecade": 381.8889,
+          "intercept": -75056.3222,
+          "mannKendall": {
+            "S": 124,
+            "varS": 1833.33,
+            "z": 2.8727,
+            "pValue": 0.0041,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1615.23,
+            "latestYearAnomaly": 693.47,
+            "recent12MoAnomaly": 765.47,
+            "recent12MoPctAnomaly": 47.39
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1302.7,
+          "historicalMax": 2891.5,
+          "historicalMean": 1867.72
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0143,
+          "sensSlopePerDecade": -0.1425,
+          "intercept": 68.2278,
+          "mannKendall": {
+            "S": -10,
+            "varS": 1833.33,
+            "z": -0.2102,
+            "pValue": 0.8335,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.84,
+            "latestYearAnomaly": -0.06,
+            "recent12MoAnomaly": -13.44,
+            "recent12MoPctAnomaly": -33.75
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.88,
+          "historicalMax": 42.56,
+          "historicalMean": 39.41
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4508,
+          "sensSlopePerDecade": 4.5083,
+          "intercept": -838.8225,
+          "mannKendall": {
+            "S": 120,
+            "varS": 1833.33,
+            "z": 2.7792,
+            "pValue": 0.0054,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.98,
+            "latestYearAnomaly": 9.19,
+            "recent12MoAnomaly": 12.35,
+            "recent12MoPctAnomaly": 19
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 59.67,
+          "historicalMax": 80,
+          "historicalMean": 67.97
+        }
+      }
+    },
+    "khagrachhari": {
+      "id": "khagrachhari",
+      "name": "Khagrachhari",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 59.7639,
+          "sensSlopePerDecade": 597.639,
+          "intercept": -118456.1021,
+          "mannKendall": {
+            "S": 166,
+            "varS": 1833.33,
+            "z": 3.8536,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1479.96,
+            "latestYearAnomaly": 1035.44,
+            "recent12MoAnomaly": -746.86,
+            "recent12MoPctAnomaly": -50.46
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1067.4,
+          "historicalMax": 4817.6,
+          "historicalMean": 2033.93
+        },
+        "rain": {
+          "sensSlopePerYear": 82.0987,
+          "sensSlopePerDecade": 820.987,
+          "intercept": -162610.3887,
+          "mannKendall": {
+            "S": 170,
+            "varS": 1833.33,
+            "z": 3.947,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2116.45,
+            "latestYearAnomaly": 1539.55,
+            "recent12MoAnomaly": 1156.45,
+            "recent12MoPctAnomaly": 54.64
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1533.8,
+          "historicalMax": 6692.8,
+          "historicalMean": 2888.31
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0768,
+          "sensSlopePerDecade": -0.7681,
+          "intercept": 192.3947,
+          "mannKendall": {
+            "S": -98,
+            "varS": 1833.33,
+            "z": -2.2654,
+            "pValue": 0.0235,
+            "trend": "decreasing"
+          },
+          "baseline2001_2010": {
+            "mean": 38.5,
+            "latestYearAnomaly": -0.88,
+            "recent12MoAnomaly": -9.68,
+            "recent12MoPctAnomaly": -25.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.15,
+          "historicalMax": 39.97,
+          "historicalMean": 37.71
+        },
+        "wet": {
+          "sensSlopePerYear": 0.537,
+          "sensSlopePerDecade": 5.3705,
+          "intercept": -1009.48,
+          "mannKendall": {
+            "S": 174,
+            "varS": 1831.33,
+            "z": 4.0426,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.87,
+            "latestYearAnomaly": 7.63,
+            "recent12MoAnomaly": 7.3,
+            "recent12MoPctAnomaly": 10.76
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 61.67,
+          "historicalMax": 85.17,
+          "historicalMean": 72.21
+        }
+      }
+    },
+    "khulna": {
+      "id": "khulna",
+      "name": "Khulna",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 37.12,
+          "sensSlopePerDecade": 371.2,
+          "intercept": -73305.08,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1107.28,
+            "latestYearAnomaly": 650.02,
+            "recent12MoAnomaly": -681.38,
+            "recent12MoPctAnomaly": -61.54
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 751,
+          "historicalMax": 2586.2,
+          "historicalMean": 1425.32
+        },
+        "rain": {
+          "sensSlopePerYear": 56.6814,
+          "sensSlopePerDecade": 566.8142,
+          "intercept": -112133.3555,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1553.19,
+            "latestYearAnomaly": 960.91,
+            "recent12MoAnomaly": 743.81,
+            "recent12MoPctAnomaly": 47.89
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1231.4,
+          "historicalMax": 3854.7,
+          "historicalMean": 2031.69
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0297,
+          "sensSlopePerDecade": -0.2969,
+          "intercept": 100.2678,
+          "mannKendall": {
+            "S": -44,
+            "varS": 1833.33,
+            "z": -1.0043,
+            "pValue": 0.3153,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.71,
+            "latestYearAnomaly": -0.43,
+            "recent12MoAnomaly": -11.55,
+            "recent12MoPctAnomaly": -28.37
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.68,
+          "historicalMax": 43.86,
+          "historicalMean": 40.39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.2275,
+          "sensSlopePerDecade": 2.2748,
+          "intercept": -379.9228,
+          "mannKendall": {
+            "S": 113,
+            "varS": 1832.33,
+            "z": 2.6165,
+            "pValue": 0.0089,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 76.47,
+            "latestYearAnomaly": 3.61,
+            "recent12MoAnomaly": 3.53,
+            "recent12MoPctAnomaly": 4.62
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 73,
+          "historicalMax": 85.42,
+          "historicalMean": 78.15
+        }
+      }
+    },
+    "kishoreganj": {
+      "id": "kishoreganj",
+      "name": "Kishoreganj",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 30.4267,
+          "sensSlopePerDecade": 304.2671,
+          "intercept": -59644.4996,
+          "mannKendall": {
+            "S": 122,
+            "varS": 1833.33,
+            "z": 2.826,
+            "pValue": 0.0047,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1399.09,
+            "latestYearAnomaly": 448.91,
+            "recent12MoAnomaly": -203.99,
+            "recent12MoPctAnomaly": -14.58
+          },
+          "recent12MoPercentile": 12,
+          "historicalMin": 994.1,
+          "historicalMax": 3214.4,
+          "historicalMean": 1659.34
+        },
+        "rain": {
+          "sensSlopePerYear": 64.4777,
+          "sensSlopePerDecade": 644.7765,
+          "intercept": -127402.9689,
+          "mannKendall": {
+            "S": 116,
+            "varS": 1833.33,
+            "z": 2.6858,
+            "pValue": 0.0072,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2144.2,
+            "latestYearAnomaly": 913.8,
+            "recent12MoAnomaly": 1193.6,
+            "recent12MoPctAnomaly": 55.67
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1734.7,
+          "historicalMax": 5259.9,
+          "historicalMean": 2611.21
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0081,
+          "sensSlopePerDecade": -0.0814,
+          "intercept": 54.7761,
+          "mannKendall": {
+            "S": -10,
+            "varS": 1833.33,
+            "z": -0.2102,
+            "pValue": 0.8335,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.95,
+            "latestYearAnomaly": 0.3,
+            "recent12MoAnomaly": -10.82,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.11,
+          "historicalMax": 41.79,
+          "historicalMean": 38.46
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4004,
+          "sensSlopePerDecade": 4.0037,
+          "intercept": -735.7308,
+          "mannKendall": {
+            "S": 97,
+            "varS": 1832.33,
+            "z": 2.2427,
+            "pValue": 0.0249,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 66.78,
+            "latestYearAnomaly": 6.47,
+            "recent12MoAnomaly": 10.05,
+            "recent12MoPctAnomaly": 15.05
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 61.67,
+          "historicalMax": 82.58,
+          "historicalMean": 69.71
+        }
+      }
+    },
+    "kurigram": {
+      "id": "kurigram",
+      "name": "Kurigram",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 29.1806,
+          "sensSlopePerDecade": 291.8056,
+          "intercept": -57163.5917,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1350.6,
+            "latestYearAnomaly": 136.2,
+            "recent12MoAnomaly": -393.6,
+            "recent12MoPctAnomaly": -29.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1042.7,
+          "historicalMax": 2538.2,
+          "historicalMean": 1586.44
+        },
+        "rain": {
+          "sensSlopePerYear": 43.9654,
+          "sensSlopePerDecade": 439.6538,
+          "intercept": -86330.7731,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1908.14,
+            "latestYearAnomaly": 606.16,
+            "recent12MoAnomaly": 935.76,
+            "recent12MoPctAnomaly": 49.04
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 1501.7,
+          "historicalMax": 3593.6,
+          "historicalMean": 2235.17
+        },
+        "heat": {
+          "sensSlopePerYear": -0.045,
+          "sensSlopePerDecade": -0.4505,
+          "intercept": 129.447,
+          "mannKendall": {
+            "S": -34,
+            "varS": 1833.33,
+            "z": -0.7707,
+            "pValue": 0.4409,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.16,
+            "latestYearAnomaly": -0.93,
+            "recent12MoAnomaly": -12.2,
+            "recent12MoPctAnomaly": -31.16
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.32,
+          "historicalMax": 42.23,
+          "historicalMean": 38.69
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4215,
+          "sensSlopePerDecade": 4.2154,
+          "intercept": -783.9185,
+          "mannKendall": {
+            "S": 150,
+            "varS": 1831.33,
+            "z": 3.4818,
+            "pValue": 0.0005,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 62.06,
+            "latestYearAnomaly": 7.11,
+            "recent12MoAnomaly": 11.19,
+            "recent12MoPctAnomaly": 18.03
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 58.67,
+          "historicalMax": 73.75,
+          "historicalMean": 64.8
+        }
+      }
+    },
+    "kushtia": {
+      "id": "kushtia",
+      "name": "Kushtia",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 15.2553,
+          "sensSlopePerDecade": 152.5528,
+          "intercept": -29681.941,
+          "mannKendall": {
+            "S": 100,
+            "varS": 1833.33,
+            "z": 2.3121,
+            "pValue": 0.0208,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 888.49,
+            "latestYearAnomaly": 321.51,
+            "recent12MoAnomaly": -472.09,
+            "recent12MoPctAnomaly": -53.13
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 650.5,
+          "historicalMax": 1377.5,
+          "historicalMean": 992.31
+        },
+        "rain": {
+          "sensSlopePerYear": 26.6946,
+          "sensSlopePerDecade": 266.9456,
+          "intercept": -52283.5687,
+          "mannKendall": {
+            "S": 136,
+            "varS": 1833.33,
+            "z": 3.1529,
+            "pValue": 0.0016,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1261.77,
+            "latestYearAnomaly": 526.23,
+            "recent12MoAnomaly": 449.63,
+            "recent12MoPctAnomaly": 35.63
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1027.2,
+          "historicalMax": 2158.4,
+          "historicalMean": 1457.86
+        },
+        "heat": {
+          "sensSlopePerYear": -0.02,
+          "sensSlopePerDecade": -0.2,
+          "intercept": 81.89,
+          "mannKendall": {
+            "S": -28,
+            "varS": 1833.33,
+            "z": -0.6306,
+            "pValue": 0.5283,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 42.06,
+            "latestYearAnomaly": 0.03,
+            "recent12MoAnomaly": -14.96,
+            "recent12MoPctAnomaly": -35.56
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.52,
+          "historicalMax": 43.78,
+          "historicalMean": 41.58
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4608,
+          "sensSlopePerDecade": 4.6081,
+          "intercept": -864.1001,
+          "mannKendall": {
+            "S": 125,
+            "varS": 1830.33,
+            "z": 2.8984,
+            "pValue": 0.0038,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 60.36,
+            "latestYearAnomaly": 9.56,
+            "recent12MoAnomaly": 8.81,
+            "recent12MoPctAnomaly": 14.6
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 55.33,
+          "historicalMax": 75.08,
+          "historicalMean": 63.34
+        }
+      }
+    },
+    "lakshmipur": {
+      "id": "lakshmipur",
+      "name": "Lakshmipur",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 41.4442,
+          "sensSlopePerDecade": 414.4416,
+          "intercept": -81842.2156,
+          "mannKendall": {
+            "S": 126,
+            "varS": 1833.33,
+            "z": 2.9194,
+            "pValue": 0.0035,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1352.61,
+            "latestYearAnomaly": 729.59,
+            "recent12MoAnomaly": -689.01,
+            "recent12MoPctAnomaly": -50.94
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1080.4,
+          "historicalMax": 3900.2,
+          "historicalMean": 1731.8
+        },
+        "rain": {
+          "sensSlopePerYear": 58.8786,
+          "sensSlopePerDecade": 588.7857,
+          "intercept": -116131.65,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1944.12,
+            "latestYearAnomaly": 1174.88,
+            "recent12MoAnomaly": 924.18,
+            "recent12MoPctAnomaly": 47.54
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1622.5,
+          "historicalMax": 5646.8,
+          "historicalMean": 2542.93
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0302,
+          "sensSlopePerDecade": -0.3024,
+          "intercept": 98.5574,
+          "mannKendall": {
+            "S": -54,
+            "varS": 1833.33,
+            "z": -1.2378,
+            "pValue": 0.2158,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.16,
+            "latestYearAnomaly": -0.36,
+            "recent12MoAnomaly": -10.6,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.35,
+          "historicalMax": 40.58,
+          "historicalMean": 37.55
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4192,
+          "sensSlopePerDecade": 4.1917,
+          "intercept": -771.7025,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 69.35,
+            "latestYearAnomaly": 5.48,
+            "recent12MoAnomaly": 5.9,
+            "recent12MoPctAnomaly": 8.51
+          },
+          "recent12MoPercentile": 70,
+          "historicalMin": 64.75,
+          "historicalMax": 84.75,
+          "historicalMean": 72.63
+        }
+      }
+    },
+    "lalmonirhat": {
+      "id": "lalmonirhat",
+      "name": "Lalmonirhat",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 29.1806,
+          "sensSlopePerDecade": 291.8056,
+          "intercept": -57163.5917,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1350.6,
+            "latestYearAnomaly": 136.2,
+            "recent12MoAnomaly": -393.6,
+            "recent12MoPctAnomaly": -29.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1042.7,
+          "historicalMax": 2538.2,
+          "historicalMean": 1586.44
+        },
+        "rain": {
+          "sensSlopePerYear": 43.9654,
+          "sensSlopePerDecade": 439.6538,
+          "intercept": -86330.7731,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1908.14,
+            "latestYearAnomaly": 606.16,
+            "recent12MoAnomaly": 935.76,
+            "recent12MoPctAnomaly": 49.04
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 1501.7,
+          "historicalMax": 3593.6,
+          "historicalMean": 2235.17
+        },
+        "heat": {
+          "sensSlopePerYear": -0.045,
+          "sensSlopePerDecade": -0.4505,
+          "intercept": 129.447,
+          "mannKendall": {
+            "S": -34,
+            "varS": 1833.33,
+            "z": -0.7707,
+            "pValue": 0.4409,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.16,
+            "latestYearAnomaly": -0.93,
+            "recent12MoAnomaly": -12.2,
+            "recent12MoPctAnomaly": -31.16
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.32,
+          "historicalMax": 42.23,
+          "historicalMean": 38.69
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4215,
+          "sensSlopePerDecade": 4.2154,
+          "intercept": -783.9185,
+          "mannKendall": {
+            "S": 150,
+            "varS": 1831.33,
+            "z": 3.4818,
+            "pValue": 0.0005,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 62.06,
+            "latestYearAnomaly": 7.11,
+            "recent12MoAnomaly": 11.19,
+            "recent12MoPctAnomaly": 18.03
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 58.67,
+          "historicalMax": 73.75,
+          "historicalMean": 64.8
+        }
+      }
+    },
+    "madaripur": {
+      "id": "madaripur",
+      "name": "Madaripur",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 31.95,
+          "sensSlopePerDecade": 319.5,
+          "intercept": -62897.75,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1148.02,
+            "latestYearAnomaly": 599.78,
+            "recent12MoAnomaly": -577.92,
+            "recent12MoPctAnomaly": -50.34
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 875.9,
+          "historicalMax": 2920.5,
+          "historicalMean": 1443.82
+        },
+        "rain": {
+          "sensSlopePerYear": 56.9611,
+          "sensSlopePerDecade": 569.6111,
+          "intercept": -112692.15,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1648.67,
+            "latestYearAnomaly": 1005.43,
+            "recent12MoAnomaly": 848.83,
+            "recent12MoPctAnomaly": 51.49
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1368.9,
+          "historicalMax": 4441.1,
+          "historicalMean": 2148.64
+        },
+        "heat": {
+          "sensSlopePerYear": -0.039,
+          "sensSlopePerDecade": -0.39,
+          "intercept": 118.848,
+          "mannKendall": {
+            "S": -42,
+            "varS": 1833.33,
+            "z": -0.9576,
+            "pValue": 0.3383,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.66,
+            "latestYearAnomaly": -0.71,
+            "recent12MoAnomaly": -12.61,
+            "recent12MoPctAnomaly": -31.01
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.87,
+          "historicalMax": 42.83,
+          "historicalMean": 40.07
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4717,
+          "sensSlopePerDecade": 4.7166,
+          "intercept": -878.4697,
+          "mannKendall": {
+            "S": 141,
+            "varS": 1832.33,
+            "z": 3.2706,
+            "pValue": 0.0011,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.58,
+            "latestYearAnomaly": 7,
+            "recent12MoAnomaly": 7.75,
+            "recent12MoPctAnomaly": 11.46
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 62.33,
+          "historicalMax": 84.08,
+          "historicalMean": 71.16
+        }
+      }
+    },
+    "magura": {
+      "id": "magura",
+      "name": "Magura",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 27.4617,
+          "sensSlopePerDecade": 274.6174,
+          "intercept": -54146.4017,
+          "mannKendall": {
+            "S": 120,
+            "varS": 1833.33,
+            "z": 2.7792,
+            "pValue": 0.0054,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 952.87,
+            "latestYearAnomaly": 502.63,
+            "recent12MoAnomaly": -406.17,
+            "recent12MoPctAnomaly": -42.63
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 686.6,
+          "historicalMax": 1989.7,
+          "historicalMean": 1159.04
+        },
+        "rain": {
+          "sensSlopePerYear": 48.9468,
+          "sensSlopePerDecade": 489.4682,
+          "intercept": -96881.0386,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1377.83,
+            "latestYearAnomaly": 858.27,
+            "recent12MoAnomaly": 844.77,
+            "recent12MoPctAnomaly": 61.31
+          },
+          "recent12MoPercentile": 76,
+          "historicalMin": 1066.7,
+          "historicalMax": 3206.5,
+          "historicalMean": 1744.92
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0265,
+          "sensSlopePerDecade": -0.2647,
+          "intercept": 94.6194,
+          "mannKendall": {
+            "S": -27,
+            "varS": 1832.33,
+            "z": -0.6074,
+            "pValue": 0.5436,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.61,
+            "latestYearAnomaly": -0.16,
+            "recent12MoAnomaly": -13.99,
+            "recent12MoPctAnomaly": -33.62
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.04,
+          "historicalMax": 43.53,
+          "historicalMean": 41.03
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5731,
+          "sensSlopePerDecade": 5.7311,
+          "intercept": -1084.8985,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.23,
+            "latestYearAnomaly": 10.1,
+            "recent12MoAnomaly": 10.77,
+            "recent12MoPctAnomaly": 16.51
+          },
+          "recent12MoPercentile": 90,
+          "historicalMin": 60.5,
+          "historicalMax": 82.08,
+          "historicalMean": 69.43
+        }
+      }
+    },
+    "manikganj": {
+      "id": "manikganj",
+      "name": "Manikganj",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 23.4925,
+          "sensSlopePerDecade": 234.925,
+          "intercept": -46034.05,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1833.33,
+            "z": 2.7325,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1135.16,
+            "latestYearAnomaly": 447.04,
+            "recent12MoAnomaly": -297.06,
+            "recent12MoPctAnomaly": -26.17
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 812,
+          "historicalMax": 2530.9,
+          "historicalMean": 1308.24
+        },
+        "rain": {
+          "sensSlopePerYear": 44.063,
+          "sensSlopePerDecade": 440.6295,
+          "intercept": -86730.598,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1680.87,
+            "latestYearAnomaly": 781.13,
+            "recent12MoAnomaly": 957.43,
+            "recent12MoPctAnomaly": 56.96
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1253.7,
+          "historicalMax": 4046.6,
+          "historicalMean": 2029.46
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0148,
+          "sensSlopePerDecade": -0.1477,
+          "intercept": 69.4861,
+          "mannKendall": {
+            "S": -16,
+            "varS": 1833.33,
+            "z": -0.3503,
+            "pValue": 0.7261,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.94,
+            "latestYearAnomaly": 0.34,
+            "recent12MoAnomaly": -12.5,
+            "recent12MoPctAnomaly": -31.3
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.95,
+          "historicalMax": 42.27,
+          "historicalMean": 39.39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.429,
+          "sensSlopePerDecade": 4.2895,
+          "intercept": -794.4261,
+          "mannKendall": {
+            "S": 91,
+            "varS": 1829.67,
+            "z": 2.1041,
+            "pValue": 0.0354,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.63,
+            "latestYearAnomaly": 8.29,
+            "recent12MoAnomaly": 11.2,
+            "recent12MoPctAnomaly": 17.06
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 57.58,
+          "historicalMax": 81,
+          "historicalMean": 68.86
+        }
+      }
+    },
+    "maulvibazar": {
+      "id": "maulvibazar",
+      "name": "Maulvibazar",
+      "division": "sylhet",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 46.3485,
+          "sensSlopePerDecade": 463.4853,
+          "intercept": -91436.2868,
+          "mannKendall": {
+            "S": 152,
+            "varS": 1833.33,
+            "z": 3.5266,
+            "pValue": 0.0004,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1603.03,
+            "latestYearAnomaly": 539.77,
+            "recent12MoAnomaly": -194.03,
+            "recent12MoPctAnomaly": -12.1
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 1288.7,
+          "historicalMax": 3626.2,
+          "historicalMean": 1966.67
+        },
+        "rain": {
+          "sensSlopePerYear": 74.9268,
+          "sensSlopePerDecade": 749.2684,
+          "intercept": -147713.4669,
+          "mannKendall": {
+            "S": 138,
+            "varS": 1833.33,
+            "z": 3.1996,
+            "pValue": 0.0014,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2556.62,
+            "latestYearAnomaly": 1144.98,
+            "recent12MoAnomaly": 1511.98,
+            "recent12MoPctAnomaly": 59.14
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1927.8,
+          "historicalMax": 6185.5,
+          "historicalMean": 3162.13
+        },
+        "heat": {
+          "sensSlopePerYear": -0.028,
+          "sensSlopePerDecade": -0.2803,
+          "intercept": 93.12,
+          "mannKendall": {
+            "S": -32,
+            "varS": 1833.33,
+            "z": -0.724,
+            "pValue": 0.4691,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 36.97,
+            "latestYearAnomaly": 0.09,
+            "recent12MoAnomaly": -8.84,
+            "recent12MoPctAnomaly": -23.92
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.92,
+          "historicalMax": 39.72,
+          "historicalMean": 36.58
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3647,
+          "sensSlopePerDecade": 3.6472,
+          "intercept": -659.2928,
+          "mannKendall": {
+            "S": 129,
+            "varS": 1832.33,
+            "z": 2.9903,
+            "pValue": 0.0028,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 71.36,
+            "latestYearAnomaly": 5.14,
+            "recent12MoAnomaly": 8.39,
+            "recent12MoPctAnomaly": 11.76
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 67,
+          "historicalMax": 86,
+          "historicalMean": 74.43
+        }
+      }
+    },
+    "meherpur": {
+      "id": "meherpur",
+      "name": "Meherpur",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 15.2553,
+          "sensSlopePerDecade": 152.5528,
+          "intercept": -29681.941,
+          "mannKendall": {
+            "S": 100,
+            "varS": 1833.33,
+            "z": 2.3121,
+            "pValue": 0.0208,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 888.49,
+            "latestYearAnomaly": 321.51,
+            "recent12MoAnomaly": -472.09,
+            "recent12MoPctAnomaly": -53.13
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 650.5,
+          "historicalMax": 1377.5,
+          "historicalMean": 992.31
+        },
+        "rain": {
+          "sensSlopePerYear": 26.6946,
+          "sensSlopePerDecade": 266.9456,
+          "intercept": -52283.5687,
+          "mannKendall": {
+            "S": 136,
+            "varS": 1833.33,
+            "z": 3.1529,
+            "pValue": 0.0016,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1261.77,
+            "latestYearAnomaly": 526.23,
+            "recent12MoAnomaly": 449.63,
+            "recent12MoPctAnomaly": 35.63
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1027.2,
+          "historicalMax": 2158.4,
+          "historicalMean": 1457.86
+        },
+        "heat": {
+          "sensSlopePerYear": -0.02,
+          "sensSlopePerDecade": -0.2,
+          "intercept": 81.89,
+          "mannKendall": {
+            "S": -28,
+            "varS": 1833.33,
+            "z": -0.6306,
+            "pValue": 0.5283,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 42.06,
+            "latestYearAnomaly": 0.03,
+            "recent12MoAnomaly": -14.96,
+            "recent12MoPctAnomaly": -35.56
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.52,
+          "historicalMax": 43.78,
+          "historicalMean": 41.58
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4608,
+          "sensSlopePerDecade": 4.6081,
+          "intercept": -864.1001,
+          "mannKendall": {
+            "S": 125,
+            "varS": 1830.33,
+            "z": 2.8984,
+            "pValue": 0.0038,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 60.36,
+            "latestYearAnomaly": 9.56,
+            "recent12MoAnomaly": 8.81,
+            "recent12MoPctAnomaly": 14.6
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 55.33,
+          "historicalMax": 75.08,
+          "historicalMean": 63.34
+        }
+      }
+    },
+    "munshiganj": {
+      "id": "munshiganj",
+      "name": "Munshiganj",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 24.7292,
+          "sensSlopePerDecade": 247.2917,
+          "intercept": -48372.6458,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1272.39,
+            "latestYearAnomaly": 500.01,
+            "recent12MoAnomaly": -519.69,
+            "recent12MoPctAnomaly": -40.84
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 994,
+          "historicalMax": 3214.9,
+          "historicalMean": 1488.04
+        },
+        "rain": {
+          "sensSlopePerYear": 43.3167,
+          "sensSlopePerDecade": 433.1667,
+          "intercept": -85032.4833,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1896.19,
+            "latestYearAnomaly": 833.21,
+            "recent12MoAnomaly": 811.71,
+            "recent12MoPctAnomaly": 42.81
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1507.1,
+          "historicalMax": 4914.5,
+          "historicalMean": 2290.96
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0157,
+          "sensSlopePerDecade": -0.1575,
+          "intercept": 70.0687,
+          "mannKendall": {
+            "S": -12,
+            "varS": 1833.33,
+            "z": -0.2569,
+            "pValue": 0.7973,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.73,
+            "latestYearAnomaly": 0.02,
+            "recent12MoAnomaly": -10.92,
+            "recent12MoPctAnomaly": -28.19
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.81,
+          "historicalMax": 41.25,
+          "historicalMean": 38.19
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4063,
+          "sensSlopePerDecade": 4.0625,
+          "intercept": -750.0175,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1831.33,
+            "z": 2.734,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.4,
+            "latestYearAnomaly": 6.85,
+            "recent12MoAnomaly": 8.1,
+            "recent12MoPctAnomaly": 12.39
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.58,
+          "historicalMax": 82.75,
+          "historicalMean": 68.58
+        }
+      }
+    },
+    "mymensingh": {
+      "id": "mymensingh",
+      "name": "Mymensingh",
+      "division": "mymensingh",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 30.4267,
+          "sensSlopePerDecade": 304.2671,
+          "intercept": -59644.4996,
+          "mannKendall": {
+            "S": 122,
+            "varS": 1833.33,
+            "z": 2.826,
+            "pValue": 0.0047,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1399.09,
+            "latestYearAnomaly": 448.91,
+            "recent12MoAnomaly": -203.99,
+            "recent12MoPctAnomaly": -14.58
+          },
+          "recent12MoPercentile": 12,
+          "historicalMin": 994.1,
+          "historicalMax": 3214.4,
+          "historicalMean": 1659.34
+        },
+        "rain": {
+          "sensSlopePerYear": 64.4777,
+          "sensSlopePerDecade": 644.7765,
+          "intercept": -127402.9689,
+          "mannKendall": {
+            "S": 116,
+            "varS": 1833.33,
+            "z": 2.6858,
+            "pValue": 0.0072,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2144.2,
+            "latestYearAnomaly": 913.8,
+            "recent12MoAnomaly": 1193.6,
+            "recent12MoPctAnomaly": 55.67
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1734.7,
+          "historicalMax": 5259.9,
+          "historicalMean": 2611.21
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0081,
+          "sensSlopePerDecade": -0.0814,
+          "intercept": 54.7761,
+          "mannKendall": {
+            "S": -10,
+            "varS": 1833.33,
+            "z": -0.2102,
+            "pValue": 0.8335,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.95,
+            "latestYearAnomaly": 0.3,
+            "recent12MoAnomaly": -10.82,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.11,
+          "historicalMax": 41.79,
+          "historicalMean": 38.46
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4004,
+          "sensSlopePerDecade": 4.0037,
+          "intercept": -735.7308,
+          "mannKendall": {
+            "S": 97,
+            "varS": 1832.33,
+            "z": 2.2427,
+            "pValue": 0.0249,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 66.78,
+            "latestYearAnomaly": 6.47,
+            "recent12MoAnomaly": 10.05,
+            "recent12MoPctAnomaly": 15.05
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 61.67,
+          "historicalMax": 82.58,
+          "historicalMean": 69.71
+        }
+      }
+    },
+    "naogaon": {
+      "id": "naogaon",
+      "name": "Naogaon",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 15.3369,
+          "sensSlopePerDecade": 153.369,
+          "intercept": -29811.7,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 946.47,
+            "latestYearAnomaly": 323.93,
+            "recent12MoAnomaly": -347.77,
+            "recent12MoPctAnomaly": -36.74
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 743.1,
+          "historicalMax": 1539.9,
+          "historicalMean": 1051.83
+        },
+        "rain": {
+          "sensSlopePerYear": 25.4444,
+          "sensSlopePerDecade": 254.4444,
+          "intercept": -49738.7222,
+          "mannKendall": {
+            "S": 122,
+            "varS": 1833.33,
+            "z": 2.826,
+            "pValue": 0.0047,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1334.68,
+            "latestYearAnomaly": 588.02,
+            "recent12MoAnomaly": 552.82,
+            "recent12MoPctAnomaly": 41.42
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1116.7,
+          "historicalMax": 2294.6,
+          "historicalMean": 1512.04
+        },
+        "heat": {
+          "sensSlopePerYear": -0.008,
+          "sensSlopePerDecade": -0.0799,
+          "intercept": 57.1903,
+          "mannKendall": {
+            "S": -10,
+            "varS": 1833.33,
+            "z": -0.2102,
+            "pValue": 0.8335,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.35,
+            "latestYearAnomaly": -0.15,
+            "recent12MoAnomaly": -14.95,
+            "recent12MoPctAnomaly": -36.15
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 36.88,
+          "historicalMax": 43.66,
+          "historicalMean": 41.02
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3844,
+          "sensSlopePerDecade": 3.8436,
+          "intercept": -709.5363,
+          "mannKendall": {
+            "S": 141,
+            "varS": 1832.33,
+            "z": 3.2706,
+            "pValue": 0.0011,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 61.81,
+            "latestYearAnomaly": 10.11,
+            "recent12MoAnomaly": 12.11,
+            "recent12MoPctAnomaly": 19.59
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 57.25,
+          "historicalMax": 77.25,
+          "historicalMean": 64.56
+        }
+      }
+    },
+    "narail": {
+      "id": "narail",
+      "name": "Narail",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 31.2722,
+          "sensSlopePerDecade": 312.7222,
+          "intercept": -61725.8889,
+          "mannKendall": {
+            "S": 138,
+            "varS": 1833.33,
+            "z": 3.1996,
+            "pValue": 0.0014,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1003.88,
+            "latestYearAnomaly": 562.42,
+            "recent12MoAnomaly": -529.78,
+            "recent12MoPctAnomaly": -52.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 650.5,
+          "historicalMax": 2231.2,
+          "historicalMean": 1256.13
+        },
+        "rain": {
+          "sensSlopePerYear": 50.4,
+          "sensSlopePerDecade": 504,
+          "intercept": -99693.7,
+          "mannKendall": {
+            "S": 148,
+            "varS": 1833.33,
+            "z": 3.4332,
+            "pValue": 0.0006,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1433.24,
+            "latestYearAnomaly": 909.56,
+            "recent12MoAnomaly": 805.36,
+            "recent12MoPctAnomaly": 56.19
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1103.5,
+          "historicalMax": 3482.9,
+          "historicalMean": 1849.42
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0401,
+          "sensSlopePerDecade": -0.4005,
+          "intercept": 121.9704,
+          "mannKendall": {
+            "S": -42,
+            "varS": 1833.33,
+            "z": -0.9576,
+            "pValue": 0.3383,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.76,
+            "latestYearAnomaly": -0.29,
+            "recent12MoAnomaly": -13.51,
+            "recent12MoPctAnomaly": -32.35
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.87,
+          "historicalMax": 44.17,
+          "historicalMean": 41.28
+        },
+        "wet": {
+          "sensSlopePerYear": 0.498,
+          "sensSlopePerDecade": 4.98,
+          "intercept": -931.232,
+          "mannKendall": {
+            "S": 165,
+            "varS": 1832.33,
+            "z": 3.8313,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 67.71,
+            "latestYearAnomaly": 8.29,
+            "recent12MoAnomaly": 8.12,
+            "recent12MoPctAnomaly": 11.99
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 62.42,
+          "historicalMax": 83.25,
+          "historicalMean": 71.35
+        }
+      }
+    },
+    "narayanganj": {
+      "id": "narayanganj",
+      "name": "Narayanganj",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 24.7292,
+          "sensSlopePerDecade": 247.2917,
+          "intercept": -48372.6458,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1272.39,
+            "latestYearAnomaly": 500.01,
+            "recent12MoAnomaly": -519.69,
+            "recent12MoPctAnomaly": -40.84
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 994,
+          "historicalMax": 3214.9,
+          "historicalMean": 1488.04
+        },
+        "rain": {
+          "sensSlopePerYear": 43.3167,
+          "sensSlopePerDecade": 433.1667,
+          "intercept": -85032.4833,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1896.19,
+            "latestYearAnomaly": 833.21,
+            "recent12MoAnomaly": 811.71,
+            "recent12MoPctAnomaly": 42.81
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1507.1,
+          "historicalMax": 4914.5,
+          "historicalMean": 2290.96
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0157,
+          "sensSlopePerDecade": -0.1575,
+          "intercept": 70.0687,
+          "mannKendall": {
+            "S": -12,
+            "varS": 1833.33,
+            "z": -0.2569,
+            "pValue": 0.7973,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.73,
+            "latestYearAnomaly": 0.02,
+            "recent12MoAnomaly": -10.92,
+            "recent12MoPctAnomaly": -28.19
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.81,
+          "historicalMax": 41.25,
+          "historicalMean": 38.19
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4063,
+          "sensSlopePerDecade": 4.0625,
+          "intercept": -750.0175,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1831.33,
+            "z": 2.734,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.4,
+            "latestYearAnomaly": 6.85,
+            "recent12MoAnomaly": 8.1,
+            "recent12MoPctAnomaly": 12.39
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.58,
+          "historicalMax": 82.75,
+          "historicalMean": 68.58
+        }
+      }
+    },
+    "narsingdi": {
+      "id": "narsingdi",
+      "name": "Narsingdi",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.2199,
+          "sensSlopePerDecade": 212.1994,
+          "intercept": -41338.6807,
+          "mannKendall": {
+            "S": 98,
+            "varS": 1833.33,
+            "z": 2.2654,
+            "pValue": 0.0235,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1261.67,
+            "latestYearAnomaly": 408.43,
+            "recent12MoAnomaly": -308.57,
+            "recent12MoPctAnomaly": -24.46
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 933.9,
+          "historicalMax": 2881,
+          "historicalMean": 1426.5
+        },
+        "rain": {
+          "sensSlopePerYear": 43.9125,
+          "sensSlopePerDecade": 439.125,
+          "intercept": -86281.9875,
+          "mannKendall": {
+            "S": 112,
+            "varS": 1833.33,
+            "z": 2.5924,
+            "pValue": 0.0095,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1923.3,
+            "latestYearAnomaly": 715.8,
+            "recent12MoAnomaly": 938.2,
+            "recent12MoPctAnomaly": 48.78
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1506,
+          "historicalMax": 4630.6,
+          "historicalMean": 2258.37
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0025,
+          "sensSlopePerDecade": -0.025,
+          "intercept": 43.78,
+          "mannKendall": {
+            "S": -4,
+            "varS": 1833.33,
+            "z": -0.0701,
+            "pValue": 0.9441,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.13,
+            "latestYearAnomaly": 0.47,
+            "recent12MoAnomaly": -11.03,
+            "recent12MoPctAnomaly": -28.19
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.21,
+          "historicalMax": 41.78,
+          "historicalMean": 38.64
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4111,
+          "sensSlopePerDecade": 4.1112,
+          "intercept": -759.7194,
+          "mannKendall": {
+            "S": 92,
+            "varS": 1831.33,
+            "z": 2.1265,
+            "pValue": 0.0335,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.02,
+            "latestYearAnomaly": 6.9,
+            "recent12MoAnomaly": 9.73,
+            "recent12MoPctAnomaly": 14.97
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 58.25,
+          "historicalMax": 81.67,
+          "historicalMean": 67.93
+        }
+      }
+    },
+    "natore": {
+      "id": "natore",
+      "name": "Natore",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.89,
+          "sensSlopePerDecade": 218.9,
+          "intercept": -42904.21,
+          "mannKendall": {
+            "S": 106,
+            "varS": 1833.33,
+            "z": 2.4523,
+            "pValue": 0.0142,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1028.46,
+            "latestYearAnomaly": 423.74,
+            "recent12MoAnomaly": -302.66,
+            "recent12MoPctAnomaly": -29.43
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 723.4,
+          "historicalMax": 1839.3,
+          "historicalMean": 1183.96
+        },
+        "rain": {
+          "sensSlopePerYear": 38.1877,
+          "sensSlopePerDecade": 381.8766,
+          "intercept": -75089.5026,
+          "mannKendall": {
+            "S": 128,
+            "varS": 1833.33,
+            "z": 2.9661,
+            "pValue": 0.003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1494.62,
+            "latestYearAnomaly": 746.38,
+            "recent12MoAnomaly": 789.38,
+            "recent12MoPctAnomaly": 52.81
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1155.4,
+          "historicalMax": 2949.2,
+          "historicalMean": 1785.43
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0141,
+          "sensSlopePerDecade": -0.1415,
+          "intercept": 68.5486,
+          "mannKendall": {
+            "S": -19,
+            "varS": 1832.33,
+            "z": -0.4205,
+            "pValue": 0.6741,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.39,
+            "latestYearAnomaly": 0.06,
+            "recent12MoAnomaly": -13.93,
+            "recent12MoPctAnomaly": -34.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.95,
+          "historicalMax": 42.58,
+          "historicalMean": 39.87
+        },
+        "wet": {
+          "sensSlopePerYear": 0.53,
+          "sensSlopePerDecade": 5.3,
+          "intercept": -1000.17,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1831.33,
+            "z": 2.6406,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 62.66,
+            "latestYearAnomaly": 10.42,
+            "recent12MoAnomaly": 12.92,
+            "recent12MoPctAnomaly": 20.62
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 55.33,
+          "historicalMax": 80,
+          "historicalMean": 66.36
+        }
+      }
+    },
+    "netrakona": {
+      "id": "netrakona",
+      "name": "Netrakona",
+      "division": "mymensingh",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 40.7055,
+          "sensSlopePerDecade": 407.0545,
+          "intercept": -80140.1345,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1525.18,
+            "latestYearAnomaly": 427.82,
+            "recent12MoAnomaly": -264.98,
+            "recent12MoPctAnomaly": -17.37
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 1122.5,
+          "historicalMax": 3353.8,
+          "historicalMean": 1873.24
+        },
+        "rain": {
+          "sensSlopePerYear": 72.0654,
+          "sensSlopePerDecade": 720.6538,
+          "intercept": -142247.5077,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2348.24,
+            "latestYearAnomaly": 991.56,
+            "recent12MoAnomaly": 1199.06,
+            "recent12MoPctAnomaly": 51.06
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1929.8,
+          "historicalMax": 5436.8,
+          "historicalMean": 2902.48
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0264,
+          "sensSlopePerDecade": -0.2643,
+          "intercept": 90.6021,
+          "mannKendall": {
+            "S": -22,
+            "varS": 1833.33,
+            "z": -0.4905,
+            "pValue": 0.6238,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 37.71,
+            "latestYearAnomaly": 0.11,
+            "recent12MoAnomaly": -9.85,
+            "recent12MoPctAnomaly": -26.13
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.34,
+          "historicalMax": 40.99,
+          "historicalMean": 37.3
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3391,
+          "sensSlopePerDecade": 3.3912,
+          "intercept": -611.0268,
+          "mannKendall": {
+            "S": 96,
+            "varS": 1833.33,
+            "z": 2.2187,
+            "pValue": 0.0265,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 68.57,
+            "latestYearAnomaly": 5.18,
+            "recent12MoAnomaly": 8.76,
+            "recent12MoPctAnomaly": 12.77
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 63.58,
+          "historicalMax": 82.75,
+          "historicalMean": 71.22
+        }
+      }
+    },
+    "nilphamari": {
+      "id": "nilphamari",
+      "name": "Nilphamari",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 38.1646,
+          "sensSlopePerDecade": 381.6456,
+          "intercept": -75317.7854,
+          "mannKendall": {
+            "S": 170,
+            "varS": 1833.33,
+            "z": 3.947,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1244.52,
+            "latestYearAnomaly": 328.48,
+            "recent12MoAnomaly": -364.12,
+            "recent12MoPctAnomaly": -29.26
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 999.6,
+          "historicalMax": 2668.4,
+          "historicalMean": 1548.28
+        },
+        "rain": {
+          "sensSlopePerYear": 52.1071,
+          "sensSlopePerDecade": 521.0714,
+          "intercept": -102844.6571,
+          "mannKendall": {
+            "S": 170,
+            "varS": 1833.33,
+            "z": 3.947,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1673.38,
+            "latestYearAnomaly": 810.52,
+            "recent12MoAnomaly": 1082.42,
+            "recent12MoPctAnomaly": 64.68
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 1386.1,
+          "historicalMax": 3578.4,
+          "historicalMean": 2076.11
+        },
+        "heat": {
+          "sensSlopePerYear": -0.041,
+          "sensSlopePerDecade": -0.41,
+          "intercept": 121.905,
+          "mannKendall": {
+            "S": -46,
+            "varS": 1833.33,
+            "z": -1.051,
+            "pValue": 0.2933,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.05,
+            "latestYearAnomaly": -1.17,
+            "recent12MoAnomaly": -13.2,
+            "recent12MoPctAnomaly": -32.95
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.88,
+          "historicalMax": 42.46,
+          "historicalMean": 39.58
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5267,
+          "sensSlopePerDecade": 5.2667,
+          "intercept": -996.27,
+          "mannKendall": {
+            "S": 179,
+            "varS": 1832.33,
+            "z": 4.1583,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 60.59,
+            "latestYearAnomaly": 10.24,
+            "recent12MoAnomaly": 15.08,
+            "recent12MoPctAnomaly": 24.88
+          },
+          "recent12MoPercentile": 100,
+          "historicalMin": 56.75,
+          "historicalMax": 74.25,
+          "historicalMean": 64.28
+        }
+      }
+    },
+    "noakhali": {
+      "id": "noakhali",
+      "name": "Noakhali",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 93.3205,
+          "sensSlopePerDecade": 933.2054,
+          "intercept": -185670.0536,
+          "mannKendall": {
+            "S": 184,
+            "varS": 1833.33,
+            "z": 4.274,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1494.13,
+            "latestYearAnomaly": 1480.77,
+            "recent12MoAnomaly": -830.53,
+            "recent12MoPctAnomaly": -55.59
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1002.7,
+          "historicalMax": 5710.8,
+          "historicalMean": 2397.57
+        },
+        "rain": {
+          "sensSlopePerYear": 125.6886,
+          "sensSlopePerDecade": 1256.8864,
+          "intercept": -250163.4045,
+          "mannKendall": {
+            "S": 182,
+            "varS": 1833.33,
+            "z": 4.2272,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2069.76,
+            "latestYearAnomaly": 2164.04,
+            "recent12MoAnomaly": 1736.54,
+            "recent12MoPctAnomaly": 83.9
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1403.6,
+          "historicalMax": 7591.5,
+          "historicalMean": 3266.24
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0232,
+          "sensSlopePerDecade": -0.2321,
+          "intercept": 79.4551,
+          "mannKendall": {
+            "S": -38,
+            "varS": 1829.33,
+            "z": -0.8651,
+            "pValue": 0.387,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 33.1,
+            "latestYearAnomaly": -0.32,
+            "recent12MoAnomaly": -6.39,
+            "recent12MoPctAnomaly": -19.31
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 30.69,
+          "historicalMax": 34.42,
+          "historicalMean": 32.83
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5842,
+          "sensSlopePerDecade": 5.8417,
+          "intercept": -1103.4292,
+          "mannKendall": {
+            "S": 165,
+            "varS": 1832.33,
+            "z": 3.8313,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 68.64,
+            "latestYearAnomaly": 7.19,
+            "recent12MoAnomaly": 7.11,
+            "recent12MoPctAnomaly": 10.35
+          },
+          "recent12MoPercentile": 60,
+          "historicalMin": 63.17,
+          "historicalMax": 85.92,
+          "historicalMean": 73.29
+        }
+      }
+    },
+    "pabna": {
+      "id": "pabna",
+      "name": "Pabna",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 22.8139,
+          "sensSlopePerDecade": 228.1389,
+          "intercept": -44760.025,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 974.2,
+            "latestYearAnomaly": 463.9,
+            "recent12MoAnomaly": -339.2,
+            "recent12MoPctAnomaly": -34.82
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 744.9,
+          "historicalMax": 1904.1,
+          "historicalMean": 1150.61
+        },
+        "rain": {
+          "sensSlopePerYear": 42.8177,
+          "sensSlopePerDecade": 428.1766,
+          "intercept": -84506.7561,
+          "mannKendall": {
+            "S": 142,
+            "varS": 1833.33,
+            "z": 3.2931,
+            "pValue": 0.001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1415.27,
+            "latestYearAnomaly": 783.73,
+            "recent12MoAnomaly": 817.63,
+            "recent12MoPctAnomaly": 57.77
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1095.4,
+          "historicalMax": 3094.4,
+          "historicalMean": 1744.3
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0283,
+          "sensSlopePerDecade": -0.2834,
+          "intercept": 97.6835,
+          "mannKendall": {
+            "S": -30,
+            "varS": 1833.33,
+            "z": -0.6773,
+            "pValue": 0.4982,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.95,
+            "latestYearAnomaly": 0.01,
+            "recent12MoAnomaly": -13.98,
+            "recent12MoPctAnomaly": -34.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.79,
+          "historicalMax": 42.83,
+          "historicalMean": 40.37
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5528,
+          "sensSlopePerDecade": 5.5278,
+          "intercept": -1045.23,
+          "mannKendall": {
+            "S": 129,
+            "varS": 1832.33,
+            "z": 2.9903,
+            "pValue": 0.0028,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 63.78,
+            "latestYearAnomaly": 10.39,
+            "recent12MoAnomaly": 11.72,
+            "recent12MoPctAnomaly": 18.38
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 56.92,
+          "historicalMax": 80.58,
+          "historicalMean": 67.67
+        }
+      }
+    },
+    "panchagarh": {
+      "id": "panchagarh",
+      "name": "Panchagarh",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 49.0969,
+          "sensSlopePerDecade": 490.9688,
+          "intercept": -97160.5469,
+          "mannKendall": {
+            "S": 190,
+            "varS": 1833.33,
+            "z": 4.4141,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1312.21,
+            "latestYearAnomaly": 426.49,
+            "recent12MoAnomaly": -475.21,
+            "recent12MoPctAnomaly": -36.21
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1062,
+          "historicalMax": 3062,
+          "historicalMean": 1700.34
+        },
+        "rain": {
+          "sensSlopePerYear": 68.0781,
+          "sensSlopePerDecade": 680.7805,
+          "intercept": -134769.7672,
+          "mannKendall": {
+            "S": 206,
+            "varS": 1833.33,
+            "z": 4.7878,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1719.08,
+            "latestYearAnomaly": 967.32,
+            "recent12MoAnomaly": 1308.02,
+            "recent12MoPctAnomaly": 76.09
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 1448.3,
+          "historicalMax": 3892.9,
+          "historicalMean": 2221.64
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0586,
+          "sensSlopePerDecade": -0.5865,
+          "intercept": 156.5049,
+          "mannKendall": {
+            "S": -44,
+            "varS": 1833.33,
+            "z": -1.0043,
+            "pValue": 0.3153,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.13,
+            "latestYearAnomaly": -1.57,
+            "recent12MoAnomaly": -12.65,
+            "recent12MoPctAnomaly": -32.33
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.87,
+          "historicalMax": 41.42,
+          "historicalMean": 38.62
+        },
+        "wet": {
+          "sensSlopePerYear": 0.6042,
+          "sensSlopePerDecade": 6.0425,
+          "intercept": -1154.6062,
+          "mannKendall": {
+            "S": 215,
+            "varS": 1832.33,
+            "z": 4.9993,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 57.18,
+            "latestYearAnomaly": 11.82,
+            "recent12MoAnomaly": 15.9,
+            "recent12MoPctAnomaly": 27.8
+          },
+          "recent12MoPercentile": 100,
+          "historicalMin": 53.92,
+          "historicalMax": 71.75,
+          "historicalMean": 61.78
+        }
+      }
+    },
+    "patuakhali": {
+      "id": "patuakhali",
+      "name": "Patuakhali",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 129.7513,
+          "sensSlopePerDecade": 1297.5128,
+          "intercept": -258536.1256,
+          "mannKendall": {
+            "S": 176,
+            "varS": 1833.33,
+            "z": 4.0871,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1595.2,
+            "latestYearAnomaly": 2098.2,
+            "recent12MoAnomaly": -865.4,
+            "recent12MoPctAnomaly": -54.25
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1127,
+          "historicalMax": 6489.5,
+          "historicalMean": 3059.42
+        },
+        "rain": {
+          "sensSlopePerYear": 180.1008,
+          "sensSlopePerDecade": 1801.0083,
+          "intercept": -359007.3742,
+          "mannKendall": {
+            "S": 174,
+            "varS": 1833.33,
+            "z": 4.0404,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2188.4,
+            "latestYearAnomaly": 3106.1,
+            "recent12MoAnomaly": 2444.4,
+            "recent12MoPctAnomaly": 111.7
+          },
+          "recent12MoPercentile": 60,
+          "historicalMin": 1601.6,
+          "historicalMax": 9427.5,
+          "historicalMean": 4234.96
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0303,
+          "sensSlopePerDecade": -0.3029,
+          "intercept": 94.3018,
+          "mannKendall": {
+            "S": -52,
+            "varS": 1833.33,
+            "z": -1.1911,
+            "pValue": 0.2336,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 33.82,
+            "latestYearAnomaly": -0.28,
+            "recent12MoAnomaly": -6.93,
+            "recent12MoPctAnomaly": -20.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 31.34,
+          "historicalMax": 34.99,
+          "historicalMean": 33.38
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4165,
+          "sensSlopePerDecade": 4.1655,
+          "intercept": -757.0907,
+          "mannKendall": {
+            "S": 153,
+            "varS": 1830.33,
+            "z": 3.5529,
+            "pValue": 0.0004,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 78.82,
+            "latestYearAnomaly": 5.1,
+            "recent12MoAnomaly": 4.68,
+            "recent12MoPctAnomaly": 5.94
+          },
+          "recent12MoPercentile": 60,
+          "historicalMin": 76.58,
+          "historicalMax": 89.5,
+          "historicalMean": 82.07
+        }
+      }
+    },
+    "pirojpur": {
+      "id": "pirojpur",
+      "name": "Pirojpur",
+      "division": "barisal",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 48.6194,
+          "sensSlopePerDecade": 486.1944,
+          "intercept": -96183.3028,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1222.46,
+            "latestYearAnomaly": 851.14,
+            "recent12MoAnomaly": -698.46,
+            "recent12MoPctAnomaly": -57.14
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 892.6,
+          "historicalMax": 3515.8,
+          "historicalMean": 1705.06
+        },
+        "rain": {
+          "sensSlopePerYear": 75.2361,
+          "sensSlopePerDecade": 752.3607,
+          "intercept": -149266.3511,
+          "mannKendall": {
+            "S": 162,
+            "varS": 1833.33,
+            "z": 3.7601,
+            "pValue": 0.0002,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1709.26,
+            "latestYearAnomaly": 1303.54,
+            "recent12MoAnomaly": 966.44,
+            "recent12MoPctAnomaly": 56.54
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1374.4,
+          "historicalMax": 5083.7,
+          "historicalMean": 2432.21
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0306,
+          "sensSlopePerDecade": -0.3058,
+          "intercept": 101.089,
+          "mannKendall": {
+            "S": -43,
+            "varS": 1832.33,
+            "z": -0.9812,
+            "pValue": 0.3265,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.75,
+            "latestYearAnomaly": -0.75,
+            "recent12MoAnomaly": -11.21,
+            "recent12MoPctAnomaly": -28.2
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.47,
+          "historicalMax": 42.06,
+          "historicalMean": 39.25
+        },
+        "wet": {
+          "sensSlopePerYear": 0.375,
+          "sensSlopePerDecade": 3.75,
+          "intercept": -679.92,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 72.29,
+            "latestYearAnomaly": 4.79,
+            "recent12MoAnomaly": 5.04,
+            "recent12MoPctAnomaly": 6.97
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 68.08,
+          "historicalMax": 85.5,
+          "historicalMean": 75.16
+        }
+      }
+    },
+    "rajbari": {
+      "id": "rajbari",
+      "name": "Rajbari",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 27.4617,
+          "sensSlopePerDecade": 274.6174,
+          "intercept": -54146.4017,
+          "mannKendall": {
+            "S": 120,
+            "varS": 1833.33,
+            "z": 2.7792,
+            "pValue": 0.0054,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 952.87,
+            "latestYearAnomaly": 502.63,
+            "recent12MoAnomaly": -406.17,
+            "recent12MoPctAnomaly": -42.63
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 686.6,
+          "historicalMax": 1989.7,
+          "historicalMean": 1159.04
+        },
+        "rain": {
+          "sensSlopePerYear": 48.9468,
+          "sensSlopePerDecade": 489.4682,
+          "intercept": -96881.0386,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1377.83,
+            "latestYearAnomaly": 858.27,
+            "recent12MoAnomaly": 844.77,
+            "recent12MoPctAnomaly": 61.31
+          },
+          "recent12MoPercentile": 76,
+          "historicalMin": 1066.7,
+          "historicalMax": 3206.5,
+          "historicalMean": 1744.92
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0265,
+          "sensSlopePerDecade": -0.2647,
+          "intercept": 94.6194,
+          "mannKendall": {
+            "S": -27,
+            "varS": 1832.33,
+            "z": -0.6074,
+            "pValue": 0.5436,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.61,
+            "latestYearAnomaly": -0.16,
+            "recent12MoAnomaly": -13.99,
+            "recent12MoPctAnomaly": -33.62
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.04,
+          "historicalMax": 43.53,
+          "historicalMean": 41.03
+        },
+        "wet": {
+          "sensSlopePerYear": 0.5731,
+          "sensSlopePerDecade": 5.7311,
+          "intercept": -1084.8985,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 65.23,
+            "latestYearAnomaly": 10.1,
+            "recent12MoAnomaly": 10.77,
+            "recent12MoPctAnomaly": 16.51
+          },
+          "recent12MoPercentile": 90,
+          "historicalMin": 60.5,
+          "historicalMax": 82.08,
+          "historicalMean": 69.43
+        }
+      }
+    },
+    "rajshahi": {
+      "id": "rajshahi",
+      "name": "Rajshahi",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 14.2201,
+          "sensSlopePerDecade": 142.2014,
+          "intercept": -27618.7799,
+          "mannKendall": {
+            "S": 96,
+            "varS": 1833.33,
+            "z": 2.2187,
+            "pValue": 0.0265,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 898.14,
+            "latestYearAnomaly": 335.66,
+            "recent12MoAnomaly": -429.24,
+            "recent12MoPctAnomaly": -47.79
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 692.2,
+          "historicalMax": 1335.1,
+          "historicalMean": 989.87
+        },
+        "rain": {
+          "sensSlopePerYear": 25.1257,
+          "sensSlopePerDecade": 251.2568,
+          "intercept": -49155.8461,
+          "mannKendall": {
+            "S": 130,
+            "varS": 1833.33,
+            "z": 3.0128,
+            "pValue": 0.0026,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1275.71,
+            "latestYearAnomaly": 551.59,
+            "recent12MoAnomaly": 448.59,
+            "recent12MoPctAnomaly": 35.16
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 1015.3,
+          "historicalMax": 2079.3,
+          "historicalMean": 1450.35
+        },
+        "heat": {
+          "sensSlopePerYear": -0.022,
+          "sensSlopePerDecade": -0.22,
+          "intercept": 85.6,
+          "mannKendall": {
+            "S": -24,
+            "varS": 1833.33,
+            "z": -0.5372,
+            "pValue": 0.5912,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 41.69,
+            "latestYearAnomaly": 0,
+            "recent12MoAnomaly": -15.21,
+            "recent12MoPctAnomaly": -36.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37,
+          "historicalMax": 43.69,
+          "historicalMean": 41.28
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4162,
+          "sensSlopePerDecade": 4.1625,
+          "intercept": -775.49,
+          "mannKendall": {
+            "S": 124,
+            "varS": 1833.33,
+            "z": 2.8727,
+            "pValue": 0.0041,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 59.82,
+            "latestYearAnomaly": 10.26,
+            "recent12MoAnomaly": 10.26,
+            "recent12MoPctAnomaly": 17.16
+          },
+          "recent12MoPercentile": 90,
+          "historicalMin": 53.92,
+          "historicalMax": 75.67,
+          "historicalMean": 62.71
+        }
+      }
+    },
+    "rangamati": {
+      "id": "rangamati",
+      "name": "Rangamati",
+      "division": "chittagong",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 65.0055,
+          "sensSlopePerDecade": 650.0551,
+          "intercept": -129287.0515,
+          "mannKendall": {
+            "S": 176,
+            "varS": 1833.33,
+            "z": 4.0871,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1134.11,
+            "latestYearAnomaly": 1051.39,
+            "recent12MoAnomaly": -491.91,
+            "recent12MoPctAnomaly": -43.37
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 649.3,
+          "historicalMax": 4071.6,
+          "historicalMean": 1701.36
+        },
+        "rain": {
+          "sensSlopePerYear": 91.6133,
+          "sensSlopePerDecade": 916.1332,
+          "intercept": -182240.737,
+          "mannKendall": {
+            "S": 180,
+            "varS": 1833.33,
+            "z": 4.1805,
+            "pValue": 0,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1636.08,
+            "latestYearAnomaly": 1596.42,
+            "recent12MoAnomaly": 1340.82,
+            "recent12MoPctAnomaly": 81.95
+          },
+          "recent12MoPercentile": 76,
+          "historicalMin": 951.4,
+          "historicalMax": 5523.7,
+          "historicalMean": 2411.69
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0382,
+          "sensSlopePerDecade": -0.3819,
+          "intercept": 113.5538,
+          "mannKendall": {
+            "S": -65,
+            "varS": 1832.33,
+            "z": -1.4951,
+            "pValue": 0.1349,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 37.17,
+            "latestYearAnomaly": -0.96,
+            "recent12MoAnomaly": -7.45,
+            "recent12MoPctAnomaly": -20.05
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.3,
+          "historicalMax": 37.96,
+          "historicalMean": 36.59
+        },
+        "wet": {
+          "sensSlopePerYear": 0.7595,
+          "sensSlopePerDecade": 7.595,
+          "intercept": -1464.977,
+          "mannKendall": {
+            "S": 172,
+            "varS": 1833.33,
+            "z": 3.9937,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 58.38,
+            "latestYearAnomaly": 11.45,
+            "recent12MoAnomaly": 10.95,
+            "recent12MoPctAnomaly": 18.75
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 48.58,
+          "historicalMax": 78.17,
+          "historicalMean": 64.39
+        }
+      }
+    },
+    "rangpur": {
+      "id": "rangpur",
+      "name": "Rangpur",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 19.7365,
+          "sensSlopePerDecade": 197.3646,
+          "intercept": -38371.0448,
+          "mannKendall": {
+            "S": 108,
+            "varS": 1833.33,
+            "z": 2.499,
+            "pValue": 0.0125,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1236.21,
+            "latestYearAnomaly": 189.69,
+            "recent12MoAnomaly": -287.11,
+            "recent12MoPctAnomaly": -23.23
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 925.7,
+          "historicalMax": 2222.5,
+          "historicalMean": 1402.69
+        },
+        "rain": {
+          "sensSlopePerYear": 37.919,
+          "sensSlopePerDecade": 379.1905,
+          "intercept": -74375.0667,
+          "mannKendall": {
+            "S": 132,
+            "varS": 1833.33,
+            "z": 3.0595,
+            "pValue": 0.0022,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1779.24,
+            "latestYearAnomaly": 609.36,
+            "recent12MoAnomaly": 786.76,
+            "recent12MoPctAnomaly": 44.22
+          },
+          "recent12MoPercentile": 88,
+          "historicalMin": 1402.9,
+          "historicalMax": 3230.6,
+          "historicalMean": 2039.92
+        },
+        "heat": {
+          "sensSlopePerYear": -0.034,
+          "sensSlopePerDecade": -0.3399,
+          "intercept": 107.4297,
+          "mannKendall": {
+            "S": -33,
+            "varS": 1832.33,
+            "z": -0.7476,
+            "pValue": 0.4547,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.54,
+            "latestYearAnomaly": -0.63,
+            "recent12MoAnomaly": -12.56,
+            "recent12MoPctAnomaly": -31.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 35.01,
+          "historicalMax": 42.4,
+          "historicalMean": 39.06
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4345,
+          "sensSlopePerDecade": 4.3454,
+          "intercept": -808.8669,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 63.33,
+            "latestYearAnomaly": 7.75,
+            "recent12MoAnomaly": 11.67,
+            "recent12MoPctAnomaly": 18.43
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 59.67,
+          "historicalMax": 76.92,
+          "historicalMean": 66.09
+        }
+      }
+    },
+    "satkhira": {
+      "id": "satkhira",
+      "name": "Satkhira",
+      "division": "khulna",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 37.12,
+          "sensSlopePerDecade": 371.2,
+          "intercept": -73305.08,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1107.28,
+            "latestYearAnomaly": 650.02,
+            "recent12MoAnomaly": -681.38,
+            "recent12MoPctAnomaly": -61.54
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 751,
+          "historicalMax": 2586.2,
+          "historicalMean": 1425.32
+        },
+        "rain": {
+          "sensSlopePerYear": 56.6814,
+          "sensSlopePerDecade": 566.8142,
+          "intercept": -112133.3555,
+          "mannKendall": {
+            "S": 156,
+            "varS": 1833.33,
+            "z": 3.62,
+            "pValue": 0.0003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1553.19,
+            "latestYearAnomaly": 960.91,
+            "recent12MoAnomaly": 743.81,
+            "recent12MoPctAnomaly": 47.89
+          },
+          "recent12MoPercentile": 68,
+          "historicalMin": 1231.4,
+          "historicalMax": 3854.7,
+          "historicalMean": 2031.69
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0297,
+          "sensSlopePerDecade": -0.2969,
+          "intercept": 100.2678,
+          "mannKendall": {
+            "S": -44,
+            "varS": 1833.33,
+            "z": -1.0043,
+            "pValue": 0.3153,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.71,
+            "latestYearAnomaly": -0.43,
+            "recent12MoAnomaly": -11.55,
+            "recent12MoPctAnomaly": -28.37
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 37.68,
+          "historicalMax": 43.86,
+          "historicalMean": 40.39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.2275,
+          "sensSlopePerDecade": 2.2748,
+          "intercept": -379.9228,
+          "mannKendall": {
+            "S": 113,
+            "varS": 1832.33,
+            "z": 2.6165,
+            "pValue": 0.0089,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 76.47,
+            "latestYearAnomaly": 3.61,
+            "recent12MoAnomaly": 3.53,
+            "recent12MoPctAnomaly": 4.62
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 73,
+          "historicalMax": 85.42,
+          "historicalMean": 78.15
+        }
+      }
+    },
+    "shariatpur": {
+      "id": "shariatpur",
+      "name": "Shariatpur",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 41.4442,
+          "sensSlopePerDecade": 414.4416,
+          "intercept": -81842.2156,
+          "mannKendall": {
+            "S": 126,
+            "varS": 1833.33,
+            "z": 2.9194,
+            "pValue": 0.0035,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1352.61,
+            "latestYearAnomaly": 729.59,
+            "recent12MoAnomaly": -689.01,
+            "recent12MoPctAnomaly": -50.94
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1080.4,
+          "historicalMax": 3900.2,
+          "historicalMean": 1731.8
+        },
+        "rain": {
+          "sensSlopePerYear": 58.8786,
+          "sensSlopePerDecade": 588.7857,
+          "intercept": -116131.65,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1944.12,
+            "latestYearAnomaly": 1174.88,
+            "recent12MoAnomaly": 924.18,
+            "recent12MoPctAnomaly": 47.54
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 1622.5,
+          "historicalMax": 5646.8,
+          "historicalMean": 2542.93
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0302,
+          "sensSlopePerDecade": -0.3024,
+          "intercept": 98.5574,
+          "mannKendall": {
+            "S": -54,
+            "varS": 1833.33,
+            "z": -1.2378,
+            "pValue": 0.2158,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.16,
+            "latestYearAnomaly": -0.36,
+            "recent12MoAnomaly": -10.6,
+            "recent12MoPctAnomaly": -27.77
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 33.35,
+          "historicalMax": 40.58,
+          "historicalMean": 37.55
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4192,
+          "sensSlopePerDecade": 4.1917,
+          "intercept": -771.7025,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1833.33,
+            "z": 3.1062,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 69.35,
+            "latestYearAnomaly": 5.48,
+            "recent12MoAnomaly": 5.9,
+            "recent12MoPctAnomaly": 8.51
+          },
+          "recent12MoPercentile": 70,
+          "historicalMin": 64.75,
+          "historicalMax": 84.75,
+          "historicalMean": 72.63
+        }
+      }
+    },
+    "sherpur": {
+      "id": "sherpur",
+      "name": "Sherpur",
+      "division": "mymensingh",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.6192,
+          "sensSlopePerDecade": 216.1923,
+          "intercept": -42088.9308,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1293.98,
+            "latestYearAnomaly": 300.02,
+            "recent12MoAnomaly": -255.78,
+            "recent12MoPctAnomaly": -19.77
+          },
+          "recent12MoPercentile": 8,
+          "historicalMin": 899.9,
+          "historicalMax": 2435.8,
+          "historicalMean": 1490.5
+        },
+        "rain": {
+          "sensSlopePerYear": 45.756,
+          "sensSlopePerDecade": 457.5602,
+          "intercept": -89991.2205,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1833.33,
+            "z": 2.7325,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1926.66,
+            "latestYearAnomaly": 719.84,
+            "recent12MoAnomaly": 884.54,
+            "recent12MoPctAnomaly": 45.91
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1530.8,
+          "historicalMax": 3899.1,
+          "historicalMean": 2275.24
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0232,
+          "sensSlopePerDecade": -0.2319,
+          "intercept": 85.35,
+          "mannKendall": {
+            "S": -24,
+            "varS": 1833.33,
+            "z": -0.5372,
+            "pValue": 0.5912,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 38.86,
+            "latestYearAnomaly": -0.18,
+            "recent12MoAnomaly": -11.56,
+            "recent12MoPctAnomaly": -29.76
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.41,
+          "historicalMax": 41.98,
+          "historicalMean": 38.38
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3765,
+          "sensSlopePerDecade": 3.765,
+          "intercept": -690.0465,
+          "mannKendall": {
+            "S": 93,
+            "varS": 1832.33,
+            "z": 2.1492,
+            "pValue": 0.0316,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.72,
+            "latestYearAnomaly": 7.45,
+            "recent12MoAnomaly": 11.11,
+            "recent12MoPctAnomaly": 17.16
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 59.75,
+          "historicalMax": 78.92,
+          "historicalMean": 67.62
+        }
+      }
+    },
+    "sirajganj": {
+      "id": "sirajganj",
+      "name": "Sirajganj",
+      "division": "rajshahi",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 21.89,
+          "sensSlopePerDecade": 218.9,
+          "intercept": -42904.21,
+          "mannKendall": {
+            "S": 106,
+            "varS": 1833.33,
+            "z": 2.4523,
+            "pValue": 0.0142,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1028.46,
+            "latestYearAnomaly": 423.74,
+            "recent12MoAnomaly": -302.66,
+            "recent12MoPctAnomaly": -29.43
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 723.4,
+          "historicalMax": 1839.3,
+          "historicalMean": 1183.96
+        },
+        "rain": {
+          "sensSlopePerYear": 38.1877,
+          "sensSlopePerDecade": 381.8766,
+          "intercept": -75089.5026,
+          "mannKendall": {
+            "S": 128,
+            "varS": 1833.33,
+            "z": 2.9661,
+            "pValue": 0.003,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1494.62,
+            "latestYearAnomaly": 746.38,
+            "recent12MoAnomaly": 789.38,
+            "recent12MoPctAnomaly": 52.81
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1155.4,
+          "historicalMax": 2949.2,
+          "historicalMean": 1785.43
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0141,
+          "sensSlopePerDecade": -0.1415,
+          "intercept": 68.5486,
+          "mannKendall": {
+            "S": -19,
+            "varS": 1832.33,
+            "z": -0.4205,
+            "pValue": 0.6741,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.39,
+            "latestYearAnomaly": 0.06,
+            "recent12MoAnomaly": -13.93,
+            "recent12MoPctAnomaly": -34.48
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.95,
+          "historicalMax": 42.58,
+          "historicalMean": 39.87
+        },
+        "wet": {
+          "sensSlopePerYear": 0.53,
+          "sensSlopePerDecade": 5.3,
+          "intercept": -1000.17,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1831.33,
+            "z": 2.6406,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 62.66,
+            "latestYearAnomaly": 10.42,
+            "recent12MoAnomaly": 12.92,
+            "recent12MoPctAnomaly": 20.62
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 55.33,
+          "historicalMax": 80,
+          "historicalMean": 66.36
+        }
+      }
+    },
+    "sunamganj": {
+      "id": "sunamganj",
+      "name": "Sunamganj",
+      "division": "sylhet",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 75.8758,
+          "sensSlopePerDecade": 758.7583,
+          "intercept": -150328.4458,
+          "mannKendall": {
+            "S": 166,
+            "varS": 1833.33,
+            "z": 3.8536,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1845.54,
+            "latestYearAnomaly": 750.86,
+            "recent12MoAnomaly": -360.34,
+            "recent12MoPctAnomaly": -19.52
+          },
+          "recent12MoPercentile": 4,
+          "historicalMin": 1479.5,
+          "historicalMax": 4379.3,
+          "historicalMean": 2464.2
+        },
+        "rain": {
+          "sensSlopePerYear": 112.5091,
+          "sensSlopePerDecade": 1125.0906,
+          "intercept": -222564.679,
+          "mannKendall": {
+            "S": 146,
+            "varS": 1833.33,
+            "z": 3.3865,
+            "pValue": 0.0007,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 2915.83,
+            "latestYearAnomaly": 1630.27,
+            "recent12MoAnomaly": 1874.87,
+            "recent12MoPctAnomaly": 64.3
+          },
+          "recent12MoPercentile": 76,
+          "historicalMin": 2307,
+          "historicalMax": 7157,
+          "historicalMean": 3827.96
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0161,
+          "sensSlopePerDecade": -0.1607,
+          "intercept": 67.9559,
+          "mannKendall": {
+            "S": -14,
+            "varS": 1833.33,
+            "z": -0.3036,
+            "pValue": 0.7614,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 35.67,
+            "latestYearAnomaly": 0.04,
+            "recent12MoAnomaly": -8.2,
+            "recent12MoPctAnomaly": -23
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 31.78,
+          "historicalMax": 38.63,
+          "historicalMean": 35.29
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3364,
+          "sensSlopePerDecade": 3.3639,
+          "intercept": -601.6011,
+          "mannKendall": {
+            "S": 118,
+            "varS": 1831.33,
+            "z": 2.734,
+            "pValue": 0.0063,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 73.09,
+            "latestYearAnomaly": 4.83,
+            "recent12MoAnomaly": 7.41,
+            "recent12MoPctAnomaly": 10.14
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 68.42,
+          "historicalMax": 86.25,
+          "historicalMean": 75.79
+        }
+      }
+    },
+    "sylhet": {
+      "id": "sylhet",
+      "name": "Sylhet",
+      "division": "sylhet",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 82.5375,
+          "sensSlopePerDecade": 825.375,
+          "intercept": -163661.4875,
+          "mannKendall": {
+            "S": 164,
+            "varS": 1833.33,
+            "z": 3.8069,
+            "pValue": 0.0001,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1891.67,
+            "latestYearAnomaly": 775.73,
+            "recent12MoAnomaly": -379.37,
+            "recent12MoPctAnomaly": -20.05
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 1574.5,
+          "historicalMax": 4460.5,
+          "historicalMean": 2540.71
+        },
+        "rain": {
+          "sensSlopePerYear": 114.0455,
+          "sensSlopePerDecade": 1140.4545,
+          "intercept": -225576.0273,
+          "mannKendall": {
+            "S": 148,
+            "varS": 1833.33,
+            "z": 3.4332,
+            "pValue": 0.0006,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 3012.43,
+            "latestYearAnomaly": 1673.87,
+            "recent12MoAnomaly": 1914.47,
+            "recent12MoPctAnomaly": 63.55
+          },
+          "recent12MoPercentile": 72,
+          "historicalMin": 2381.4,
+          "historicalMax": 7298,
+          "historicalMean": 3956
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0442,
+          "sensSlopePerDecade": -0.4417,
+          "intercept": 123.1667,
+          "mannKendall": {
+            "S": -54,
+            "varS": 1833.33,
+            "z": -1.2378,
+            "pValue": 0.2158,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 34.6,
+            "latestYearAnomaly": -0.74,
+            "recent12MoAnomaly": -6.84,
+            "recent12MoPctAnomaly": -19.76
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 32.07,
+          "historicalMax": 36.51,
+          "historicalMean": 34.19
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3308,
+          "sensSlopePerDecade": 3.3078,
+          "intercept": -587.9094,
+          "mannKendall": {
+            "S": 134,
+            "varS": 1831.33,
+            "z": 3.1079,
+            "pValue": 0.0019,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 75.43,
+            "latestYearAnomaly": 4.74,
+            "recent12MoAnomaly": 7.4,
+            "recent12MoPctAnomaly": 9.82
+          },
+          "recent12MoPercentile": 80,
+          "historicalMin": 71.42,
+          "historicalMax": 88.08,
+          "historicalMean": 78.25
+        }
+      }
+    },
+    "tangail": {
+      "id": "tangail",
+      "name": "Tangail",
+      "division": "dhaka",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 22.9292,
+          "sensSlopePerDecade": 229.2917,
+          "intercept": -44815.3208,
+          "mannKendall": {
+            "S": 122,
+            "varS": 1833.33,
+            "z": 2.826,
+            "pValue": 0.0047,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1207.79,
+            "latestYearAnomaly": 414.21,
+            "recent12MoAnomaly": -222.59,
+            "recent12MoPctAnomaly": -18.43
+          },
+          "recent12MoPercentile": 12,
+          "historicalMin": 803.6,
+          "historicalMax": 2585.5,
+          "historicalMean": 1400.45
+        },
+        "rain": {
+          "sensSlopePerYear": 45.8309,
+          "sensSlopePerDecade": 458.3088,
+          "intercept": -90187.875,
+          "mannKendall": {
+            "S": 112,
+            "varS": 1833.33,
+            "z": 2.5924,
+            "pValue": 0.0095,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1793.8,
+            "latestYearAnomaly": 792.1,
+            "recent12MoAnomaly": 990.6,
+            "recent12MoPctAnomaly": 55.22
+          },
+          "recent12MoPercentile": 84,
+          "historicalMin": 1357.1,
+          "historicalMax": 4159.1,
+          "historicalMean": 2162.39
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0229,
+          "sensSlopePerDecade": -0.2292,
+          "intercept": 85.3588,
+          "mannKendall": {
+            "S": -20,
+            "varS": 1833.33,
+            "z": -0.4437,
+            "pValue": 0.6572,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 39.54,
+            "latestYearAnomaly": 0.14,
+            "recent12MoAnomaly": -12.49,
+            "recent12MoPctAnomaly": -31.58
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 34.39,
+          "historicalMax": 42.11,
+          "historicalMean": 39
+        },
+        "wet": {
+          "sensSlopePerYear": 0.4651,
+          "sensSlopePerDecade": 4.6508,
+          "intercept": -868.3209,
+          "mannKendall": {
+            "S": 97,
+            "varS": 1832.33,
+            "z": 2.2427,
+            "pValue": 0.0249,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 64.11,
+            "latestYearAnomaly": 8.72,
+            "recent12MoAnomaly": 12.47,
+            "recent12MoPctAnomaly": 19.45
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 56.5,
+          "historicalMax": 80.17,
+          "historicalMean": 67.43
+        }
+      }
+    },
+    "thakurgaon": {
+      "id": "thakurgaon",
+      "name": "Thakurgaon",
+      "division": "rangpur",
+      "metrics": {
+        "monsoon": {
+          "sensSlopePerYear": 20.97,
+          "sensSlopePerDecade": 209.7,
+          "intercept": -40878.14,
+          "mannKendall": {
+            "S": 114,
+            "varS": 1833.33,
+            "z": 2.6391,
+            "pValue": 0.0083,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1200.78,
+            "latestYearAnomaly": 64.32,
+            "recent12MoAnomaly": -611.48,
+            "recent12MoPctAnomaly": -50.92
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 945.7,
+          "historicalMax": 2219.9,
+          "historicalMean": 1353.02
+        },
+        "rain": {
+          "sensSlopePerYear": 24.203,
+          "sensSlopePerDecade": 242.0298,
+          "intercept": -46914.2,
+          "mannKendall": {
+            "S": 148,
+            "varS": 1833.33,
+            "z": 3.4332,
+            "pValue": 0.0006,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 1578.83,
+            "latestYearAnomaly": 318.27,
+            "recent12MoAnomaly": 493.27,
+            "recent12MoPctAnomaly": 31.24
+          },
+          "recent12MoPercentile": 92,
+          "historicalMin": 1349.7,
+          "historicalMax": 2883.1,
+          "historicalMean": 1771.47
+        },
+        "heat": {
+          "sensSlopePerYear": -0.0032,
+          "sensSlopePerDecade": -0.0321,
+          "intercept": 46.5511,
+          "mannKendall": {
+            "S": -3,
+            "varS": 1832.33,
+            "z": -0.0467,
+            "pValue": 0.9627,
+            "trend": "no_trend"
+          },
+          "baseline2001_2010": {
+            "mean": 40.45,
+            "latestYearAnomaly": -0.02,
+            "recent12MoAnomaly": -13.75,
+            "recent12MoPctAnomaly": -33.99
+          },
+          "recent12MoPercentile": 0,
+          "historicalMin": 36.93,
+          "historicalMax": 42.51,
+          "historicalMean": 40.33
+        },
+        "wet": {
+          "sensSlopePerYear": 0.3475,
+          "sensSlopePerDecade": 3.4745,
+          "intercept": -638.0708,
+          "mannKendall": {
+            "S": 140,
+            "varS": 1833.33,
+            "z": 3.2463,
+            "pValue": 0.0012,
+            "trend": "increasing"
+          },
+          "baseline2001_2010": {
+            "mean": 59.36,
+            "latestYearAnomaly": 5.22,
+            "recent12MoAnomaly": 10.06,
+            "recent12MoPctAnomaly": 16.95
+          },
+          "recent12MoPercentile": 96,
+          "historicalMin": 55.33,
+          "historicalMax": 71.25,
+          "historicalMean": 61.57
+        }
+      }
+    }
+  },
+  "nationalSummary": {
+    "monsoon": {
+      "meanSlopePerDecade": 397.55,
+      "significantTrendsCount": 63,
+      "increasingCount": 63,
+      "decreasingCount": 0,
+      "meanRecentAnomalyVsBaseline": -500.01
+    },
+    "rain": {
+      "meanSlopePerDecade": 613.94,
+      "significantTrendsCount": 63,
+      "increasingCount": 63,
+      "decreasingCount": 0,
+      "meanRecentAnomalyVsBaseline": 1007.88
+    },
+    "heat": {
+      "meanSlopePerDecade": -0.27,
+      "significantTrendsCount": 2,
+      "increasingCount": 0,
+      "decreasingCount": 2,
+      "meanRecentAnomalyVsBaseline": -11.52
+    },
+    "wet": {
+      "meanSlopePerDecade": 4.38,
+      "significantTrendsCount": 63,
+      "increasingCount": 63,
+      "decreasingCount": 0,
+      "meanRecentAnomalyVsBaseline": 8.88
+    }
+  }
+}

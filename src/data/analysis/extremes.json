@@ -1,0 +1,1298 @@
+{
+  "metadata": {
+    "source": "NASA POWER Daily Meteorological Surface Archive",
+    "sourceUrl": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "thresholds": {
+      "heatwaveModerateC": 36,
+      "heatwaveSevereC": 38,
+      "heavyRainMm": 50,
+      "extremeRainMm": 100,
+      "dryDayThresholdMm": 1
+    },
+    "analysisTimestamp": "2026-10-03T06:42:39.494Z",
+    "license": "NASA Open Data Policy (Public Domain)",
+    "citation": "NASA POWER Daily Point API, NASA Langley Research Center"
+  },
+  "districts": {
+    "bagerhat": {
+      "id": "bagerhat",
+      "name": "Bagerhat",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 51.9,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 702.1
+      }
+    },
+    "bandarban": {
+      "id": "bandarban",
+      "name": "Bandarban",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 4,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 72.6,
+        "maxRecordedTmaxC": 34.9,
+        "totalPeriodRainMm": 1071.5
+      }
+    },
+    "barguna": {
+      "id": "barguna",
+      "name": "Barguna",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 2,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 90.1,
+        "maxRecordedTmaxC": 32.9,
+        "totalPeriodRainMm": 906.8
+      }
+    },
+    "barisal": {
+      "id": "barisal",
+      "name": "Barisal",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 58.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 753.9
+      }
+    },
+    "bhola": {
+      "id": "bhola",
+      "name": "Bhola",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 2,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 85.2,
+        "maxRecordedTmaxC": 33.4,
+        "totalPeriodRainMm": 961.8
+      }
+    },
+    "bogra": {
+      "id": "bogra",
+      "name": "Bogra",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 28.5,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 442.4
+      }
+    },
+    "brahmanbaria": {
+      "id": "brahmanbaria",
+      "name": "Brahmanbaria",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 34.6,
+        "maxRecordedTmaxC": 34.7,
+        "totalPeriodRainMm": 543
+      }
+    },
+    "chandpur": {
+      "id": "chandpur",
+      "name": "Chandpur",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 58.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 753.9
+      }
+    },
+    "chapai-nawabganj": {
+      "id": "chapai-nawabganj",
+      "name": "Chapai Nawabganj",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 32.6,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 454.4
+      }
+    },
+    "chittagong": {
+      "id": "chittagong",
+      "name": "Chittagong",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 5,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 95,
+        "maxRecordedTmaxC": 34.1,
+        "totalPeriodRainMm": 1033.3
+      }
+    },
+    "chuadanga": {
+      "id": "chuadanga",
+      "name": "Chuadanga",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 20.2,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 443.7
+      }
+    },
+    "comilla": {
+      "id": "comilla",
+      "name": "Comilla",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 33.5,
+        "maxRecordedTmaxC": 34.4,
+        "totalPeriodRainMm": 613.5
+      }
+    },
+    "cox-s-bazar": {
+      "id": "cox-s-bazar",
+      "name": "Cox's Bazar",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 6,
+        "extremeRainDays100mm": 3,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 198.8,
+        "maxRecordedTmaxC": 32,
+        "totalPeriodRainMm": 1536.8
+      }
+    },
+    "dhaka": {
+      "id": "dhaka",
+      "name": "Dhaka",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 30.2,
+        "maxRecordedTmaxC": 34.3,
+        "totalPeriodRainMm": 513.4
+      }
+    },
+    "dinajpur": {
+      "id": "dinajpur",
+      "name": "Dinajpur",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 34.3,
+        "maxRecordedTmaxC": 34.2,
+        "totalPeriodRainMm": 423.6
+      }
+    },
+    "faridpur": {
+      "id": "faridpur",
+      "name": "Faridpur",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 28.8,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 543.1
+      }
+    },
+    "feni": {
+      "id": "feni",
+      "name": "Feni",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 61,
+        "maxRecordedTmaxC": 34.4,
+        "totalPeriodRainMm": 829.1
+      }
+    },
+    "gaibandha": {
+      "id": "gaibandha",
+      "name": "Gaibandha",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 40.4,
+        "maxRecordedTmaxC": 34.4,
+        "totalPeriodRainMm": 438.3
+      }
+    },
+    "gazipur": {
+      "id": "gazipur",
+      "name": "Gazipur",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 30.7,
+        "maxRecordedTmaxC": 34.8,
+        "totalPeriodRainMm": 531.7
+      }
+    },
+    "gopalganj": {
+      "id": "gopalganj",
+      "name": "Gopalganj",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 41.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 611.9
+      }
+    },
+    "habiganj": {
+      "id": "habiganj",
+      "name": "Habiganj",
+      "division": "sylhet",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 38.5,
+        "maxRecordedTmaxC": 35.6,
+        "totalPeriodRainMm": 730.9
+      }
+    },
+    "jamalpur": {
+      "id": "jamalpur",
+      "name": "Jamalpur",
+      "division": "mymensingh",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 39.5,
+        "maxRecordedTmaxC": 34.1,
+        "totalPeriodRainMm": 481.3
+      }
+    },
+    "jessore": {
+      "id": "jessore",
+      "name": "Jessore",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 26.2,
+        "maxRecordedTmaxC": 33.6,
+        "totalPeriodRainMm": 519.5
+      }
+    },
+    "jhalokati": {
+      "id": "jhalokati",
+      "name": "Jhalokati",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 51.9,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 702.1
+      }
+    },
+    "jhenaidah": {
+      "id": "jhenaidah",
+      "name": "Jhenaidah",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 20.2,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 443.7
+      }
+    },
+    "joypurhat": {
+      "id": "joypurhat",
+      "name": "Joypurhat",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 28.5,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 442.4
+      }
+    },
+    "khagrachhari": {
+      "id": "khagrachhari",
+      "name": "Khagrachhari",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 6,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 59.5,
+        "maxRecordedTmaxC": 37.8,
+        "totalPeriodRainMm": 881.4
+      }
+    },
+    "khulna": {
+      "id": "khulna",
+      "name": "Khulna",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 32,
+        "maxRecordedTmaxC": 33.7,
+        "totalPeriodRainMm": 579.8
+      }
+    },
+    "kishoreganj": {
+      "id": "kishoreganj",
+      "name": "Kishoreganj",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 43.2,
+        "maxRecordedTmaxC": 35,
+        "totalPeriodRainMm": 588.9
+      }
+    },
+    "kurigram": {
+      "id": "kurigram",
+      "name": "Kurigram",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 71.4,
+        "maxRecordedTmaxC": 34.8,
+        "totalPeriodRainMm": 535
+      }
+    },
+    "kushtia": {
+      "id": "kushtia",
+      "name": "Kushtia",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 22.1,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 442.1
+      }
+    },
+    "lakshmipur": {
+      "id": "lakshmipur",
+      "name": "Lakshmipur",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 58.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 753.9
+      }
+    },
+    "lalmonirhat": {
+      "id": "lalmonirhat",
+      "name": "Lalmonirhat",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 71.4,
+        "maxRecordedTmaxC": 34.8,
+        "totalPeriodRainMm": 535
+      }
+    },
+    "madaripur": {
+      "id": "madaripur",
+      "name": "Madaripur",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 41.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 611.9
+      }
+    },
+    "magura": {
+      "id": "magura",
+      "name": "Magura",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 25.7,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 492.4
+      }
+    },
+    "manikganj": {
+      "id": "manikganj",
+      "name": "Manikganj",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 30.2,
+        "maxRecordedTmaxC": 34.3,
+        "totalPeriodRainMm": 513.4
+      }
+    },
+    "maulvibazar": {
+      "id": "maulvibazar",
+      "name": "Maulvibazar",
+      "division": "sylhet",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 38.8,
+        "maxRecordedTmaxC": 35.4,
+        "totalPeriodRainMm": 717.3
+      }
+    },
+    "meherpur": {
+      "id": "meherpur",
+      "name": "Meherpur",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 22.1,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 442.1
+      }
+    },
+    "munshiganj": {
+      "id": "munshiganj",
+      "name": "Munshiganj",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 4,
+        "maxDailyRainMm": 29.7,
+        "maxRecordedTmaxC": 34.3,
+        "totalPeriodRainMm": 590.2
+      }
+    },
+    "mymensingh": {
+      "id": "mymensingh",
+      "name": "Mymensingh",
+      "division": "mymensingh",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 43.2,
+        "maxRecordedTmaxC": 35,
+        "totalPeriodRainMm": 588.9
+      }
+    },
+    "naogaon": {
+      "id": "naogaon",
+      "name": "Naogaon",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 23.2,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 429.2
+      }
+    },
+    "narail": {
+      "id": "narail",
+      "name": "Narail",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 26.2,
+        "maxRecordedTmaxC": 33.6,
+        "totalPeriodRainMm": 519.5
+      }
+    },
+    "narayanganj": {
+      "id": "narayanganj",
+      "name": "Narayanganj",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 4,
+        "maxDailyRainMm": 29.7,
+        "maxRecordedTmaxC": 34.3,
+        "totalPeriodRainMm": 590.2
+      }
+    },
+    "narsingdi": {
+      "id": "narsingdi",
+      "name": "Narsingdi",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 30.7,
+        "maxRecordedTmaxC": 34.8,
+        "totalPeriodRainMm": 531.7
+      }
+    },
+    "natore": {
+      "id": "natore",
+      "name": "Natore",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 24.7,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 482.9
+      }
+    },
+    "netrakona": {
+      "id": "netrakona",
+      "name": "Netrakona",
+      "division": "mymensingh",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 62.4,
+        "maxRecordedTmaxC": 34.1,
+        "totalPeriodRainMm": 650.2
+      }
+    },
+    "nilphamari": {
+      "id": "nilphamari",
+      "name": "Nilphamari",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 63.5,
+        "maxRecordedTmaxC": 34.7,
+        "totalPeriodRainMm": 518.4
+      }
+    },
+    "noakhali": {
+      "id": "noakhali",
+      "name": "Noakhali",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 5,
+        "extremeRainDays100mm": 1,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 102,
+        "maxRecordedTmaxC": 33.1,
+        "totalPeriodRainMm": 1063
+      }
+    },
+    "pabna": {
+      "id": "pabna",
+      "name": "Pabna",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 24.5,
+        "maxRecordedTmaxC": 34.1,
+        "totalPeriodRainMm": 488
+      }
+    },
+    "panchagarh": {
+      "id": "panchagarh",
+      "name": "Panchagarh",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 75.9,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 635.6
+      }
+    },
+    "patuakhali": {
+      "id": "patuakhali",
+      "name": "Patuakhali",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 5,
+        "extremeRainDays100mm": 1,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 183.9,
+        "maxRecordedTmaxC": 32.5,
+        "totalPeriodRainMm": 1335.7
+      }
+    },
+    "pirojpur": {
+      "id": "pirojpur",
+      "name": "Pirojpur",
+      "division": "barisal",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 3,
+        "maxDailyRainMm": 51.9,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 702.1
+      }
+    },
+    "rajbari": {
+      "id": "rajbari",
+      "name": "Rajbari",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 25.7,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 492.4
+      }
+    },
+    "rajshahi": {
+      "id": "rajshahi",
+      "name": "Rajshahi",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 31.2,
+        "maxRecordedTmaxC": 33.8,
+        "totalPeriodRainMm": 461.1
+      }
+    },
+    "rangamati": {
+      "id": "rangamati",
+      "name": "Rangamati",
+      "division": "chittagong",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 41.8,
+        "maxRecordedTmaxC": 35,
+        "totalPeriodRainMm": 757.9
+      }
+    },
+    "rangpur": {
+      "id": "rangpur",
+      "name": "Rangpur",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 40.4,
+        "maxRecordedTmaxC": 34.4,
+        "totalPeriodRainMm": 438.3
+      }
+    },
+    "satkhira": {
+      "id": "satkhira",
+      "name": "Satkhira",
+      "division": "khulna",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 32,
+        "maxRecordedTmaxC": 33.7,
+        "totalPeriodRainMm": 579.8
+      }
+    },
+    "shariatpur": {
+      "id": "shariatpur",
+      "name": "Shariatpur",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 58.3,
+        "maxRecordedTmaxC": 33.9,
+        "totalPeriodRainMm": 753.9
+      }
+    },
+    "sherpur": {
+      "id": "sherpur",
+      "name": "Sherpur",
+      "division": "mymensingh",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 39.5,
+        "maxRecordedTmaxC": 34.1,
+        "totalPeriodRainMm": 481.3
+      }
+    },
+    "sirajganj": {
+      "id": "sirajganj",
+      "name": "Sirajganj",
+      "division": "rajshahi",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 24.7,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 482.9
+      }
+    },
+    "sunamganj": {
+      "id": "sunamganj",
+      "name": "Sunamganj",
+      "division": "sylhet",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 83,
+        "maxRecordedTmaxC": 33.4,
+        "totalPeriodRainMm": 913.3
+      }
+    },
+    "sylhet": {
+      "id": "sylhet",
+      "name": "Sylhet",
+      "division": "sylhet",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 3,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 1,
+        "maxDailyRainMm": 85.5,
+        "maxRecordedTmaxC": 34,
+        "totalPeriodRainMm": 949.4
+      }
+    },
+    "tangail": {
+      "id": "tangail",
+      "name": "Tangail",
+      "division": "dhaka",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 0,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 0,
+        "maxDailyRainMm": 31.7,
+        "maxRecordedTmaxC": 34.5,
+        "totalPeriodRainMm": 500.6
+      }
+    },
+    "thakurgaon": {
+      "id": "thakurgaon",
+      "name": "Thakurgaon",
+      "division": "rangpur",
+      "observationDays": 60,
+      "recentPeriod": {
+        "start": "20260727",
+        "end": "20260924"
+      },
+      "indicators": {
+        "heatwaveDays36C": 0,
+        "heatwaveDays38C": 0,
+        "heavyRainDays50mm": 1,
+        "extremeRainDays100mm": 0,
+        "longestDrySpellDays": 2,
+        "maxDailyRainMm": 53.3,
+        "maxRecordedTmaxC": 34.6,
+        "totalPeriodRainMm": 454.6
+      }
+    }
+  }
+}

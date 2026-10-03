@@ -125,7 +125,7 @@
 - [x] Year $\times$ Month heatmap visualization (`HeatmapChart.tsx`).
 - [x] "Unusual right now" badge based on empirical percentiles of the last 30–60 days with explicit numbers.
 
-### STAGE 4 — Online Data Pipeline (`npm run data`)
+### STAGE 4 — Online Data Pipeline (`npm run data`) [COMPLETED & VERIFIED]
 - [x] Verify API specifications, rate limits, and licenses for open data providers before ingestion.
 - [x] NASA POWER: automated per-district historical monthly and near-real-time daily ingestion.
 - [x] GBIF Occurrences API (`https://api.gbif.org/v1`): Bangladesh records for 6 verified priority species (Bengal tiger, Ganges dolphin, Irrawaddy dolphin, Hilsa, Asian elephant, Fishing cat).

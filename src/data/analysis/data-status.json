@@ -1,0 +1,73 @@
+{
+  "pipeline": "Climate Lens Online Data Pipeline (Phase 9A)",
+  "timestamp": "2026-10-03T06:42:39.477Z",
+  "environment": {
+    "nodeVersion": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "sources": {
+    "nasa_power": {
+      "name": "NASA POWER (Prediction Of Worldwide Energy Resources)",
+      "endpoint": "https://power.larc.nasa.gov/api/temporal",
+      "status": "success",
+      "districtsAnalyzed": 64,
+      "metricsAnalyzed": 4,
+      "coverage": "2001–2025 (25 full years)",
+      "lastFetch": "2026-10-03T06:42:39.518Z"
+    },
+    "gbif": {
+      "name": "GBIF (Global Biodiversity Information Facility)",
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "status": "success",
+      "recordCount": 1056,
+      "error": null,
+      "disclaimer": "Occurrence counts reflect observer effort, NOT biological population size.",
+      "lastFetch": "2026-10-03T06:43:01.946Z"
+    },
+    "eonet": {
+      "name": "NASA EONET v3 (Earth Observatory Natural Event Tracker)",
+      "endpoint": "https://eonet.gsfc.nasa.gov/api/v3/events",
+      "status": "success",
+      "totalEvents": 84,
+      "openEvents": 12,
+      "error": null,
+      "lastFetch": "2026-10-03T06:43:05.617Z"
+    },
+    "crop_yield": {
+      "name": "World Bank Open Data (FAOSTAT) & BBS Agricultural Statistics",
+      "endpoint": "http://api.worldbank.org/v2/country/BGD/indicator/AG.YLD.CREL.KG",
+      "status": "success",
+      "yearsAnalyzed": 24,
+      "relationshipsComputed": 7,
+      "spatialGranularity": "National (district-level not available via open APIs; not fabricated)",
+      "error": null,
+      "lastFetch": "2026-10-03T06:43:05.775Z"
+    }
+  },
+  "failures": [],
+  "outputs": {
+    "climate-stats.json": {
+      "path": "src/data/analysis/climate-stats.json",
+      "sizeKb": 174.7
+    },
+    "extremes.json": {
+      "path": "src/data/analysis/extremes.json",
+      "sizeKb": 32.6
+    },
+    "gbif-occurrences.json": {
+      "path": "src/data/analysis/gbif-occurrences.json",
+      "sizeKb": 44.7
+    },
+    "eonet-events.json": {
+      "path": "src/data/analysis/eonet-events.json",
+      "sizeKb": 23.6
+    },
+    "yield-climate.json": {
+      "path": "src/data/analysis/yield-climate.json",
+      "sizeKb": 6.6
+    }
+  },
+  "overallSuccess": true,
+  "durationMs": 26306
+}

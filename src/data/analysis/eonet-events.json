@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source": "NASA EONET v3 (Earth Observatory Natural Event Tracker)",
+    "sourceUrl": "https://eonet.gsfc.nasa.gov/api/v3/events",
+    "bbox": "87.5,27.0,93.0,20.0",
+    "fetchedAt": "2026-10-03T06:43:01.950Z",
+    "license": "NASA Open Data Policy (Public Domain)",
+    "citation": "National Aeronautics and Space Administration (NASA) Earth Observatory Natural Event Tracker (EONET v3)",
+    "totalEvents": 84,
+    "openEventsCount": 12,
+    "historicalEventsCount": 72
+  },
+  "categories": [
+    {
+      "id": "drought",
+      "title": "Drought",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/drought",
+      "description": "Long lasting absence of precipitation affecting agriculture and livestock, and the overall availability of food and water."
+    },
+    {
+      "id": "dustHaze",
+      "title": "Dust and Haze",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/dustHaze",
+      "description": "Related to dust storms, air pollution and other non-volcanic aerosols. Volcano-related plumes shall be included with the originating eruption event."
+    },
+    {
+      "id": "earthquakes",
+      "title": "Earthquakes",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/earthquakes",
+      "description": "Related to all manner of shaking and displacement. Certain aftermath of earthquakes may also be found under landslides and floods."
+    },
+    {
+      "id": "floods",
+      "title": "Floods",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/floods",
+      "description": "Related to aspects of actual flooding--e.g., inundation, water extending beyond river and lake extents."
+    },
+    {
+      "id": "landslides",
+      "title": "Landslides",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/landslides",
+      "description": "Related to landslides and variations thereof: mudslides, avalanche."
+    },
+    {
+      "id": "manmade",
+      "title": "Manmade",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/manmade",
+      "description": "Events that have been human-induced and are extreme in their extent."
+    },
+    {
+      "id": "seaLakeIce",
+      "title": "Sea and Lake Ice",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/seaLakeIce",
+      "description": "Related to all ice that resides on oceans and lakes, including sea and lake ice (permanent and seasonal) and icebergs."
+    },
+    {
+      "id": "severeStorms",
+      "title": "Severe Storms",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/severeStorms",
+      "description": "Related to the atmospheric aspect of storms (hurricanes, cyclones, tornadoes, etc.). Results of storms may be included under floods, landslides, etc."
+    },
+    {
+      "id": "snow",
+      "title": "Snow",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/snow",
+      "description": "Related to snow events, particularly extreme/anomalous snowfall in either timing or extent/depth."
+    },
+    {
+      "id": "tempExtremes",
+      "title": "Temperature Extremes",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/tempExtremes",
+      "description": "Related to anomalous land temperatures, either heat or cold."
+    },
+    {
+      "id": "volcanoes",
+      "title": "Volcanoes",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/volcanoes",
+      "description": "Related to both the physical effects of an eruption (rock, ash, lava) and the atmospheric (ash and gas plumes)."
+    },
+    {
+      "id": "waterColor",
+      "title": "Water Color",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/waterColor",
+      "description": "Related to events that alter the appearance of water: phytoplankton, red tide, algae, sediment, whiting, etc."
+    },
+    {
+      "id": "wildfires",
+      "title": "Wildfires",
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/categories/wildfires",
+      "description": "Wildland fires includes all nature of fire, in forest and plains, as well as those that spread to become urban and industrial fire events. Fires may be naturally caused or manmade."
+    }
+  ],
+  "eventsByYear": {
+    "2000": 1,
+    "2002": 1,
+    "2005": 1,
+    "2006": 1,
+    "2007": 2,
+    "2008": 2,
+    "2009": 3,
+    "2011": 1,
+    "2013": 1,
+    "2015": 2,
+    "2016": 2,
+    "2017": 2,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 2,
+    "2023": 2,
+    "2024": 1,
+    "2025": 15,
+    "2026": 42
+  },
+  "eventsByCategory": {
+    "floods": 13,
+    "wildfires": 47,
+    "severeStorms": 24,
+    "landslides": 2
+  },
+  "yearByCategory": {
+    "2000": {
+      "severeStorms": 1
+    },
+    "2002": {
+      "severeStorms": 1
+    },
+    "2005": {
+      "severeStorms": 1
+    },
+    "2006": {
+      "severeStorms": 1
+    },
+    "2007": {
+      "severeStorms": 2
+    },
+    "2008": {
+      "severeStorms": 2
+    },
+    "2009": {
+      "severeStorms": 3
+    },
+    "2011": {
+      "severeStorms": 1
+    },
+    "2013": {
+      "severeStorms": 1
+    },
+    "2015": {
+      "severeStorms": 1,
+      "floods": 1,
+      "landslides": 1
+    },
+    "2016": {
+      "floods": 1,
+      "severeStorms": 1
+    },
+    "2017": {
+      "floods": 1,
+      "landslides": 1,
+      "severeStorms": 1
+    },
+    "2019": {
+      "severeStorms": 1
+    },
+    "2020": {
+      "severeStorms": 1
+    },
+    "2021": {
+      "severeStorms": 1
+    },
+    "2022": {
+      "severeStorms": 2
+    },
+    "2023": {
+      "severeStorms": 2
+    },
+    "2024": {
+      "severeStorms": 1
+    },
+    "2025": {
+      "floods": 3,
+      "wildfires": 12
+    },
+    "2026": {
+      "floods": 7,
+      "wildfires": 35
+    }
+  },
+  "openEvents": [
+    {
+      "id": "EONET_13162",
+      "title": "Wildfire in Myanmar 1023656",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-28T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023656"
+        }
+      ],
+      "coordinates": [
+        92.76503877746704,
+        21.894352137316375
+      ]
+    },
+    {
+      "id": "EONET_13163",
+      "title": "Wildfire in India 1023657",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-24T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023657"
+        }
+      ],
+      "coordinates": [
+        91.87846739769266,
+        23.72915241526437
+      ]
+    },
+    {
+      "id": "EONET_13112",
+      "title": "Wildfire in Myanmar 1023635",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-23T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023635"
+        }
+      ],
+      "coordinates": [
+        92.68472384031173,
+        21.452035528128153
+      ]
+    },
+    {
+      "id": "EONET_13113",
+      "title": "Wildfire in India, Bangladesh 1023636",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-21T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023636"
+        }
+      ],
+      "coordinates": [
+        92.61231032581605,
+        22.115586717309117
+      ]
+    },
+    {
+      "id": "EONET_13037",
+      "title": "Wildfire in India 1023609",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-16T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023609"
+        }
+      ],
+      "coordinates": [
+        91.16213724363195,
+        25.75808077379684
+      ]
+    },
+    {
+      "id": "EONET_13038",
+      "title": "Wildfire in India 1023613",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-15T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023613"
+        }
+      ],
+      "coordinates": [
+        91.19923416495722,
+        25.77018954782079
+      ]
+    },
+    {
+      "id": "EONET_13040",
+      "title": "Wildfire in India 1023610",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-14T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023610"
+        }
+      ],
+      "coordinates": [
+        92.1848055127105,
+        25.91382783620165
+      ]
+    },
+    {
+      "id": "EONET_13035",
+      "title": "Wildfire in India 1023608",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-12T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023608"
+        }
+      ],
+      "coordinates": [
+        90.99926889712192,
+        25.79082244673053
+      ]
+    },
+    {
+      "id": "EONET_12886",
+      "title": "Wildfire in India 1023599",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-10T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023599"
+        }
+      ],
+      "coordinates": [
+        92.59304989103023,
+        22.955887691948824
+      ]
+    },
+    {
+      "id": "EONET_12888",
+      "title": "Wildfire in India 1023600",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-09T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023600"
+        }
+      ],
+      "coordinates": [
+        92.74218103787095,
+        22.32423758852614
+      ]
+    },
+    {
+      "id": "EONET_12879",
+      "title": "Wildfire in India 1023587",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-06T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023587"
+        }
+      ],
+      "coordinates": [
+        92.67331338162069,
+        22.48307877881833
+      ]
+    },
+    {
+      "id": "EONET_12892",
+      "title": "Wildfire in India 1023594",
+      "categories": [
+        "wildfires"
+      ],
+      "date": "2025-03-06T19:00:00Z",
+      "closed": null,
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023594"
+        }
+      ],
+      "coordinates": [
+        92.41440586858594,
+        23.18152643821413
+      ]
+    }
+  ],
+  "recentClosedEvents": [
+    {
+      "id": "EONET_6368",
+      "title": "Tropical Cyclone 03B",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2023-06-09T00:00:00Z",
+      "closed": "2023-06-15T00:00:00Z",
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/Cyclones/report.aspx?eventid=1000976&eventtype=TC"
+        },
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0323.tcw"
+        }
+      ],
+      "coordinates": [
+        91.3,
+        19.8
+      ]
+    },
+    {
+      "id": "EONET_6287",
+      "title": "Tropical Cyclone Sitrang",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2022-10-23T12:00:00Z",
+      "closed": "2022-10-29T00:00:00Z",
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/Cyclones/report.aspx?eventid=1000941&eventtype=TC"
+        },
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0522.tcw"
+        }
+      ],
+      "coordinates": [
+        88.4,
+        15.8
+      ]
+    },
+    {
+      "id": "EONET_6187",
+      "title": "Tropical Cyclone 04B",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2022-08-18T18:00:00Z",
+      "closed": "2022-08-24T00:00:00Z",
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/Cyclones/report.aspx?eventid=1000904&eventtype=TC"
+        },
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0422.tcw"
+        }
+      ],
+      "coordinates": [
+        90,
+        20.4
+      ]
+    },
+    {
+      "id": "EONET_5347",
+      "title": "Tropical Cyclone Yaas",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2021-05-23T18:00:00Z",
+      "closed": "2021-05-31T00:00:00Z",
+      "sources": [
+        {
+          "id": "EO",
+          "url": "https://earthobservatory.nasa.gov/images/148371/cyclone-yaas-swamps-india-and-bangladesh"
+        },
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/Cyclones/report.aspx?eventid=1000784&eventtype=TC"
+        },
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0221.tcw"
+        }
+      ],
+      "coordinates": [
+        89.2,
+        15.6
+      ]
+    },
+    {
+      "id": "EONET_4654",
+      "title": "Tropical Cyclone Amphan",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2020-05-16T06:00:00Z",
+      "closed": "2020-05-25T00:00:00Z",
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/Cyclones/report.aspx?eventid=1000667&eventtype=TC"
+        },
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0120.tcw"
+        }
+      ],
+      "coordinates": [
+        85.9,
+        10
+      ]
+    },
+    {
+      "id": "EONET_4496",
+      "title": "Tropical Cyclone Matmo",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2019-11-06T00:00:00Z",
+      "closed": "2019-11-15T00:00:00Z",
+      "sources": [
+        {
+          "id": "JTWC",
+          "url": "http://www.metoc.navy.mil/jtwc/products/wp2319.tcw"
+        }
+      ],
+      "coordinates": [
+        89.8,
+        13.9
+      ]
+    },
+    {
+      "id": "EONET_2835",
+      "title": "Bangladesh Floods and Landslides",
+      "categories": [
+        "floods",
+        "landslides"
+      ],
+      "date": "2017-05-30T00:00:00Z",
+      "closed": "2017-06-21T00:00:00Z",
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "http://www.gdacs.org/report.aspx?eventtype=FL&eventid=1000095"
+        },
+        {
+          "id": "IDC",
+          "url": "https://www.disasterscharter.org/web/guest/-/flood-in-bangladesh-call-613-"
+        },
+        {
+          "id": "ReliefWeb",
+          "url": "http://reliefweb.int/disaster/ls-2017-000068-bgd"
+        }
+      ],
+      "coordinates": [
+        [
+          [
+            91.083984375,
+            20.523952051662295
+          ],
+          [
+            91.083984375,
+            23.99346097934524
+          ],
+          [
+            92.890625,
+            23.99346097934524
+          ],
+          [
+            92.890625,
+            20.523952051662295
+          ],
+          [
+            91.083984375,
+            20.523952051662295
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "EONET_2804",
+      "title": "Cyclone Mora",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2017-05-27T18:00:00Z",
+      "closed": "2017-06-04T00:00:00Z",
+      "sources": [
+        {
+          "id": "EO",
+          "url": "https://earthobservatory.nasa.gov/NaturalHazards/view.php?id=90304"
+        },
+        {
+          "id": "GDACS",
+          "url": "http://www.gdacs.org/report.aspx?eventtype=TC&eventid=1000357"
+        },
+        {
+          "id": "ReliefWeb",
+          "url": "http://reliefweb.int/disaster/tc-2017-000058-bgd"
+        },
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2017/MORA/track.dat"
+        }
+      ],
+      "coordinates": [
+        88.7,
+        14
+      ]
+    },
+    {
+      "id": "EONET_415",
+      "title": "Bangladesh Flooding, May 2016",
+      "categories": [
+        "floods"
+      ],
+      "date": "2016-05-21T00:00:00Z",
+      "closed": "2016-06-03T00:00:00Z",
+      "sources": [
+        {
+          "id": "IDC",
+          "url": "https://www.disasterscharter.org/web/guest/-/cyclone-in-bangladesh"
+        },
+        {
+          "id": "ReliefWeb",
+          "url": "http://reliefweb.int/disaster/tc-2016-000052-mmr"
+        }
+      ],
+      "coordinates": [
+        [
+          [
+            89.43603515625,
+            21.947311998253628
+          ],
+          [
+            89.43603515625,
+            23.460405928263487
+          ],
+          [
+            91.231689453125,
+            23.460405928263487
+          ],
+          [
+            91.231689453125,
+            21.947311998253628
+          ],
+          [
+            89.43603515625,
+            21.947311998253628
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "EONET_402",
+      "title": "Tropical Storm Roanu",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2016-05-18T06:00:00Z",
+      "closed": "2016-05-27T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2016/ROANU/track.dat"
+        }
+      ],
+      "coordinates": [
+        81.5,
+        13.9
+      ]
+    },
+    {
+      "id": "EONET_331",
+      "title": "Tropical Storm Two",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2015-07-29T00:00:00Z",
+      "closed": "2016-02-03T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2015/TWO/track.dat"
+        }
+      ],
+      "coordinates": [
+        91.2,
+        21.2
+      ]
+    },
+    {
+      "id": "EONET_42",
+      "title": "Bangladesh: Floods and Landslides, Summer 2015",
+      "categories": [
+        "floods",
+        "landslides"
+      ],
+      "date": "2015-06-24T00:00:00Z",
+      "closed": "2015-08-10T00:00:00Z",
+      "sources": [
+        {
+          "id": "ReliefWeb",
+          "url": "http://reliefweb.int/disaster/fl-2015-000068-bgd"
+        }
+      ],
+      "coordinates": [
+        [
+          [
+            91.2353515625,
+            20.782820620659265
+          ],
+          [
+            91.2353515625,
+            23.819522533901992
+          ],
+          [
+            92.87353515625,
+            23.819522533901992
+          ],
+          [
+            92.87353515625,
+            20.782820620659265
+          ],
+          [
+            91.2353515625,
+            20.782820620659265
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "EONET_1255",
+      "title": "Tropical Storm Mahasen",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2013-05-10T06:00:00Z",
+      "closed": "2013-05-21T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2013/MAHASEN/track.dat"
+        }
+      ],
+      "coordinates": [
+        93.6,
+        4.8
+      ]
+    },
+    {
+      "id": "EONET_1427",
+      "title": "Tropical Storm #2",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2011-10-17T00:00:00Z",
+      "closed": "2011-10-24T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2011/2/track.dat"
+        }
+      ],
+      "coordinates": [
+        89.5,
+        15.2
+      ]
+    },
+    {
+      "id": "EONET_1599",
+      "title": "Tropical Storm #3",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2009-09-03T18:00:00Z",
+      "closed": "2009-09-12T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2009/3/track.dat"
+        }
+      ],
+      "coordinates": [
+        88.8,
+        19.4
+      ]
+    },
+    {
+      "id": "EONET_1600",
+      "title": "Cyclone  #2",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2009-05-22T18:00:00Z",
+      "closed": "2009-05-31T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2009/2/track.dat"
+        }
+      ],
+      "coordinates": [
+        88.8,
+        16.9
+      ]
+    },
+    {
+      "id": "EONET_1601",
+      "title": "Tropical Storm #1",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2009-04-14T00:00:00Z",
+      "closed": "2009-04-23T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2009/1/track.dat"
+        }
+      ],
+      "coordinates": [
+        87.7,
+        12.6
+      ]
+    },
+    {
+      "id": "EONET_1699",
+      "title": "Tropical Storm #4",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2008-10-24T06:00:00Z",
+      "closed": "2008-11-01T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2008/4/track.dat"
+        }
+      ],
+      "coordinates": [
+        85,
+        16
+      ]
+    },
+    {
+      "id": "EONET_1700",
+      "title": "Tropical Storm #2",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2008-09-15T06:00:00Z",
+      "closed": "2008-09-23T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2008/2/track.dat"
+        }
+      ],
+      "coordinates": [
+        88.8,
+        19.7
+      ]
+    },
+    {
+      "id": "EONET_1778",
+      "title": "Cyclone  #6",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2007-11-10T06:00:00Z",
+      "closed": "2007-11-21T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2007/6/track.dat"
+        }
+      ],
+      "coordinates": [
+        93.2,
+        9.6
+      ]
+    },
+    {
+      "id": "EONET_1783",
+      "title": "Cyclone  #1",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2007-05-13T00:00:00Z",
+      "closed": "2007-05-20T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2007/1/track.dat"
+        }
+      ],
+      "coordinates": [
+        91.2,
+        14.4
+      ]
+    },
+    {
+      "id": "EONET_1871",
+      "title": "Tropical Storm #3",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2006-06-30T18:00:00Z",
+      "closed": "2006-07-08T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2006/3/track.dat"
+        }
+      ],
+      "coordinates": [
+        88.3,
+        20
+      ]
+    },
+    {
+      "id": "EONET_1952",
+      "title": "Tropical Storm #3",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2005-10-01T06:00:00Z",
+      "closed": "2005-10-08T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2005/3/track.dat"
+        }
+      ],
+      "coordinates": [
+        85.9,
+        17.4
+      ]
+    },
+    {
+      "id": "EONET_2223",
+      "title": "Tropical Storm #3",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2002-11-09T18:00:00Z",
+      "closed": "2002-11-17T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2002/3/track.dat"
+        }
+      ],
+      "coordinates": [
+        82.5,
+        11.7
+      ]
+    },
+    {
+      "id": "EONET_2413",
+      "title": "Tropical Storm #2",
+      "categories": [
+        "severeStorms"
+      ],
+      "date": "2000-10-25T18:00:00Z",
+      "closed": "2000-11-02T00:00:00Z",
+      "sources": [
+        {
+          "id": "UNISYS",
+          "url": "http://weather.unisys.com/hurricane/n_indian/2000/2/track.dat"
+        }
+      ],
+      "coordinates": [
+        89.9,
+        15.9
+      ]
+    }
+  ]
+}

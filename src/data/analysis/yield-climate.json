@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "source": "World Bank Open Data (FAOSTAT) & BBS Yearbook of Agricultural Statistics",
+    "sourceUrl": "http://api.worldbank.org/v2/country/BGD/indicator/AG.YLD.CREL.KG",
+    "bbsSource": "Bangladesh Bureau of Statistics (BBS) 45 Years Agriculture Statistics of Major Crops",
+    "fetchedAt": "2026-10-03T06:43:05.773Z",
+    "coverageYears": "2001–2024",
+    "spatialLevel": "National (Bangladesh total)",
+    "spatialNotice": "DISCLOSURE: Only national-level rice yield data is officially and openly available. District-level digital time-series is not published via open APIs by BBS or DAE. District yields are NOT fabricated.",
+    "causalityWarning": "IMPORTANT SCIENTIFIC LIMITATION: Sample size is small (n = 20–24 years). Statistical correlations indicate historical co-movement after detrending technology gains, but DO NOT demonstrate direct causality. Yield is strongly influenced by non-climatic factors including fertilizer availability, irrigation power access, seed varieties, and pest outbreaks.",
+    "license": "World Bank Open Data (CC-BY 4.0) & Government of Bangladesh Open Data Policy",
+    "totalRecords": 24
+  },
+  "nationalYields": {
+    "years": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "cerealAnnualKgHa": [
+      3352.6,
+      3374,
+      3479.8,
+      3439.4,
+      3663.6,
+      3710.5,
+      3783.1,
+      4154.3,
+      4126.4,
+      4262.6,
+      4367.1,
+      4396.5,
+      4492.1,
+      4558.8,
+      4588.2,
+      4624,
+      4684.5,
+      4778.5,
+      4855.4,
+      4885.9,
+      4964.4,
+      5089.7,
+      5320.9,
+      5408
+    ],
+    "seasonalMtHa": [
+      {
+        "year": 2001,
+        "aus": 1.68,
+        "aman": 2.01,
+        "boro": 3.25
+      },
+      {
+        "year": 2002,
+        "aus": 1.72,
+        "aman": 2.04,
+        "boro": 3.31
+      },
+      {
+        "year": 2003,
+        "aus": 1.76,
+        "aman": 2.11,
+        "boro": 3.39
+      },
+      {
+        "year": 2004,
+        "aus": 1.78,
+        "aman": 1.89,
+        "boro": 3.44
+      },
+      {
+        "year": 2005,
+        "aus": 1.83,
+        "aman": 2.16,
+        "boro": 3.51
+      },
+      {
+        "year": 2006,
+        "aus": 1.85,
+        "aman": 2.12,
+        "boro": 3.58
+      },
+      {
+        "year": 2007,
+        "aus": 1.88,
+        "aman": 1.95,
+        "boro": 3.69
+      },
+      {
+        "year": 2008,
+        "aus": 1.95,
+        "aman": 2.21,
+        "boro": 3.85
+      },
+      {
+        "year": 2009,
+        "aus": 2.02,
+        "aman": 2.24,
+        "boro": 3.88
+      },
+      {
+        "year": 2010,
+        "aus": 2.13,
+        "aman": 2.29,
+        "boro": 3.92
+      },
+      {
+        "year": 2011,
+        "aus": 2.19,
+        "aman": 2.33,
+        "boro": 3.96
+      },
+      {
+        "year": 2012,
+        "aus": 2.22,
+        "aman": 2.36,
+        "boro": 3.97
+      },
+      {
+        "year": 2013,
+        "aus": 2.25,
+        "aman": 2.39,
+        "boro": 3.99
+      },
+      {
+        "year": 2014,
+        "aus": 2.27,
+        "aman": 2.42,
+        "boro": 4.02
+      },
+      {
+        "year": 2015,
+        "aus": 2.29,
+        "aman": 2.45,
+        "boro": 4.05
+      },
+      {
+        "year": 2016,
+        "aus": 2.34,
+        "aman": 2.48,
+        "boro": 3.89
+      },
+      {
+        "year": 2017,
+        "aus": 2.41,
+        "aman": 2.51,
+        "boro": 3.96
+      },
+      {
+        "year": 2018,
+        "aus": 2.48,
+        "aman": 2.55,
+        "boro": 4.12
+      },
+      {
+        "year": 2019,
+        "aus": 2.53,
+        "aman": 2.61,
+        "boro": 4.15
+      },
+      {
+        "year": 2020,
+        "aus": 2.57,
+        "aman": 2.65,
+        "boro": 4.21
+      },
+      {
+        "year": 2021,
+        "aus": 2.62,
+        "aman": 2.68,
+        "boro": 4.25
+      },
+      {
+        "year": 2022,
+        "aus": 2.66,
+        "aman": 2.72,
+        "boro": 4.29
+      },
+      {
+        "year": 2023,
+        "aus": 2.71,
+        "aman": 2.76,
+        "boro": 4.33
+      },
+      {
+        "year": 2024,
+        "aus": 2.74,
+        "aman": 2.78,
+        "boro": 4.36
+      }
+    ]
+  },
+  "correlations": [
+    {
+      "relationship": "Annual Cereal Yield vs Annual Rainfall (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": -0.462,
+      "pValue": 0.0235,
+      "ci95": [
+        -0.73,
+        -0.07
+      ],
+      "rawYieldMean": 4348.35,
+      "rawClimateMean": 2333.28,
+      "association": "significant_negative"
+    },
+    {
+      "relationship": "Annual Cereal Yield vs Summer Max Temp (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": 0.294,
+      "pValue": 0.1635,
+      "ci95": [
+        -0.12,
+        0.62
+      ],
+      "rawYieldMean": 4348.35,
+      "rawClimateMean": 33.33,
+      "association": "statistically_indistinguishable"
+    },
+    {
+      "relationship": "Boro Rice Yield vs Spring Max Temp (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": 0.195,
+      "pValue": 0.3618,
+      "ci95": [
+        -0.23,
+        0.55
+      ],
+      "rawYieldMean": 3890.42,
+      "rawClimateMean": 38.58,
+      "association": "statistically_indistinguishable"
+    },
+    {
+      "relationship": "Boro Rice Yield vs Winter Soil Wetness (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": -0.349,
+      "pValue": 0.0952,
+      "ci95": [
+        -0.66,
+        0.06
+      ],
+      "rawYieldMean": 3890.42,
+      "rawClimateMean": 0.5,
+      "association": "statistically_indistinguishable"
+    },
+    {
+      "relationship": "Aus Rice Yield vs Pre-Monsoon Rain (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": -0.117,
+      "pValue": 0.5877,
+      "ci95": [
+        -0.5,
+        0.3
+      ],
+      "rawYieldMean": 2203.33,
+      "rawClimateMean": 1684.27,
+      "association": "statistically_indistinguishable"
+    },
+    {
+      "relationship": "Aman Rice Yield vs Monsoon Rainfall (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": -0.281,
+      "pValue": 0.1839,
+      "ci95": [
+        -0.61,
+        0.14
+      ],
+      "rawYieldMean": 2362.92,
+      "rawClimateMean": 1421.43,
+      "association": "statistically_indistinguishable"
+    },
+    {
+      "relationship": "Aman Rice Yield vs Root-Zone Wetness (Detrended)",
+      "sampleSize": 24,
+      "spearmanRho": -0.289,
+      "pValue": 0.1715,
+      "ci95": [
+        -0.62,
+        0.13
+      ],
+      "rawYieldMean": 2362.92,
+      "rawClimateMean": 0.87,
+      "association": "statistically_indistinguishable"
+    }
+  ]
+}
