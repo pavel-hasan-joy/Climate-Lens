@@ -34,8 +34,9 @@ export default function Timeline({ time, year, playing, onTime, onTogglePlay }: 
   const at = year ?? STOP[time];
 
   return (
-    <div className="timeline">
+    <div className="timeline" role="region" aria-label="Climate Timeline Controls">
       <button
+        type="button"
         className={'play' + (playing ? ' on' : '')}
         onClick={onTogglePlay}
         aria-label={playing ? t('timeline.pause') : t('timeline.play')}
@@ -59,7 +60,9 @@ export default function Timeline({ time, year, playing, onTime, onTogglePlay }: 
           {TIMES.map((stop) => (
             <button
               key={stop.id}
+              type="button"
               className={'stop' + (year == null && stop.id === time ? ' on' : '')}
+              aria-pressed={year == null && stop.id === time}
               style={{ left: `${pos(STOP[stop.id])}%`, '--c': stop.color } as React.CSSProperties}
               onClick={() => onTime(stop.id)}
             >

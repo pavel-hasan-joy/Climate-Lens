@@ -24,7 +24,10 @@ jobs:
         run: npm ci
 
       - name: Check code formatting
-        run: npx prettier --check "src/**/*.{js,jsx,css}"
+        run: npm run format:check
+
+      - name: Verify TypeScript types
+        run: npm run typecheck
 
       - name: Run ESLint
         run: npm run lint
@@ -32,5 +35,9 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
 
+      - name: Validate Climate Impacts Dataset
+        run: npm run validate:impacts
+
       - name: Build production bundle
         run: npm run build
+
