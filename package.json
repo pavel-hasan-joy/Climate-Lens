@@ -2,6 +2,7 @@
   "name": "climate-lens",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://climate-lens-three.vercel.app",
   "type": "module",
   "scripts": {
     "dev": "vite",

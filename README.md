@@ -1,5 +1,10 @@
 # Climate Lens — Bangladesh
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://climate-lens-three.vercel.app)
+[![CI](https://github.com/pavel-hasan-joy/Climate-Lens/actions/workflows/ci.yml/badge.svg)](https://github.com/pavel-hasan-joy/Climate-Lens/actions)
+
+🌐 **Live Demo:** [https://climate-lens-three.vercel.app](https://climate-lens-three.vercel.app)
+
 A 3D geospatial observatory of how Bangladesh's rainfall, heat, and root-zone soil wetness **were**, **are**, and **may become** — district by district, directly grounded in NASA Earth science data and CMIP6 climate model projections.
 
 - Pick a **region** (8 divisions) and a **place** (64 districts). The borders are real, from geoBoundaries.
