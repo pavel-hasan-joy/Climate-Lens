@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import * as maplibregl from 'maplibre-gl';
+
+if (typeof window !== 'undefined') {
+  maplibregl.setWorkerUrl('/maplibre-gl-worker.mjs');
+}
+
 import { METRIC, TIMES } from '../../lib/constants';
 import {
   ALL_YEARS,

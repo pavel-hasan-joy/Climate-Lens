@@ -1,4 +1,4 @@
-const CACHE_NAME = 'climate-lens-v1';
+const CACHE_NAME = 'climate-lens-v2';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
