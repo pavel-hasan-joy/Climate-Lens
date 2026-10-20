@@ -127,8 +127,9 @@ export default function ClimateMap({
       container: box.current,
       style: buildStyle(),
       center: [90.3, 23.7],
-      zoom: 3.2,
-      pitch: 0,
+      zoom: 5.8,
+      pitch: 45,
+      bearing: -12,
       maxPitch: 75,
       attributionControl: { compact: true },
       fadeDuration: 300,
@@ -161,8 +162,17 @@ export default function ClimateMap({
     });
     m.on('click', 'districts-3d', (e) => (m as any).__select?.(e.features?.[0]?.properties?.id));
 
-    m.on('load', () => setReady(true));
+    const onReady = () => setReady(true);
+    if (m.isStyleLoaded()) {
+      onReady();
+    } else {
+      m.once('style.load', onReady);
+      m.once('load', onReady);
+    }
+    const fallbackTimer = window.setTimeout(onReady, 500);
+
     return () => {
+      window.clearTimeout(fallbackTimer);
       anim.current?.stop();
       m.remove();
     };
