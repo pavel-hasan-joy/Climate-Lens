@@ -1,9 +1,12 @@
-const CACHE_NAME = 'climate-lens-v2';
+const CACHE_NAME = 'climate-lens-v3';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
   '/icon.svg',
+  '/icon-192.png',
+  '/icon-512.png',
+  '/apple-touch-icon.png',
 ];
 
 // Install: precache application shell

@@ -533,4 +533,21 @@ export const bn = {
     tooltip:
       'নাসা POWER, GBIF, EONET ও World Bank থেকে প্রতি মাসে স্বয়ংক্রিয়ভাবে সংগৃহীত। লাইভ সংযোগ রিফ্রেশ করতে ক্লিক করুন।',
   },
+  mobileNav: {
+    map: 'ম্যাপ',
+    districts: 'জেলাসমূহ',
+    details: 'বিশ্লেষণ',
+    more: 'মেনু',
+    layers: 'লেয়ার ও লেজেন্ড',
+    peekDetails: 'বিস্তারিত দেখুন',
+    close: 'বন্ধ করুন',
+    installApp: 'অ্যাপ ইনস্টল করুন',
+    installed: 'ইনস্টল সম্পন্ন',
+    installSubtitle: 'অফলাইন ও দ্রুত ব্যবহারের জন্য ফোনে ইনস্টল করুন',
+    installAction: 'এখনই ইনস্টল করুন',
+    iosInstallHint: 'iOS-এ ইনস্টল করতে: Safari-এর Share বাটনে ট্যাপ করে "Add to Home Screen" বেছে নিন।',
+    searchDistricts: 'জেলা খুঁজুন...',
+    allDivisions: 'সকল',
+    selectedDistrict: 'নির্বাচিত জেলা',
+  },
 };

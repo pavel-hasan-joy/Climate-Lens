@@ -122,7 +122,7 @@ export default function ClimateMap({
   const mobile = useIsMobile();
 
   const padding = mobile
-    ? { top: 110, bottom: Math.round(window.innerHeight * 0.5), left: 20, right: 20 }
+    ? { top: 80, bottom: 140, left: 16, right: 16 }
     : { top: 110, bottom: 150, left: 390, right: 430 };
 
   // ---- create the map once ----

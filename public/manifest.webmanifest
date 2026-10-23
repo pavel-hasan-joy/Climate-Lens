@@ -3,16 +3,42 @@
   "short_name": "ClimateLens",
   "description": "24-year NASA Earth observation data, agricultural calendars, and CMIP6 climate projections for Bangladesh",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0b0f19",
   "theme_color": "#0b0f19",
   "orientation": "any",
+  "categories": ["weather", "education", "productivity"],
   "icons": [
     {
       "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Climate Map",
+      "url": "/",
+      "description": "Interactive 3D climate map for Bangladesh"
+    },
+    {
+      "name": "Agricultural Calendar",
+      "url": "/?metric=rain",
+      "description": "Crop risk calendars and seasonal projections"
     }
   ]
 }

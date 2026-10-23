@@ -536,6 +536,23 @@ export const en = {
     tooltip:
       'Pipeline data updated monthly via NASA POWER, GBIF, EONET & World Bank. Click to refresh live connection status.',
   },
+  mobileNav: {
+    map: 'Map',
+    districts: 'Districts',
+    details: 'Analysis',
+    more: 'Menu',
+    layers: 'Layers & Legend',
+    peekDetails: 'View Details',
+    close: 'Close',
+    installApp: 'Install App',
+    installed: 'App Installed',
+    installSubtitle: 'Add to home screen for quick offline access',
+    installAction: 'Install Now',
+    iosInstallHint: 'To install on iOS: tap the Share button and select "Add to Home Screen".',
+    searchDistricts: 'Search district...',
+    allDivisions: 'All',
+    selectedDistrict: 'Selected District',
+  },
 };
 
 export type Translations = typeof en;
