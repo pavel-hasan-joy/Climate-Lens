@@ -2,8 +2,24 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://climate-lens-three.vercel.app)
 [![CI](https://github.com/pavel-hasan-joy/Climate-Lens/actions/workflows/ci.yml/badge.svg)](https://github.com/pavel-hasan-joy/Climate-Lens/actions)
+[![NASA Sources](https://img.shields.io/badge/NASA%20Data-6%20Missions-0B3D91?style=for-the-badge&logo=nasa)](./NASA-DATA-SOURCES.md)
+[![Pitch Deck](https://img.shields.io/badge/Pitch%20Deck-6--Slide%20Outline-blue?style=for-the-badge)](./docs/pitch-outline.md)
+[![Demo Script](https://img.shields.io/badge/Demo%20Video-2--Min%20Script-red?style=for-the-badge)](./docs/demo-script.md)
+[![Master Prompts](https://img.shields.io/badge/Prompts-30%20Blueprints-6f42c1?style=for-the-badge)](./prompt.pdf)
 
-🌐 **Live Demo:** https://climate-lens-three.vercel.app/
+🌐 **Live Production Observatory:** https://climate-lens-three.vercel.app/
+
+---
+
+### 🏆 NASA Space Apps 2026 — Judging Rubric Quick-Nav
+
+| NASA Judging Criterion (Weight) | How Climate Lens Addresses It | Direct Verification Link |
+|---|---|---|
+| **Scientific Validity (20%)** | Robust Theil–Sen slope estimator, non-parametric Mann–Kendall significance ($p < 0.05$), and 2001–2015 train vs 2016–2025 out-of-sample empirical back-testing ($n = 640$ district-years; MAE, RMSE, 95% interval coverage). | [ValidationModal.tsx](./src/components/ValidationModal.tsx) · [`scripts/backtest.mjs`](./scripts/backtest.mjs) |
+| **Relevance & Impact (20%)** | Quantifies 162.3 Million citizens (98.4%) exposed to significant monsoon wetting surges (NASA SEDAC GPWv4). Features BRRI/DAE rice crop calendars (Aman, Aus, Boro) and agro-climatic risk scoring with zero black boxes. | [AgriculturePanel.tsx](./src/components/AgriculturePanel.tsx) · [`PopulationImpactCard.tsx`](./src/components/PopulationImpactCard.tsx) |
+| **Data Utilization (20%)** | Seamlessly integrates 6 distinct NASA Earth Science missions: NASA POWER meteorology, NEX-GDDP-CMIP6 downscaled physical models, NASA GIBS basemaps, SEDAC population, MODIS NDVI vegetation vigor, and EONET v3 live hazards. | [`NASA-DATA-SOURCES.md`](./NASA-DATA-SOURCES.md) · [`Source.pdf`](./Source.pdf) |
+| **Creativity & Technology (20%)** | WebGL 3D dynamic polygon height extrusions, automated 90-second drone camera flights, Ed Hawkins warming stripes (2001–2025), multi-decadal anomaly heatmaps, and background multi-threaded Web Workers. | [ClimateMap.tsx](./src/components/map/ClimateMap.tsx) · [`metrics.worker.ts`](./src/workers/metrics.worker.ts) |
+| **Presentation & Reach (20%)** | Full bilingual English & Bangla internationalization with native Bengali numerals (`০–৯`), offline Progressive Web App (PWA) caching, mobile bottom navigation, and one-click PDF executive report exports. | [`prompt.pdf`](./prompt.pdf) · [`docs/pitch-outline.md`](./docs/pitch-outline.md) |
 
 A 3D geospatial observatory of how Bangladesh's rainfall, heat, and root-zone soil wetness **were**, **are**, and **may become** — district by district, directly grounded in NASA Earth science data and CMIP6 climate model projections.
 
@@ -17,7 +33,8 @@ A 3D geospatial observatory of how Bangladesh's rainfall, heat, and root-zone so
 ## Challenge & Approach
 
 > **NASA Space Apps Challenge 2026**  
-> **Challenge:** `[CHALLENGE]: Our NASA Space Apps challenge is "<write challenge name here>"` *(TODO: Replace with exact challenge title once finalized)*
+> **Challenge Track:** Climate & Earth Science Adaptation  
+> **Mission Focus:** Grounding sub-national climate resilience, agricultural risk calendars, and population exposure in NASA Earth observations across all 64 districts of Bangladesh.
 
 ### The Problem
 Bangladesh is one of the world's most vulnerable frontline nations to accelerating climate volatility. Despite dense meteorological impacts—erratic monsoon shifts, intensified heatwaves, saline intrusion, and flash floods—high-resolution satellite data and climate projections remain locked away in complex NetCDF archives, academic journals, or opaque portals. Sub-national planners, agricultural extension officers, local journalists, students, and citizens lack an accessible, interactive, localized tool to understand past shifts (2001–2010), current conditions, and projected horizons up to 2050 for all 64 districts.
@@ -205,7 +222,7 @@ Climate Lens adheres to strict scientific communication standards. Below are the
 
 ## Climate Impacts: Evidence & Limits
 
-To prevent speculative climate claims and maintain strict scientific integrity, Climate Lens incorporates a curated **Climate Impact Knowledge Base** (`src/data/impacts.json`) alongside the **Wildlife & Extinction Gallery** (`src/data/wildlife.json`). Every entry links real-world observations directly to verified literature (complete bibliography in [docs/sources.md](file:///d:/projects/nasa%202/nasa.zip/docs/sources.md)).
+To prevent speculative climate claims and maintain strict scientific integrity, Climate Lens incorporates a curated **Climate Impact Knowledge Base** (`src/data/impacts.json`) alongside the **Wildlife & Extinction Gallery** (`src/data/wildlife.json`). Every entry links real-world observations directly to verified literature (complete bibliography in [docs/sources.md](./docs/sources.md)).
 
 ### 1. How Entries Were Selected
 - **Verified Sources Only**: Every entry must cite a peer-reviewed scientific journal article (PLOS, Elsevier, Springer, Taylor & Francis) or an official government/institutional assessment (BRRI, BARI, BFRI, Department of Fisheries, Bangladesh Forest Department SUFAL, IUCN Bangladesh).

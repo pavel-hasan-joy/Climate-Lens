@@ -100,7 +100,7 @@
 - [x] Configure GitHub Actions CI (`.github/workflows/ci.yml`) checking lint, typecheck, test, and build.
 - [x] Implement lightweight i18n infrastructure (English + Bangla) with zero hardcoded UI strings.
 - [x] Add "Limitations" section to `README.md` (0.5° resolution, statistical trend vs climate model, 2001 start rationale).
-- [x] Add "Challenge & Approach" section in `README.md` with challenge title TODO.
+- [x] Add "Challenge & Approach" section in `README.md` with finalized NASA Space Apps challenge title.
 - [x] Deployment readiness (`vercel.json`, `public/_redirects`), Open Graph meta tags, and favicon in `index.html`.
 - [x] First-visit "How to read this map" modal (`AboutModal.tsx`) with localStorage persistence and interactive guided tour.
 
