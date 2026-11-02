@@ -387,18 +387,56 @@ Add a validator function checking:
 
 ---
 
-### 5. GitHub Actions Automated Pipeline & CI/CD
+### 5. 🔄 Continuous Data Upgrade & Self-Updating Architecture
 
-Climate Lens includes a robust GitHub Actions workflow ([`.github/workflows/data-update.yml`](file:///d:/projects/nasa%202/nasa.zip/.github/workflows/data-update.yml)) that automates data updates:
+A common question for climate observatories is: ***"Is this a one-time static snapshot, or does the platform automatically upgrade when NASA releases new data?"***
 
-- **Schedule**: Executes on the 1st of every month at 03:00 UTC (`0 3 1 * *`) and on manual trigger (`workflow_dispatch`).
-- **Steps**:
-  1. Checks out repository and sets up Node.js LTS environment.
-  2. Runs `npm run data` to ingest fresh NASA POWER, GBIF, and EONET data.
-  3. Executes `npm run validate:data` and `npm run validate:impacts` (fails loudly with exit code 1 if any value is out-of-range or schema is invalid).
-  4. Runs `npm test` and `npm run typecheck` to prevent regressions.
-  5. Inspects `git status --porcelain src/data/`. If data changed, opens an automated Pull Request via `peter-evans/create-pull-request@v6` with complete update summaries.
-  6. **Security**: Uses default `GITHUB_TOKEN` permissions; never pushes secrets or pushes directly to main.
+**Climate Lens is built as an active, self-upgrading platform** using a hybrid **Two-Tier Continuous Data Architecture**:
+
+```
+                                  ┌──────────────────────────────────────────────┐
+                                  │             NASA Earth Science APIs          │
+                                  │   NASA POWER · NASA GIBS · NASA EONET v3     │
+                                  └───────┬──────────────────────────────┬───────┘
+                                          │                              │
+                     Tier 1: Real-Time In-Browser Fetch     Tier 2: Scheduled Background Pipeline
+                                          │                              │
+                                          ▼                              ▼
+                             ┌─────────────────────────┐   ┌───────────────────────────┐
+                             │    Client Application   │   │ GitHub Actions (.github)  │
+                             │   (useLiveDaily, EONET) │   │  data-update.yml (Monthly)│
+                             └────────────┬────────────┘   └─────────────┬─────────────┘
+                                          │                              │
+                                   Instant 60-Day             npm run data & validation
+                                    Live Updates                         │
+                                                                         ▼
+                                                           Automated PR & Vercel Deploy
+```
+
+#### Tier 1: Real-Time In-Browser Live Fetching (Instant Updates)
+The client web application is not frozen to hardcoded static bundles. When visitors interact with the observatory:
+- **Rolling 60-Day Daily Meteorological Feeds (`useLiveDaily.ts`)**: Selecting any district dynamically queries NASA POWER's live endpoint (`https://power.larc.nasa.gov/api/temporal/daily/point`). As NASA ingests yesterday's and today's satellite readings, the user's charts update in real time with an active green **"Live"** indicator badge.
+- **Real-Time Natural Hazard Tracking (`useEonetFeed.ts`)**: Live cyclone, flash flood, and severe storm events from NASA EONET v3 are fetched hourly and plotted onto the 3D map canvas.
+- **On-Demand Web Worker Analysis (`LiveDistrictAnalysis.tsx`)**: Users can trigger on-the-fly live queries across custom historical spans, processed in client-side Web Workers.
+- **Stale-While-Revalidate Caching (`apiCache.ts`)**: IndexedDB and Service Worker caches guarantee that if NASA's servers experience temporary downtime, the platform gracefully falls back to prebuilt bundles without crashing.
+
+#### Tier 2: Automated Monthly Background Ingestion Pipeline
+To keep 25-year historical baselines, decadal Theil–Sen trends, and annual extremes continuously up to date as NASA publishes monthly validated summaries:
+- **Automated Workflow**: [`.github/workflows/data-update.yml`](./.github/workflows/data-update.yml)
+- **Schedule**: Executes automatically on the **1st of every month at 03:00 UTC** (`0 3 1 * *`).
+- **Execution Flow**:
+  1. Spins up an Ubuntu runner and executes the end-to-end data pipeline (`npm run data`).
+  2. Queries NASA POWER, GBIF, EONET, and the World Bank to ingest freshly published monthly blocks.
+  3. Executes strict data integrity gates (`npm run validate:data` and `npm run validate:impacts`) to prevent physical outliers or missing coordinates.
+  4. Runs the automated test suite (`npm test`) and TypeScript checks (`npm run typecheck`).
+  5. If new data is detected, opens an automated Pull Request titled `chore(data): automated monthly NASA climate dataset update`.
+  6. Upon merging, **Vercel** triggers an automatic production build—seamlessly upgrading the live website without manual developer effort.
+
+#### Manual On-Demand Refresh (One-Click)
+Repository maintainers can also refresh the entire dataset at any time on demand:
+1. Navigate to the **Actions** tab in GitHub.
+2. Select **"Monthly Climate Dataset Update & Validation"**.
+3. Click **"Run workflow"** to immediately trigger fresh ingestion across all 64 districts.
 
 ---
 
