@@ -66,6 +66,8 @@ The complete 30-prompt specification detailing how the author directed Claude th
 
 ## Data
 
+> 🛰️ **NASA Space Apps Evaluation Dossier:** For an exhaustive inventory of all 6 NASA Earth Science datasets, variables, and methodologies used in this project, see [NASA-DATA-SOURCES.md](./NASA-DATA-SOURCES.md).
+
 | What | Source |
 |---|---|
 | Rainfall, max temperature, root-zone soil wetness | [NASA POWER](https://power.larc.nasa.gov/) (`PRECTOTCORR`, `T2M_MAX`, `GWETROOT`), monthly 2001–2025 + daily for the last ~400 days (Public Domain) |
