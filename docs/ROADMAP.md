@@ -1,6 +1,7 @@
 # Climate Lens — Bangladesh: Technical Roadmap & Stage Plan
 
 > **Project:** Climate Lens — Bangladesh (NASA Space Apps Challenge 2026)  
+> **Challenge Category:** **Be An Earth System Trend Detective!**  
 > **Role:** Lead Engineer  
 > **Date:** October 2026 (6-Week Sprint to Hackathon Nov 14–15, 2026)  
 > **Target Criteria:** Influence/Impact, Creativity, Scientific Validity, Relevance, Presentation.

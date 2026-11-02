@@ -1,6 +1,8 @@
 # Climate Lens — Bangladesh
 ## NASA Space Apps Challenge 2026 — 6-Slide Pitch Deck Outline
 
+> **Official Challenge Category:** **Be An Earth System Trend Detective!**
+
 Optimized for the NASA Space Apps judging rubric: **Influence/Impact, Creativity, Scientific Validity, Relevance, and Presentation**.
 
 ---

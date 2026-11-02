@@ -2,6 +2,7 @@
 
 > **Project:** Climate Lens — Bangladesh  
 > **Event:** NASA Space Apps Challenge 2026  
+> **Challenge Category:** **Be An Earth System Trend Detective!**  
 > **Lead Architect & Author:** [Pavel Hasan Joy](https://github.com/pavel-hasan-joy)  
 > **Evaluation Rubrics Addressed:** Scientific Validity, Relevance, Impact, and Data Utilization
 

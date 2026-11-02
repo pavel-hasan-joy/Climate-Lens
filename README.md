@@ -2,6 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://climate-lens-three.vercel.app)
 [![CI](https://github.com/pavel-hasan-joy/Climate-Lens/actions/workflows/ci.yml/badge.svg)](https://github.com/pavel-hasan-joy/Climate-Lens/actions)
+[![Challenge](https://img.shields.io/badge/Challenge-Be%20An%20Earth%20System%20Trend%20Detective!-blueviolet?style=for-the-badge&logo=nasa)](https://www.spaceappschallenge.org/)
 [![NASA Sources](https://img.shields.io/badge/NASA%20Data-6%20Missions-0B3D91?style=for-the-badge&logo=nasa)](./NASA-DATA-SOURCES.md)
 [![Pitch Deck](https://img.shields.io/badge/Pitch%20Deck-6--Slide%20Outline-blue?style=for-the-badge)](./docs/pitch-outline.md)
 [![Demo Script](https://img.shields.io/badge/Demo%20Video-2--Min%20Script-red?style=for-the-badge)](./docs/demo-script.md)
@@ -33,8 +34,8 @@ A 3D geospatial observatory of how Bangladesh's rainfall, heat, and root-zone so
 ## Challenge & Approach
 
 > **NASA Space Apps Challenge 2026**  
-> **Challenge Track:** Climate & Earth Science Adaptation  
-> **Mission Focus:** Grounding sub-national climate resilience, agricultural risk calendars, and population exposure in NASA Earth observations across all 64 districts of Bangladesh.
+> **Official Challenge:** **Be An Earth System Trend Detective!**  
+> **Challenge Response & Mission:** Acting as an empirical Earth system trend detective by mining 25 years of NASA satellite observations, verifying non-parametric climate trends (Theil–Sen & Mann–Kendall $p < 0.05$), and projecting localized agro-climatic shifts across all 64 districts of Bangladesh.
 
 ### The Problem
 Bangladesh is one of the world's most vulnerable frontline nations to accelerating climate volatility. Despite dense meteorological impacts—erratic monsoon shifts, intensified heatwaves, saline intrusion, and flash floods—high-resolution satellite data and climate projections remain locked away in complex NetCDF archives, academic journals, or opaque portals. Sub-national planners, agricultural extension officers, local journalists, students, and citizens lack an accessible, interactive, localized tool to understand past shifts (2001–2010), current conditions, and projected horizons up to 2050 for all 64 districts.

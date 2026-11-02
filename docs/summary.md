@@ -1,6 +1,8 @@
 # Climate Lens — Bangladesh
 ## NASA Space Apps Challenge 2026 — Comprehensive Project Summary & Scientific Dossier
 
+> **Official Challenge Category:** **Be An Earth System Trend Detective!**
+
 ---
 
 ### A. One-Sentence Pitch (Max 25 Words)
