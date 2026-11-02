@@ -36,6 +36,34 @@ Bangladesh is one of the world's most vulnerable frontline nations to accelerati
 
 ---
 
+## 🧠 Conception, Architecture & Authorship
+
+> **Original Concept, Scientific Formulation & Engineering Direction by [Pavel Hasan Joy](https://github.com/pavel-hasan-joy)**  
+> *Developed for the NASA Space Apps Challenge 2026*
+
+### The Vision & Core Authorship
+**Climate Lens — Bangladesh** was conceived, architected, and directed end-to-end by **Pavel Hasan Joy**. The entire conceptual framework, mathematical methodologies, sub-national climate analysis approach, and data sourcing strategies originated from the author:
+- **Ideation & Domain Scoping**: Conceptualized the 3D spatio-temporal observatory spanning 64 districts across three distinct time horizons (**Past** 2001–2010 baseline, **Now** near-real-time observations, and **Future** CMIP6 downscaled trajectories to 2050).
+- **Data Sourcing & Pipeline Design**: Identified, evaluated, and directed the integration of multi-agency open scientific data sources:
+  - **NASA POWER**: 25-year daily & monthly meteorology (`T2M_MAX`, `PRECTOTCORR`, `GWETROOT`).
+  - **NASA GIBS**: Multi-layer raster basemaps (Black Marble night lights, Blue Marble, VIIRS, and GPM IMERG rain radar).
+  - **NASA NEX-GDDP-CMIP6**: High-resolution 0.25° downscaled 5-model physical climate ensembles (SSP2-4.5 & SSP5-8.5).
+  - **NASA SEDAC GPWv4**: Gridded population exposure calibrated to the Bangladesh Bureau of Statistics (BBS) 2022 Census.
+  - **NASA MODIS**: 25-year vegetation vigor tracking (`MOD13C2`/`MOD13A2` NDVI) across rice seasons.
+  - **NASA EONET v3**: Live natural hazard tracking inside Bangladesh's geographic bounds.
+  - **GBIF Occurrences**: Observation records for 6 national indicator species with open dataset citations.
+  - **World Bank / FAOSTAT**: 24-year national crop yield time series.
+  - **BRRI & DAE**: Standard agronomic crop calendars for Aman, Aus, and Boro rice.
+- **Statistical Rigor & Validation**: Formulated the strict scientific integrity requirements, including non-parametric Theil–Sen slope estimation, Mann–Kendall significance verification ($p < 0.05$), and out-of-sample empirical back-testing (2001–2015 training vs 2016–2025 testing).
+
+### AI-Assisted Implementation via Claude
+The code implementation and engineering workflows were executed in collaboration with **Claude (Anthropic)** acting as an advanced AI pair-programmer. The author structured, staged, and orchestrated a master sequence of **30 comprehensive engineering prompts** across 11 development stages—guiding the AI step-by-step on architecture, zero-hallucination deterministic templates, off-thread Web Worker computation, bilingual English/Bangla localization, and Progressive Web App (PWA) resilience.
+
+📄 **30 Master Prompts Blueprint**:  
+The complete 30-prompt specification detailing how the author directed Claude throughout the project's construction is available in [`prompt.pdf`](./prompt.pdf) and [`docs/prompt.pdf`](./docs/prompt.pdf).
+
+---
+
 ## Data
 
 | What | Source |
@@ -378,7 +406,7 @@ Climate Lens is optimized for zero-configuration deployment to standard static h
 
 ### Vercel
 1. Connect your GitHub repository to Vercel.
-2. The repository includes [vercel.json](file:///d:/projects/nasa%202/nasa.zip/vercel.json) with single-page application (SPA) rewrite rules to `/index.html`.
+2. The repository includes [vercel.json](./vercel.json) with single-page application (SPA) rewrite rules to `/index.html`.
 3. Build Settings:
    - **Framework Preset**: Vite
    - **Build Command**: `npm run build`
@@ -386,13 +414,13 @@ Climate Lens is optimized for zero-configuration deployment to standard static h
 
 ### Netlify
 1. Connect your GitHub repository to Netlify.
-2. The repository includes [public/_redirects](file:///d:/projects/nasa%202/nasa.zip/public/_redirects) (`/* /index.html 200`) ensuring all deep links (`?dist=dhaka&m=heat`) resolve smoothly on direct refresh.
+2. The repository includes [public/_redirects](./public/_redirects) (`/* /index.html 200`) ensuring all deep links (`?dist=dhaka&m=heat`) resolve smoothly on direct refresh.
 3. Build Settings:
    - **Build Command**: `npm run build`
    - **Publish Directory**: `dist`
 
 ### Base Path Note
-In [vite.config.js](file:///d:/projects/nasa%202/nasa.zip/vite.config.js), `base` defaults to `/`, which works out-of-the-box for custom domains, Vercel (`*.vercel.app`), and Netlify (`*.netlify.app`).
+In [vite.config.js](./vite.config.js), `base` defaults to `/`, which works out-of-the-box for custom domains, Vercel (`*.vercel.app`), and Netlify (`*.netlify.app`).
 
 ---
 
@@ -415,7 +443,7 @@ npm run validate:data   # Run dataset integrity and physical outlier validator
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](file:///d:/projects/nasa%202/nasa.zip/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
