@@ -66,7 +66,7 @@ The complete 30-prompt specification detailing how the author directed Claude th
 
 ## Data
 
-> 🛰️ **NASA Space Apps Evaluation Dossier:** For an exhaustive inventory of all 6 NASA Earth Science datasets, variables, and methodologies used in this project, see [NASA-DATA-SOURCES.md](./NASA-DATA-SOURCES.md).
+> 🛰️ **NASA Space Apps Evaluation Dossier:** For an exhaustive inventory of all 6 NASA Earth Science datasets, variables, and methodologies used in this project, see [NASA-DATA-SOURCES.md](./NASA-DATA-SOURCES.md) or download the formatted [`Source.pdf`](./Source.pdf) ([`docs/Source.pdf`](./docs/Source.pdf)).
 
 | What | Source |
 |---|---|
