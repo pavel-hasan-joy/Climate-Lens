@@ -21,7 +21,7 @@ describe('PWA & Mobile Navigation Suite', () => {
     expect(Array.isArray(content.icons)).toBe(true);
     expect(content.icons.length).toBeGreaterThanOrEqual(3);
 
-    const sizes = content.icons.map((ic: { sizes: string }) => ic.sizes);
+    const sizes = content.icons.map((ic) => ic.sizes);
     expect(sizes).toContain('any');
     expect(sizes).toContain('192x192');
     expect(sizes).toContain('512x512');
