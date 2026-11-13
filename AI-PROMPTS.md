@@ -7,6 +7,20 @@
 
 ---
 
+## 🤝 Roles & Attribution: Human Architect vs. AI Coder
+
+> [!IMPORTANT]
+> ### 🏛️ Project Governance & Division of Roles
+> - **Concept, Master Plan & Architectural Direction (100% Human):** Conceived, planned, scientifically formulated, and orchestrated by **Pavel Hasan Joy** (Project Lead & System Architect). Every feature, data source, mathematical formula, and master prompt blueprint originated from the author.
+> - **Code Implementation & Engineering (100% AI via Claude):** All source code, TypeScript components, MapLibre GL 3D integration, WebGL shaders, multi-threaded Web Workers, build pipelines, and automated test suites were written and synthesized by **Claude (Anthropic)** acting as the AI pair-programmer under Pavel's direct prompt engineering.
+
+| Domain | Contributor / Role | Specific Responsibilities |
+|---|---|---|
+| **Concept & Master Plan** | 👤 **Pavel Hasan Joy** (Lead) | Project vision, domain scoping, NASA dataset selection, mathematical criteria (Theil–Sen, Mann–Kendall, backtesting), prompt engineering architecture, and roadmap design. |
+| **Full Code Implementation** | 🤖 **Claude (Anthropic)** (AI Engine) | React 19 frontend, TypeScript strict typing, WebGL 3D polygon extrusions, metrics calculation engine, worker threading, PWA service worker, and 14 test suites. |
+
+---
+
 ## 📌 Executive Architecture & Engineering Directive
 
 These **30 structured master prompts** represent the primary architectural, mathematical, and full-stack engineering milestones required to construct **Climate Lens — Bangladesh**. 

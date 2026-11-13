@@ -74,8 +74,19 @@ Bangladesh is one of the world's most vulnerable frontline nations to accelerati
   - **BRRI & DAE**: Standard agronomic crop calendars for Aman, Aus, and Boro rice.
 - **Statistical Rigor & Validation**: Formulated the strict scientific integrity requirements, including non-parametric Theil–Sen slope estimation, Mann–Kendall significance verification ($p < 0.05$), and out-of-sample empirical back-testing (2001–2015 training vs 2016–2025 testing).
 
-### AI-Assisted Implementation via Claude
-The code implementation and engineering workflows were executed in collaboration with **Claude (Anthropic)** acting as an advanced AI pair-programmer. The author structured, staged, and orchestrated a master sequence of **30 comprehensive engineering prompts** across 11 development stages—guiding the AI step-by-step on architecture, zero-hallucination deterministic templates, off-thread Web Worker computation, bilingual English/Bangla localization, and Progressive Web App (PWA) resilience.
+### AI-Assisted Implementation via Claude: Architecture by Pavel Hasan Joy, Full Coding by Claude
+
+> [!NOTE]
+> **Clear Attribution & Division of Roles:**
+> - **The Vision, Conception & Master Plan (100% Human Architect):** **Pavel Hasan Joy** conceived the entire platform, designed the domain strategy, formulated mathematical and scientific requirements, selected all NASA/BBS/BRRI datasets, and orchestrated the sequence of 30 master prompts across 11 development stages.
+> - **Code Generation & Engineering Implementation (100% AI via Claude):** All actual code—including React 19 UI, TypeScript definitions, WebGL 3D height shaders, multi-threaded Web Workers, data fetching scripts, and 14 test suites (129 unit & integration tests)—was generated and written by **Claude (Anthropic)** acting as the full-stack AI coder under Pavel's direction.
+
+| Domain / Layer | Contributor / Role | Specific Responsibility |
+|---|---|---|
+| **Concept, Plan & Architecture** | 👤 **Pavel Hasan Joy** (Lead Architect) | Complete project vision, prompt engineering blueprints, scientific validation methodology (Theil–Sen, Mann–Kendall), data pipeline design, and judging criteria alignment. |
+| **Code Synthesis & Engineering** | 🤖 **Claude (Anthropic)** (AI Engine) | Complete source code implementation, React/TypeScript components, MapLibre GL 3D integration, Web Worker offloading, PWA caching, and automated test suite authoring. |
+
+The author structured, staged, and orchestrated a master sequence of **30 comprehensive engineering prompts** across 11 development stages—guiding the AI step-by-step on architecture, zero-hallucination deterministic templates, off-thread Web Worker computation, bilingual English/Bangla localization, and Progressive Web App (PWA) resilience.
 
 📄 **30 Master Prompts Blueprint**:  
 The complete 30-prompt specification detailing how the author directed Claude throughout the project's construction is available in Markdown format at [`AI-PROMPTS.md`](./AI-PROMPTS.md) ([`docs/AI-PROMPTS.md`](./docs/AI-PROMPTS.md)) and formatted print PDF at [`prompt.pdf`](./prompt.pdf) ([`docs/prompt.pdf`](./docs/prompt.pdf)).

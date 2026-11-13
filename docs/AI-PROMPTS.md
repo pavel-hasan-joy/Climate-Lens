@@ -7,6 +7,20 @@
 
 ---
 
+## 🤝 Roles & Attribution: Human Architect vs. AI Coder
+
+> [!IMPORTANT]
+> ### 🏛️ Project Governance & Division of Roles
+> - **Concept, Master Plan & Architectural Direction (100% Human):** Conceived, planned, scientifically formulated, and orchestrated by **Pavel Hasan Joy** (Project Lead & System Architect). Every feature, data source, mathematical formula, and master prompt blueprint originated from the author.
+> - **Code Implementation & Engineering (100% AI via Claude):** All source code, TypeScript components, MapLibre GL 3D integration, WebGL shaders, multi-threaded Web Workers, build pipelines, and automated test suites were written and synthesized by **Claude (Anthropic)** acting as the AI pair-programmer under Pavel's direct prompt engineering.
+
+| Domain | Contributor / Role | Specific Responsibilities |
+|---|---|---|
+| **Concept & Master Plan** | 👤 **Pavel Hasan Joy** (Lead) | Project vision, domain scoping, NASA dataset selection, mathematical criteria (Theil–Sen, Mann–Kendall, backtesting), prompt engineering architecture, and roadmap design. |
+| **Full Code Implementation** | 🤖 **Claude (Anthropic)** (AI Engine) | React 19 frontend, TypeScript strict typing, WebGL 3D polygon extrusions, metrics calculation engine, worker threading, PWA service worker, and 14 test suites. |
+
+---
+
 ## 📌 Executive Architecture & Engineering Directive
 
 These **30 structured master prompts** represent the primary architectural, mathematical, and full-stack engineering milestones required to construct **Climate Lens — Bangladesh**. 
@@ -314,3 +328,4 @@ Re-architect the user interface for mobile devices (< 768px) with a dedicated re
 ```text
 Conduct a final production optimization and documentation pass. Implement React.lazy() and dynamic code-splitting for heavy secondary modals (WildlifeGallery, ValidationModal, SpeciesRecordsModal) and jsPDF export libraries to drastically reduce initial bundle size and enhance mobile LCP. Write the official NASA Space Apps submission suite: (1) a 6-slide executive pitch deck outline (docs/pitch-outline.md), (2) a 2-minute video demonstration script (docs/demo-script.md), (3) a complete project dossier (docs/summary.md), and (4) an exhaustive scientific bibliography (docs/sources.md). Verify that 100% of CI checks pass.
 ```
+
