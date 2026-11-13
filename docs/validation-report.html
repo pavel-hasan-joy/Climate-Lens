@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation & Limitations Dossier — Climate Lens Bangladesh</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background-color: #ffffff;
+      line-height: 1.35;
+      font-size: 9.5pt;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      page-break-after: always;
+      height: 277mm;
+      max-height: 277mm;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .content-wrap {
+      flex: 1;
+    }
+
+    /* Header */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0b3d91;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nasa-badge {
+      background: #0b3d91;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 8.5pt;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .brand-title {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #0b3d91;
+      letter-spacing: -0.2px;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 8pt;
+      color: #475569;
+      line-height: 1.25;
+    }
+
+    .doc-meta b {
+      color: #0f172a;
+    }
+
+    /* Title Block */
+    .title-block {
+      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-left: 4.5px solid #0284c7;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .dossier-title {
+      font-size: 13pt;
+      font-weight: 800;
+      color: #0c4a6e;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .dossier-subtitle {
+      font-size: 8.5pt;
+      color: #334155;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .author-strip {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
+      padding-top: 5px;
+      border-top: 1px dashed #7dd3fc;
+      font-size: 8pt;
+      color: #0369a1;
+    }
+
+    .author-strip span b {
+      color: #0c4a6e;
+    }
+
+    /* Sections */
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+
+    .section-num {
+      background: #0284c7;
+      color: #fff;
+      font-size: 7.5pt;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    p {
+      margin-bottom: 6px;
+      font-size: 8.5pt;
+      color: #334155;
+      text-align: justify;
+    }
+
+    /* Teleprompter Box */
+    .teleprompter-banner {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 3.5px solid #16a34a;
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .teleprompter-banner .tb-title {
+      font-weight: 800;
+      color: #15803d;
+      font-size: 8.5pt;
+    }
+
+    .teleprompter-banner .tb-desc {
+      font-size: 8pt;
+      color: #166534;
+    }
+
+    /* Timeline Split */
+    .timeline-container {
+      display: flex;
+      gap: 10px;
+      margin: 6px 0 8px 0;
+    }
+
+    .timeline-card {
+      flex: 1;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid;
+    }
+
+    .train-card {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .train-card h4 {
+      color: #1d4ed8;
+      font-size: 8.5pt;
+      margin-bottom: 2px;
+    }
+
+    .test-card {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .test-card h4 {
+      color: #b91c1c;
+      font-size: 8.5pt;
+      margin-bottom: 2px;
+    }
+
+    /* KPI Cards */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 6px 0 8px 0;
+    }
+
+    .kpi-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      padding: 6px 8px;
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .kpi-label {
+      font-size: 7pt;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .kpi-val {
+      font-size: 12pt;
+      font-weight: 800;
+      margin: 2px 0;
+    }
+
+    .kpi-sub {
+      font-size: 7pt;
+      color: #475569;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 8px 0;
+      font-size: 8pt;
+    }
+
+    th, td {
+      padding: 4px 6px;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      color: #1e293b;
+      font-weight: 700;
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    tr:nth-child(even) {
+      background: #fbfcfd;
+    }
+
+    .num-col {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 8px;
+      font-size: 7pt;
+      font-weight: 700;
+    }
+
+    .pill-green {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .pill-amber {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .pill-red {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* Callouts */
+    .callout-box {
+      border: 1px solid #cbd5e1;
+      padding: 7px 10px;
+      border-radius: 4px;
+      margin: 6px 0;
+    }
+
+    .callout-box.honesty {
+      background: #fffbeb;
+      border-color: #fde68a;
+      border-left: 4px solid #d97706;
+    }
+
+    .callout-box.honesty b {
+      color: #b45309;
+    }
+
+    /* Limitations Grid */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .limit-box {
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      border-radius: 4px;
+      padding: 6px 9px;
+    }
+
+    .limit-box h5 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .limit-box p {
+      font-size: 7.5pt;
+      color: #475569;
+      line-height: 1.3;
+      margin-bottom: 0;
+    }
+
+    /* Voiceover Box */
+    .script-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 5px;
+      padding: 9px 12px;
+      margin: 8px 0;
+    }
+
+    .script-text {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #38bdf8;
+      font-style: italic;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .script-meta {
+      font-size: 7.5pt;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #334155;
+      padding-top: 4px;
+    }
+
+    /* Footer */
+    .footer-bar {
+      border-top: 1px solid #cbd5e1;
+      padding-top: 4px;
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+    <div class="content-wrap">
+      <div class="header-bar">
+        <div class="brand-group">
+          <span class="nasa-badge">NASA Space Apps 2026</span>
+          <span class="brand-title">Climate Lens — Bangladesh</span>
+        </div>
+        <div class="doc-meta">
+          <b>Official Validation &amp; Limitations Dossier</b><br>
+          Out-of-Sample Verification: 2001–2015 Train vs. 2016–2025 Test
+        </div>
+      </div>
+
+      <div class="title-block">
+        <div class="dossier-title">Empirical Validation &amp; Limitations Dossier</div>
+        <div class="dossier-subtitle">
+          Rigorous out-of-sample backtesting (640 district-years), error diagnostics, prediction band calibration disclosures, and scientific boundaries.
+        </div>
+        <div class="author-strip">
+          <span><b>Lead Architect &amp; Concept:</b> Pavel Hasan Joy (Team NovaByte)</span>
+          <span><b>AI Pair-Programmer:</b> Claude (Anthropic)</span>
+          <span><b>Evaluated Scope:</b> 64 Districts · $N = 640$ District-Years</span>
+        </div>
+      </div>
+
+      <!-- Teleprompter Notice for Section 09 -->
+      <div class="teleprompter-banner">
+        <span class="tb-title">🎥 Screen Evidence for Judging Video — Section 09 (03:00 – 03:18 · 18s):</span>
+        <span class="tb-desc">This document provides unvarnished empirical proof of held-out model performance and interval calibration.</span>
+      </div>
+
+      <!-- 1. BACKTESTING FRAMEWORK -->
+      <div class="section-title">
+        <span class="section-num">1</span>
+        <span>Out-of-Sample Empirical Backtesting Framework</span>
+      </div>
+
+      <p>
+        To verify model fidelity and avoid synthetic overconfidence, Climate Lens subjects its projection engine to <b>strict temporal out-of-sample backtesting</b> across all 64 districts using authentic daily NASA POWER satellite assimilations (2001–2025):
+      </p>
+
+      <div class="timeline-container">
+        <div class="timeline-card train-card">
+          <h4>Training Window (2001–2015 · 15 Years)</h4>
+          <p style="font-size: 8pt; margin-bottom: 0;">
+            Used exclusively to train robust non-parametric <b>Theil–Sen linear regressions</b> and compute residual dispersion ($\pm 1.96\sigma$). Models were blinded to post-2015 reality.
+          </p>
+        </div>
+        <div class="timeline-card test-card">
+          <h4>Held-Out Test Window (2016–2025 · 10 Years)</h4>
+          <p style="font-size: 8pt; margin-bottom: 0;">
+            Unseen ground truth used to evaluate predictions across 64 districts $\times$ 10 test years = <b>640 out-of-sample evaluations</b> for all 4 primary climate indicators.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. NATIONAL ERROR METRICS -->
+      <div class="section-title">
+        <span class="section-num">2</span>
+        <span>National Test-Period Error &amp; Uncertainty Diagnostics (2016–2025)</span>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-label">Monsoon Rain (MAE)</div>
+          <div class="kpi-val" style="color: #0284c7;">639.8 <span style="font-size: 8pt;">mm</span></div>
+          <div class="kpi-sub">RMSE: 778.1 mm</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Annual Rain (MAE)</div>
+          <div class="kpi-val" style="color: #0369a1;">1,129 <span style="font-size: 8pt;">mm</span></div>
+          <div class="kpi-sub">RMSE: 1,300.5 mm</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Summer Peak Heat (MAE)</div>
+          <div class="kpi-val" style="color: #ea580c;">2.07 <span style="font-size: 8pt;">°C</span></div>
+          <div class="kpi-sub">RMSE: 2.53 °C</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Root Soil Wetness (MAE)</div>
+          <div class="kpi-val" style="color: #059669;">8.97 <span style="font-size: 8pt;">%</span></div>
+          <div class="kpi-sub">RMSE: 9.57 %</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>Observed Baseline</th>
+            <th class="num-col">MAE</th>
+            <th class="num-col">RMSE</th>
+            <th class="num-col">95% Interval Coverage</th>
+            <th>Empirical Calibration Diagnosis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Monsoon Rain (Jun–Sep)</b></td>
+            <td>1,531 mm</td>
+            <td class="num-col">639.78 mm</td>
+            <td class="num-col">778.12 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">47.3%</span></td>
+            <td>Substantial inter-annual monsoon volatility; requires ensemble ribbons.</td>
+          </tr>
+          <tr>
+            <td><b>Annual Precipitation</b></td>
+            <td>2,240 mm</td>
+            <td class="num-col">1,129.34 mm</td>
+            <td class="num-col">1,300.52 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">20.2%</span></td>
+            <td>Non-stationary extremes; poorly bounded by stationary linear models.</td>
+          </tr>
+          <tr>
+            <td><b>Summer Peak Heat (Tmax)</b></td>
+            <td>35.8 °C</td>
+            <td class="num-col">2.07 °C</td>
+            <td class="num-col">2.53 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">55.0%</span></td>
+            <td>Strong thermal trend continuity; tracks long-term planetary warming.</td>
+          </tr>
+          <tr>
+            <td><b>Root Soil Wetness (0–100cm)</b></td>
+            <td>62.4%</td>
+            <td class="num-col">8.97%</td>
+            <td class="num-col">9.57%</td>
+            <td class="num-col"><span class="badge-pill pill-red">21.1%</span></td>
+            <td>Heavily decoupled by regional tube-well irrigation &amp; drainage canal shifts.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 3. SCIENTIFIC HONESTY & CALIBRATION NOTE -->
+      <div class="section-title">
+        <span class="section-num">3</span>
+        <span>Interval Calibration Disclosure (Scientific Honesty Protocol)</span>
+      </div>
+
+      <div class="callout-box honesty">
+        <div style="font-weight: 800; font-size: 8pt; margin-bottom: 2px;">
+          ⚖️ Scientific Integrity Statement: Why Empirical Coverage is 20.2% – 55.0% vs Nominal 95%
+        </div>
+        <p style="font-size: 7.8pt; margin-bottom: 0;">
+          A standard Gaussian model assumes a stationary $\pm 1.96\sigma$ envelope covers 95% of future observations. In Bangladesh's real climate, our held-out test achieves only <b>20.2% to 55.0%</b> coverage. <b>We deliberately report this limitation:</b> the South Asian summer monsoon is non-stationary and prone to chaotic extremes (e.g. 2022 Sylhet deluge, where coverage plunged to 5.0%). To mitigate this, Climate Lens couples Theil–Sen statistics with <b>NASA NEX-GDDP-CMIP6 downscaled physical GCM ensembles</b> to provide dynamic 10th-to-90th percentile uncertainty ribbons.
+        </p>
+      </div>
+
+      <!-- 4. SCIENTIFIC LIMITATIONS -->
+      <div class="section-title">
+        <span class="section-num">4</span>
+        <span>Key Scientific Limitations &amp; Boundaries</span>
+      </div>
+
+      <div class="grid-2col">
+        <div class="limit-box">
+          <h5>1. Spatial Grid Resolution (~50 km)</h5>
+          <p>NASA POWER delivers 0.5° (~55 km) grid points. Small neighboring districts (e.g. Dhaka and Narayanganj) share identical readings; micro-scale urban heat islands cannot be resolved.</p>
+        </div>
+        <div class="limit-box">
+          <h5>2. Exploratory Projections vs Forecasts</h5>
+          <p>Trajectories for 2040/2050 are exploratory scenario projections under IPCC SSP2-4.5/SSP5-8.5. They are <b>NOT deterministic local weather forecasts</b> and do not replace BMD advisories.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>Climate Lens — Bangladesh · NASA International Space Apps Challenge 2026</span>
+      <span>Page 1 of 2 · Empirical Backtesting Evidence</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page">
+    <div class="content-wrap">
+      <div class="header-bar">
+        <div class="brand-group">
+          <span class="nasa-badge">NASA Space Apps 2026</span>
+          <span class="brand-title">Climate Lens — Bangladesh</span>
+        </div>
+        <div class="doc-meta">
+          <b>Division Matrix &amp; Video Recording Teleprompter</b><br>
+          Empirical Dataset: <code>src/data/validation.json</code>
+        </div>
+      </div>
+
+      <!-- 5. DIVISION BREAKDOWN MATRIX -->
+      <div class="section-title">
+        <span class="section-num">5</span>
+        <span>Division-Level Empirical Validation Matrix (2016–2025 Ground Truth)</span>
+      </div>
+
+      <p>
+        Out-of-sample backtesting metrics aggregated across all 8 administrative divisions demonstrate distinct regional hydro-climatic volatility across Bangladesh:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Division</th>
+            <th class="num-col">Districts</th>
+            <th class="num-col">Monsoon MAE</th>
+            <th class="num-col">Monsoon Cov %</th>
+            <th class="num-col">Heat MAE</th>
+            <th class="num-col">Heat Cov %</th>
+            <th class="num-col">Annual Rain MAE</th>
+            <th class="num-col">Rain Cov %</th>
+            <th>Regional Hydro-Climate Character</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Khulna</b></td>
+            <td class="num-col">10</td>
+            <td class="num-col">357.67 mm</td>
+            <td class="num-col"><span class="badge-pill pill-green">81.0%</span></td>
+            <td class="num-col">1.60 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">64.0%</span></td>
+            <td class="num-col">634.49 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">43.0%</span></td>
+            <td>Best calibrated division; stable coastal delta patterns.</td>
+          </tr>
+          <tr>
+            <td><b>Chittagong</b></td>
+            <td class="num-col">11</td>
+            <td class="num-col">841.32 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">48.2%</span></td>
+            <td class="num-col">1.47 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">65.5%</span></td>
+            <td class="num-col">1,241.80 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">34.5%</span></td>
+            <td>High thermal fidelity; moderate orographic rain variation.</td>
+          </tr>
+          <tr>
+            <td><b>Dhaka</b></td>
+            <td class="num-col">13</td>
+            <td class="num-col">598.12 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">46.9%</span></td>
+            <td class="num-col">2.04 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">63.1%</span></td>
+            <td class="num-col">1,203.88 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">8.5%</span></td>
+            <td>Dense floodplain; heavy inter-annual rainfall swings.</td>
+          </tr>
+          <tr>
+            <td><b>Rajshahi</b></td>
+            <td class="num-col">8</td>
+            <td class="num-col">414.15 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">45.0%</span></td>
+            <td class="num-col">2.24 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">57.5%</span></td>
+            <td class="num-col">768.56 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">10.0%</span></td>
+            <td>Barind tract; high summer heat vulnerability.</td>
+          </tr>
+          <tr>
+            <td><b>Barisal</b></td>
+            <td class="num-col">6</td>
+            <td class="num-col">1,032.22 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">45.0%</span></td>
+            <td class="num-col">1.44 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">58.3%</span></td>
+            <td class="num-col">1,659.10 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">28.3%</span></td>
+            <td>Coastal estuary; cyclonic surge precipitation spikes.</td>
+          </tr>
+          <tr>
+            <td><b>Rangpur</b></td>
+            <td class="num-col">8</td>
+            <td class="num-col">429.62 mm</td>
+            <td class="num-col"><span class="badge-pill pill-amber">43.8%</span></td>
+            <td class="num-col">3.11 °C</td>
+            <td class="num-col"><span class="badge-pill pill-red">30.0%</span></td>
+            <td class="num-col">793.85 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">13.8%</span></td>
+            <td>Teesta river basin; cold wave/heat extremes increase MAE.</td>
+          </tr>
+          <tr>
+            <td><b>Mymensingh</b></td>
+            <td class="num-col">4</td>
+            <td class="num-col">735.98 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">20.0%</span></td>
+            <td class="num-col">3.37 °C</td>
+            <td class="num-col"><span class="badge-pill pill-red">20.0%</span></td>
+            <td class="num-col">1,536.30 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">0.0%</span></td>
+            <td>Piedmont flood zones; cloudburst rainfall under-covered.</td>
+          </tr>
+          <tr>
+            <td><b>Sylhet</b></td>
+            <td class="num-col">4</td>
+            <td class="num-col">1,112.97 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">5.0%</span></td>
+            <td class="num-col">2.28 °C</td>
+            <td class="num-col"><span class="badge-pill pill-green">52.5%</span></td>
+            <td class="num-col">2,005.91 mm</td>
+            <td class="num-col"><span class="badge-pill pill-red">2.5%</span></td>
+            <td>Extreme Meghalaya orographic runoff; severe 2022 flood anomaly.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 6. ADDITIONAL SCIENTIFIC LIMITATIONS -->
+      <div class="section-title">
+        <span class="section-num">6</span>
+        <span>Additional Scientific Limitations &amp; Confounding Nuance</span>
+      </div>
+
+      <div class="grid-2col">
+        <div class="limit-box">
+          <h5>3. Sensor Homogeneity (2001 Start Baseline)</h5>
+          <p>Dataset initiates in 2001 to coincide with TRMM and MODIS satellite assimilations in NASA POWER, preventing artificial pre-2001 sensor transition jumps.</p>
+        </div>
+        <div class="limit-box">
+          <h5>4. Confounding Drivers in Agriculture &amp; Fish</h5>
+          <p>Rice yields and fish stocks are confounded by HYV seed adoption, deep tube well irrigation, and Farakka water diversion. Correlation does not equal isolated climate causality.</p>
+        </div>
+      </div>
+
+      <!-- 7. VIDEO TELEPROMPTER & BEAT SHEET -->
+      <div class="section-title">
+        <span class="section-num">7</span>
+        <span>Judging Video Screen Recording Beat Sheet (03:00 – 03:18 · 18 Seconds)</span>
+      </div>
+
+      <div class="script-box">
+        <div class="script-text">
+          &ldquo;I also test the analysis against held-out years. Current prediction ranges still need better calibration. So, future results are exploratory projections, not exact local forecasts.&rdquo;
+        </div>
+        <div class="script-meta">
+          <span>⏱️ Duration: 03:00 – 03:18 (18.0 seconds total)</span>
+          <span>Target Pace: 29 English Words · ~98 wpm (Calm, authoritative)</span>
+        </div>
+      </div>
+
+      <table style="margin-top: 4px; font-size: 7.5pt;">
+        <thead>
+          <tr>
+            <th style="width: 14%;">Timecode</th>
+            <th style="width: 28%;">On-Screen Visual Action</th>
+            <th style="width: 58%;">Spoken Word Synchronization &amp; Voiceover Cue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>03:00 – 03:04</b></td>
+            <td>Display Page 1 Part 1 (Train 2001–2015 vs Test 2016–2025, 640 District-Years).</td>
+            <td><i>&ldquo;I also test the analysis against held-out years...&rdquo;</i></td>
+          </tr>
+          <tr>
+            <td><b>03:05 – 03:09</b></td>
+            <td>Highlight Part 2 Error Table (Monsoon MAE: 639.8 mm, Heat MAE: 2.07 °C).</td>
+            <td><i>&ldquo;...Current prediction ranges...&rdquo;</i></td>
+          </tr>
+          <tr>
+            <td><b>03:10 – 03:14</b></td>
+            <td>Focus on Part 3 Coverage disclosure (Honest 20.2%–55.0% calibration).</td>
+            <td><i>&ldquo;...still need better calibration...&rdquo;</i></td>
+          </tr>
+          <tr>
+            <td><b>03:15 – 03:18</b></td>
+            <td>Show Part 4 Limitations Note ("Exploratory Projections, not exact forecasts").</td>
+            <td><i>&ldquo;...So, future results are exploratory projections, not exact local forecasts.&rdquo;</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-bar">
+      <span>Climate Lens — Bangladesh · NASA International Space Apps Challenge 2026</span>
+      <span>Page 2 of 2 · Official GitHub: github.com/pavel-hasan-joy/Climate-Lens</span>
+    </div>
+  </div>
+
+</body>
+</html>
