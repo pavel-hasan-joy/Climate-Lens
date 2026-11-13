@@ -55,6 +55,11 @@ export function parseUrlState(
   const scenParam = params.get('scenario') || params.get('scen');
   const scenario: ScenarioId = scenParam && VALID_SCENARIOS.has(scenParam) ? (scenParam as ScenarioId) : 'statistical';
 
+  // basemap: base or basemap
+  const baseParam = params.get('base') || params.get('basemap');
+  const basemap =
+    baseParam && (baseParam === 'relief' || baseParam === 'satellite' || baseParam === 'night') ? baseParam : undefined;
+
   // language: lang or l
   const langParam = params.get('lang') || params.get('l');
   const lang = langParam === 'bn' || langParam === 'en' ? langParam : undefined;
@@ -68,6 +73,7 @@ export function parseUrlState(
     year,
     isAnomaly,
     scenario,
+    ...(basemap ? { basemap } : {}),
     ...(lang ? { lang } : {}),
   };
 }
@@ -84,6 +90,7 @@ export function buildUrlQuery({
   year,
   isAnomaly,
   scenario,
+  basemap,
   lang,
 }: Partial<AppUrlState>): string {
   const params = new URLSearchParams();
@@ -116,6 +123,10 @@ export function buildUrlQuery({
 
   if (scenario && scenario !== 'statistical') {
     params.set('scenario', scenario);
+  }
+
+  if (basemap && basemap !== 'relief') {
+    params.set('base', basemap);
   }
 
   if (lang && lang === 'bn') {

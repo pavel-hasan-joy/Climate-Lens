@@ -23,6 +23,7 @@ import MapNav from './MapNav';
 import useIsMobile from '../../hooks/useIsMobile';
 import { useTranslation } from '../../lib/i18n';
 import { useEonetFeed } from '../../hooks/useEonetFeed';
+import { isInsideBangladesh, isForeignHazardEvent } from '../../lib/geoUtils';
 import type { DomainRange, MetricId, ScenarioId, TimeId } from '../../lib/types';
 
 const BG = hexToRgb('#0b1220');
@@ -344,7 +345,7 @@ export default function ClimateMap({
   useEffect(() => {
     if (!ready || !map.current) return;
     const m = map.current;
-    ['night', 'relief', 'satellite'].forEach((id) =>
+    ['relief', 'satellite', 'night'].forEach((id) =>
       m.setLayoutProperty(id, 'visibility', id === basemap ? 'visible' : 'none'),
     );
     m.setLayoutProperty('rainfall', 'visibility', showRain ? 'visible' : 'none');
@@ -474,10 +475,13 @@ export default function ClimateMap({
     };
 
     eonetEvents.forEach((ev) => {
+      // Safeguard: Never render foreign events or points outside Bangladesh borders
+      if (isForeignHazardEvent(ev.title)) return;
       if (!ev.coordinates) return;
       const [lng, lat] = ev.coordinates;
       if (typeof lng !== 'number' || typeof lat !== 'number' || Number.isNaN(lng) || Number.isNaN(lat)) return;
       if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
+      if (!isInsideBangladesh(lng, lat)) return;
 
       try {
         const el = document.createElement('div');

@@ -78,14 +78,14 @@ a {
   inset: 0;
 }
 
-/* Darkens the map edges so panels sit on calm ground */
+/* Soft vignette on map edges so panels sit on calm ground while preserving terrain */
 .map-shade {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(4, 6, 11, 0.55) 100%),
-    linear-gradient(90deg, rgba(4, 6, 11, 0.6), transparent 30%, transparent 70%, rgba(4, 6, 11, 0.6));
+    radial-gradient(ellipse at 50% 45%, transparent 60%, rgba(4, 6, 11, 0.3) 100%),
+    linear-gradient(90deg, rgba(4, 6, 11, 0.35), transparent 25%, transparent 75%, rgba(4, 6, 11, 0.35));
 }
 
 /* ---------- Panels ---------- */

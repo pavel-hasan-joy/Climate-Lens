@@ -42,7 +42,7 @@ export default function App() {
   const [time, setTime] = useState<TimeId>(initial.time);
   const [year, setYear] = useState<number | null>(initial.year);
   const [playing, setPlaying] = useState(false);
-  const [basemap, setBasemap] = useState<string>('night');
+  const [basemap, setBasemap] = useState<string>(initial.basemap || 'relief');
   const [showRain, setShowRain] = useState(false);
   const [isAnomaly, setIsAnomaly] = useState(initial.isAnomaly);
   const [scenario, setScenario] = useState<ScenarioId>(initial.scenario);
@@ -72,8 +72,8 @@ export default function App() {
 
   // Sync state to URL query string whenever state changes
   useEffect(() => {
-    syncUrlState({ divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, lang });
-  }, [divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, lang]);
+    syncUrlState({ divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, basemap, lang });
+  }, [divisionId, districtId, compareId, metric, time, year, isAnomaly, scenario, basemap, lang]);
 
   // Support browser Back/Forward navigation
   useEffect(() => {
@@ -87,6 +87,9 @@ export default function App() {
       setYear(s.year);
       setIsAnomaly(s.isAnomaly);
       setScenario(s.scenario);
+      if (s.basemap) {
+        setBasemap(s.basemap);
+      }
       if (s.lang && s.lang !== lang) {
         setLang(s.lang);
       }

@@ -271,6 +271,7 @@ export interface AppState {
   year: number | null;
   isAnomaly: boolean;
   scenario: ScenarioId;
+  basemap?: string;
   lang?: Language;
 }
 

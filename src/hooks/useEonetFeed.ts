@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { apiCache, apiQueue, fetchWithBackoff } from '../lib/apiCache';
+import { isInsideBangladesh, isForeignHazardEvent } from '../lib/geoUtils';
 import prebuiltEonet from '../data/analysis/eonet-events.json';
 
 export interface EonetHazardEvent {
@@ -89,15 +90,21 @@ export function useEonetFeed(days = 30): UseEonetFeedResult {
   const [source, setSource] = useState('NASA EONET v3');
 
   const loadFallback = useCallback((reason?: string) => {
-    const openPrebuilt = (prebuiltEonet.openEvents || []).map((ev: any) => ({
-      id: ev.id,
-      title: ev.title,
-      categories: ev.categories || [],
-      date: ev.date,
-      closed: ev.closed,
-      sources: ev.sources || [],
-      coordinates: extractCoords(ev.coordinates),
-    }));
+    const openPrebuilt = (prebuiltEonet.openEvents || [])
+      .filter((ev: any) => {
+        if (isForeignHazardEvent(ev.title || '')) return false;
+        const coords = extractCoords(ev.coordinates);
+        return coords ? isInsideBangladesh(coords[0], coords[1]) : false;
+      })
+      .map((ev: any) => ({
+        id: ev.id,
+        title: ev.title,
+        categories: ev.categories || [],
+        date: ev.date,
+        closed: ev.closed,
+        sources: ev.sources || [],
+        coordinates: extractCoords(ev.coordinates),
+      }));
 
     setEvents(openPrebuilt);
     setIsLive(false);
@@ -135,9 +142,12 @@ export function useEonetFeed(days = 30): UseEonetFeedResult {
           const processed: EonetHazardEvent[] = [];
 
           for (const ev of rawEvents) {
-            // Include open events or recently closed (within window)
+            // Strictly exclude foreign country events and events outside Bangladesh territory
+            if (isForeignHazardEvent(ev.title || '')) continue;
+
             const firstGeom = ev.geometry?.[0];
             const coords = extractCoords(firstGeom?.coordinates);
+            if (!coords || !isInsideBangladesh(coords[0], coords[1])) continue;
 
             processed.push({
               id: ev.id,

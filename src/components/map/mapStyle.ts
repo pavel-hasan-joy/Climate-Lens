@@ -10,9 +10,9 @@ const isoDate = (s: string): string => `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.sl
 export const RAIN_DATE = isoDate(latestDaily);
 
 export const BASEMAPS = [
-  { id: 'night', label: 'Night lights', note: 'NASA Black Marble' },
   { id: 'relief', label: 'Terrain', note: 'NASA Blue Marble' },
   { id: 'satellite', label: 'Satellite', note: `NASA VIIRS · ${RAIN_DATE}` },
+  { id: 'night', label: 'Night lights', note: 'NASA Black Marble' },
 ] as const;
 
 export function buildStyle(): StyleSpecification {
@@ -51,21 +51,31 @@ export function buildStyle(): StyleSpecification {
       divisions: { type: 'geojson', data: divisionsGeo as any, promoteId: 'id' },
     },
     layers: [
-      { id: 'bg', type: 'background', paint: { 'background-color': '#04060b' } },
-      { id: 'night', type: 'raster', source: 'night', paint: { 'raster-opacity': 1, 'raster-fade-duration': 400 } },
+      { id: 'bg', type: 'background', paint: { 'background-color': '#081326' } },
       {
         id: 'relief',
         type: 'raster',
         source: 'relief',
-        layout: { visibility: 'none' },
-        paint: { 'raster-brightness-max': 0.7, 'raster-saturation': -0.2 },
+        paint: {
+          'raster-opacity': 0.95,
+          'raster-fade-duration': 300,
+          'raster-brightness-max': 0.88,
+          'raster-saturation': 0,
+        },
       },
       {
         id: 'satellite',
         type: 'raster',
         source: 'satellite',
         layout: { visibility: 'none' },
-        paint: { 'raster-brightness-max': 0.75 },
+        paint: { 'raster-brightness-max': 0.8 },
+      },
+      {
+        id: 'night',
+        type: 'raster',
+        source: 'night',
+        layout: { visibility: 'none' },
+        paint: { 'raster-opacity': 1, 'raster-fade-duration': 400 },
       },
       {
         id: 'rainfall',
