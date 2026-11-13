@@ -6,7 +6,7 @@
 [![NASA Sources](https://img.shields.io/badge/NASA%20Data-6%20Missions-0B3D91?style=for-the-badge&logo=nasa)](./NASA-DATA-SOURCES.md)
 [![Pitch Deck](https://img.shields.io/badge/Pitch%20Deck-6--Slide%20Outline-blue?style=for-the-badge)](./docs/pitch-outline.md)
 [![Demo Script](https://img.shields.io/badge/Demo%20Video-2--Min%20Script-red?style=for-the-badge)](./docs/demo-script.md)
-[![Master Prompts](https://img.shields.io/badge/Prompts-30%20Blueprints-6f42c1?style=for-the-badge)](./prompt.pdf)
+[![Master Prompts](https://img.shields.io/badge/Prompts-30%20Blueprints-6f42c1?style=for-the-badge)](./AI-PROMPTS.md)
 
 🌐 **Live Production Observatory:** https://climate-lens-three.vercel.app/
 
@@ -20,7 +20,7 @@
 | **Relevance & Impact (20%)** | Quantifies 162.3 Million citizens (98.4%) exposed to significant monsoon wetting surges (NASA SEDAC GPWv4). Features BRRI/DAE rice crop calendars (Aman, Aus, Boro) and agro-climatic risk scoring with zero black boxes. | [AgriculturePanel.tsx](./src/components/AgriculturePanel.tsx) · [`PopulationImpactCard.tsx`](./src/components/PopulationImpactCard.tsx) |
 | **Data Utilization (20%)** | Seamlessly integrates 6 distinct NASA Earth Science missions: NASA POWER meteorology, NEX-GDDP-CMIP6 downscaled physical models, NASA GIBS basemaps, SEDAC population, MODIS NDVI vegetation vigor, and EONET v3 live hazards. | [`NASA-DATA-SOURCES.md`](./NASA-DATA-SOURCES.md) · [`Source.pdf`](./Source.pdf) |
 | **Creativity & Technology (20%)** | WebGL 3D dynamic polygon height extrusions, automated 90-second drone camera flights, Ed Hawkins warming stripes (2001–2025), multi-decadal anomaly heatmaps, and background multi-threaded Web Workers. | [ClimateMap.tsx](./src/components/map/ClimateMap.tsx) · [`metrics.worker.ts`](./src/workers/metrics.worker.ts) |
-| **Presentation & Reach (20%)** | Full bilingual English & Bangla internationalization with native Bengali numerals (`০–৯`), offline Progressive Web App (PWA) caching, mobile bottom navigation, and one-click PDF executive report exports. | [`prompt.pdf`](./prompt.pdf) · [`docs/pitch-outline.md`](./docs/pitch-outline.md) |
+| **Presentation & Reach (20%)** | Full bilingual English & Bangla internationalization with native Bengali numerals (`০–৯`), offline Progressive Web App (PWA) caching, mobile bottom navigation, and one-click PDF executive report exports. | [`AI-PROMPTS.md`](./AI-PROMPTS.md) · [`prompt.pdf`](./prompt.pdf) · [`docs/pitch-outline.md`](./docs/pitch-outline.md) |
 
 A 3D geospatial observatory of how Bangladesh's rainfall, heat, and root-zone soil wetness **were**, **are**, and **may become** — district by district, directly grounded in NASA Earth science data and CMIP6 climate model projections.
 
@@ -78,7 +78,18 @@ Bangladesh is one of the world's most vulnerable frontline nations to accelerati
 The code implementation and engineering workflows were executed in collaboration with **Claude (Anthropic)** acting as an advanced AI pair-programmer. The author structured, staged, and orchestrated a master sequence of **30 comprehensive engineering prompts** across 11 development stages—guiding the AI step-by-step on architecture, zero-hallucination deterministic templates, off-thread Web Worker computation, bilingual English/Bangla localization, and Progressive Web App (PWA) resilience.
 
 📄 **30 Master Prompts Blueprint**:  
-The complete 30-prompt specification detailing how the author directed Claude throughout the project's construction is available in [`prompt.pdf`](./prompt.pdf) and [`docs/prompt.pdf`](./docs/prompt.pdf).
+The complete 30-prompt specification detailing how the author directed Claude throughout the project's construction is available in Markdown format at [`AI-PROMPTS.md`](./AI-PROMPTS.md) ([`docs/AI-PROMPTS.md`](./docs/AI-PROMPTS.md)) and formatted print PDF at [`prompt.pdf`](./prompt.pdf) ([`docs/prompt.pdf`](./docs/prompt.pdf)).
+
+| Topic # | Core Engineering Topic | Prompts | Key Focus Areas |
+|---|---|---|---|
+| **Topic 1** | Core Foundation, Tooling, Architecture & Localization | `01–05` | React 19, strict TypeScript, GitHub Actions CI, zero-dependency i18n engine, Bengali numerals (০–৯) |
+| **Topic 2** | 3D Geospatial Engine, Satellite Overlays & Drone Navigation | `06–10` | MapLibre GL v6 3D polygon extrusions, NASA GIBS satellite basemaps (Black Marble/Blue Marble), 90s drone tour |
+| **Topic 3** | Statistical Rigor, Anomaly Detection & Empirical Backtesting | `11–15` | Theil–Sen slope, Mann–Kendall significance ($p < 0.05$), out-of-sample backtesting (2001–2015 vs 2016–2025), Web Workers |
+| **Topic 4** | Extreme Climate Indicators, Data Pipelines & Species Mapping | `16–20` | BMD extreme weather indicators, Ed Hawkins warming stripes, NASA POWER automated pipeline, GBIF species occurrences |
+| **Topic 5** | Agro-Climatic Intelligence, Peer-Reviewed Impacts & NASA Models | `21–25` | BRRI/DAE rice crop calendars (Aman, Aus, Boro), World Bank yield correlations, NEX-GDDP-CMIP6 projections, SEDAC population |
+| **Topic 6** | Decision Support, Multi-Platform UI, PWA & Hackathon Delivery | `26–30` | Deterministic natural language synthesis, dual-district comparison, client-side PDF export, PWA mobile layout |
+
+👉 *Read the full prompts, tags, and architectural directives in [**AI-PROMPTS.md**](./AI-PROMPTS.md).*
 
 ---
 
