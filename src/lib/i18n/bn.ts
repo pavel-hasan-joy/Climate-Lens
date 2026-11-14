@@ -550,4 +550,12 @@ export const bn = {
     allDivisions: 'সকল',
     selectedDistrict: 'নির্বাচিত জেলা',
   },
+  cleanMap: {
+    focus: 'ক্লিন ম্যাপ',
+    restore: 'প্যানেল দেখান',
+    tooltipFocus: 'ক্লিন ম্যাপ ভিউ: সম্পূর্ণ ৩ডি ম্যাপ দেখতে সব প্যানেল লুকান (F)',
+    tooltipRestore: 'ফোকাস মোড থেকে প্রস্থান: সব প্যানেল ফিরিয়ে আনুন (Esc)',
+    shortcut: 'F',
+    exitShortcut: 'Esc',
+  },
 };

@@ -110,3 +110,4 @@ node scripts/backtest.mjs
 # Compile high-resolution PDF dossier via Chrome Headless
 chrome --headless=new --disable-gpu --print-to-pdf="VALIDATION-AND-LIMITATIONS.pdf" "docs/validation-report.html"
 ```
+

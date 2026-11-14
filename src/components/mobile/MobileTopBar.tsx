@@ -34,6 +34,8 @@ interface MobileTopBarProps {
   canInstall?: boolean;
   onInstall?: () => void;
   onOpenAbout: () => void;
+  cleanMapMode?: boolean;
+  onToggleCleanMap?: () => void;
 }
 
 export default function MobileTopBar({
@@ -44,6 +46,8 @@ export default function MobileTopBar({
   canInstall,
   onInstall,
   onOpenAbout,
+  cleanMapMode = false,
+  onToggleCleanMap,
 }: MobileTopBarProps) {
   const { lang, setLang, t } = useTranslation();
 
@@ -74,6 +78,19 @@ export default function MobileTopBar({
             >
               <span className="mobile-install-icon">📲</span>
               <span className="mobile-install-text">{lang === 'bn' ? 'অ্যাপ' : 'App'}</span>
+            </button>
+          )}
+
+          {onToggleCleanMap && (
+            <button
+              type="button"
+              className={'mobile-icon-btn mobile-eye-btn' + (cleanMapMode ? ' active' : '')}
+              onClick={onToggleCleanMap}
+              title={cleanMapMode ? t('cleanMap.tooltipRestore') : t('cleanMap.tooltipFocus')}
+              aria-label={cleanMapMode ? t('cleanMap.restore') : t('cleanMap.focus')}
+              aria-pressed={cleanMapMode}
+            >
+              👁️
             </button>
           )}
 

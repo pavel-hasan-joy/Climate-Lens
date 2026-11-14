@@ -8490,3 +8490,264 @@ body.lang-bn,
     opacity: 0.7;
   }
 }
+
+/* ========================================================================= */
+/* ---------- Clean Map / Focus Mode (Eye Bar Toggle & Transitions) ---------- */
+/* ========================================================================= */
+
+.panel.left,
+.panel.right {
+  transition:
+    transform 0.55s var(--ease),
+    opacity 0.45s ease;
+}
+
+.metrics {
+  transition:
+    transform 0.45s var(--ease),
+    opacity 0.35s ease;
+}
+
+.timeline {
+  transition:
+    transform 0.45s var(--ease),
+    opacity 0.35s ease;
+}
+
+.map-controls {
+  transition:
+    transform 0.45s var(--ease),
+    opacity 0.35s ease;
+}
+
+.map-nav {
+  transition:
+    right 0.55s var(--ease),
+    opacity 0.35s ease;
+}
+
+.stamp {
+  transition:
+    transform 0.45s var(--ease),
+    opacity 0.35s ease;
+}
+
+.mobile-topbar,
+.mobile-bottom-nav,
+.mobile-timeline-container,
+.mobile-layers-fab,
+.mobile-district-peek {
+  transition:
+    transform 0.45s var(--ease),
+    opacity 0.35s ease;
+}
+
+/* Floating Clean Map Toggle Bar */
+.clean-map-bar {
+  position: absolute;
+  top: var(--gap);
+  right: calc(var(--right-w) + var(--gap) * 2);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  transition:
+    right 0.55s var(--ease),
+    top 0.45s var(--ease),
+    transform 0.4s var(--ease);
+  animation: fadeUp 0.8s 0.3s var(--ease) both;
+}
+
+.clean-map-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(10, 14, 23, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  color: var(--text-2, #b4bccd);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    all 0.25s var(--ease),
+    box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.clean-map-toggle-btn:hover {
+  background: rgba(15, 23, 42, 0.94);
+  color: #fff;
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.25);
+  transform: translateY(-1px);
+}
+
+.clean-map-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.clean-map-icon svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s var(--ease);
+}
+
+.clean-map-toggle-btn:hover .clean-map-icon svg {
+  transform: scale(1.1);
+}
+
+.clean-map-label {
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.clean-map-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 2px;
+}
+
+/* Active State (When in Clean Map Mode) */
+.clean-map-bar.is-active .clean-map-toggle-btn {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.95));
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow:
+    0 0 24px rgba(59, 130, 246, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.clean-map-bar.is-active .clean-map-toggle-btn:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(30, 58, 138, 0.98));
+  color: #ffffff;
+  box-shadow:
+    0 0 30px rgba(59, 130, 246, 0.6),
+    0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.clean-map-bar.is-active .clean-map-badge {
+  background: rgba(59, 130, 246, 0.28);
+  border-color: rgba(147, 197, 253, 0.5);
+  color: #dbeafe;
+}
+
+/* Desktop Clean Map Mode Active Positions */
+.app.clean-map-mode .clean-map-bar {
+  right: var(--gap);
+  top: var(--gap);
+}
+
+.app.clean-map-mode .panel.left {
+  transform: translateX(calc(-100% - var(--gap) * 3)) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.app.clean-map-mode .panel.right {
+  transform: translateX(calc(100% + var(--gap) * 3)) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.app.clean-map-mode .metrics {
+  transform: translate(-50%, -120px) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.app.clean-map-mode .timeline {
+  transform: translateY(calc(100% + var(--gap) * 3)) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.app.clean-map-mode .stamp {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-20px) !important;
+}
+
+.app.clean-map-mode .map-controls {
+  transform: translateY(160px) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.app.clean-map-mode .map-nav {
+  right: var(--gap) !important;
+}
+
+/* Mobile Clean Map Mode Styles */
+@media (max-width: 860px) {
+  .clean-map-bar {
+    position: fixed;
+    top: calc(var(--mobile-header-h) + 12px);
+    right: 12px;
+    z-index: 990;
+  }
+
+  .clean-map-bar.is-compact .clean-map-toggle-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .app.clean-map-mode .clean-map-bar {
+    top: max(14px, env(safe-area-inset-top)) !important;
+    right: 14px !important;
+    z-index: 2000 !important;
+  }
+
+  .app.clean-map-mode .mobile-topbar {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .app.clean-map-mode .mobile-bottom-nav {
+    transform: translateY(100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .app.clean-map-mode .mobile-timeline-container {
+    transform: translateY(140px) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .app.clean-map-mode .mobile-layers-fab {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: scale(0.7) !important;
+  }
+
+  .app.clean-map-mode .mobile-stamp {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .app.clean-map-mode .mobile-district-peek {
+    transform: translateY(100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

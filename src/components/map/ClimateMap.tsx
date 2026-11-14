@@ -76,6 +76,7 @@ interface ClimateMapProps {
   isAnomaly?: boolean;
   scenario?: ScenarioId;
   selectedHazardCoords?: [number, number] | null;
+  cleanMapMode?: boolean;
   onSelectDistrict: (id: string) => void;
 }
 
@@ -103,6 +104,7 @@ export default function ClimateMap({
   isAnomaly = false,
   scenario = 'statistical',
   selectedHazardCoords = null,
+  cleanMapMode = false,
   onSelectDistrict,
 }: ClimateMapProps) {
   const { lang, getDistrictName, getDivisionName, formatVal, formatAnom } = useTranslation();
@@ -117,6 +119,7 @@ export default function ClimateMap({
     first?: boolean;
     droneBase?: any;
     time?: TimeId;
+    cleanMapMode?: boolean;
   }>({ divisionId: undefined });
   const [mapInstance, setMapInstance] = useState<maplibregl.Map | null>(null);
   const [ready, setReady] = useState(false);
@@ -124,7 +127,9 @@ export default function ClimateMap({
 
   const padding = mobile
     ? { top: 80, bottom: 140, left: 16, right: 16 }
-    : { top: 110, bottom: 150, left: 390, right: 430 };
+    : cleanMapMode
+      ? { top: 60, bottom: 60, left: 60, right: 60 }
+      : { top: 110, bottom: 150, left: 390, right: 430 };
 
   // ---- create the map once ----
   useEffect(() => {
@@ -253,6 +258,8 @@ export default function ClimateMap({
     const cam = m.cameraForBounds(bounds, { padding, bearing }) ?? m.cameraForBounds(bounds, { padding: 20, bearing });
     if (!cam) return;
     const focus = districtId ? byId[districtId]?.properties?.anchor : null;
+    const isCleanToggle = last.current.cleanMapMode !== cleanMapMode;
+    last.current.cleanMapMode = cleanMapMode;
     m.flyTo({
       ...cam,
       ...(focus && {
@@ -262,13 +269,13 @@ export default function ClimateMap({
       zoom: Math.min(cam.zoom! + (districtId ? 0.35 : -0.15), 9),
       pitch: districtId ? 60 : divisionId ? 55 : 48,
       bearing,
-      duration: last.current.first ? 2200 : 3400,
-      curve: 1.6,
+      duration: isCleanToggle ? 1000 : last.current.first ? 2200 : 3400,
+      curve: isCleanToggle ? 1.2 : 1.6,
       essential: true,
     });
     last.current.first = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, divisionId, districtId, mobile]);
+  }, [ready, divisionId, districtId, mobile, cleanMapMode]);
 
   // Drone view: while the years play, the camera slowly orbits and bobs over the region
   // Respects user's prefers-reduced-motion setting for accessibility

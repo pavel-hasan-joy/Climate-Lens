@@ -10,6 +10,7 @@ import Stamp from './components/Stamp';
 import AboutModal from './components/AboutModal';
 import SystemStatusBar from './components/SystemStatusBar';
 import ErrorBoundary from './components/ErrorBoundary';
+import CleanMapToggle from './components/CleanMapToggle';
 
 // Mobile-specific components
 import useIsMobile from './hooks/useIsMobile';
@@ -55,6 +56,31 @@ export default function App() {
   const [showDataMethods, setShowDataMethods] = useState(false);
   const [showSpeciesRecords, setShowSpeciesRecords] = useState(false);
   const [selectedHazardCoords, setSelectedHazardCoords] = useState<[number, number] | null>(null);
+  const [cleanMapMode, setCleanMapMode] = useState(false);
+
+  const toggleCleanMap = useCallback(() => {
+    setCleanMapMode((prev) => !prev);
+  }, []);
+
+  // Keyboard shortcut: 'f' or 'F' toggles clean map mode, 'Escape' exits clean map mode
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.target as HTMLElement)?.closest('input, textarea, select, [contenteditable]')) {
+        return;
+      }
+      if (e.key === 'Escape') {
+        if (cleanMapMode && !showAbout && !showValidation && !showWildlife && !showDataMethods && !showSpeciesRecords) {
+          e.preventDefault();
+          setCleanMapMode(false);
+        }
+      } else if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        e.preventDefault();
+        setCleanMapMode((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [cleanMapMode, showAbout, showValidation, showWildlife, showDataMethods, showSpeciesRecords]);
 
   // Responsive mobile states
   const isMobile = useIsMobile();
@@ -158,6 +184,7 @@ export default function App() {
       className={
         'app' +
         (playing ? ' playing' : '') +
+        (cleanMapMode ? ' clean-map-mode' : '') +
         (isAnomaly ? ' anomaly-active' : '') +
         (lang === 'bn' ? ' lang-bn' : '') +
         (isMobile ? ' is-mobile-view' : ' is-desktop-view')
@@ -186,6 +213,7 @@ export default function App() {
             isAnomaly={isAnomaly}
             scenario={scenario}
             selectedHazardCoords={selectedHazardCoords}
+            cleanMapMode={cleanMapMode}
             onSelectDistrict={selectDistrict}
           />
         </ErrorBoundary>
@@ -206,11 +234,16 @@ export default function App() {
             canInstall={canInstall}
             onInstall={install}
             onOpenAbout={() => setShowAbout(true)}
+            cleanMapMode={cleanMapMode}
+            onToggleCleanMap={toggleCleanMap}
           />
 
           {/* Tab 1: Fullscreen Map Controls & Overlays */}
           {mobileTab === 'map' && (
             <>
+              {/* Floating Compact Clean Map Toggle */}
+              <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} compact />
+
               {/* Floating Compact Stamp */}
               <div className="mobile-stamp">
                 <Stamp time={time} year={year} isAnomaly={isAnomaly} scenario={scenario} />
@@ -403,6 +436,16 @@ export default function App() {
                 </button>
                 <button
                   type="button"
+                  className={'help-btn' + (cleanMapMode ? ' on' : '')}
+                  title={cleanMapMode ? t('cleanMap.tooltipRestore') : t('cleanMap.tooltipFocus')}
+                  aria-label={cleanMapMode ? t('cleanMap.restore') : t('cleanMap.focus')}
+                  aria-pressed={cleanMapMode}
+                  onClick={toggleCleanMap}
+                >
+                  👁️
+                </button>
+                <button
+                  type="button"
                   className="help-btn"
                   title={t('aboutModal.btnTitle')}
                   aria-label={t('aboutModal.btnTitle')}
@@ -442,6 +485,7 @@ export default function App() {
           </aside>
 
           <MetricTabs value={metric} onChange={setMetric} isAnomaly={isAnomaly} onToggleAnomaly={toggleAnomaly} />
+          <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} />
           <Stamp time={time} year={year} isAnomaly={isAnomaly} scenario={scenario} />
 
           <ErrorBoundary fallbackTitle="District Detail Error">

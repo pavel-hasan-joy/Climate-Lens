@@ -553,6 +553,14 @@ export const en = {
     allDivisions: 'All',
     selectedDistrict: 'Selected District',
   },
+  cleanMap: {
+    focus: 'Clean Map',
+    restore: 'Show Panels',
+    tooltipFocus: 'Clean Map View: Hide all panels for pure 3D map exploration (F)',
+    tooltipRestore: 'Exit Focus: Restore all interface panels (Esc)',
+    shortcut: 'F',
+    exitShortcut: 'Esc',
+  },
 };
 
 export type Translations = typeof en;
