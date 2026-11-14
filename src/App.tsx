@@ -214,6 +214,7 @@ export default function App() {
             scenario={scenario}
             selectedHazardCoords={selectedHazardCoords}
             cleanMapMode={cleanMapMode}
+            onToggleCleanMap={toggleCleanMap}
             onSelectDistrict={selectDistrict}
           />
         </ErrorBoundary>
@@ -241,8 +242,8 @@ export default function App() {
           {/* Tab 1: Fullscreen Map Controls & Overlays */}
           {mobileTab === 'map' && (
             <>
-              {/* Floating Compact Clean Map Toggle */}
-              <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} compact />
+              {/* Floating Restore Toggle: Appears only in Clean Map Mode so mobile view has zero clutter in normal mode */}
+              {cleanMapMode && <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} compact />}
 
               {/* Floating Compact Stamp */}
               <div className="mobile-stamp">
@@ -485,7 +486,7 @@ export default function App() {
           </aside>
 
           <MetricTabs value={metric} onChange={setMetric} isAnomaly={isAnomaly} onToggleAnomaly={toggleAnomaly} />
-          <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} />
+          {cleanMapMode && <CleanMapToggle active={cleanMapMode} onToggle={toggleCleanMap} />}
           <Stamp time={time} year={year} isAnomaly={isAnomaly} scenario={scenario} />
 
           <ErrorBoundary fallbackTitle="District Detail Error">
@@ -516,6 +517,8 @@ export default function App() {
             metric={metric}
             domain={domain}
             isAnomaly={isAnomaly}
+            cleanMapMode={cleanMapMode}
+            onToggleCleanMap={toggleCleanMap}
             onToggleAnomaly={toggleAnomaly}
             onBasemap={setBasemap}
             onRain={setShowRain}

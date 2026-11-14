@@ -77,6 +77,7 @@ interface ClimateMapProps {
   scenario?: ScenarioId;
   selectedHazardCoords?: [number, number] | null;
   cleanMapMode?: boolean;
+  onToggleCleanMap?: () => void;
   onSelectDistrict: (id: string) => void;
 }
 
@@ -105,6 +106,7 @@ export default function ClimateMap({
   scenario = 'statistical',
   selectedHazardCoords = null,
   cleanMapMode = false,
+  onToggleCleanMap,
   onSelectDistrict,
 }: ClimateMapProps) {
   const { lang, getDistrictName, getDivisionName, formatVal, formatAnom } = useTranslation();
@@ -542,7 +544,15 @@ export default function ClimateMap({
   return (
     <>
       <div ref={box} className="map" />
-      {ready && mapInstance && <MapNav map={mapInstance} ready={ready} playing={playing} />}
+      {ready && mapInstance && (
+        <MapNav
+          map={mapInstance}
+          ready={ready}
+          playing={playing}
+          cleanMapMode={cleanMapMode}
+          onToggleCleanMap={onToggleCleanMap}
+        />
+      )}
     </>
   );
 }

@@ -9,6 +9,8 @@ interface MapControlsProps {
   metric: MetricId;
   domain: DomainRange;
   isAnomaly: boolean;
+  cleanMapMode?: boolean;
+  onToggleCleanMap?: () => void;
   onToggleAnomaly: () => void;
   onBasemap: (id: string) => void;
   onRain: (show: boolean) => void;
@@ -20,6 +22,8 @@ export default function MapControls({
   metric,
   domain,
   isAnomaly,
+  cleanMapMode = false,
+  onToggleCleanMap,
   onToggleAnomaly,
   onBasemap,
   onRain,
@@ -97,6 +101,19 @@ export default function MapControls({
         >
           {t('controls.rainRadar')}
         </button>
+        {onToggleCleanMap && (
+          <button
+            type="button"
+            className={'clean-map-btn' + (cleanMapMode ? ' on' : '')}
+            aria-pressed={cleanMapMode}
+            onClick={onToggleCleanMap}
+            title={cleanMapMode ? t('cleanMap.tooltipRestore') : t('cleanMap.tooltipFocus')}
+            aria-label={cleanMapMode ? t('cleanMap.restore') : t('cleanMap.focus')}
+          >
+            <span>👁️</span>
+            <span>{cleanMapMode ? t('cleanMap.restore') : t('cleanMap.focus')}</span>
+          </button>
+        )}
       </div>
     </div>
   );
